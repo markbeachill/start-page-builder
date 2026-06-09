@@ -35,7 +35,14 @@
     button:hover,.file-label:hover{background:#777}button:disabled{opacity:.5;cursor:not-allowed}
     .mini{font-size:11px;padding:2px 6px;border-radius:3px;font-weight:650;background:#f2f2f2;color:#222;border:1px solid #aaa}.mini:hover{background:#e0e0e0}.mini.danger{background:#fff;color:#b91c1c;border-color:#f0b4b4}.mini.secondary{background:#f2f2f2;color:#1d4ed8;border-color:#9ab7ff}
     input[type=file]{display:none}
-    .import-group{display:flex;gap:6px;flex-wrap:wrap}
+    .import-group,.toolbar-group{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+    .toolbar-group{border-left:1px solid #555;padding-left:8px}
+    .toolbar-label{font-size:11px;color:#ccc;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+    .toolbar-more{display:inline-flex;align-items:center;position:relative}
+    .toolbar-more summary{border:1px solid #777;background:#555;color:#fff;border-radius:3px;padding:4px 8px;font-weight:650;font-size:12px;cursor:pointer;list-style:none}
+    .toolbar-more summary::-webkit-details-marker{display:none}
+    .toolbar-more[open] .toolbar-more-panel{display:flex}
+    .toolbar-more-panel{display:none;position:absolute;right:0;top:28px;background:#333;border:1px solid #666;border-radius:4px;padding:8px;gap:6px;z-index:200;min-width:240px;box-shadow:0 8px 24px rgba(0,0,0,.25);flex-wrap:wrap}
     .status{font-size:12px;color:#ddd;margin-left:auto;min-width:240px;text-align:right}
 
     .builder-main{flex:1;min-height:0;display:flex;background:#e9ecef}
@@ -61,27 +68,53 @@
   <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-link" href="builder.html">Builder</a></div></nav>
   <main class="builder-page">
     <div class="builder-toolbar" aria-label="Menu actions">
-      <label>Template
-        <select id="templateSelect">
-          <option value="typical-uk-user">Typical UK User</option>
-          <option value="software-developer">Software Developer</option>
-          <option value="typical-us-consumer">Typical US User</option>
-          <option value="blank">Blank</option>
-        </select>
-      </label>
-      <button id="loadTemplateBtn" type="button">Load selected template</button>
-      <button id="exportHtmlBtn" type="button">Download start page</button>
-      <button id="exportProjectBtn" type="button" class="secondary">Save editable project</button>
-      <button id="exportMarkdownBtn" type="button" class="secondary">Download Markdown list</button>
-      <button id="exportTextBtn" type="button" class="secondary">Download text list</button>
-      <span class="import-group">
-        <label class="file-label secondary">Open saved project/template <input id="importJsonInput" type="file" accept="application/json,.json"></label>
-        <label class="file-label secondary">Import Markdown <input id="importMarkdownInput" type="file" accept=".md,.markdown,text/markdown,text/plain"></label>
-        <label class="file-label secondary">Import CSV <input id="importCsvInput" type="file" accept=".csv,text/csv,text/plain"></label>
-        <label class="file-label secondary">Import TXT <input id="importTextInput" type="file" accept=".txt,text/plain"></label>
+      <span class="toolbar-group">
+        <label>Template
+          <select id="templateSelect">
+            <option value="typical-uk-user">Typical UK User</option>
+            <option value="software-developer">Software Developer</option>
+            <option value="typical-us-consumer">Typical US User</option>
+            <option value="blank">Blank</option>
+          </select>
+        </label>
+        <button id="loadTemplateBtn" type="button">Use template</button>
       </span>
-      <button id="restoreSavedBtn" type="button" class="secondary" hidden>Restore browser save</button>
-      <button id="clearSavedBtn" type="button" class="danger">Clear browser save</button>
+      <span class="toolbar-group">
+        <span class="toolbar-label">Start page</span>
+        <button id="exportHtmlBtn" type="button">Save start page</button>
+        <label class="file-label secondary">Load existing start page <input id="importHtmlInput" type="file" accept=".html,.htm,text/html"></label>
+      </span>
+      <span class="toolbar-group">
+        <span class="toolbar-label">Menu config</span>
+        <button id="exportConfigBtn" type="button" class="secondary">Save menu config</button>
+        <label class="file-label secondary">Load menu config <input id="importConfigInput" type="file" accept="application/json,.json"></label>
+      </span>
+      <span class="toolbar-group">
+        <label>Import list
+          <select id="importListType">
+            <option value="markdown">Markdown</option>
+            <option value="csv">CSV</option>
+            <option value="text">Plain text</option>
+          </select>
+        </label>
+        <label class="file-label secondary">Import <input id="importListInput" type="file" accept=".md,.markdown,.csv,.txt,text/plain,text/markdown,text/csv"></label>
+      </span>
+      <span class="toolbar-group">
+        <label>Export list
+          <select id="exportListType">
+            <option value="markdown">Markdown</option>
+            <option value="text">Plain text</option>
+          </select>
+        </label>
+        <button id="exportListBtn" type="button" class="secondary">Export</button>
+      </span>
+      <details class="toolbar-more">
+        <summary>Browser save</summary>
+        <span class="toolbar-more-panel">
+          <button id="restoreSavedBtn" type="button" class="secondary" hidden>Restore browser save</button>
+          <button id="clearSavedBtn" type="button" class="danger">Clear browser save</button>
+        </span>
+      </details>
       <span id="status" class="status">Loading starter template…</span>
     </div>
 
@@ -111,7 +144,7 @@
         </div>
 
         <div id="sectionList" class="section-list"></div>
-        <div class="privacy"><strong>Privacy:</strong> this static GitHub Pages builder edits in your browser. Nothing is uploaded. Save your editable project file to keep a portable copy.</div>
+        <div class="privacy"><strong>Privacy:</strong> this static GitHub Pages builder edits in your browser. Nothing is uploaded. Save your menu config file to keep a portable copy for this builder.</div>
       </aside>
 
       <section class="builder-preview-wrapper" aria-label="Menu preview">
@@ -557,11 +590,44 @@ function importJsonFile(file){
       if(parsed.settings && parsed.menu) project = internalStateToProject(parsed);
       else if(parsed.sections) project = normaliseFriendlyProject(parsed);
       else if(Array.isArray(parsed)) project = normaliseFriendlyProject({title:"Imported links", sections:parsed});
-      else throw new Error("Unrecognised JSON format. Use a saved project JSON, an internal builder config, or a template JSON with a sections array.");
-      saveToBrowser(); renderAll(); setStatus("Imported JSON project/template/config.");
-    }catch(err){ alert("Could not import JSON: " + err.message); }
+      else throw new Error("Unrecognised JSON format. Use a menu config, an older builder config, or a template JSON with a sections array.");
+      saveToBrowser(); renderAll(); setStatus("Loaded menu config/template.");
+    }catch(err){ alert("Could not load menu config: " + err.message); }
   };
   reader.readAsText(file);
+}
+
+function colourFromClass(el, suffix){
+  const cls = Array.from(el.classList || []).find(c => c.endsWith(suffix));
+  return cls ? cleanColour(cls.slice(0, -suffix.length)) : "blue";
+}
+function importHtmlStartPage(file){
+  readTextFile(file, html => {
+    try{
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      const columns = Array.from(doc.querySelectorAll(".col"));
+      if(!columns.length) throw new Error("No classic start page columns were found.");
+      const sections = [];
+      columns.forEach(col => {
+        let current = null;
+        Array.from(col.children).forEach(el => {
+          const header = el.matches("p.hdr-para") ? el.querySelector(".hdr") : (el.matches(".hdr") ? el : null);
+          if(header){
+            current = {name:(header.textContent || "Section").trim(), colour:colourFromClass(header, "-hdr"), included:true, links:[]};
+            sections.push(current);
+            return;
+          }
+          if(el.matches("a.btn")){
+            if(!current){ current = {name:"Links", colour:colourFromClass(el, "-btn"), included:true, links:[]}; sections.push(current); }
+            current.links.push({label:(el.textContent || "Link").trim(), url:el.getAttribute("href") || "#", colour:colourFromClass(el, "-btn") || current.colour, included:true});
+          }
+        });
+      });
+      if(!sections.length) throw new Error("No sections or links were found in that start page.");
+      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), sections});
+      saveToBrowser(); renderAll(); setStatus("Loaded existing start page.");
+    }catch(err){ alert("Could not load existing start page: " + err.message); }
+  });
 }
 
 function readTextFile(file, callback){
@@ -653,26 +719,37 @@ function initialiseEvents(){
   document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); setStatus("No sections are currently used. Tick Use beside sections to add them back."); scheduleRender(); });
   const templateFromUrl = getTemplateFromUrl();
   if(templateFiles[templateFromUrl]) document.getElementById("templateSelect").value = templateFromUrl;
-  document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Load selected template to replace the current menu."));
+  document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Use template to replace the current menu."));
   document.getElementById("loadTemplateBtn").addEventListener("click", () => {
-    if(confirm("Load the selected template? This replaces the current menu in this browser.")) loadTemplate(true);
+    if(confirm("Use the selected template? This replaces the current menu in this browser.")) loadTemplate(true);
   });
   document.getElementById("exportHtmlBtn").addEventListener("click", () => {
     const state = getCurrentState();
     downloadBlob(exportClassicStandaloneHtml(state), ensureHtmlFilename(project.filename || state.settings.menuFilename), "text/html");
-    setStatus("Downloaded start page.");
+    setStatus("Saved start page.");
   });
-  document.getElementById("exportProjectBtn").addEventListener("click", () => {
-    const filename = ensureHtmlFilename(project.filename || "start-page.html").replace(/\.html?$/i,"-project.json");
+  document.getElementById("exportConfigBtn").addEventListener("click", () => {
+    const filename = ensureHtmlFilename(project.filename || "start-page.html").replace(/\.html?$/i,"-menu-config.json");
     downloadBlob(JSON.stringify(project,null,2), filename, "application/json");
-    setStatus("Saved editable project.");
+    setStatus("Saved menu config.");
   });
-  document.getElementById("exportMarkdownBtn").addEventListener("click", () => { downloadBlob(exportMarkdown(), "start-page.md", "text/markdown"); setStatus("Downloaded Markdown list."); });
-  document.getElementById("exportTextBtn").addEventListener("click", () => { downloadBlob(exportPlainText(), "start-page.txt", "text/plain"); setStatus("Downloaded text list."); });
-  document.getElementById("importJsonInput").addEventListener("change", event => { const file = event.target.files[0]; if(file) importJsonFile(file); event.target.value = ""; });
-  document.getElementById("importMarkdownInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseMarkdownMenu(text), "Markdown")); event.target.value=""; });
-  document.getElementById("importCsvInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseCsvMenu(text), "CSV")); event.target.value=""; });
-  document.getElementById("importTextInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parsePlainTextMenu(text), "plain text")); event.target.value=""; });
+  document.getElementById("importConfigInput").addEventListener("change", event => { const file = event.target.files[0]; if(file) importJsonFile(file); event.target.value = ""; });
+  document.getElementById("importHtmlInput").addEventListener("change", event => { const file = event.target.files[0]; if(file) importHtmlStartPage(file); event.target.value = ""; });
+  document.getElementById("importListInput").addEventListener("change", event => {
+    const file=event.target.files[0];
+    const type=document.getElementById("importListType").value;
+    if(file) readTextFile(file, text => {
+      if(type === "csv") importProjectObject(parseCsvMenu(text), "CSV list");
+      else if(type === "text") importProjectObject(parsePlainTextMenu(text), "plain text list");
+      else importProjectObject(parseMarkdownMenu(text), "Markdown list");
+    });
+    event.target.value="";
+  });
+  document.getElementById("exportListBtn").addEventListener("click", () => {
+    const type=document.getElementById("exportListType").value;
+    if(type === "text") { downloadBlob(exportPlainText(), "start-page.txt", "text/plain"); setStatus("Exported plain text list."); }
+    else { downloadBlob(exportMarkdown(), "start-page.md", "text/markdown"); setStatus("Exported Markdown list."); }
+  });
   document.getElementById("restoreSavedBtn").addEventListener("click", restoreBrowserSave);
   document.getElementById("clearSavedBtn").addEventListener("click", () => {
     if(confirm("Clear the auto-saved menu from this browser? The current screen will stay as it is.")){

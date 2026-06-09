@@ -1,58 +1,62 @@
-# Personal Start Page Creator
+# Personal Start Page Creator — Stage 1.8
 
-Live website: https://markbeachill.github.io/start-page-builder
+**Live website:** https://markbeachill.github.io/start-page-builder  
+**GitHub repository:** https://github.com/markbeachill/start-page-builder
 
-GitHub repository: https://github.com/markbeachill/start-page-builder
+A static GitHub Pages website for creating standalone personal start pages.
 
-A static GitHub Pages site for creating personal browser start pages.
+## GitHub Pages
 
-## Current stage
+Set GitHub Pages to publish from:
 
-Stage 1.7 adds public-site messaging and real example pages:
-
-- UK everyday start page example
-- US everyday start page example
-- Software developer start page example
-- UK and US templates with equal billing
-- clearer user-facing wording: “download start page”, “save editable project”, “open saved project/template”
-- better default filenames such as `start-page-uk.html`, `start-page-us.html`, and `start-page-software.html`
-- a Build with AI guide for Markdown, CSV and JSON menu creation
-- a GitHub Pages publishing guide
-- mobile support messaging
-
-## GitHub Pages setup
-
-Publish from the `/docs` folder.
+```text
+/docs
+```
 
 ## Structure
 
 ```text
-README.md
 docs/
-  index.html
-  builder.html
-  templates.html
-  help.html
-  ai-menu-help.html
-  github-pages.html
-  .nojekyll
-  assets/
-    site.css
-  templates/
-    typical-uk-user.json
-    typical-us-consumer.json
-    software-developer.json
-    blank.json
-  examples/
-    start-page-uk-links.html
-    start-page-us-links.html
-    start-page-software.html
+  index.html              integrated public home page
+  templates.html          templates and example pages
+  ai-menu-help.html       instructions for building a menu with AI
+  github-pages.html       publishing guide
+  help.html               help and notes
+  builder.html            light-wrapper app page
+  assets/site.css         public site styling
+  templates/*.json        starter templates
+  examples/*.html         exported demo start pages
 ```
 
 ## Design rule
 
-The public information pages may use the integrated website design. The builder uses only a light wrapper. Exported start pages remain standalone-friendly and should not depend on the website design.
+The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
-## Protected layout rule
+## Stage 1.8 features
 
-The classic five-column start page renderer is treated as protected. Improve the surrounding service, templates and guidance without redesigning the proven menu layout.
+- Integrated home, templates, AI help, publishing and help pages.
+- Light-wrapper builder page with wide editor and preview panes.
+- Template selector: Typical UK User, Typical US User, Software Developer and Blank.
+- Real example start pages for UK, US and Software Developer menus.
+- Save/load start page as first-class actions.
+- Save/load menu config as first-class actions.
+- Import list dropdown: Markdown, CSV and plain text.
+- Export list dropdown: Markdown and plain text.
+- Load existing exported start page HTML back into the builder.
+- Section **Use** control remains, with sections used by default.
+- No framework, no backend, no account, no external library dependency.
+
+## File concepts
+
+- **Start page**: the finished `.html` page used in a browser or published online.
+- **Menu config**: the `.json` configuration file that lets this builder reload sections, links, colours and settings later.
+- **List**: Markdown, CSV or plain text used for importing/exporting links.
+
+## Local testing
+
+```bash
+cd docs
+python3 -m http.server 8000
+```
+
+Open `http://localhost:8000`.
