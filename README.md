@@ -1,4 +1,4 @@
-# Personal Start Page Creator — Stage 1.9
+# Personal Start Page Creator — Stage 1.10
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
@@ -7,10 +7,23 @@ A static GitHub Pages website for creating standalone personal start pages.
 
 ## GitHub Pages
 
-Set GitHub Pages to publish from:
+Set this project website to publish from:
 
 ```text
 /docs
+```
+
+For a user's own published start page, the simplest rule is:
+
+```text
+Rename the saved start page to index.html.
+```
+
+Then put `index.html` at the top of the chosen GitHub Pages publishing source:
+
+```text
+/index.html        if publishing from the repository root
+/docs/index.html   if publishing from /docs
 ```
 
 ## Structure
@@ -19,6 +32,7 @@ Set GitHub Pages to publish from:
 docs/
   index.html              integrated public home page
   templates.html          templates and example pages
+  why-start-page.html     explanation of why a custom start page is useful
   ai-menu-help.html       instructions for building a menu with AI
   github-pages.html       publishing guide
   help.html               help and notes
@@ -32,10 +46,13 @@ docs/
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
-## Stage 1.9 features
+## Stage 1.10 features
 
+- Added a **Why use a start page?** page explaining deep links, reduced distraction, spatial familiarity, no-extension use, and digital autonomy.
+- Home page now links to the start-page rationale as well as examples.
+- Publishing page now strongly recommends renaming the saved start page to `index.html` for GitHub Pages.
+- Publishing AI prompt now asks the AI to guide the user step by step, use `index.html`, calculate the final URL, write a README and choose a shortcut system.
 - Integrated home, templates, AI help, publishing and help pages.
-- Publishing page now includes a copy/paste AI prompt for step-by-step GitHub Pages setup, URL calculation, README wording and shortcut setup.
 - Light-wrapper builder page with wide editor and preview panes.
 - Template selector: Typical UK User, Typical US User, Software Developer and Blank.
 - Real example start pages for UK, US and Software Developer menus.
@@ -62,7 +79,6 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000`.
 
-
 ## Publishing URL pattern
 
 For a normal GitHub Pages project repository, the live URL is usually:
@@ -77,4 +93,4 @@ For a special user site repository named `USERNAME.github.io`, the live URL is u
 https://USERNAME.github.io/
 ```
 
-After publishing, add the URL to this README and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
+After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.

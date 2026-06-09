@@ -1,19 +1,27 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Publish with GitHub Pages · Personal Start Page Creator</title><link rel="stylesheet" href="assets/site.css"></head><body>
-<nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-cta" href="builder.html">Start building</a></div></nav>
-<main class="page"><section class="hero"><span class="badge">Use your start page anywhere</span><h1>Publish your start page with GitHub Pages.</h1><p>You can use your saved start page locally, or publish it online so it is available from any browser. GitHub Pages is a good option because your start page is just a static HTML file.</p></section>
+<nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="why-start-page.html">Why a start page?</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-cta" href="builder.html">Start building</a></div></nav>
+<main class="page"><section class="hero"><span class="badge">Use your start page anywhere</span><h1>Publish your start page with GitHub Pages.</h1><p>You can use your saved start page locally, or publish it online so it is available from any browser. For the simplest GitHub Pages setup, rename your saved start page to <code>index.html</code>.</p></section>
 <section class="mini-grid"><article class="card"><h2>Simple local use</h2><p>Save your start page, save it somewhere safe, and set that file as your browser homepage or start page.</p></article><article class="card"><h2>Use anywhere</h2><p>Publish the saved start page as <code>index.html</code> in a GitHub Pages repository, then open it from your GitHub Pages address.</p></article></section>
-<section class="section-title"><h2>Basic GitHub Pages workflow</h2><p>This is the practical version for a single exported start page.</p></section><section class="steps"><div class="step"><div><strong>Create a GitHub repository</strong><br><span class="tiny-note">For example, create a repository called <code>my-start-page</code>.</span></div></div><div class="step"><div><strong>Rename your saved page</strong><br><span class="tiny-note">Rename the exported start page to <code>index.html</code>.</span></div></div><div class="step"><div><strong>Upload it to the repository</strong><br><span class="tiny-note">Put <code>index.html</code> in the repository root, or in a <code>docs/</code> folder if you prefer that publishing source.</span></div></div><div class="step"><div><strong>Enable GitHub Pages</strong><br><span class="tiny-note">In repository settings, enable Pages and choose the branch/folder that contains your <code>index.html</code>.</span></div></div><div class="step"><div><strong>Open it anywhere</strong><br><span class="tiny-note">Use the GitHub Pages URL on your desktop, tablet or phone.</span></div></div></section>
+<section class="section-title"><h2>The simple rule: use <code>index.html</code></h2><p>GitHub Pages works most smoothly when the page you want people to see first is called <code>index.html</code>. Put that file at the top level of whichever folder GitHub Pages is publishing.</p></section>
+<section class="mini-grid"><article class="card"><h2>Publishing from repository root</h2><p>Put your file here:</p><p><code>/index.html</code></p><p>This is often the simplest option for a repository that only contains your personal start page.</p></article><article class="card"><h2>Publishing from <code>/docs</code></h2><p>Put your file here:</p><p><code>/docs/index.html</code></p><p>This is useful if your repository has other files but the website itself lives in <code>docs/</code>.</p></article></section>
+<section class="section-title"><h2>Basic GitHub Pages workflow</h2><p>This is the practical version for a single exported start page.</p></section><section class="steps"><div class="step"><div><strong>Create a GitHub repository</strong><br><span class="tiny-note">For example, create a repository called <code>my-start-page</code>.</span></div></div><div class="step"><div><strong>Rename your saved page</strong><br><span class="tiny-note">Rename the exported start page to <code>index.html</code>.</span></div></div><div class="step"><div><strong>Upload <code>index.html</code></strong><br><span class="tiny-note">Put it in the repository root, or inside <code>docs/</code> if you choose <code>/docs</code> as your publishing folder.</span></div></div><div class="step"><div><strong>Enable GitHub Pages</strong><br><span class="tiny-note">In repository settings, enable Pages and choose the branch/folder that contains your <code>index.html</code>.</span></div></div><div class="step"><div><strong>Open it anywhere</strong><br><span class="tiny-note">Use the GitHub Pages URL on your desktop, tablet or phone.</span></div></div></section>
 
-<section class="section-title"><h2>Let an AI walk you through publishing</h2><p>Copy this prompt into an AI assistant. It asks the AI to guide you one step at a time, work out your likely GitHub Pages URL, help you write a README, and choose a shortcut method so the start page is easy to open.</p></section>
+<section class="section-title"><h2>Let an AI walk you through publishing</h2><p>Copy this prompt into an AI assistant. It is designed to make the AI ask one question at a time, help you use <code>index.html</code>, work out your final URL, write a README, and choose a shortcut method.</p></section>
 <section class="card wide-card"><h2>Copy/paste AI prompt</h2><pre class="codeblock">I have created a personal start page as a standalone HTML file and I want to publish it with GitHub Pages so I can open it anywhere.
 
 Please guide me step by step. Do not give all instructions at once. Ask me for one piece of information at a time and wait for my answer.
+
+Important rule for simplicity:
+- Help me rename my downloaded start page to index.html.
+- Help me put index.html in the correct publishing location.
+- If I publish from the repository root, index.html should be at /index.html.
+- If I publish from /docs, index.html should be at /docs/index.html.
 
 Help me with:
 1. Checking whether I have a GitHub account.
 2. Choosing a repository name for my start page.
 3. Deciding whether to publish from the repository root or from a docs/ folder.
-4. Renaming my exported start page to index.html if needed.
+4. Renaming my exported start page to index.html.
 5. Uploading index.html to the right place.
 6. Enabling GitHub Pages in repository Settings → Pages.
 7. Working out my final URL.
@@ -24,12 +32,18 @@ When calculating the URL, use this rule:
 - For a normal project repository, the URL will usually be: https://USERNAME.github.io/REPOSITORY/
 - For a special user site repository named USERNAME.github.io, the URL will usually be: https://USERNAME.github.io/
 
+When writing the README.md, include:
+- the live start-page URL
+- what the repository is for
+- where index.html is stored
+- how I can update the page later
+
 Ask me which shortcut system I want to use, for example:
 - browser bookmark or bookmarks bar
 - browser homepage/start page setting
 - desktop shortcut
 - phone/tablet “Add to Home Screen”
-- a notes app or launcher link
+- a notes app, launcher app or shortcut manager
 
 After each step, check that I have completed it before moving on.</pre></section>
 <section class="section-title"><h2>What your URL will look like</h2><p>For most people using a normal repository, the address follows this pattern:</p></section>
@@ -41,13 +55,15 @@ Live start page: https://USERNAME.github.io/REPOSITORY/
 This repository publishes my personal browser start page using GitHub Pages.
 The page is a standalone HTML file created with Personal Start Page Creator.
 
+Published file:
+- index.html
+
 To update it:
 1. Edit the menu in the builder.
 2. Save a new start page.
 3. Rename it to index.html.
 4. Replace the old index.html in this repository.</pre></section>
-<section class="card wide-card"><h2>Make it easy to open</h2><p>After publishing, choose the shortcut system that suits you. You might set the URL as your browser homepage, add it to the bookmarks bar, create a desktop shortcut, or add it to your phone or tablet home screen. The best option depends on your device and browser, so the AI prompt above asks which route you want to use.</p></section>
-
+<section class="card wide-card"><h2>Make it easy to open</h2><p>After publishing, choose the shortcut system that suits you. You might set the URL as your browser homepage, add it to the bookmarks bar, create a desktop shortcut, add it to your phone or tablet home screen, or use a launcher/shortcut app. The best option depends on your device and browser, so the AI prompt above asks which route you want to use.</p></section>
 <section class="card"><h2>Updating later</h2><p>Keep your menu config JSON. When you want to change your menu, reopen it in the builder, save a new start page, rename it to <code>index.html</code>, and replace the old file in your repository.</p></section>
 <section class="inline-note"><strong>Privacy note:</strong> if you publish a start page on GitHub Pages, the links on that page are public. Use local files for private menus.</section>
 </main><footer class="site-footer">The exported start pages are standalone-friendly and work on desktop, tablet and mobile.<div class="footer-links"><a href="https://markbeachill.github.io/start-page-builder">Live site</a><a href="https://github.com/markbeachill/start-page-builder">GitHub repository</a></div></footer></body></html>
