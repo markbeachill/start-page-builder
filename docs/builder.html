@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Builder · Personal Start Page Creator</title>
+  <style>
+    :root{
+      --site-bg:#f5f7fb;
+      --site-card:#ffffff;
+      --site-text:#1f2937;
+      --site-muted:#6b7280;
+      --site-border:#d8dee9;
+      --site-accent:#2563eb;
+      --site-accent-dark:#1d4ed8;
+      --site-danger:#b91c1c;
+      --site-soft:#eef4ff;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--site-bg);color:var(--site-text)}
+    .site-shell{max-width:1280px;margin:0 auto;padding:22px 16px 42px}
+    .hero{background:linear-gradient(135deg,#ffffff,#eef4ff);border:1px solid var(--site-border);border-radius:16px;padding:26px;margin-bottom:16px;box-shadow:0 10px 28px rgba(15,23,42,.06)}
+    .hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,42px);line-height:1.05}.hero p{margin:0;max-width:850px;color:var(--site-muted);font-size:17px;line-height:1.55}
+    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#fff;border:1px solid var(--site-border);border-radius:12px;padding:12px;margin-bottom:16px;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px rgba(15,23,42,.05)}
+    button,.file-label{border:1px solid var(--site-accent-dark);background:var(--site-accent);color:#fff;border-radius:8px;padding:8px 11px;font-weight:650;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;line-height:1.2}
+    button.secondary,.file-label.secondary{background:#fff;color:var(--site-accent-dark)}button.danger{background:#fff;color:var(--site-danger);border-color:#fecaca}.mini{font-size:12px;padding:5px 7px;border-radius:6px;font-weight:650}button:hover,.file-label:hover{filter:brightness(.96)}button:disabled{opacity:.5;cursor:not-allowed}input[type=file]{display:none}
+    .status{font-size:13px;color:var(--site-muted);margin-left:auto;min-width:220px;text-align:right}.grid{display:grid;grid-template-columns:430px minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--site-card);border:1px solid var(--site-border);border-radius:12px;padding:14px;box-shadow:0 4px 16px rgba(15,23,42,.04)}
+    .panel h2{font-size:18px;margin:0 0 8px}.panel p{font-size:14px;color:var(--site-muted);line-height:1.5;margin:0 0 12px}
+    .settings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.field{display:flex;flex-direction:column;gap:4px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:700;color:#4b5563}.field input,.field textarea,.link-row input,.section-title input,.field select,.section-title select{border:1px solid var(--site-border);border-radius:8px;padding:8px;font:inherit;font-size:14px;background:#fff}.field textarea{min-height:58px;resize:vertical}.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.section-list{display:flex;flex-direction:column;gap:10px;max-height:72vh;overflow:auto;padding-right:4px}
+    .section-card{border:1px solid var(--site-border);border-radius:12px;background:#fbfdff;overflow:hidden}.section-card.excluded{opacity:.58;background:#f6f6f6}.section-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:start;padding:10px;border-bottom:1px solid #eef0f4}.section-title{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:7px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}.toggle-line{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--site-muted);font-weight:700;padding-top:7px}.toggle-line input{margin:0}.links{display:flex;flex-direction:column;gap:7px;padding:10px}.link-row{display:grid;grid-template-columns:minmax(80px,1fr) minmax(120px,1.5fr) 82px auto;gap:6px;align-items:center}.empty-links{font-size:13px;color:var(--site-muted);padding:2px 0}.section-foot{padding:0 10px 10px;display:flex;gap:7px}.preview-panel{padding:0;overflow:hidden}.preview-head{padding:14px 16px;border-bottom:1px solid var(--site-border);display:flex;justify-content:space-between;gap:12px;align-items:center}.preview-head h2{margin:0;font-size:18px}.preview-meta{font-size:13px;color:var(--site-muted)}.preview-frame{background:#fff;min-height:650px;max-height:78vh;overflow:auto}.note{font-size:13px;color:var(--site-muted);line-height:1.5;margin-top:12px}.privacy{margin-top:16px;background:#fff;border:1px solid var(--site-border);border-radius:12px;padding:16px;color:var(--site-muted);font-size:14px}.privacy strong{color:var(--site-text)}
+    .colour-dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.2);display:inline-block}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:980px){.grid{grid-template-columns:1fr}.status{width:100%;margin-left:0;text-align:left}.toolbar{position:static}.section-list{max-height:none}.preview-frame{max-height:none}.settings{grid-template-columns:1fr}.link-row{grid-template-columns:1fr}.section-title{grid-template-columns:1fr}.section-head{grid-template-columns:1fr}.section-controls{justify-content:flex-start}}
+  
+    .site-nav{background:#fff;border-bottom:1px solid var(--site-border);position:sticky;top:0;z-index:100}.site-nav-inner{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;align-items:center}.brand{font-weight:800;color:var(--site-text);text-decoration:none;margin-right:auto}.nav-link{font-weight:650;color:#334155;text-decoration:none;font-size:14px}.nav-link:hover{text-decoration:underline}.light-page-note{font-size:13px;color:var(--site-muted);margin:8px 0 0}.import-group{display:flex;gap:8px;flex-wrap:wrap}
+  </style>
+  <style id="classicMenuCss"></style>
+</head>
+<body>
+  <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="help.html">Help</a><a class="nav-link" href="builder.html">Builder</a></div></nav>
+  <main class="site-shell">
+    <section class="hero">
+      <h1>Start Page Builder</h1>
+      <p>Choose a template, edit sections and links, preview the protected classic five-column menu, and export a standalone HTML start page.</p>
+      <p class="light-page-note">This builder uses a light website wrapper only. The preview and exported start pages remain standalone-friendly.</p>
+    </section>
+
+    <div class="toolbar" aria-label="Menu actions">
+      <label>Template
+        <select id="templateSelect">
+          <option value="typical-uk-user">Typical UK User</option>
+          <option value="software-developer">Software Developer</option>
+          <option value="typical-us-consumer">Typical US User</option>
+          <option value="blank">Blank</option>
+        </select>
+      </label>
+      <button id="loadTemplateBtn" type="button">Load selected template</button>
+      <button id="exportHtmlBtn" type="button">Download HTML</button>
+      <button id="exportProjectBtn" type="button" class="secondary">Download project JSON</button>
+      <button id="exportMarkdownBtn" type="button" class="secondary">Download MD</button>
+      <button id="exportTextBtn" type="button" class="secondary">Download TXT</button>
+      <span class="import-group">
+        <label class="file-label secondary">Import JSON <input id="importJsonInput" type="file" accept="application/json,.json"></label>
+        <label class="file-label secondary">Import Markdown <input id="importMarkdownInput" type="file" accept=".md,.markdown,text/markdown,text/plain"></label>
+        <label class="file-label secondary">Import CSV <input id="importCsvInput" type="file" accept=".csv,text/csv,text/plain"></label>
+        <label class="file-label secondary">Import TXT <input id="importTextInput" type="file" accept=".txt,text/plain"></label>
+      </span>
+      <button id="clearSavedBtn" type="button" class="danger">Clear browser save</button>
+      <span id="status" class="status">Loading starter template…</span>
+    </div>
+
+    <div class="grid">
+      <aside class="panel" aria-label="Menu editor">
+        <h2>Edit your menu</h2>
+        <p id="templateDescription">Choose sections and links, then export your personal start page.</p>
+
+        <div class="settings">
+          <div class="field">
+            <label for="titleInput">Page title</label>
+            <input id="titleInput" type="text" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="filenameInput">HTML filename</label>
+            <input id="filenameInput" type="text" autocomplete="off" placeholder="links.html">
+          </div>
+          <div class="field full">
+            <label for="descriptionInput">Description / notes</label>
+            <textarea id="descriptionInput"></textarea>
+          </div>
+        </div>
+
+        <div class="editor-actions">
+          <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
+          <button id="includeAllBtn" type="button" class="secondary">Include all</button>
+          <button id="excludeAllBtn" type="button" class="secondary">Exclude all</button>
+        </div>
+
+        <div id="sectionList" class="section-list"></div>
+        <div class="note">Stage 1 keeps the proven Classic Five-Column menu intact. These controls only change the data that is passed into the protected renderer.</div>
+      </aside>
+
+      <section class="panel preview-panel" aria-label="Menu preview">
+        <div class="preview-head">
+          <h2>Classic Five-Column Preview</h2>
+          <span id="previewMeta" class="preview-meta">0 sections · 0 links · 5 columns</span>
+        </div>
+        <div id="preview" class="preview-frame"></div>
+      </section>
+    </div>
+
+    <section class="privacy">
+      <strong>Privacy:</strong> this is a static GitHub Pages app. Your menu is created in your browser and auto-saved locally in this browser. Nothing is uploaded to a server. To keep a portable copy, download your project JSON.
+    </section>
+  </main>
+
+<script>
+/*
+  Protected Classic Five-Column Renderer
+  --------------------------------------
+  This section is deliberately based on the known-good menu output.
+  Do not redesign the five-column layout while building the editor around it.
+*/
+const defaultPalette = {
+  blue:   "#4d90fe",
+  green:  "#35aa47",
+  orange: "#d84a38",
+  purple: "#852b99",
+  red:    "#bd121d"
+};
+const allowedColours = ["blue","green","orange","purple","red"];
+const STORAGE_KEY = "personalStartPageCreatorStage1";
+
+function escapeHtml(str){
+  return String(str ?? "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#39;");
+}
+function cleanColour(colour){ return allowedColours.includes(colour) ? colour : "blue"; }
+function ensureHtmlFilename(name){
+  let filename = String(name || "links.html").trim() || "links.html";
+  if(!/\.html?$/i.test(filename)) filename += ".html";
+  return filename.replace(/[\\/:*?"<>|]+/g,"-");
+}
+function defaultProject(){
+  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"links.html",sections:[]};
+}
+function defaultState(){
+  return {
+    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"links.html",columns:5,theme:"light",palette:{...defaultPalette}},
+    menu:{columns:[{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}]}
+  };
+}
+function ensureFiveColumns(menu){
+  const desired = 5;
+  const cols = menu.columns || [];
+  if(cols.length < desired){ while(cols.length < desired) cols.push({items:[]}); menu.columns = cols; }
+  else if(cols.length > desired){ const keep = cols.slice(0, desired); const extra = cols.slice(desired); const target = keep[keep.length - 1]; extra.forEach(c => target.items.push(...(c.items || []))); menu.columns = keep; }
+}
+function colorToClasses(color){ const c = cleanColour(color || "blue"); return {btn:c + "-btn", hdr:c + "-hdr"}; }
+function buildClassicMenuCss(settings){
+  const pal = settings.palette || defaultPalette;
+  const bodyBg = settings.theme === "dark" ? "#111" : "#ffffff";
+  const bodyColor = settings.theme === "dark" ? "#e6e6e6" : "#333333";
+  const searchBg = settings.theme === "dark" ? "#222" : "#f1f1f1";
+  const searchBorder = settings.theme === "dark" ? "#444" : "#ddd";
+  return `
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bodyBg};color:${bodyColor};}
+.searchbar-wrapper{background:${searchBg};padding:10px 15px;border-bottom:1px solid ${searchBorder};}
+.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-form input[type="text"]{flex:1 1 200px;padding:6px 8px;border:1px solid #ccc;border-radius:2px;font-size:14px;}
+.searchbar-form button{padding:6px 12px;border-radius:2px;border:1px solid ${pal.blue};background:${pal.blue};color:#fff;cursor:pointer;}
+.searchbar-form button:hover{background:#3367d6;}
+.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;}
+.maincontent{clear:both;width:80%;font-size:.8125em;max-width:92.3em;margin:0 auto;padding:1em 0;color:${bodyColor};line-height:1.5em;position:relative;}
+.section{clear:both;padding:0;margin:0;}
+.group{display:flex;flex-wrap:nowrap;justify-content:space-between;}
+.col{box-sizing:border-box;flex:0 0 19%;max-width:19%;margin:1% 0;}
+.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
+@media only screen and (max-width:767px){.group{flex-wrap:wrap;}.col{flex:1 1 100%;max-width:100%;margin:1% 0;}}
+.btn{text-align:left;width:200px;color:#333;position:relative;display:inline-block;overflow:visible;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;border-image:none 100% / 1 / 0 stretch;background:#eee none repeat scroll 0 0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;min-width:42px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;vertical-align:inherit;font-weight:600;}
+.btn:hover{background-color:#aaa;color:#000;}
+.blue-btn{border-color:currentcolor currentcolor currentcolor ${pal.blue};}.green-btn{border-color:currentcolor currentcolor currentcolor ${pal.green};}.orange-btn{border-color:currentcolor currentcolor currentcolor ${pal.orange};}.purple-btn{border-color:currentcolor currentcolor currentcolor ${pal.purple};}.red-btn{border-color:currentcolor currentcolor currentcolor ${pal.red};}
+.hdr{text-align:left;width:200px;color:#fff;position:relative;display:inline-block;overflow:visible;margin:0;margin-top:8px;padding:10px 14px;cursor:pointer;outline:0;border:0;background-repeat:repeat-x;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;min-width:42px;text-shadow:none;text-decoration:none;white-space:nowrap;vertical-align:inherit;}
+.blue-hdr{background-color:${pal.blue};}.green-hdr{background-color:${pal.green};}.orange-hdr{background-color:${pal.orange};}.purple-hdr{background-color:${pal.purple};}.red-hdr{background-color:${pal.red};}
+.hdr-para{margin-bottom:1.8em;line-height:160%;margin:0;}
+`;
+}
+function renderClassicMenuBody(menu, settings){
+  ensureFiveColumns(menu);
+  const colClass = "span_1_of_5";
+  let body = "";
+  if(settings.pageHeadline){ body += `<div class="page-headline">${escapeHtml(settings.pageHeadline)}</div>\n`; }
+  body += `
+<div class="searchbar-wrapper">
+  <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+    <input type="text" name="q" placeholder="Search...">
+    <label><input type="radio" name="searchtype" value="web" checked> Web</label>
+    <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
+    <button type="submit">Go</button>
+  </form>
+</div>
+<div class="maincontent">
+  <div class="section group">
+`;
+  menu.columns.forEach(col => {
+    body += `<div class="col ${colClass}">`;
+    (col.items || []).forEach(item => {
+      const classes = colorToClasses(item.color || "blue");
+      if(item.type === "header"){
+        body += `
+    <p class="hdr-para">
+      <a class="hdr ${classes.hdr}" data-section-header="true"><b>${escapeHtml(item.text || "")}</b></a>
+    </p>
+`;
+      }else{
+        body += `
+    <a class="btn ${classes.btn}" href="${escapeHtml(item.url || "#")}" target="_blank" rel="noopener noreferrer">
+      ${escapeHtml(item.text || "")}
+    </a>
+`;
+      }
+    });
+    body += `</div>`;
+  });
+  body += `
+  </div>
+</div>`;
+  return body;
+}
+function attachClassicMenuBehaviour(root=document){
+  const form = root.querySelector(".searchbar-form");
+  if(form){
+    form.addEventListener("submit", function(){
+      const type = form.querySelector('input[name="searchtype"]:checked');
+      const q = form.querySelector('input[name="q"]');
+      if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
+    });
+  }
+  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
+    h.addEventListener("click", function(ev){
+      ev.preventDefault();
+      let current = h.parentElement.nextElementSibling;
+      let hiding = false;
+      while(current){
+        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        current = current.nextElementSibling;
+      }
+      current = h.parentElement.nextElementSibling;
+      while(current){
+        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader2) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        current = current.nextElementSibling;
+      }
+    });
+  });
+}
+function exportClassicStandaloneHtml(state){
+  const css = buildClassicMenuCss(state.settings);
+  const body = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings);
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>${escapeHtml(state.settings.pageTitle || "Personal Start Page")}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+${css}
+  </style>
+</head>
+<body>
+${body}
+<script>
+  (${attachClassicMenuBehaviour.toString()})(document);
+<\/script>
+</body>
+</html>`;
+}
+
+/* Project data and conversion */
+let project = defaultProject();
+let renderQueued = false;
+function normaliseFriendlyProject(input){
+  const p = defaultProject();
+  p.title = input.title || input.settings?.pageTitle || "Personal Start Page";
+  p.description = input.description || "";
+  p.filename = ensureHtmlFilename(input.filename || input.settings?.menuFilename || "links.html");
+  p.sections = (input.sections || []).map(section => ({
+    name: section.name || section.text || "Section",
+    colour: cleanColour(section.colour || section.color || "blue"),
+    included: section.included !== false,
+    links: (section.links || []).map(link => ({
+      label: link.label || link.text || "Link",
+      url: link.url || "#",
+      colour: cleanColour(link.colour || link.color || section.colour || section.color || "blue"),
+      included: link.included !== false
+    }))
+  }));
+  return p;
+}
+function internalStateToProject(input){
+  const p = defaultProject();
+  p.title = input.settings?.pageTitle || "Personal Start Page";
+  p.description = input.settings?.pageHeadline || "";
+  p.filename = ensureHtmlFilename(input.settings?.menuFilename || "links.html");
+  const sections = [];
+  (input.menu?.columns || []).forEach(col => {
+    let current = null;
+    (col.items || []).forEach(item => {
+      if(item.type === "header"){
+        current = {name:item.text || "Section", colour:cleanColour(item.color || "blue"), included:true, links:[]};
+        sections.push(current);
+      }else if(item.type === "link"){
+        if(!current){ current = {name:"Links", colour:cleanColour(item.color || "blue"), included:true, links:[]}; sections.push(current); }
+        current.links.push({label:item.text || "Link", url:item.url || "#", colour:cleanColour(item.color || current.colour), included:true});
+      }
+    });
+  });
+  p.sections = sections;
+  return p;
+}
+function projectToInternalState(p){
+  const state = defaultState();
+  state.settings.pageTitle = p.title || "Personal Start Page";
+  state.settings.pageHeadline = "";
+  state.settings.menuFilename = ensureHtmlFilename(p.filename || "links.html");
+  state.menu.columns = [{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}];
+  (p.sections || []).filter(s => s.included !== false).forEach(section => {
+    const colour = cleanColour(section.colour || "blue");
+    const block = [{type:"header", text:section.name || "Section", color:colour}];
+    (section.links || []).filter(link => link.included !== false).forEach(link => {
+      block.push({type:"link", text:link.label || "Link", url:link.url || "#", color:cleanColour(link.colour || colour)});
+    });
+    let targetIndex = 0;
+    let fewest = Infinity;
+    state.menu.columns.forEach((col, i) => {
+      const count = (col.items || []).length;
+      if(count < fewest){ fewest = count; targetIndex = i; }
+    });
+    state.menu.columns[targetIndex].items.push(...block);
+  });
+  ensureFiveColumns(state.menu);
+  return state;
+}
+function getCurrentState(){ return projectToInternalState(project); }
+function downloadBlob(content, filename, type){
+  const blob = new Blob([content], {type});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url; a.download = filename;
+  document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+}
+function setStatus(message){ document.getElementById("status").textContent = message; }
+function saveToBrowser(){
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(project)); }
+  catch(err){ console.warn("Could not save locally", err); }
+}
+function loadFromBrowser(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return null;
+    return normaliseFriendlyProject(JSON.parse(raw));
+  }catch(err){ console.warn("Could not load local save", err); return null; }
+}
+function colourOptions(selected){
+  return allowedColours.map(c => `<option value="${c}" ${c === selected ? "selected" : ""}>${c}</option>`).join("");
+}
+function scheduleRender(save=true){
+  if(save) saveToBrowser();
+  if(renderQueued) return;
+  renderQueued = true;
+  requestAnimationFrame(() => { renderQueued = false; renderAll(); });
+}
+function bindInput(id, key){
+  const el = document.getElementById(id);
+  el.value = project[key] || "";
+  el.addEventListener("input", () => { project[key] = key === "filename" ? ensureHtmlFilename(el.value) : el.value; scheduleRender(); });
+}
+function renderSettings(){
+  document.getElementById("titleInput").value = project.title || "";
+  document.getElementById("filenameInput").value = project.filename || "links.html";
+  document.getElementById("descriptionInput").value = project.description || "";
+  document.getElementById("templateDescription").textContent = project.description || "Choose sections and links, then export your personal start page.";
+}
+function renderEditor(){
+  const container = document.getElementById("sectionList");
+  if(!project.sections.length){
+    container.innerHTML = `<div class="section-card"><div class="links"><div class="empty-links">No sections yet. Use “Add section” to start.</div></div></div>`;
+    return;
+  }
+  container.innerHTML = project.sections.map((section, si) => {
+    const included = section.included !== false;
+    const linkRows = (section.links || []).map((link, li) => `
+      <div class="link-row" data-section-index="${si}" data-link-index="${li}">
+        <input type="text" value="${escapeHtml(link.label || "")}" data-action="link-label" aria-label="Link label">
+        <input type="url" value="${escapeHtml(link.url || "")}" data-action="link-url" aria-label="Link URL">
+        <select data-action="link-colour" aria-label="Link colour">${colourOptions(cleanColour(link.colour || section.colour))}</select>
+        <button type="button" class="mini danger" data-action="delete-link">Remove</button>
+      </div>
+    `).join("") || `<div class="empty-links">No links in this section yet.</div>`;
+    return `
+      <article class="section-card ${included ? "" : "excluded"}" data-section-index="${si}">
+        <div class="section-head">
+          <label class="toggle-line"><input type="checkbox" data-action="toggle-section" ${included ? "checked" : ""}> Use</label>
+          <div class="section-title">
+            <input type="text" value="${escapeHtml(section.name || "")}" data-action="section-name" aria-label="Section name">
+            <select data-action="section-colour" aria-label="Section colour">${colourOptions(cleanColour(section.colour || "blue"))}</select>
+          </div>
+          <div class="section-controls">
+            <button type="button" class="mini secondary" data-action="move-section-up" ${si === 0 ? "disabled" : ""}>↑</button>
+            <button type="button" class="mini secondary" data-action="move-section-down" ${si === project.sections.length - 1 ? "disabled" : ""}>↓</button>
+            <button type="button" class="mini secondary" data-action="duplicate-section">Copy</button>
+            <button type="button" class="mini danger" data-action="delete-section">Delete</button>
+          </div>
+        </div>
+        <div class="links">${linkRows}</div>
+        <div class="section-foot"><button type="button" class="mini secondary" data-action="add-link">+ Add link</button></div>
+      </article>`;
+  }).join("");
+}
+function renderPreview(){
+  const state = getCurrentState();
+  document.getElementById("classicMenuCss").textContent = buildClassicMenuCss(state.settings);
+  const preview = document.getElementById("preview");
+  preview.innerHTML = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings);
+  attachClassicMenuBehaviour(preview);
+  const includedSections = project.sections.filter(s => s.included !== false);
+  const linkCount = includedSections.reduce((sum, s) => sum + (s.links || []).filter(l => l.included !== false).length, 0);
+  document.getElementById("previewMeta").textContent = `${includedSections.length} sections · ${linkCount} links · 5 columns`;
+}
+function renderAll(){ renderSettings(); renderEditor(); renderPreview(); }
+function onSectionListInput(event){
+  const card = event.target.closest(".section-card");
+  if(!card) return;
+  const si = Number(card.dataset.sectionIndex);
+  const section = project.sections[si];
+  if(!section) return;
+  const action = event.target.dataset.action;
+  if(action === "section-name") section.name = event.target.value;
+  if(action === "section-colour"){
+    const oldColour = section.colour;
+    section.colour = cleanColour(event.target.value);
+    (section.links || []).forEach(link => { if(!link.colour || link.colour === oldColour) link.colour = section.colour; });
+  }
+  if(action === "toggle-section") section.included = event.target.checked;
+  const row = event.target.closest(".link-row");
+  if(row){
+    const li = Number(row.dataset.linkIndex);
+    const link = section.links?.[li];
+    if(link){
+      if(action === "link-label") link.label = event.target.value;
+      if(action === "link-url") link.url = event.target.value;
+      if(action === "link-colour") link.colour = cleanColour(event.target.value);
+    }
+  }
+  scheduleRender();
+}
+function onSectionListClick(event){
+  const action = event.target.dataset.action;
+  if(!action) return;
+  const card = event.target.closest(".section-card");
+  if(!card) return;
+  const si = Number(card.dataset.sectionIndex);
+  const section = project.sections[si];
+  if(!section) return;
+  if(action === "delete-section"){
+    if(confirm(`Delete section “${section.name || "Section"}”?`)) project.sections.splice(si, 1);
+  }else if(action === "duplicate-section"){
+    project.sections.splice(si + 1, 0, JSON.parse(JSON.stringify({...section, name:(section.name || "Section") + " copy"})));
+  }else if(action === "move-section-up" && si > 0){
+    [project.sections[si - 1], project.sections[si]] = [project.sections[si], project.sections[si - 1]];
+  }else if(action === "move-section-down" && si < project.sections.length - 1){
+    [project.sections[si + 1], project.sections[si]] = [project.sections[si], project.sections[si + 1]];
+  }else if(action === "add-link"){
+    section.links = section.links || [];
+    section.links.push({label:"New link", url:"https://", colour:cleanColour(section.colour || "blue"), included:true});
+  }else if(action === "delete-link"){
+    const row = event.target.closest(".link-row");
+    if(row){ section.links.splice(Number(row.dataset.linkIndex), 1); }
+  }
+  scheduleRender();
+}
+const templateFiles = {
+  "typical-uk-user":"templates/typical-uk-user.json",
+  "software-developer":"templates/software-developer.json",
+  "typical-us-consumer":"templates/typical-us-consumer.json",
+  "blank":"templates/blank.json"
+};
+function getTemplateFromUrl(){
+  const params = new URLSearchParams(location.search);
+  return params.get("template") || "typical-uk-user";
+}
+async function loadSelectedTemplate(force=false){
+  const key = document.getElementById("templateSelect")?.value || getTemplateFromUrl();
+  if(!force){
+    const saved = loadFromBrowser();
+    if(saved){ project = saved; renderAll(); setStatus("Loaded browser auto-save."); return; }
+  }
+  try{
+    const response = await fetch(templateFiles[key] || templateFiles["typical-uk-user"], {cache:"no-store"});
+    if(!response.ok) throw new Error("Could not load template JSON");
+    const template = await response.json();
+    project = normaliseFriendlyProject(template);
+    project.filename = "links.html";
+    saveToBrowser(); renderAll(); setStatus("Loaded template: " + (project.title || key));
+  }catch(err){ setStatus("Could not load template. Use a local web server, not file://."); console.error(err); }
+}
+function loadTemplate(force=false){ return loadSelectedTemplate(force); }
+function importJsonFile(file){
+  const reader = new FileReader();
+  reader.onload = e => {
+    try{
+      const parsed = JSON.parse(e.target.result);
+      if(parsed.settings && parsed.menu) project = internalStateToProject(parsed);
+      else if(parsed.sections) project = normaliseFriendlyProject(parsed);
+      else throw new Error("Unrecognised JSON format");
+      saveToBrowser(); renderAll(); setStatus("Imported JSON project/config.");
+    }catch(err){ alert("Could not import JSON: " + err.message); }
+  };
+  reader.readAsText(file);
+}
+
+function readTextFile(file, callback){
+  const reader = new FileReader();
+  reader.onload = e => callback(String(e.target.result || ""));
+  reader.readAsText(file);
+}
+function parseMarkdownMenu(text){
+  const lines = text.split(/\r?\n/);
+  const out = {format:"personal-start-page-creator-v1", title:"Imported Markdown Menu", description:"Imported from Markdown.", filename:"links.html", sections:[]};
+  let current = null;
+  for(const raw of lines){
+    const line = raw.trim();
+    if(!line) continue;
+    const h1 = line.match(/^#\s+(.+)/);
+    if(h1 && !line.startsWith("##")){ out.title = h1[1].trim(); continue; }
+    const h2 = line.match(/^##\s+(.+)/);
+    if(h2){ current = {name:h2[1].trim(), colour:"blue", included:true, links:[]}; out.sections.push(current); continue; }
+    const link = line.match(/^[-*]\s*\[([^\]]+)\]\(([^)]+)\)/);
+    if(link){ if(!current){ current={name:"Links", colour:"blue", included:true, links:[]}; out.sections.push(current); } current.links.push({label:link[1].trim(), url:link[2].trim(), colour:current.colour, included:true}); }
+  }
+  return normaliseFriendlyProject(out);
+}
+function splitCsvLine(line){
+  const cells=[]; let cell=""; let quoted=false;
+  for(let i=0;i<line.length;i++){
+    const ch=line[i];
+    if(ch==='"' && line[i+1]==='"'){ cell+='"'; i++; }
+    else if(ch==='"'){ quoted=!quoted; }
+    else if(ch===',' && !quoted){ cells.push(cell.trim()); cell=""; }
+    else cell+=ch;
+  }
+  cells.push(cell.trim()); return cells;
+}
+function parseCsvMenu(text){
+  const rows = text.split(/\r?\n/).map(l=>l.trim()).filter(Boolean).map(splitCsvLine);
+  if(!rows.length) return defaultProject();
+  const header = rows[0].map(h=>h.toLowerCase());
+  const idx = name => header.indexOf(name);
+  const si=idx("section"), li=idx("label"), ui=idx("url"), ci=idx("colour")>=0?idx("colour"):idx("color");
+  const out={format:"personal-start-page-creator-v1",title:"Imported CSV Menu",description:"Imported from CSV.",filename:"links.html",sections:[]};
+  const byName=new Map();
+  for(const row of rows.slice(1)){
+    const sectionName = row[si>=0?si:0] || "Links";
+    const label = row[li>=0?li:1] || "";
+    const url = row[ui>=0?ui:2] || "";
+    if(!label && !url) continue;
+    const colour = cleanColour(row[ci] || "blue");
+    if(!byName.has(sectionName)){ const sec={name:sectionName, colour, included:true, links:[]}; byName.set(sectionName, sec); out.sections.push(sec); }
+    const sec=byName.get(sectionName);
+    sec.links.push({label, url, colour:cleanColour(row[ci] || sec.colour), included:true});
+  }
+  return normaliseFriendlyProject(out);
+}
+function parsePlainTextMenu(text){
+  const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"links.html",sections:[]};
+  let current=null;
+  for(const raw of text.split(/\r?\n/)){
+    const line=raw.trim(); if(!line) continue;
+    const sec=line.match(/^\[([^\]]+)\]$/);
+    if(sec){ current={name:sec[1].trim(), colour:"blue", included:true, links:[]}; out.sections.push(current); continue; }
+    const parts=line.split("|");
+    if(parts.length>=2){ if(!current){current={name:"Links",colour:"blue",included:true,links:[]}; out.sections.push(current);} current.links.push({label:parts[0].trim(), url:parts.slice(1).join("|").trim(), colour:current.colour, included:true}); }
+  }
+  return normaliseFriendlyProject(out);
+}
+function importProjectObject(obj, label){ project = normaliseFriendlyProject(obj); saveToBrowser(); renderAll(); setStatus("Imported " + label + "."); }
+function exportMarkdown(){
+  const lines=["# "+(project.title||"My Start Page"), ""];
+  project.sections.filter(s=>s.included!==false).forEach(sec=>{ lines.push("## "+(sec.name||"Links")); (sec.links||[]).filter(l=>l.included!==false).forEach(l=>lines.push(`- [${l.label||"Link"}](${l.url||"#"})`)); lines.push(""); });
+  return lines.join("\n");
+}
+function exportPlainText(){
+  const lines=[project.title||"My Start Page", "=".repeat(40), ""];
+  project.sections.filter(s=>s.included!==false).forEach(sec=>{ lines.push("["+(sec.name||"Links")+"]"); (sec.links||[]).filter(l=>l.included!==false).forEach(l=>lines.push((l.label||"Link")+" | "+(l.url||"#"))); lines.push(""); });
+  return lines.join("\n");
+}
+function initialiseEvents(){
+  document.getElementById("titleInput").addEventListener("input", e => { project.title = e.target.value; scheduleRender(); });
+  document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; scheduleRender(); });
+  document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; scheduleRender(); });
+  document.getElementById("sectionList").addEventListener("input", onSectionListInput);
+  document.getElementById("sectionList").addEventListener("change", onSectionListInput);
+  document.getElementById("sectionList").addEventListener("click", onSectionListClick);
+  document.getElementById("addSectionBtn").addEventListener("click", () => {
+    project.sections.push({name:"New section", colour:"blue", included:true, links:[{label:"New link", url:"https://", colour:"blue", included:true}]}); scheduleRender();
+  });
+  document.getElementById("includeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = true); scheduleRender(); });
+  document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); scheduleRender(); });
+  const templateFromUrl = getTemplateFromUrl();
+  if(templateFiles[templateFromUrl]) document.getElementById("templateSelect").value = templateFromUrl;
+  document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Load selected template to replace the current menu."));
+  document.getElementById("loadTemplateBtn").addEventListener("click", () => {
+    if(confirm("Load the selected template? This replaces the current menu in this browser.")) loadTemplate(true);
+  });
+  document.getElementById("exportHtmlBtn").addEventListener("click", () => {
+    const state = getCurrentState();
+    downloadBlob(exportClassicStandaloneHtml(state), ensureHtmlFilename(project.filename || state.settings.menuFilename), "text/html");
+    setStatus("Downloaded standalone HTML.");
+  });
+  document.getElementById("exportProjectBtn").addEventListener("click", () => {
+    const filename = ensureHtmlFilename(project.filename || "links.html").replace(/\.html?$/i,"-project.json");
+    downloadBlob(JSON.stringify(project,null,2), filename, "application/json");
+    setStatus("Downloaded project JSON.");
+  });
+  document.getElementById("exportMarkdownBtn").addEventListener("click", () => { downloadBlob(exportMarkdown(), "start-page.md", "text/markdown"); setStatus("Downloaded Markdown."); });
+  document.getElementById("exportTextBtn").addEventListener("click", () => { downloadBlob(exportPlainText(), "start-page.txt", "text/plain"); setStatus("Downloaded plain text."); });
+  document.getElementById("importJsonInput").addEventListener("change", event => { const file = event.target.files[0]; if(file) importJsonFile(file); event.target.value = ""; });
+  document.getElementById("importMarkdownInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseMarkdownMenu(text), "Markdown")); event.target.value=""; });
+  document.getElementById("importCsvInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseCsvMenu(text), "CSV")); event.target.value=""; });
+  document.getElementById("importTextInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parsePlainTextMenu(text), "plain text")); event.target.value=""; });
+  document.getElementById("clearSavedBtn").addEventListener("click", () => {
+    if(confirm("Clear the auto-saved menu from this browser? The current screen will stay as it is.")){
+      localStorage.removeItem(STORAGE_KEY); setStatus("Browser auto-save cleared.");
+    }
+  });
+}
+initialiseEvents();
+loadTemplate(false);
+</script>
+</body>
+</html>
