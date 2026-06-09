@@ -52,7 +52,7 @@
     .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
     .links{display:flex;flex-direction:column;gap:4px}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
     .builder-preview-wrapper h2{margin:0 0 8px;font-size:16px;font-weight:600;border-bottom:1px solid #ddd;padding-bottom:4px;display:flex;justify-content:space-between;gap:10px}.preview-meta{font-size:12px;color:#666;font-weight:400}.preview-frame{background:#fff;min-height:calc(100vh - 120px);overflow:visible}
-    .privacy{font-size:11px;color:#666;margin-top:8px;line-height:1.4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .empty-preview{padding:18px;margin:10px;border:1px dashed #bbb;border-radius:6px;background:#fafafa;color:#444;font-size:14px;line-height:1.5}.privacy{font-size:11px;color:#666;margin-top:8px;line-height:1.4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:1100px){.builder-main{flex-direction:column}.builder-editor,.builder-preview-wrapper{flex:none;max-width:none;min-width:0;height:auto;min-height:50vh}.status{width:100%;margin-left:0;text-align:left}.builder-page{height:auto}.builder-toolbar{position:static}.field textarea{min-width:0}.preview-frame{min-height:500px}.section-controls{margin-left:0}}
   </style>
   <style id="classicMenuCss"></style>
@@ -80,6 +80,7 @@
         <label class="file-label secondary">Import CSV <input id="importCsvInput" type="file" accept=".csv,text/csv,text/plain"></label>
         <label class="file-label secondary">Import TXT <input id="importTextInput" type="file" accept=".txt,text/plain"></label>
       </span>
+      <button id="restoreSavedBtn" type="button" class="secondary" hidden>Restore browser save</button>
       <button id="clearSavedBtn" type="button" class="danger">Clear browser save</button>
       <span id="status" class="status">Loading starter template…</span>
     </div>
@@ -101,12 +102,12 @@
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
-        <p id="templateDescription" class="subtle-help">Choose sections and links, then export your personal start page.</p>
+        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Untick it to keep a section while leaving it out for now.</p>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
-          <button id="includeAllBtn" type="button" class="secondary">Include all</button>
-          <button id="excludeAllBtn" type="button" class="secondary">Exclude all</button>
+          <button id="includeAllBtn" type="button" class="secondary">Use all</button>
+          <button id="excludeAllBtn" type="button" class="secondary">Use none</button>
         </div>
 
         <div id="sectionList" class="section-list"></div>
@@ -364,8 +365,16 @@ function downloadBlob(content, filename, type){
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
 function setStatus(message){ document.getElementById("status").textContent = message; }
+function hasBrowserSave(){
+  try{ return !!localStorage.getItem(STORAGE_KEY); }
+  catch(err){ return false; }
+}
+function updateRestoreButton(){
+  const btn = document.getElementById("restoreSavedBtn");
+  if(btn) btn.hidden = !hasBrowserSave();
+}
 function saveToBrowser(){
-  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(project)); }
+  try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(project)); updateRestoreButton(); }
   catch(err){ console.warn("Could not save locally", err); }
 }
 function loadFromBrowser(){
@@ -393,7 +402,7 @@ function renderSettings(){
   document.getElementById("titleInput").value = project.title || "";
   document.getElementById("filenameInput").value = project.filename || "links.html";
   document.getElementById("descriptionInput").value = project.description || "";
-  document.getElementById("templateDescription").textContent = project.description || "Choose sections and links, then export your personal start page.";
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Untick it to keep a section while leaving it out for now.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -426,6 +435,7 @@ function renderEditor(){
             <button type="button" class="mini danger" data-action="delete-section">Delete</button>
           </div>
         </div>
+        ${included ? "" : `<div class="empty-links">This section is kept in the editor but is not currently used in the preview/export.</div>`}
         <div class="links">${linkRows}</div>
         <div class="section-foot"><button type="button" class="mini secondary" data-action="add-link">+ Add link</button></div>
       </article>`;
@@ -435,10 +445,14 @@ function renderPreview(){
   const state = getCurrentState();
   document.getElementById("classicMenuCss").textContent = buildClassicMenuCss(state.settings);
   const preview = document.getElementById("preview");
-  preview.innerHTML = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings);
-  attachClassicMenuBehaviour(preview);
   const includedSections = project.sections.filter(s => s.included !== false);
   const linkCount = includedSections.reduce((sum, s) => sum + (s.links || []).filter(l => l.included !== false).length, 0);
+  if(project.sections.length && !includedSections.length){
+    preview.innerHTML = `<div class="empty-preview"><strong>No sections are currently used.</strong><br>Tick <strong>Use</strong> beside a section, or choose <strong>Use all</strong>, to show it in the preview and exported menu.</div>`;
+  }else{
+    preview.innerHTML = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings);
+    attachClassicMenuBehaviour(preview);
+  }
   document.getElementById("previewMeta").textContent = `${includedSections.length} sections · ${linkCount} links · 5 columns`;
 }
 function renderAll(){ renderSettings(); renderEditor(); renderPreview(); }
@@ -503,22 +517,31 @@ function getTemplateFromUrl(){
   const params = new URLSearchParams(location.search);
   return params.get("template") || "typical-uk-user";
 }
-async function loadSelectedTemplate(force=false){
+async function loadSelectedTemplate(saveAfterLoad=true){
   const key = document.getElementById("templateSelect")?.value || getTemplateFromUrl();
-  if(!force){
-    const saved = loadFromBrowser();
-    if(saved){ project = saved; renderAll(); setStatus("Loaded browser auto-save."); return; }
-  }
+  const hadBrowserSave = hasBrowserSave();
   try{
     const response = await fetch(templateFiles[key] || templateFiles["typical-uk-user"], {cache:"no-store"});
     if(!response.ok) throw new Error("Could not load template JSON");
     const template = await response.json();
     project = normaliseFriendlyProject(template);
     project.filename = "links.html";
-    saveToBrowser(); renderAll(); setStatus("Loaded template: " + (project.title || key));
+    if(saveAfterLoad) saveToBrowser();
+    renderAll();
+    updateRestoreButton();
+    if(!saveAfterLoad && hadBrowserSave){
+      setStatus("Loaded starter template. Browser auto-save found; use Restore browser save if needed.");
+    }else{
+      setStatus("Loaded template: " + (project.title || key));
+    }
   }catch(err){ setStatus("Could not load template. Use a local web server, not file://."); console.error(err); }
 }
-function loadTemplate(force=false){ return loadSelectedTemplate(force); }
+function loadTemplate(saveAfterLoad=true){ return loadSelectedTemplate(saveAfterLoad); }
+function restoreBrowserSave(){
+  const saved = loadFromBrowser();
+  if(saved){ project = saved; renderAll(); setStatus("Restored browser auto-save."); }
+  else { setStatus("No browser auto-save found."); updateRestoreButton(); }
+}
 function importJsonFile(file){
   const reader = new FileReader();
   reader.onload = e => {
@@ -619,8 +642,8 @@ function initialiseEvents(){
   document.getElementById("addSectionBtn").addEventListener("click", () => {
     project.sections.push({name:"New section", colour:"blue", included:true, links:[{label:"New link", url:"https://", colour:"blue", included:true}]}); scheduleRender();
   });
-  document.getElementById("includeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = true); scheduleRender(); });
-  document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); scheduleRender(); });
+  document.getElementById("includeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = true); setStatus("All sections are now used."); scheduleRender(); });
+  document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); setStatus("No sections are currently used. Tick Use beside sections to add them back."); scheduleRender(); });
   const templateFromUrl = getTemplateFromUrl();
   if(templateFiles[templateFromUrl]) document.getElementById("templateSelect").value = templateFromUrl;
   document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Load selected template to replace the current menu."));
@@ -643,13 +666,17 @@ function initialiseEvents(){
   document.getElementById("importMarkdownInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseMarkdownMenu(text), "Markdown")); event.target.value=""; });
   document.getElementById("importCsvInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseCsvMenu(text), "CSV")); event.target.value=""; });
   document.getElementById("importTextInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parsePlainTextMenu(text), "plain text")); event.target.value=""; });
+  document.getElementById("restoreSavedBtn").addEventListener("click", restoreBrowserSave);
   document.getElementById("clearSavedBtn").addEventListener("click", () => {
     if(confirm("Clear the auto-saved menu from this browser? The current screen will stay as it is.")){
-      localStorage.removeItem(STORAGE_KEY); setStatus("Browser auto-save cleared.");
+      localStorage.removeItem(STORAGE_KEY); updateRestoreButton(); setStatus("Browser auto-save cleared.");
     }
   });
+  updateRestoreButton();
 }
 initialiseEvents();
+// Initial load should show the selected starter template, not silently restore an old browser save.
+// This prevents a previous “Exclude all” session from making the preview appear empty.
 loadTemplate(false);
 </script>
 </body>
