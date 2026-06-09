@@ -6,7 +6,7 @@
   <title>Builder · Personal Start Page Creator</title>
   <style>
     :root{
-      --site-bg:#f5f7fb;
+      --site-bg:#f7f7f7;
       --site-card:#ffffff;
       --site-text:#1f2937;
       --site-muted:#6b7280;
@@ -17,34 +17,50 @@
       --site-soft:#eef4ff;
     }
     *{box-sizing:border-box}
+    html,body{height:100%}
     body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--site-bg);color:var(--site-text)}
-    .site-shell{max-width:1280px;margin:0 auto;padding:22px 16px 42px}
-    .hero{background:linear-gradient(135deg,#ffffff,#eef4ff);border:1px solid var(--site-border);border-radius:16px;padding:26px;margin-bottom:16px;box-shadow:0 10px 28px rgba(15,23,42,.06)}
-    .hero h1{margin:0 0 8px;font-size:clamp(28px,4vw,42px);line-height:1.05}.hero p{margin:0;max-width:850px;color:var(--site-muted);font-size:17px;line-height:1.55}
-    .toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:#fff;border:1px solid var(--site-border);border-radius:12px;padding:12px;margin-bottom:16px;position:sticky;top:0;z-index:20;box-shadow:0 4px 16px rgba(15,23,42,.05)}
-    button,.file-label{border:1px solid var(--site-accent-dark);background:var(--site-accent);color:#fff;border-radius:8px;padding:8px 11px;font-weight:650;font-size:14px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;line-height:1.2}
-    button.secondary,.file-label.secondary{background:#fff;color:var(--site-accent-dark)}button.danger{background:#fff;color:var(--site-danger);border-color:#fecaca}.mini{font-size:12px;padding:5px 7px;border-radius:6px;font-weight:650}button:hover,.file-label:hover{filter:brightness(.96)}button:disabled{opacity:.5;cursor:not-allowed}input[type=file]{display:none}
-    .status{font-size:13px;color:var(--site-muted);margin-left:auto;min-width:220px;text-align:right}.grid{display:grid;grid-template-columns:430px minmax(0,1fr);gap:16px;align-items:start}.panel{background:var(--site-card);border:1px solid var(--site-border);border-radius:12px;padding:14px;box-shadow:0 4px 16px rgba(15,23,42,.04)}
-    .panel h2{font-size:18px;margin:0 0 8px}.panel p{font-size:14px;color:var(--site-muted);line-height:1.5;margin:0 0 12px}
-    .settings{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}.field{display:flex;flex-direction:column;gap:4px}.field.full{grid-column:1/-1}label{font-size:12px;font-weight:700;color:#4b5563}.field input,.field textarea,.link-row input,.section-title input,.field select,.section-title select{border:1px solid var(--site-border);border-radius:8px;padding:8px;font:inherit;font-size:14px;background:#fff}.field textarea{min-height:58px;resize:vertical}.editor-actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.section-list{display:flex;flex-direction:column;gap:10px;max-height:72vh;overflow:auto;padding-right:4px}
-    .section-card{border:1px solid var(--site-border);border-radius:12px;background:#fbfdff;overflow:hidden}.section-card.excluded{opacity:.58;background:#f6f6f6}.section-head{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:start;padding:10px;border-bottom:1px solid #eef0f4}.section-title{display:grid;grid-template-columns:minmax(0,1fr) 92px;gap:7px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}.toggle-line{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--site-muted);font-weight:700;padding-top:7px}.toggle-line input{margin:0}.links{display:flex;flex-direction:column;gap:7px;padding:10px}.link-row{display:grid;grid-template-columns:minmax(80px,1fr) minmax(120px,1.5fr) 82px auto;gap:6px;align-items:center}.empty-links{font-size:13px;color:var(--site-muted);padding:2px 0}.section-foot{padding:0 10px 10px;display:flex;gap:7px}.preview-panel{padding:0;overflow:hidden}.preview-head{padding:14px 16px;border-bottom:1px solid var(--site-border);display:flex;justify-content:space-between;gap:12px;align-items:center}.preview-head h2{margin:0;font-size:18px}.preview-meta{font-size:13px;color:var(--site-muted)}.preview-frame{background:#fff;min-height:650px;max-height:78vh;overflow:auto}.note{font-size:13px;color:var(--site-muted);line-height:1.5;margin-top:12px}.privacy{margin-top:16px;background:#fff;border:1px solid var(--site-border);border-radius:12px;padding:16px;color:var(--site-muted);font-size:14px}.privacy strong{color:var(--site-text)}
-    .colour-dot{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.2);display:inline-block}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(max-width:980px){.grid{grid-template-columns:1fr}.status{width:100%;margin-left:0;text-align:left}.toolbar{position:static}.section-list{max-height:none}.preview-frame{max-height:none}.settings{grid-template-columns:1fr}.link-row{grid-template-columns:1fr}.section-title{grid-template-columns:1fr}.section-head{grid-template-columns:1fr}.section-controls{justify-content:flex-start}}
-  
-    .site-nav{background:#fff;border-bottom:1px solid var(--site-border);position:sticky;top:0;z-index:100}.site-nav-inner{max-width:1280px;margin:0 auto;padding:10px 16px;display:flex;gap:16px;align-items:center}.brand{font-weight:800;color:var(--site-text);text-decoration:none;margin-right:auto}.nav-link{font-weight:650;color:#334155;text-decoration:none;font-size:14px}.nav-link:hover{text-decoration:underline}.light-page-note{font-size:13px;color:var(--site-muted);margin:8px 0 0}.import-group{display:flex;gap:8px;flex-wrap:wrap}
+    .site-nav{background:#fff;border-bottom:1px solid var(--site-border);position:sticky;top:0;z-index:100}
+    .site-nav-inner{max-width:none;margin:0;padding:10px 18px;display:flex;gap:16px;align-items:center}
+    .brand{font-weight:800;color:var(--site-text);text-decoration:none;margin-right:auto}
+    .nav-link{font-weight:650;color:#334155;text-decoration:none;font-size:14px}.nav-link:hover{text-decoration:underline}
+
+    /* Builder page deliberately uses only a light wrapper. The workspace is wide and app-like. */
+    .builder-page{height:calc(100vh - 45px);display:flex;flex-direction:column;min-height:0}
+    .builder-toolbar{background:#333;color:#fff;display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:8px 10px;font-size:13px;border-bottom:1px solid #222}
+    .builder-toolbar label{font-size:12px;color:#eee;display:inline-flex;align-items:center;gap:6px}
+    .builder-toolbar select,.builder-toolbar input{font-size:12px;padding:4px 6px;border-radius:3px;border:1px solid #aaa;background:#fff;color:#111}
+    button,.file-label{border:1px solid #555;background:#555;color:#fff;border-radius:3px;padding:4px 8px;font-weight:650;font-size:12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center;line-height:1.2;text-decoration:none}
+    button.secondary,.file-label.secondary{background:#555;color:#fff;border-color:#777}
+    button.danger{background:#5d1d1d;color:#fff;border-color:#7f2a2a}
+    button:hover,.file-label:hover{background:#777}button:disabled{opacity:.5;cursor:not-allowed}
+    .mini{font-size:11px;padding:2px 6px;border-radius:3px;font-weight:650;background:#f2f2f2;color:#222;border:1px solid #aaa}.mini:hover{background:#e0e0e0}.mini.danger{background:#fff;color:#b91c1c;border-color:#f0b4b4}.mini.secondary{background:#f2f2f2;color:#1d4ed8;border-color:#9ab7ff}
+    input[type=file]{display:none}
+    .import-group{display:flex;gap:6px;flex-wrap:wrap}
+    .status{font-size:12px;color:#ddd;margin-left:auto;min-width:240px;text-align:right}
+
+    .builder-main{flex:1;min-height:0;display:flex;background:#e9ecef}
+    .builder-editor{flex:0 0 48%;min-width:620px;max-width:900px;min-height:0;padding:10px;overflow:auto;background:#f7f7f7;border-right:1px solid #c9cfd8}
+    .builder-preview-wrapper{flex:1;min-width:600px;min-height:0;padding:10px;overflow:auto;background:#fff}
+    .builder-settings{margin-bottom:8px;padding:6px;background:#fff;border-radius:4px;border:1px solid #ddd;display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}
+    .builder-settings h1{font-size:16px;margin:0 14px 0 0;align-self:center;white-space:nowrap}
+    .field{display:flex;flex-direction:column;gap:3px}.field.full{flex:1 1 320px}label{font-size:11px;font-weight:700;color:#4b5563}
+    .field input,.field textarea,.section-title input,.field select,.section-title select,.link-row input,.link-row select{border:1px solid #ccc;border-radius:4px;padding:5px 6px;font:inherit;font-size:12px;background:#fff}
+    .field textarea{height:48px;min-width:320px;resize:vertical}.field input{min-width:170px}
+    .subtle-help{font-size:11px;color:#666;margin:0 0 6px}.editor-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.section-list{display:flex;flex-direction:column;gap:8px}
+    .section-card{background:#fff;border-radius:4px;border:1px solid #ddd;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}.section-card.excluded{opacity:.55;background:#f6f6f6}
+    .section-head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.toggle-line{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#555;font-weight:700;margin-right:4px}.toggle-line input{margin:0}
+    .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
+    .links{display:flex;flex-direction:column;gap:4px}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
+    .builder-preview-wrapper h2{margin:0 0 8px;font-size:16px;font-weight:600;border-bottom:1px solid #ddd;padding-bottom:4px;display:flex;justify-content:space-between;gap:10px}.preview-meta{font-size:12px;color:#666;font-weight:400}.preview-frame{background:#fff;min-height:calc(100vh - 120px);overflow:visible}
+    .privacy{font-size:11px;color:#666;margin-top:8px;line-height:1.4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    @media(max-width:1100px){.builder-main{flex-direction:column}.builder-editor,.builder-preview-wrapper{flex:none;max-width:none;min-width:0;height:auto;min-height:50vh}.status{width:100%;margin-left:0;text-align:left}.builder-page{height:auto}.builder-toolbar{position:static}.field textarea{min-width:0}.preview-frame{min-height:500px}.section-controls{margin-left:0}}
   </style>
   <style id="classicMenuCss"></style>
 </head>
 <body>
   <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="help.html">Help</a><a class="nav-link" href="builder.html">Builder</a></div></nav>
-  <main class="site-shell">
-    <section class="hero">
-      <h1>Start Page Builder</h1>
-      <p>Choose a template, edit sections and links, preview the protected classic five-column menu, and export a standalone HTML start page.</p>
-      <p class="light-page-note">This builder uses a light website wrapper only. The preview and exported start pages remain standalone-friendly.</p>
-    </section>
-
-    <div class="toolbar" aria-label="Menu actions">
+  <main class="builder-page">
+    <div class="builder-toolbar" aria-label="Menu actions">
       <label>Template
         <select id="templateSelect">
           <option value="typical-uk-user">Typical UK User</option>
@@ -59,7 +75,7 @@
       <button id="exportMarkdownBtn" type="button" class="secondary">Download MD</button>
       <button id="exportTextBtn" type="button" class="secondary">Download TXT</button>
       <span class="import-group">
-        <label class="file-label secondary">Import JSON <input id="importJsonInput" type="file" accept="application/json,.json"></label>
+        <label class="file-label secondary">Import JSON/template <input id="importJsonInput" type="file" accept="application/json,.json"></label>
         <label class="file-label secondary">Import Markdown <input id="importMarkdownInput" type="file" accept=".md,.markdown,text/markdown,text/plain"></label>
         <label class="file-label secondary">Import CSV <input id="importCsvInput" type="file" accept=".csv,text/csv,text/plain"></label>
         <label class="file-label secondary">Import TXT <input id="importTextInput" type="file" accept=".txt,text/plain"></label>
@@ -68,12 +84,10 @@
       <span id="status" class="status">Loading starter template…</span>
     </div>
 
-    <div class="grid">
-      <aside class="panel" aria-label="Menu editor">
-        <h2>Edit your menu</h2>
-        <p id="templateDescription">Choose sections and links, then export your personal start page.</p>
-
-        <div class="settings">
+    <div class="builder-main">
+      <aside class="builder-editor" aria-label="Menu editor">
+        <div class="builder-settings">
+          <h1>Start Page Builder</h1>
           <div class="field">
             <label for="titleInput">Page title</label>
             <input id="titleInput" type="text" autocomplete="off">
@@ -87,6 +101,7 @@
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
+        <p id="templateDescription" class="subtle-help">Choose sections and links, then export your personal start page.</p>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
@@ -95,21 +110,14 @@
         </div>
 
         <div id="sectionList" class="section-list"></div>
-        <div class="note">Stage 1 keeps the proven Classic Five-Column menu intact. These controls only change the data that is passed into the protected renderer.</div>
+        <div class="privacy"><strong>Privacy:</strong> this static GitHub Pages builder edits in your browser. Nothing is uploaded. Download your project JSON to keep a portable copy.</div>
       </aside>
 
-      <section class="panel preview-panel" aria-label="Menu preview">
-        <div class="preview-head">
-          <h2>Classic Five-Column Preview</h2>
-          <span id="previewMeta" class="preview-meta">0 sections · 0 links · 5 columns</span>
-        </div>
+      <section class="builder-preview-wrapper" aria-label="Menu preview">
+        <h2>Classic Five-Column Preview <span id="previewMeta" class="preview-meta">0 sections · 0 links · 5 columns</span></h2>
         <div id="preview" class="preview-frame"></div>
       </section>
     </div>
-
-    <section class="privacy">
-      <strong>Privacy:</strong> this is a static GitHub Pages app. Your menu is created in your browser and auto-saved locally in this browser. Nothing is uploaded to a server. To keep a portable copy, download your project JSON.
-    </section>
   </main>
 
 <script>
@@ -518,8 +526,9 @@ function importJsonFile(file){
       const parsed = JSON.parse(e.target.result);
       if(parsed.settings && parsed.menu) project = internalStateToProject(parsed);
       else if(parsed.sections) project = normaliseFriendlyProject(parsed);
-      else throw new Error("Unrecognised JSON format");
-      saveToBrowser(); renderAll(); setStatus("Imported JSON project/config.");
+      else if(Array.isArray(parsed)) project = normaliseFriendlyProject({title:"Imported links", sections:parsed});
+      else throw new Error("Unrecognised JSON format. Use a saved project JSON, an internal builder config, or a template JSON with a sections array.");
+      saveToBrowser(); renderAll(); setStatus("Imported JSON project/template/config.");
     }catch(err){ alert("Could not import JSON: " + err.message); }
   };
   reader.readAsText(file);

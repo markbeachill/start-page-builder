@@ -45,3 +45,13 @@ python3 -m http.server 8000
 ```
 
 Open `http://localhost:8000`.
+
+
+## Live site and repository
+
+- Website: https://markbeachill.github.io/start-page-builder
+- Repository: https://github.com/markbeachill/start-page-builder
+
+## Stage 1.2 note
+
+The builder page has been adjusted back toward the original unconstrained workspace model: top navigation, compact action toolbar, wide editor pane, and standalone-friendly preview. JSON import accepts saved project JSON, internal builder config JSON, and friendly template JSON with a `sections` array.
