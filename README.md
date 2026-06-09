@@ -1,4 +1,4 @@
-# Personal Start Page Creator — Stage 1.10
+# Personal Start Page Creator — Stage 1.11
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
@@ -46,9 +46,12 @@ docs/
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
-## Stage 1.10 features
+## Stage 1.11 features
 
 - Added a **Why use a start page?** page explaining deep links, reduced distraction, spatial familiarity, no-extension use, and digital autonomy.
+- Link rows now have ↑ / ↓ controls and can be dragged within their section to reorder links.
+- Publishing page now has a simpler heading and puts the AI step-by-step publishing prompt near the top.
+- AI instruction blocks on the AI and publishing pages now include copy-to-clipboard buttons.
 - Home page now links to the start-page rationale as well as examples.
 - Publishing page now strongly recommends renaming the saved start page to `index.html` for GitHub Pages.
 - Publishing AI prompt now asks the AI to guide the user step by step, use `index.html`, calculate the final URL, write a README and choose a shortcut system.

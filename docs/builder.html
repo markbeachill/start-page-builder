@@ -57,7 +57,7 @@
     .section-card{background:#fff;border-radius:4px;border:1px solid #ddd;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}.section-card.excluded{opacity:.55;background:#f6f6f6}
     .section-head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.toggle-line{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#555;font-weight:700;margin-right:4px}.toggle-line input{margin:0}
     .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-    .links{display:flex;flex-direction:column;gap:4px}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
+    .links{display:flex;flex-direction:column;gap:4px}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row.drag-over{outline:2px dashed #2563eb;outline-offset:1px}.drag-handle{border:1px solid #bbb;background:#f4f4f4;border-radius:4px;padding:3px 6px;cursor:grab;font-size:12px;line-height:1}.drag-handle:active{cursor:grabbing}.link-actions{display:flex;gap:4px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
     .builder-preview-wrapper h2{margin:0 0 8px;font-size:16px;font-weight:600;border-bottom:1px solid #ddd;padding-bottom:4px;display:flex;justify-content:space-between;gap:10px}.preview-meta{font-size:12px;color:#666;font-weight:400}.preview-frame{background:#fff;min-height:calc(100vh - 120px);overflow:visible}
     .empty-preview{padding:18px;margin:10px;border:1px dashed #bbb;border-radius:6px;background:#fafafa;color:#444;font-size:14px;line-height:1.5}.privacy{font-size:11px;color:#666;margin-top:8px;line-height:1.4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:1100px){.builder-main{flex-direction:column}.builder-editor,.builder-preview-wrapper{flex:none;max-width:none;min-width:0;height:auto;min-height:50vh}.status{width:100%;margin-left:0;text-align:left}.builder-page{height:auto}.builder-toolbar{position:static}.field textarea{min-width:0}.preview-frame{min-height:500px}.section-controls{margin-left:0}}
@@ -135,7 +135,7 @@
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
-        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Untick it to keep a section while leaving it out for now.</p>
+        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Drag links within a section to reorder them, or use the ↑ ↓ buttons.</p>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
@@ -435,7 +435,7 @@ function renderSettings(){
   document.getElementById("titleInput").value = project.title || "";
   document.getElementById("filenameInput").value = project.filename || "start-page.html";
   document.getElementById("descriptionInput").value = project.description || "";
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Untick it to keep a section while leaving it out for now.";
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Drag links within a section to reorder them, or use the ↑ ↓ buttons.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -447,10 +447,15 @@ function renderEditor(){
     const included = section.included !== false;
     const linkRows = (section.links || []).map((link, li) => `
       <div class="link-row" data-section-index="${si}" data-link-index="${li}">
+        <span class="drag-handle" draggable="true" title="Drag to reorder this link" aria-label="Drag to reorder this link">↕</span>
         <input type="text" value="${escapeHtml(link.label || "")}" data-action="link-label" aria-label="Link label">
         <input type="url" value="${escapeHtml(link.url || "")}" data-action="link-url" aria-label="Link URL">
         <select data-action="link-colour" aria-label="Link colour">${colourOptions(cleanColour(link.colour || section.colour))}</select>
-        <button type="button" class="mini danger" data-action="delete-link">Remove</button>
+        <div class="link-actions">
+          <button type="button" class="mini secondary" data-action="move-link-up" ${li === 0 ? "disabled" : ""}>↑</button>
+          <button type="button" class="mini secondary" data-action="move-link-down" ${li === (section.links || []).length - 1 ? "disabled" : ""}>↓</button>
+          <button type="button" class="mini danger" data-action="delete-link">Remove</button>
+        </div>
       </div>
     `).join("") || `<div class="empty-links">No links in this section yet.</div>`;
     return `
@@ -534,11 +539,71 @@ function onSectionListClick(event){
   }else if(action === "add-link"){
     section.links = section.links || [];
     section.links.push({label:"New link", url:"https://", colour:cleanColour(section.colour || "blue"), included:true});
+  }else if(action === "move-link-up" || action === "move-link-down"){
+    const row = event.target.closest(".link-row");
+    if(row){
+      const li = Number(row.dataset.linkIndex);
+      const next = action === "move-link-up" ? li - 1 : li + 1;
+      if(next >= 0 && next < section.links.length){
+        [section.links[li], section.links[next]] = [section.links[next], section.links[li]];
+      }
+    }
   }else if(action === "delete-link"){
     const row = event.target.closest(".link-row");
     if(row){ section.links.splice(Number(row.dataset.linkIndex), 1); }
   }
   scheduleRender();
+}
+let draggedLink = null;
+function onLinkDragStart(event){
+  const handle = event.target.closest(".drag-handle");
+  if(!handle) return;
+  const row = handle.closest(".link-row");
+  if(!row) return;
+  draggedLink = { sectionIndex:Number(row.dataset.sectionIndex), linkIndex:Number(row.dataset.linkIndex) };
+  event.dataTransfer.effectAllowed = "move";
+  event.dataTransfer.setData("text/plain", `${draggedLink.sectionIndex}:${draggedLink.linkIndex}`);
+}
+function onLinkDragOver(event){
+  if(!draggedLink) return;
+  const row = event.target.closest(".link-row");
+  if(!row) return;
+  const targetSection = Number(row.dataset.sectionIndex);
+  if(targetSection !== draggedLink.sectionIndex) return;
+  event.preventDefault();
+  event.dataTransfer.dropEffect = "move";
+  row.classList.add("drag-over");
+}
+function onLinkDragLeave(event){
+  const row = event.target.closest(".link-row");
+  if(row) row.classList.remove("drag-over");
+}
+function onLinkDrop(event){
+  if(!draggedLink) return;
+  const row = event.target.closest(".link-row");
+  if(!row) return;
+  const targetSection = Number(row.dataset.sectionIndex);
+  if(targetSection !== draggedLink.sectionIndex) return;
+  event.preventDefault();
+  row.classList.remove("drag-over");
+  const section = project.sections[targetSection];
+  if(!section || !section.links) return;
+  const from = draggedLink.linkIndex;
+  let to = Number(row.dataset.linkIndex);
+  const rect = row.getBoundingClientRect();
+  const after = event.clientY > rect.top + rect.height / 2;
+  if(after) to += 1;
+  const [item] = section.links.splice(from, 1);
+  if(from < to) to -= 1;
+  if(to < 0) to = 0;
+  if(to > section.links.length) to = section.links.length;
+  section.links.splice(to, 0, item);
+  draggedLink = null;
+  scheduleRender();
+}
+function onLinkDragEnd(){
+  document.querySelectorAll(".link-row.drag-over").forEach(el => el.classList.remove("drag-over"));
+  draggedLink = null;
 }
 const templateFiles = {
   "typical-uk-user":"templates/typical-uk-user.json",
@@ -712,6 +777,11 @@ function initialiseEvents(){
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
   document.getElementById("sectionList").addEventListener("change", onSectionListInput);
   document.getElementById("sectionList").addEventListener("click", onSectionListClick);
+  document.getElementById("sectionList").addEventListener("dragstart", onLinkDragStart);
+  document.getElementById("sectionList").addEventListener("dragover", onLinkDragOver);
+  document.getElementById("sectionList").addEventListener("dragleave", onLinkDragLeave);
+  document.getElementById("sectionList").addEventListener("drop", onLinkDrop);
+  document.getElementById("sectionList").addEventListener("dragend", onLinkDragEnd);
   document.getElementById("addSectionBtn").addEventListener("click", () => {
     project.sections.push({name:"New section", colour:"blue", included:true, links:[{label:"New link", url:"https://", colour:"blue", included:true}]}); scheduleRender();
   });
