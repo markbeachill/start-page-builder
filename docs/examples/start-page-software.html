@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Software Developer Start Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
+.searchbar-wrapper{background:#f1f1f1;padding:10px 15px;border-bottom:1px solid #ddd;}
+.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-form input[type="text"]{flex:1 1 200px;padding:6px 8px;border:1px solid #ccc;border-radius:2px;font-size:14px;}
+.searchbar-form button{padding:6px 12px;border-radius:2px;border:1px solid #4d90fe;background:#4d90fe;color:#fff;cursor:pointer;}
+.searchbar-form button:hover{background:#3367d6;}
+.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;}
+.maincontent{clear:both;width:80%;font-size:.8125em;max-width:92.3em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
+.section{clear:both;padding:0;margin:0;}
+.group{display:flex;flex-wrap:nowrap;justify-content:space-between;}
+.col{box-sizing:border-box;flex:0 0 19%;max-width:19%;margin:1% 0;}
+.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
+@media only screen and (max-width:767px){.group{flex-wrap:wrap;}.col{flex:1 1 100%;max-width:100%;margin:1% 0;}}
+.btn{text-align:left;width:200px;color:#333;position:relative;display:inline-block;overflow:visible;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;border-image:none 100% / 1 / 0 stretch;background:#eee none repeat scroll 0 0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;min-width:42px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;vertical-align:inherit;font-weight:600;}
+.btn:hover{background-color:#aaa;color:#000;}
+.blue-btn{border-color:currentcolor currentcolor currentcolor #4d90fe;}.green-btn{border-color:currentcolor currentcolor currentcolor #35aa47;}.orange-btn{border-color:currentcolor currentcolor currentcolor #d84a38;}.purple-btn{border-color:currentcolor currentcolor currentcolor #852b99;}.red-btn{border-color:currentcolor currentcolor currentcolor #bd121d;}
+.hdr{text-align:left;width:200px;color:#fff;position:relative;display:inline-block;overflow:visible;margin:0;margin-top:8px;padding:10px 14px;cursor:pointer;outline:0;border:0;background-repeat:repeat-x;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;min-width:42px;text-shadow:none;text-decoration:none;white-space:nowrap;vertical-align:inherit;}
+.blue-hdr{background-color:#4d90fe;}.green-hdr{background-color:#35aa47;}.orange-hdr{background-color:#d84a38;}.purple-hdr{background-color:#852b99;}.red-hdr{background-color:#bd121d;}
+.hdr-para{margin-bottom:1.8em;line-height:160%;margin:0;}
+
+  </style>
+</head>
+<body>
+
+<div class="searchbar-wrapper">
+  <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+    <input type="text" name="q" placeholder="Search...">
+    <label><input type="radio" name="searchtype" value="web" checked> Web</label>
+    <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
+    <button type="submit">Go</button>
+  </form>
+</div>
+<div class="maincontent">
+  <div class="section group">
+<div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr blue-hdr" data-section-header="true"><b>Search &amp; AI</b></a>
+    </p>
+
+    <a class="btn blue-btn" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+      Google
+    </a>
+
+    <a class="btn blue-btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+      ChatGPT
+    </a>
+
+    <a class="btn blue-btn" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer">
+      Perplexity
+    </a>
+
+    <a class="btn blue-btn" href="https://stackoverflow.com/" target="_blank" rel="noopener noreferrer">
+      Stack Overflow
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr green-hdr" data-section-header="true"><b>Databases</b></a>
+    </p>
+
+    <a class="btn green-btn" href="https://www.postgresql.org/docs/" target="_blank" rel="noopener noreferrer">
+      PostgreSQL Docs
+    </a>
+
+    <a class="btn green-btn" href="https://www.mongodb.com/docs/" target="_blank" rel="noopener noreferrer">
+      MongoDB Docs
+    </a>
+
+    <a class="btn green-btn" href="https://redis.io/docs/latest/" target="_blank" rel="noopener noreferrer">
+      Redis Docs
+    </a>
+
+    <a class="btn green-btn" href="https://www.sqlite.org/docs.html" target="_blank" rel="noopener noreferrer">
+      SQLite Docs
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr green-hdr" data-section-header="true"><b>Code Hosting</b></a>
+    </p>
+
+    <a class="btn green-btn" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+      GitHub
+    </a>
+
+    <a class="btn green-btn" href="https://gitlab.com/" target="_blank" rel="noopener noreferrer">
+      GitLab
+    </a>
+
+    <a class="btn green-btn" href="https://bitbucket.org/" target="_blank" rel="noopener noreferrer">
+      Bitbucket
+    </a>
+
+    <a class="btn green-btn" href="https://gist.github.com/" target="_blank" rel="noopener noreferrer">
+      Gist
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr red-hdr" data-section-header="true"><b>Design &amp; Testing</b></a>
+    </p>
+
+    <a class="btn red-btn" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+      Figma
+    </a>
+
+    <a class="btn red-btn" href="https://pagespeed.web.dev/" target="_blank" rel="noopener noreferrer">
+      Lighthouse
+    </a>
+
+    <a class="btn red-btn" href="https://www.browserstack.com/" target="_blank" rel="noopener noreferrer">
+      BrowserStack
+    </a>
+
+    <a class="btn red-btn" href="https://regex101.com/" target="_blank" rel="noopener noreferrer">
+      Regex101
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr blue-hdr" data-section-header="true"><b>Documentation</b></a>
+    </p>
+
+    <a class="btn blue-btn" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+      MDN Web Docs
+    </a>
+
+    <a class="btn blue-btn" href="https://caniuse.com/" target="_blank" rel="noopener noreferrer">
+      Can I Use
+    </a>
+
+    <a class="btn blue-btn" href="https://devdocs.io/" target="_blank" rel="noopener noreferrer">
+      DevDocs
+    </a>
+
+    <a class="btn blue-btn" href="https://www.typescriptlang.org/docs/" target="_blank" rel="noopener noreferrer">
+      TypeScript Docs
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr blue-hdr" data-section-header="true"><b>Learning &amp; Community</b></a>
+    </p>
+
+    <a class="btn blue-btn" href="https://news.ycombinator.com/" target="_blank" rel="noopener noreferrer">
+      Hacker News
+    </a>
+
+    <a class="btn blue-btn" href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">
+      freeCodeCamp
+    </a>
+
+    <a class="btn blue-btn" href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer">
+      CSS-Tricks
+    </a>
+
+    <a class="btn blue-btn" href="https://www.reddit.com/r/programming/" target="_blank" rel="noopener noreferrer">
+      Reddit Programming
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr orange-hdr" data-section-header="true"><b>Packages</b></a>
+    </p>
+
+    <a class="btn orange-btn" href="https://www.npmjs.com/" target="_blank" rel="noopener noreferrer">
+      npm
+    </a>
+
+    <a class="btn orange-btn" href="https://pypi.org/" target="_blank" rel="noopener noreferrer">
+      PyPI
+    </a>
+
+    <a class="btn orange-btn" href="https://hub.docker.com/" target="_blank" rel="noopener noreferrer">
+      Docker Hub
+    </a>
+
+    <a class="btn orange-btn" href="https://central.sonatype.com/" target="_blank" rel="noopener noreferrer">
+      Maven Central
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr purple-hdr" data-section-header="true"><b>Cloud &amp; Hosting</b></a>
+    </p>
+
+    <a class="btn purple-btn" href="https://aws.amazon.com/console/" target="_blank" rel="noopener noreferrer">
+      AWS Console
+    </a>
+
+    <a class="btn purple-btn" href="https://portal.azure.com/" target="_blank" rel="noopener noreferrer">
+      Azure Portal
+    </a>
+
+    <a class="btn purple-btn" href="https://console.cloud.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Cloud
+    </a>
+
+    <a class="btn purple-btn" href="https://dash.cloudflare.com/" target="_blank" rel="noopener noreferrer">
+      Cloudflare
+    </a>
+
+    <a class="btn purple-btn" href="https://vercel.com/" target="_blank" rel="noopener noreferrer">
+      Vercel
+    </a>
+
+    <a class="btn purple-btn" href="https://app.netlify.com/" target="_blank" rel="noopener noreferrer">
+      Netlify
+    </a>
+</div>
+  </div>
+</div>
+<script>
+  (function attachClassicMenuBehaviour(root=document){
+  const form = root.querySelector(".searchbar-form");
+  if(form){
+    form.addEventListener("submit", function(){
+      const type = form.querySelector('input[name="searchtype"]:checked');
+      const q = form.querySelector('input[name="q"]');
+      if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
+    });
+  }
+  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
+    h.addEventListener("click", function(ev){
+      ev.preventDefault();
+      let current = h.parentElement.nextElementSibling;
+      let hiding = false;
+      while(current){
+        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        current = current.nextElementSibling;
+      }
+      current = h.parentElement.nextElementSibling;
+      while(current){
+        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader2) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        current = current.nextElementSibling;
+      }
+    });
+  });
+})(document);
+</script>
+</body>
+</html>

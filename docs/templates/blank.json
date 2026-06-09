@@ -1,1 +1,17 @@
-{"title":"My Start Page","description":"A blank start page template.","sections":[{"name":"My Links","colour":"blue","links":[{"label":"Example link","url":"https://example.com/"}]}]}
+{
+  "title": "My Start Page",
+  "description": "A blank start page template.",
+  "sections": [
+    {
+      "name": "My Links",
+      "colour": "blue",
+      "links": [
+        {
+          "label": "Example link",
+          "url": "https://example.com/"
+        }
+      ]
+    }
+  ],
+  "filename": "start-page.html"
+}

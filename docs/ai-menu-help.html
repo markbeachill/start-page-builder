@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build with AI · Personal Start Page Creator</title><link rel="stylesheet" href="assets/site.css"></head><body>
+<nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-cta" href="builder.html">Start building</a></div></nav>
+<main class="page"><section class="hero"><span class="badge">Copy · paste · import</span><h1>Ask an AI to build your menu.</h1><p>You can ask an AI assistant to create a list of links for you, then import it into the builder. Markdown is the easiest format to read and check, but CSV and JSON also work.</p><div class="actions"><a class="button" href="builder.html">Open builder</a><a class="button secondary" href="help.html">Import help</a></div></section>
+<section class="section-title"><h2>Recommended: ask for Markdown</h2><p>Markdown is readable, easy to edit, and imports well.</p></section>
+<section class="card"><h3>Prompt to copy</h3><pre class="codeblock">Create a personal start page menu for me in Markdown format.
+
+Use this exact structure:
+# My Start Page
+
+## Section name
+- [Link label](https://example.com/)
+- [Another link](https://example.com/)
+
+Please create 8 to 12 useful sections, with 4 to 8 links in each section. Use practical, well-known sites. Do not include explanations after the Markdown.</pre><h3>Example output</h3><pre class="codeblock"># My Start Page
+
+## Search & AI
+- [Google](https://www.google.co.uk/)
+- [ChatGPT](https://chatgpt.com/)
+- [Wikipedia](https://www.wikipedia.org/)
+
+## News
+- [BBC News](https://www.bbc.co.uk/news)
+- [Google News](https://news.google.com/)</pre><p>In the builder, open <strong>More options</strong> and use <strong>Import Markdown</strong>.</p></section>
+<section class="grid"><article class="card"><h2>CSV format</h2><p>Useful if you want to work in a spreadsheet first.</p><pre><code>section,label,url,colour
+Search,Google,https://www.google.co.uk/,blue
+News,BBC News,https://www.bbc.co.uk/news,red</code></pre></article><article class="card"><h2>JSON format</h2><p>Useful for advanced users or when asking an AI to create a ready-made template.</p><pre><code>{
+  "title": "My Start Page",
+  "filename": "start-page.html",
+  "sections": [
+    {"name":"Search","colour":"blue","links":[{"label":"Google","url":"https://www.google.co.uk/"}]}
+  ]
+}</code></pre></article><article class="card"><h2>Plain text format</h2><p>Useful for quick hand-written lists.</p><pre><code>[Search]
+Google | https://www.google.co.uk/
+Wikipedia | https://www.wikipedia.org/</code></pre></article></section>
+<section class="inline-note"><strong>Tip:</strong> ask the AI for links you recognise and trust, then review the result before importing. You can delete or edit anything in the builder.</section>
+</main><footer class="site-footer">The exported start pages are standalone-friendly and work on desktop, tablet and mobile.<div class="footer-links"><a href="https://markbeachill.github.io/start-page-builder">Live site</a><a href="https://github.com/markbeachill/start-page-builder">GitHub repository</a></div></footer></body></html>

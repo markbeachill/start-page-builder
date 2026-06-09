@@ -58,7 +58,7 @@
   <style id="classicMenuCss"></style>
 </head>
 <body>
-  <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="help.html">Help</a><a class="nav-link" href="builder.html">Builder</a></div></nav>
+  <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-link" href="builder.html">Builder</a></div></nav>
   <main class="builder-page">
     <div class="builder-toolbar" aria-label="Menu actions">
       <label>Template
@@ -70,12 +70,12 @@
         </select>
       </label>
       <button id="loadTemplateBtn" type="button">Load selected template</button>
-      <button id="exportHtmlBtn" type="button">Download HTML</button>
-      <button id="exportProjectBtn" type="button" class="secondary">Download project JSON</button>
-      <button id="exportMarkdownBtn" type="button" class="secondary">Download MD</button>
-      <button id="exportTextBtn" type="button" class="secondary">Download TXT</button>
+      <button id="exportHtmlBtn" type="button">Download start page</button>
+      <button id="exportProjectBtn" type="button" class="secondary">Save editable project</button>
+      <button id="exportMarkdownBtn" type="button" class="secondary">Download Markdown list</button>
+      <button id="exportTextBtn" type="button" class="secondary">Download text list</button>
       <span class="import-group">
-        <label class="file-label secondary">Import JSON/template <input id="importJsonInput" type="file" accept="application/json,.json"></label>
+        <label class="file-label secondary">Open saved project/template <input id="importJsonInput" type="file" accept="application/json,.json"></label>
         <label class="file-label secondary">Import Markdown <input id="importMarkdownInput" type="file" accept=".md,.markdown,text/markdown,text/plain"></label>
         <label class="file-label secondary">Import CSV <input id="importCsvInput" type="file" accept=".csv,text/csv,text/plain"></label>
         <label class="file-label secondary">Import TXT <input id="importTextInput" type="file" accept=".txt,text/plain"></label>
@@ -94,8 +94,8 @@
             <input id="titleInput" type="text" autocomplete="off">
           </div>
           <div class="field">
-            <label for="filenameInput">HTML filename</label>
-            <input id="filenameInput" type="text" autocomplete="off" placeholder="links.html">
+            <label for="filenameInput">Start page filename</label>
+            <input id="filenameInput" type="text" autocomplete="off" placeholder="start-page.html">
           </div>
           <div class="field full">
             <label for="descriptionInput">Description / notes</label>
@@ -111,7 +111,7 @@
         </div>
 
         <div id="sectionList" class="section-list"></div>
-        <div class="privacy"><strong>Privacy:</strong> this static GitHub Pages builder edits in your browser. Nothing is uploaded. Download your project JSON to keep a portable copy.</div>
+        <div class="privacy"><strong>Privacy:</strong> this static GitHub Pages builder edits in your browser. Nothing is uploaded. Save your editable project file to keep a portable copy.</div>
       </aside>
 
       <section class="builder-preview-wrapper" aria-label="Menu preview">
@@ -148,16 +148,16 @@ function escapeHtml(str){
 }
 function cleanColour(colour){ return allowedColours.includes(colour) ? colour : "blue"; }
 function ensureHtmlFilename(name){
-  let filename = String(name || "links.html").trim() || "links.html";
+  let filename = String(name || "start-page.html").trim() || "start-page.html";
   if(!/\.html?$/i.test(filename)) filename += ".html";
   return filename.replace(/[\\/:*?"<>|]+/g,"-");
 }
 function defaultProject(){
-  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"links.html",sections:[]};
+  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",sections:[]};
 }
 function defaultState(){
   return {
-    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"links.html",columns:5,theme:"light",palette:{...defaultPalette}},
+    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"start-page.html",columns:5,theme:"light",palette:{...defaultPalette}},
     menu:{columns:[{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}]}
   };
 }
@@ -298,7 +298,7 @@ function normaliseFriendlyProject(input){
   const p = defaultProject();
   p.title = input.title || input.settings?.pageTitle || "Personal Start Page";
   p.description = input.description || "";
-  p.filename = ensureHtmlFilename(input.filename || input.settings?.menuFilename || "links.html");
+  p.filename = ensureHtmlFilename(input.filename || input.settings?.menuFilename || "start-page.html");
   p.sections = (input.sections || []).map(section => ({
     name: section.name || section.text || "Section",
     colour: cleanColour(section.colour || section.color || "blue"),
@@ -316,7 +316,7 @@ function internalStateToProject(input){
   const p = defaultProject();
   p.title = input.settings?.pageTitle || "Personal Start Page";
   p.description = input.settings?.pageHeadline || "";
-  p.filename = ensureHtmlFilename(input.settings?.menuFilename || "links.html");
+  p.filename = ensureHtmlFilename(input.settings?.menuFilename || "start-page.html");
   const sections = [];
   (input.menu?.columns || []).forEach(col => {
     let current = null;
@@ -337,7 +337,7 @@ function projectToInternalState(p){
   const state = defaultState();
   state.settings.pageTitle = p.title || "Personal Start Page";
   state.settings.pageHeadline = "";
-  state.settings.menuFilename = ensureHtmlFilename(p.filename || "links.html");
+  state.settings.menuFilename = ensureHtmlFilename(p.filename || "start-page.html");
   state.menu.columns = [{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}];
   (p.sections || []).filter(s => s.included !== false).forEach(section => {
     const colour = cleanColour(section.colour || "blue");
@@ -400,7 +400,7 @@ function bindInput(id, key){
 }
 function renderSettings(){
   document.getElementById("titleInput").value = project.title || "";
-  document.getElementById("filenameInput").value = project.filename || "links.html";
+  document.getElementById("filenameInput").value = project.filename || "start-page.html";
   document.getElementById("descriptionInput").value = project.description || "";
   document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Untick it to keep a section while leaving it out for now.";
 }
@@ -525,7 +525,14 @@ async function loadSelectedTemplate(saveAfterLoad=true){
     if(!response.ok) throw new Error("Could not load template JSON");
     const template = await response.json();
     project = normaliseFriendlyProject(template);
-    project.filename = "links.html";
+    
+    const templateDefaultFilenames = {
+      "typical-uk-user":"start-page-uk.html",
+      "typical-us-consumer":"start-page-us.html",
+      "software-developer":"start-page-software.html",
+      "blank":"start-page.html"
+    };
+    project.filename = ensureHtmlFilename(project.filename || templateDefaultFilenames[key] || "start-page.html");
     if(saveAfterLoad) saveToBrowser();
     renderAll();
     updateRestoreButton();
@@ -564,7 +571,7 @@ function readTextFile(file, callback){
 }
 function parseMarkdownMenu(text){
   const lines = text.split(/\r?\n/);
-  const out = {format:"personal-start-page-creator-v1", title:"Imported Markdown Menu", description:"Imported from Markdown.", filename:"links.html", sections:[]};
+  const out = {format:"personal-start-page-creator-v1", title:"Imported Markdown Menu", description:"Imported from Markdown.", filename:"start-page.html", sections:[]};
   let current = null;
   for(const raw of lines){
     const line = raw.trim();
@@ -595,7 +602,7 @@ function parseCsvMenu(text){
   const header = rows[0].map(h=>h.toLowerCase());
   const idx = name => header.indexOf(name);
   const si=idx("section"), li=idx("label"), ui=idx("url"), ci=idx("colour")>=0?idx("colour"):idx("color");
-  const out={format:"personal-start-page-creator-v1",title:"Imported CSV Menu",description:"Imported from CSV.",filename:"links.html",sections:[]};
+  const out={format:"personal-start-page-creator-v1",title:"Imported CSV Menu",description:"Imported from CSV.",filename:"start-page.html",sections:[]};
   const byName=new Map();
   for(const row of rows.slice(1)){
     const sectionName = row[si>=0?si:0] || "Links";
@@ -610,7 +617,7 @@ function parseCsvMenu(text){
   return normaliseFriendlyProject(out);
 }
 function parsePlainTextMenu(text){
-  const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"links.html",sections:[]};
+  const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"start-page.html",sections:[]};
   let current=null;
   for(const raw of text.split(/\r?\n/)){
     const line=raw.trim(); if(!line) continue;
@@ -653,15 +660,15 @@ function initialiseEvents(){
   document.getElementById("exportHtmlBtn").addEventListener("click", () => {
     const state = getCurrentState();
     downloadBlob(exportClassicStandaloneHtml(state), ensureHtmlFilename(project.filename || state.settings.menuFilename), "text/html");
-    setStatus("Downloaded standalone HTML.");
+    setStatus("Downloaded start page.");
   });
   document.getElementById("exportProjectBtn").addEventListener("click", () => {
-    const filename = ensureHtmlFilename(project.filename || "links.html").replace(/\.html?$/i,"-project.json");
+    const filename = ensureHtmlFilename(project.filename || "start-page.html").replace(/\.html?$/i,"-project.json");
     downloadBlob(JSON.stringify(project,null,2), filename, "application/json");
-    setStatus("Downloaded project JSON.");
+    setStatus("Saved editable project.");
   });
-  document.getElementById("exportMarkdownBtn").addEventListener("click", () => { downloadBlob(exportMarkdown(), "start-page.md", "text/markdown"); setStatus("Downloaded Markdown."); });
-  document.getElementById("exportTextBtn").addEventListener("click", () => { downloadBlob(exportPlainText(), "start-page.txt", "text/plain"); setStatus("Downloaded plain text."); });
+  document.getElementById("exportMarkdownBtn").addEventListener("click", () => { downloadBlob(exportMarkdown(), "start-page.md", "text/markdown"); setStatus("Downloaded Markdown list."); });
+  document.getElementById("exportTextBtn").addEventListener("click", () => { downloadBlob(exportPlainText(), "start-page.txt", "text/plain"); setStatus("Downloaded text list."); });
   document.getElementById("importJsonInput").addEventListener("change", event => { const file = event.target.files[0]; if(file) importJsonFile(file); event.target.value = ""; });
   document.getElementById("importMarkdownInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseMarkdownMenu(text), "Markdown")); event.target.value=""; });
   document.getElementById("importCsvInput").addEventListener("change", event => { const file=event.target.files[0]; if(file) readTextFile(file, text => importProjectObject(parseCsvMenu(text), "CSV")); event.target.value=""; });

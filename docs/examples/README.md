@@ -1,10 +1,9 @@
-# Examples
+# Example start pages
 
-Export polished demo menus from `builder.html` and place the standalone HTML files in this folder.
+These are exported standalone start pages created from the builder/templates.
 
-Suggested future examples:
+- `start-page-uk-links.html`
+- `start-page-us-links.html`
+- `start-page-software.html`
 
-- `typical-uk-user.html`
-- `software-developer.html`
-- `typical-us-consumer.html`
-- `local-history.html`
+To add another demo, open a template in the builder, customise it, choose **Download start page**, and save the exported HTML file into this folder.
