@@ -1,4 +1,4 @@
-# Personal Start Page Creator — Stage 1.11
+# Personal Start Page Creator — Stage 1.12
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
@@ -35,6 +35,7 @@ docs/
   why-start-page.html     explanation of why a custom start page is useful
   ai-menu-help.html       instructions for building a menu with AI
   github-pages.html       publishing guide
+  about.html              about this tool
   help.html               help and notes
   builder.html            light-wrapper app page
   assets/site.css         public site styling
@@ -45,6 +46,13 @@ docs/
 ## Design rule
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
+
+
+## Stage 1.12 update
+
+- Added `docs/about.html`.
+- Added footer links to the About page across the integrated site pages.
+- Kept the builder page as a light workspace without a heavy footer.
 
 ## Stage 1.11 features
 
