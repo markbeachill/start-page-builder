@@ -1,4 +1,4 @@
-# Personal Start Page Creator — Stage 1.12
+# Personal Start Page Creator — Stage 1.13
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
@@ -48,7 +48,7 @@ docs/
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
 
-## Stage 1.12 update
+## Stage 1.13 update
 
 - Added `docs/about.html`.
 - Added footer links to the About page across the integrated site pages.
@@ -105,3 +105,11 @@ https://USERNAME.github.io/
 ```
 
 After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
+
+## Stage 1.13 update
+
+- Updated the exported start-page search area so it feels more like a search-first browser start page.
+- The search bar is now aligned with the menu content width.
+- The search box is larger, has an accessibility label, and autofocuses in saved/exported start pages.
+- The button now says “Search” rather than “Go”.
+- The builder preview does not steal focus while editing.
