@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workplace Start Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+:root{--columns:5;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
+.searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
+.searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
+.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
+.searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
+.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
+.searchbar-form button:hover{filter:brightness(.92);}
+.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
+.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
+.section{clear:both;padding:0;margin:0;}
+.group{display:flex;flex-wrap:wrap;gap:0 2%;}
+.col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
+.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
+.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
+.btn:hover{background-color:#aaa;color:#000;}
+.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
+.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
+.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
+.hdr-para{margin:0;line-height:160%;}
+
+  </style>
+</head>
+<body data-skin="classic" data-columns="5">
+<div class="searchbar-wrapper">
+  <div class="searchbar-inner">
+    <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+      <input type="text" name="q" placeholder="Search…" aria-label="Search the web" autofocus>
+      <label><input type="radio" name="searchtype" value="web" checked> Web</label>
+      <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div>
+<div class="maincontent">
+  <div class="section group">
+<div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr green-hdr" data-section-header="true"><b>Company &amp; Productivity</b></a>
+    </p>
+
+    <a class="btn green-btn" href="https://outlook.live.com/" target="_blank" rel="noopener noreferrer">
+      Outlook.com
+    </a>
+
+    <a class="btn green-btn" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
+      Gmail
+    </a>
+
+    <a class="btn green-btn" href="https://calendar.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Calendar
+    </a>
+
+    <a class="btn green-btn" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Drive
+    </a>
+
+    <a class="btn green-btn" href="https://docs.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Docs
+    </a>
+
+    <a class="btn green-btn" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Sheets
+    </a>
+
+    <a class="btn green-btn" href="https://slides.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Slides
+    </a>
+
+    <a class="btn green-btn" href="https://meet.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Meet
+    </a>
+
+    <a class="btn green-btn" href="https://keep.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Keep
+    </a>
+
+    <a class="btn green-btn" href="https://to-do.live.com/" target="_blank" rel="noopener noreferrer">
+      Microsoft To Do
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr green-hdr" data-section-header="true"><b>Finance, Legal &amp; Admin</b></a>
+    </p>
+
+    <a class="btn green-btn" href="https://www.gov.uk/" target="_blank" rel="noopener noreferrer">
+      GOV.UK
+    </a>
+
+    <a class="btn green-btn" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank" rel="noopener noreferrer">
+      HMRC
+    </a>
+
+    <a class="btn green-btn" href="https://www.irs.gov/" target="_blank" rel="noopener noreferrer">
+      IRS
+    </a>
+
+    <a class="btn green-btn" href="https://www.usa.gov/" target="_blank" rel="noopener noreferrer">
+      USA.gov
+    </a>
+
+    <a class="btn green-btn" href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">
+      Find a UK Company
+    </a>
+
+    <a class="btn green-btn" href="https://www.sec.gov/edgar/searchedgar/companysearch" target="_blank" rel="noopener noreferrer">
+      SEC Company Search
+    </a>
+
+    <a class="btn green-btn" href="https://www.citizensadvice.org.uk/" target="_blank" rel="noopener noreferrer">
+      Citizens Advice
+    </a>
+
+    <a class="btn green-btn" href="https://www.law.cornell.edu/" target="_blank" rel="noopener noreferrer">
+      Legal Information Institute
+    </a>
+
+    <a class="btn green-btn" href="https://www.google.com/finance/" target="_blank" rel="noopener noreferrer">
+      Google Finance
+    </a>
+
+    <a class="btn green-btn" href="https://openexchangerates.org/" target="_blank" rel="noopener noreferrer">
+      Open Exchange Rates
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr orange-hdr" data-section-header="true"><b>Sales &amp; CRM</b></a>
+    </p>
+
+    <a class="btn orange-btn" href="https://www.hubspot.com/products/crm" target="_blank" rel="noopener noreferrer">
+      HubSpot CRM
+    </a>
+
+    <a class="btn orange-btn" href="https://www.zoho.com/crm/" target="_blank" rel="noopener noreferrer">
+      Zoho CRM
+    </a>
+
+    <a class="btn orange-btn" href="https://www.bitrix24.com/tools/crm/" target="_blank" rel="noopener noreferrer">
+      Bitrix24 CRM
+    </a>
+
+    <a class="btn orange-btn" href="https://forms.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Forms
+    </a>
+
+    <a class="btn orange-btn" href="https://trends.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Trends
+    </a>
+
+    <a class="btn orange-btn" href="https://hunter.io/" target="_blank" rel="noopener noreferrer">
+      Hunter Email Finder
+    </a>
+
+    <a class="btn orange-btn" href="https://www.apollo.io/" target="_blank" rel="noopener noreferrer">
+      Apollo
+    </a>
+
+    <a class="btn orange-btn" href="https://www.docusign.com/" target="_blank" rel="noopener noreferrer">
+      DocuSign Free Trial
+    </a>
+
+    <a class="btn orange-btn" href="https://www.canva.com/presentations/" target="_blank" rel="noopener noreferrer">
+      Canva Presentations
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr orange-hdr" data-section-header="true"><b>Travel, Maps &amp; Expenses</b></a>
+    </p>
+
+    <a class="btn orange-btn" href="https://maps.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Maps
+    </a>
+
+    <a class="btn orange-btn" href="https://www.google.com/travel/" target="_blank" rel="noopener noreferrer">
+      Google Travel
+    </a>
+
+    <a class="btn orange-btn" href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
+      Skyscanner
+    </a>
+
+    <a class="btn orange-btn" href="https://www.kayak.com/" target="_blank" rel="noopener noreferrer">
+      Kayak
+    </a>
+
+    <a class="btn orange-btn" href="https://www.thetrainline.com/" target="_blank" rel="noopener noreferrer">
+      Trainline
+    </a>
+
+    <a class="btn orange-btn" href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener noreferrer">
+      National Rail
+    </a>
+
+    <a class="btn orange-btn" href="https://www.amtrak.com/" target="_blank" rel="noopener noreferrer">
+      Amtrak
+    </a>
+
+    <a class="btn orange-btn" href="https://www.uber.com/" target="_blank" rel="noopener noreferrer">
+      Uber
+    </a>
+
+    <a class="btn orange-btn" href="https://wise.com/gb/currency-converter/" target="_blank" rel="noopener noreferrer">
+      Wise Currency Converter
+    </a>
+
+    <a class="btn orange-btn" href="https://www.xe.com/currencyconverter/" target="_blank" rel="noopener noreferrer">
+      XE Currency Converter
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr purple-hdr" data-section-header="true"><b>PR &amp; Communications</b></a>
+    </p>
+
+    <a class="btn purple-btn" href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer">
+      Google Alerts
+    </a>
+
+    <a class="btn purple-btn" href="https://www.talkwalker.com/alerts" target="_blank" rel="noopener noreferrer">
+      Talkwalker Alerts
+    </a>
+
+    <a class="btn purple-btn" href="https://www.connectively.us/" target="_blank" rel="noopener noreferrer">
+      HARO / Connectively
+    </a>
+
+    <a class="btn purple-btn" href="https://www.prlog.org/" target="_blank" rel="noopener noreferrer">
+      PRLog
+    </a>
+
+    <a class="btn purple-btn" href="https://www.openpr.com/" target="_blank" rel="noopener noreferrer">
+      OpenPR
+    </a>
+
+    <a class="btn purple-btn" href="https://muckrack.com/daily" target="_blank" rel="noopener noreferrer">
+      Muck Rack Daily
+    </a>
+
+    <a class="btn purple-btn" href="https://www.businesswire.com/portal/site/home/news/" target="_blank" rel="noopener noreferrer">
+      Business Wire Newsroom
+    </a>
+
+    <a class="btn purple-btn" href="https://www.prnewswire.com/news-releases/" target="_blank" rel="noopener noreferrer">
+      PR Newswire News Releases
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr blue-hdr" data-section-header="true"><b>Research &amp; Search</b></a>
+    </p>
+
+    <a class="btn blue-btn" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Search
+    </a>
+
+    <a class="btn blue-btn" href="https://www.bing.com/" target="_blank" rel="noopener noreferrer">
+      Bing
+    </a>
+
+    <a class="btn blue-btn" href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">
+      DuckDuckGo
+    </a>
+
+    <a class="btn blue-btn" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Scholar
+    </a>
+
+    <a class="btn blue-btn" href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">
+      Wikipedia
+    </a>
+
+    <a class="btn blue-btn" href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">
+      Wikidata
+    </a>
+
+    <a class="btn blue-btn" href="https://opencorporates.com/" target="_blank" rel="noopener noreferrer">
+      OpenCorporates
+    </a>
+
+    <a class="btn blue-btn" href="https://www.gov.uk/government/organisations/companies-house" target="_blank" rel="noopener noreferrer">
+      Companies House
+    </a>
+
+    <a class="btn blue-btn" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">
+      SEC EDGAR
+    </a>
+
+    <a class="btn blue-btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+      ChatGPT
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr red-hdr" data-section-header="true"><b>News &amp; Market Awareness</b></a>
+    </p>
+
+    <a class="btn red-btn" href="https://www.bbc.co.uk/news" target="_blank" rel="noopener noreferrer">
+      BBC News
+    </a>
+
+    <a class="btn red-btn" href="https://www.reuters.com/" target="_blank" rel="noopener noreferrer">
+      Reuters
+    </a>
+
+    <a class="btn red-btn" href="https://apnews.com/" target="_blank" rel="noopener noreferrer">
+      Associated Press
+    </a>
+
+    <a class="btn red-btn" href="https://www.npr.org/" target="_blank" rel="noopener noreferrer">
+      NPR
+    </a>
+
+    <a class="btn red-btn" href="https://www.theguardian.com/" target="_blank" rel="noopener noreferrer">
+      The Guardian
+    </a>
+
+    <a class="btn red-btn" href="https://news.google.com/" target="_blank" rel="noopener noreferrer">
+      Google News
+    </a>
+
+    <a class="btn red-btn" href="https://finance.yahoo.com/" target="_blank" rel="noopener noreferrer">
+      Yahoo Finance
+    </a>
+
+    <a class="btn red-btn" href="https://www.marketwatch.com/" target="_blank" rel="noopener noreferrer">
+      MarketWatch
+    </a>
+
+    <a class="btn red-btn" href="https://www.cnbc.com/" target="_blank" rel="noopener noreferrer">
+      CNBC
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr green-hdr" data-section-header="true"><b>HR, Learning &amp; Workplace</b></a>
+    </p>
+
+    <a class="btn green-btn" href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer">
+      LinkedIn Learning
+    </a>
+
+    <a class="btn green-btn" href="https://www.coursera.org/" target="_blank" rel="noopener noreferrer">
+      Coursera
+    </a>
+
+    <a class="btn green-btn" href="https://www.edx.org/" target="_blank" rel="noopener noreferrer">
+      edX
+    </a>
+
+    <a class="btn green-btn" href="https://www.open.edu/openlearn/" target="_blank" rel="noopener noreferrer">
+      OpenLearn
+    </a>
+
+    <a class="btn green-btn" href="https://www.futurelearn.com/" target="_blank" rel="noopener noreferrer">
+      FutureLearn
+    </a>
+
+    <a class="btn green-btn" href="https://skillshop.withgoogle.com/" target="_blank" rel="noopener noreferrer">
+      Google Skillshop
+    </a>
+
+    <a class="btn green-btn" href="https://learn.microsoft.com/" target="_blank" rel="noopener noreferrer">
+      Microsoft Learn
+    </a>
+
+    <a class="btn green-btn" href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer">
+      ACAS
+    </a>
+
+    <a class="btn green-btn" href="https://www.gov.uk/browse/working" target="_blank" rel="noopener noreferrer">
+      GOV.UK Working, Jobs and Pensions
+    </a>
+
+    <a class="btn green-btn" href="https://www.dol.gov/" target="_blank" rel="noopener noreferrer">
+      U.S. Department of Labor
+    </a>
+</div><div class="col span_1_of_5">
+    <p class="hdr-para">
+      <a class="hdr purple-hdr" data-section-header="true"><b>Social Media &amp; Publishing</b></a>
+    </p>
+
+    <a class="btn purple-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      LinkedIn
+    </a>
+
+    <a class="btn purple-btn" href="https://x.com/" target="_blank" rel="noopener noreferrer">
+      X
+    </a>
+
+    <a class="btn purple-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+      Facebook
+    </a>
+
+    <a class="btn purple-btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
+
+    <a class="btn purple-btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+      YouTube
+    </a>
+
+    <a class="btn purple-btn" href="https://business.facebook.com/" target="_blank" rel="noopener noreferrer">
+      Meta Business Suite
+    </a>
+
+    <a class="btn purple-btn" href="https://buffer.com/" target="_blank" rel="noopener noreferrer">
+      Buffer
+    </a>
+
+    <a class="btn purple-btn" href="https://www.hootsuite.com/" target="_blank" rel="noopener noreferrer">
+      Hootsuite
+    </a>
+
+    <a class="btn purple-btn" href="https://later.com/" target="_blank" rel="noopener noreferrer">
+      Later
+    </a>
+
+    <a class="btn purple-btn" href="https://joinmastodon.org/" target="_blank" rel="noopener noreferrer">
+      Mastodon
+    </a>
+
+    <p class="hdr-para">
+      <a class="hdr blue-hdr" data-section-header="true"><b>Utilities &amp; Quick Tools</b></a>
+    </p>
+
+    <a class="btn blue-btn" href="https://time.is/" target="_blank" rel="noopener noreferrer">
+      Time.is
+    </a>
+
+    <a class="btn blue-btn" href="https://www.worldtimebuddy.com/" target="_blank" rel="noopener noreferrer">
+      World Time Buddy
+    </a>
+
+    <a class="btn blue-btn" href="https://smallpdf.com/" target="_blank" rel="noopener noreferrer">
+      Smallpdf
+    </a>
+
+    <a class="btn blue-btn" href="https://tools.pdf24.org/" target="_blank" rel="noopener noreferrer">
+      PDF24 Tools
+    </a>
+
+    <a class="btn blue-btn" href="https://www.ilovepdf.com/" target="_blank" rel="noopener noreferrer">
+      ILovePDF
+    </a>
+
+    <a class="btn blue-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">
+      Grammarly
+    </a>
+
+    <a class="btn blue-btn" href="https://hemingwayapp.com/" target="_blank" rel="noopener noreferrer">
+      Hemingway Editor
+    </a>
+
+    <a class="btn blue-btn" href="https://bitwarden.com/" target="_blank" rel="noopener noreferrer">
+      Bitwarden
+    </a>
+
+    <a class="btn blue-btn" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">
+      Have I Been Pwned
+    </a>
+
+    <a class="btn blue-btn" href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
+      Speedtest
+    </a>
+</div>
+  </div>
+</div>
+<script>
+  (function attachClassicMenuBehaviour(root=document, options = {}){
+  const form = root.querySelector(".searchbar-form");
+  if(form){
+    form.addEventListener("submit", function(){
+      const type = form.querySelector('input[name="searchtype"]:checked');
+      const q = form.querySelector('input[name="q"]');
+      if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
+    });
+    const q = form.querySelector('input[name="q"]');
+    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
+  }
+  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
+    h.addEventListener("click", function(ev){
+      ev.preventDefault();
+      let current = h.parentElement.nextElementSibling;
+      let hiding = false;
+      while(current){
+        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        current = current.nextElementSibling;
+      }
+      current = h.parentElement.nextElementSibling;
+      while(current){
+        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
+        if(nextHeader2) break;
+        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        current = current.nextElementSibling;
+      }
+    });
+  });
+})(document);
+</script>
+</body>
+</html>

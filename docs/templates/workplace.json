@@ -1,0 +1,451 @@
+{
+  "title": "Workplace Start Page",
+  "description": "A workplace-focused start page for productivity, CRM, communications, market awareness, publishing, research, travel, learning, finance, admin and quick tools.",
+  "filename": "start-page-workplace.html",
+  "sections": [
+    {
+      "name": "Company & Productivity",
+      "colour": "green",
+      "links": [
+        {
+          "label": "Outlook.com",
+          "url": "https://outlook.live.com/"
+        },
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/"
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/"
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/"
+        },
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/"
+        },
+        {
+          "label": "Google Sheets",
+          "url": "https://sheets.google.com/"
+        },
+        {
+          "label": "Google Slides",
+          "url": "https://slides.google.com/"
+        },
+        {
+          "label": "Google Meet",
+          "url": "https://meet.google.com/"
+        },
+        {
+          "label": "Google Keep",
+          "url": "https://keep.google.com/"
+        },
+        {
+          "label": "Microsoft To Do",
+          "url": "https://to-do.live.com/"
+        }
+      ]
+    },
+    {
+      "name": "Sales & CRM",
+      "colour": "orange",
+      "links": [
+        {
+          "label": "HubSpot CRM",
+          "url": "https://www.hubspot.com/products/crm"
+        },
+        {
+          "label": "Zoho CRM",
+          "url": "https://www.zoho.com/crm/"
+        },
+        {
+          "label": "Bitrix24 CRM",
+          "url": "https://www.bitrix24.com/tools/crm/"
+        },
+        {
+          "label": "Google Forms",
+          "url": "https://forms.google.com/"
+        },
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/"
+        },
+        {
+          "label": "Hunter Email Finder",
+          "url": "https://hunter.io/"
+        },
+        {
+          "label": "Apollo",
+          "url": "https://www.apollo.io/"
+        },
+        {
+          "label": "DocuSign Free Trial",
+          "url": "https://www.docusign.com/"
+        },
+        {
+          "label": "Canva Presentations",
+          "url": "https://www.canva.com/presentations/"
+        }
+      ]
+    },
+    {
+      "name": "PR & Communications",
+      "colour": "purple",
+      "links": [
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts"
+        },
+        {
+          "label": "Talkwalker Alerts",
+          "url": "https://www.talkwalker.com/alerts"
+        },
+        {
+          "label": "HARO / Connectively",
+          "url": "https://www.connectively.us/"
+        },
+        {
+          "label": "PRLog",
+          "url": "https://www.prlog.org/"
+        },
+        {
+          "label": "OpenPR",
+          "url": "https://www.openpr.com/"
+        },
+        {
+          "label": "Muck Rack Daily",
+          "url": "https://muckrack.com/daily"
+        },
+        {
+          "label": "Business Wire Newsroom",
+          "url": "https://www.businesswire.com/portal/site/home/news/"
+        },
+        {
+          "label": "PR Newswire News Releases",
+          "url": "https://www.prnewswire.com/news-releases/"
+        }
+      ]
+    },
+    {
+      "name": "News & Market Awareness",
+      "colour": "red",
+      "links": [
+        {
+          "label": "BBC News",
+          "url": "https://www.bbc.co.uk/news"
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/"
+        },
+        {
+          "label": "Associated Press",
+          "url": "https://apnews.com/"
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/"
+        },
+        {
+          "label": "The Guardian",
+          "url": "https://www.theguardian.com/"
+        },
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/"
+        },
+        {
+          "label": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/"
+        },
+        {
+          "label": "MarketWatch",
+          "url": "https://www.marketwatch.com/"
+        },
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/"
+        }
+      ]
+    },
+    {
+      "name": "Social Media & Publishing",
+      "colour": "purple",
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/"
+        },
+        {
+          "label": "Meta Business Suite",
+          "url": "https://business.facebook.com/"
+        },
+        {
+          "label": "Buffer",
+          "url": "https://buffer.com/"
+        },
+        {
+          "label": "Hootsuite",
+          "url": "https://www.hootsuite.com/"
+        },
+        {
+          "label": "Later",
+          "url": "https://later.com/"
+        },
+        {
+          "label": "Mastodon",
+          "url": "https://joinmastodon.org/"
+        }
+      ]
+    },
+    {
+      "name": "Research & Search",
+      "colour": "blue",
+      "links": [
+        {
+          "label": "Google Search",
+          "url": "https://www.google.com/"
+        },
+        {
+          "label": "Bing",
+          "url": "https://www.bing.com/"
+        },
+        {
+          "label": "DuckDuckGo",
+          "url": "https://duckduckgo.com/"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/"
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/"
+        },
+        {
+          "label": "Wikidata",
+          "url": "https://www.wikidata.org/"
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/"
+        },
+        {
+          "label": "Companies House",
+          "url": "https://www.gov.uk/government/organisations/companies-house"
+        },
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/search/"
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/"
+        }
+      ]
+    },
+    {
+      "name": "Travel, Maps & Expenses",
+      "colour": "orange",
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/"
+        },
+        {
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/"
+        },
+        {
+          "label": "Skyscanner",
+          "url": "https://www.skyscanner.net/"
+        },
+        {
+          "label": "Kayak",
+          "url": "https://www.kayak.com/"
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/"
+        },
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/"
+        },
+        {
+          "label": "Amtrak",
+          "url": "https://www.amtrak.com/"
+        },
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/"
+        },
+        {
+          "label": "Wise Currency Converter",
+          "url": "https://wise.com/gb/currency-converter/"
+        },
+        {
+          "label": "XE Currency Converter",
+          "url": "https://www.xe.com/currencyconverter/"
+        }
+      ]
+    },
+    {
+      "name": "HR, Learning & Workplace",
+      "colour": "green",
+      "links": [
+        {
+          "label": "LinkedIn Learning",
+          "url": "https://www.linkedin.com/learning/"
+        },
+        {
+          "label": "Coursera",
+          "url": "https://www.coursera.org/"
+        },
+        {
+          "label": "edX",
+          "url": "https://www.edx.org/"
+        },
+        {
+          "label": "OpenLearn",
+          "url": "https://www.open.edu/openlearn/"
+        },
+        {
+          "label": "FutureLearn",
+          "url": "https://www.futurelearn.com/"
+        },
+        {
+          "label": "Google Skillshop",
+          "url": "https://skillshop.withgoogle.com/"
+        },
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/"
+        },
+        {
+          "label": "ACAS",
+          "url": "https://www.acas.org.uk/"
+        },
+        {
+          "label": "GOV.UK Working, Jobs and Pensions",
+          "url": "https://www.gov.uk/browse/working"
+        },
+        {
+          "label": "U.S. Department of Labor",
+          "url": "https://www.dol.gov/"
+        }
+      ]
+    },
+    {
+      "name": "Finance, Legal & Admin",
+      "colour": "green",
+      "links": [
+        {
+          "label": "GOV.UK",
+          "url": "https://www.gov.uk/"
+        },
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs"
+        },
+        {
+          "label": "IRS",
+          "url": "https://www.irs.gov/"
+        },
+        {
+          "label": "USA.gov",
+          "url": "https://www.usa.gov/"
+        },
+        {
+          "label": "Find a UK Company",
+          "url": "https://find-and-update.company-information.service.gov.uk/"
+        },
+        {
+          "label": "SEC Company Search",
+          "url": "https://www.sec.gov/edgar/searchedgar/companysearch"
+        },
+        {
+          "label": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/"
+        },
+        {
+          "label": "Legal Information Institute",
+          "url": "https://www.law.cornell.edu/"
+        },
+        {
+          "label": "Google Finance",
+          "url": "https://www.google.com/finance/"
+        },
+        {
+          "label": "Open Exchange Rates",
+          "url": "https://openexchangerates.org/"
+        }
+      ]
+    },
+    {
+      "name": "Utilities & Quick Tools",
+      "colour": "blue",
+      "links": [
+        {
+          "label": "Time.is",
+          "url": "https://time.is/"
+        },
+        {
+          "label": "World Time Buddy",
+          "url": "https://www.worldtimebuddy.com/"
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/"
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/"
+        },
+        {
+          "label": "ILovePDF",
+          "url": "https://www.ilovepdf.com/"
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/"
+        },
+        {
+          "label": "Hemingway Editor",
+          "url": "https://hemingwayapp.com/"
+        },
+        {
+          "label": "Bitwarden",
+          "url": "https://bitwarden.com/"
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/"
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/"
+        }
+      ]
+    }
+  ]
+}

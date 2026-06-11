@@ -1,9 +1,17 @@
-# Personal Start Page Creator — Stage 1.15
+# Personal Start Page Creator — Stage 1.17
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal start pages.
+
+## Stage 1.17 update
+
+- Added a **Workplace** starter template.
+- Added `docs/templates/workplace.json`.
+- Added `docs/examples/start-page-workplace.html`.
+- Added Workplace to the builder template selector.
+- Added Workplace cards/links to the home and templates pages.
 
 ## GitHub Pages
 
@@ -47,32 +55,22 @@ docs/
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
+## Current features
 
-## Stage 1.15 update
-
-- Added `docs/about.html`.
-- Added footer links to the About page across the integrated site pages.
-- Kept the builder page as a light workspace without a heavy footer.
-
-## Stage 1.15 features
-
-- Added a **Why use a start page?** page explaining deep links, reduced distraction, spatial familiarity, no-extension use, and digital autonomy.
-- Link rows now have ↑ / ↓ controls and can be dragged within their section to reorder links.
-- Publishing page now has a simpler heading and puts the AI step-by-step publishing prompt near the top.
-- AI instruction blocks on the AI and publishing pages now include copy-to-clipboard buttons.
-- Home page now links to the start-page rationale as well as examples.
-- Publishing page now strongly recommends renaming the saved start page to `index.html` for GitHub Pages.
-- Publishing AI prompt now asks the AI to guide the user step by step, use `index.html`, calculate the final URL, write a README and choose a shortcut system.
-- Integrated home, templates, AI help, publishing and help pages.
+- Integrated home, templates, AI help, publishing, about and help pages.
 - Light-wrapper builder page with wide editor and preview panes.
-- Template selector: Typical UK User, Typical US User, Software Developer and Blank.
-- Real example start pages for UK, US and Software Developer menus.
+- Template selector: Typical UK User, Typical US User, Software Developer, Workplace and Blank.
+- Real example start pages for UK, US, Software Developer and Workplace menus.
 - Save/load start page as first-class actions.
 - Save/load menu config as first-class actions.
 - Import list dropdown: Markdown, CSV and plain text.
 - Export list dropdown: Markdown and plain text.
 - Load existing exported start page HTML back into the builder.
+- Link rows have ↑ / ↓ controls and can be dragged within their section to reorder links.
 - Section **Use** control remains, with sections used by default.
+- Responsive classic renderer with full-width buttons, calculated five-column widths and search-first behaviour.
+- Publishing page recommends renaming saved start pages to `index.html` for GitHub Pages.
+- AI instruction blocks include copy-to-clipboard buttons.
 - No framework, no backend, no account, no external library dependency.
 
 ## File concepts
@@ -105,16 +103,3 @@ https://USERNAME.github.io/
 ```
 
 After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
-
-## Stage 1.15 update
-
-- Updated the exported start-page search area so it feels more like a search-first browser start page.
-- The search bar is now aligned with the menu content width.
-- The search box is larger, has an accessibility label, and autofocuses in saved/exported start pages.
-- The button now says “Search” rather than “Go”.
-- The builder preview does not steal focus while editing.
-
-
-## Stage 1.15 note
-
-This point release fixes editor focus loss while typing. Text edits now update the preview without rebuilding the editor form, so inputs should keep focus as expected.

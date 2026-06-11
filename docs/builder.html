@@ -73,6 +73,7 @@
           <select id="templateSelect">
             <option value="typical-uk-user">Typical UK User</option>
             <option value="software-developer">Software Developer</option>
+            <option value="workplace">Workplace</option>
             <option value="typical-us-consumer">Typical US User</option>
             <option value="blank">Blank</option>
           </select>
@@ -208,28 +209,29 @@ function buildClassicMenuCss(settings){
   const searchBg = settings.theme === "dark" ? "#222" : "#f1f1f1";
   const searchBorder = settings.theme === "dark" ? "#444" : "#ddd";
   return `
+:root{--columns:5;--c-blue:${pal.blue};--c-green:${pal.green};--c-orange:${pal.orange};--c-purple:${pal.purple};--c-red:${pal.red};}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bodyBg};color:${bodyColor};}
 .searchbar-wrapper{background:${searchBg};padding:12px 15px;border-bottom:1px solid ${searchBorder};}
-.searchbar-inner{width:80%;max-width:92.3em;margin:0 auto;}
+.searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
 .searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
 .searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
-.searchbar-form input[type="text"]:focus{outline:2px solid ${pal.blue};outline-offset:0;border-color:${pal.blue};}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid ${pal.blue};background:${pal.blue};color:#fff;cursor:pointer;font-size:14px;}
-.searchbar-form button:hover{background:#3367d6;}
+.searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
+.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
+.searchbar-form button:hover{filter:brightness(.92);}
 .searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
-.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;}
-.maincontent{clear:both;width:80%;font-size:.8125em;max-width:92.3em;margin:0 auto;padding:1em 0;color:${bodyColor};line-height:1.5em;position:relative;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
+.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:${bodyColor};line-height:1.5em;position:relative;}
 .section{clear:both;padding:0;margin:0;}
-.group{display:flex;flex-wrap:nowrap;justify-content:space-between;}
-.col{box-sizing:border-box;flex:0 0 19%;max-width:19%;margin:1% 0;}
+.group{display:flex;flex-wrap:wrap;gap:0 2%;}
+.col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
 .span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.group{flex-wrap:wrap;}.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner{width:100%;}}
-.btn{text-align:left;width:200px;color:#333;position:relative;display:inline-block;overflow:visible;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;border-image:none 100% / 1 / 0 stretch;background:#eee none repeat scroll 0 0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;min-width:42px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;vertical-align:inherit;font-weight:600;}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
+.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
 .btn:hover{background-color:#aaa;color:#000;}
-.blue-btn{border-color:currentcolor currentcolor currentcolor ${pal.blue};}.green-btn{border-color:currentcolor currentcolor currentcolor ${pal.green};}.orange-btn{border-color:currentcolor currentcolor currentcolor ${pal.orange};}.purple-btn{border-color:currentcolor currentcolor currentcolor ${pal.purple};}.red-btn{border-color:currentcolor currentcolor currentcolor ${pal.red};}
-.hdr{text-align:left;width:200px;color:#fff;position:relative;display:inline-block;overflow:visible;margin:0;margin-top:8px;padding:10px 14px;cursor:pointer;outline:0;border:0;background-repeat:repeat-x;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;min-width:42px;text-shadow:none;text-decoration:none;white-space:nowrap;vertical-align:inherit;}
-.blue-hdr{background-color:${pal.blue};}.green-hdr{background-color:${pal.green};}.orange-hdr{background-color:${pal.orange};}.purple-hdr{background-color:${pal.purple};}.red-hdr{background-color:${pal.red};}
-.hdr-para{margin-bottom:1.8em;line-height:160%;margin:0;}
+.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
+.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
+.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
+.hdr-para{margin:0;line-height:160%;}
 `;
 }
 function renderClassicMenuBody(menu, settings, options = {}){
@@ -323,7 +325,7 @@ function exportClassicStandaloneHtml(state){
 ${css}
   </style>
 </head>
-<body>
+<body data-skin="classic" data-columns="5">
 ${body}
 <script>
   (${attachClassicMenuBehaviour.toString()})(document);
@@ -634,6 +636,7 @@ function onLinkDragEnd(){
 const templateFiles = {
   "typical-uk-user":"templates/typical-uk-user.json",
   "software-developer":"templates/software-developer.json",
+  "workplace":"templates/workplace.json",
   "typical-us-consumer":"templates/typical-us-consumer.json",
   "blank":"templates/blank.json"
 };
@@ -654,6 +657,7 @@ async function loadSelectedTemplate(saveAfterLoad=true){
       "typical-uk-user":"start-page-uk.html",
       "typical-us-consumer":"start-page-us.html",
       "software-developer":"start-page-software.html",
+      "workplace":"start-page-workplace.html",
       "blank":"start-page.html"
     };
     project.filename = ensureHtmlFilename(project.filename || templateDefaultFilenames[key] || "start-page.html");
