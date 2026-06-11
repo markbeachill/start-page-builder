@@ -1,0 +1,60 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Everyday Life Start Page",
+  "description": "Simplified, clean interface for low-stress daily navigation.",
+  "filename": "start-page-everyday-life-uk.html",
+  "sections": [
+    {
+      "name": "Email",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "News",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC News",
+          "url": "https://www.bbc.co.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Public Services",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "DVLA Portal",
+          "url": "https://www.gov.uk/browse/driving",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Local Info",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Weather",
+          "url": "https://www.bbc.co.uk/weather",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Students (University) Start Page",
+  "description": "Independent academic research, campus portals, and life admin.",
+  "filename": "start-page-student-uni-uk.html",
+  "sections": [
+    {
+      "name": "Learning Platform",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Canvas",
+          "url": "https://canvas.instructure.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Blackboard",
+          "url": "https://www.blackboard.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Library & Research",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "JSTOR",
+          "url": "https://www.jstor.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ResearchGate",
+          "url": "https://www.researchgate.net/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing Tools",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Zotero",
+          "url": "https://www.zotero.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Mendeley",
+          "url": "https://www.mendeley.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "CiteThisForMe",
+          "url": "https://www.citethisforme.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "AI Study Tools",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "DeepL Translate",
+          "url": "https://www.deepl.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Student Finance",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Student Loans",
+          "url": "https://www.gov.uk/student-finance",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "UNiDAYS",
+          "url": "https://www.myunidays.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Daily Life",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Splitwise",
+          "url": "https://www.splitwise.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Wellbeing",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Nightline",
+          "url": "https://nightline.ac.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Careers",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Handshake",
+          "url": "https://joinhandshake.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

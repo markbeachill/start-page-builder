@@ -1,0 +1,148 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Teachers Start Page",
+  "description": "Aggregating fragmented lesson planning and grading systems.",
+  "filename": "start-page-teacher-uk.html",
+  "sections": [
+    {
+      "name": "School Systems",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Arbor",
+          "url": "https://arbor-education.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "SIMS",
+          "url": "https://www.ess-sims.co.uk/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Lesson Planning",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Twinkl",
+          "url": "https://www.twinkl.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Padlet",
+          "url": "https://padlet.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Assessment",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Blooket",
+          "url": "https://www.blooket.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Kahoot!",
+          "url": "https://kahoot.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Turnitin",
+          "url": "https://www.turnitin.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Resources",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "TES Resources",
+          "url": "https://www.tes.com/teaching-resources",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Safeguarding",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "CPOMS",
+          "url": "https://www.cpoms.co.uk/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Communication",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "AI Teaching Tools",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "MagicSchool AI",
+          "url": "https://www.magicschool.ai/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Eduaide",
+          "url": "https://www.eduaide.ai/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Professional Dev",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "NEU Union",
+          "url": "https://neu.org.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Edutopia",
+          "url": "https://www.edutopia.org/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Travel Planners Start Page",
+  "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
+  "filename": "start-page-travel-planner-uk.html",
+  "sections": [
+    {
+      "name": "Maps",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Flights",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Skyscanner",
+          "url": "https://www.skyscanner.net/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Trains",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Hotels",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Currency",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "XE Currency",
+          "url": "https://www.xe.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Revolut",
+          "url": "https://www.revolut.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Travel Alerts",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "FCDO Advice",
+          "url": "https://www.gov.uk/foreign-travel-advice",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

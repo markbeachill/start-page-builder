@@ -1,0 +1,104 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "News Buffs Start Page",
+  "description": "Deep political, regional, and investigative media aggregation.",
+  "filename": "start-page-news-buff-us.html",
+  "sections": [
+    {
+      "name": "Aggregators",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Techmeme",
+          "url": "https://www.techmeme.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Memeorandum",
+          "url": "https://www.memeorandum.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Feedly",
+          "url": "https://feedly.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Live News",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "CNN Live",
+          "url": "https://www.cnn.com/go",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Opinion",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Substack",
+          "url": "https://substack.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Polling Data",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "FiveThirtyEight",
+          "url": "https://fivethirtyeight.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "YouGov",
+          "url": "https://yougov.co.uk/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Long-form",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Longform",
+          "url": "https://longform.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Financial News",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

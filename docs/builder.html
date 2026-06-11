@@ -71,11 +71,49 @@
       <span class="toolbar-group">
         <label>Template
           <select id="templateSelect">
+          <optgroup label="Featured">
             <option value="typical-uk-user">Typical UK User</option>
-            <option value="software-developer">Software Developer</option>
-            <option value="workplace">Workplace</option>
             <option value="typical-us-consumer">Typical US User</option>
+            <option value="workplace">Workplace</option>
+            <option value="software-developer">Software Developer</option>
             <option value="blank">Blank</option>
+          </optgroup>
+          <optgroup label="Education">
+            <option value="student-primary-uk">Students (Primary) (UK)</option>
+            <option value="student-primary-us">Students (Elementary) (US)</option>
+            <option value="student-school-uk">Students (Secondary) (UK)</option>
+            <option value="student-school-us">Students (High School) (US)</option>
+            <option value="student-uni-uk">Students (University) (UK)</option>
+            <option value="student-uni-us">Students (College) (US)</option>
+            <option value="teacher-uk">Teachers (UK)</option>
+            <option value="teacher-us">Teachers (US)</option>
+          </optgroup>
+          <optgroup label="Work &amp; Business">
+            <option value="small-business-uk">Small Business (UK)</option>
+            <option value="small-business-us">Small Business (US)</option>
+            <option value="freelancer-uk">Freelancers (UK)</option>
+            <option value="freelancer-us">Freelancers (US)</option>
+            <option value="dev-ops">DevOps</option>
+            <option value="newsroom-uk">Newsroom (UK)</option>
+            <option value="newsroom-us">Newsroom (US)</option>
+          </optgroup>
+          <optgroup label="Tech &amp; Creative">
+            <option value="ai-user">AI Users</option>
+            <option value="creative-pro">Creative Pros</option>
+            <option value="creator">Creators</option>
+          </optgroup>
+          <optgroup label="Everyday Life">
+            <option value="news-buff-uk">News Buffs (UK)</option>
+            <option value="news-buff-us">News Buffs (US)</option>
+            <option value="health-wellness-uk">Health &amp; Wellness (UK)</option>
+            <option value="health-wellness-us">Health &amp; Wellness (US)</option>
+            <option value="family-home-uk">Family &amp; Home (UK)</option>
+            <option value="family-home-us">Family &amp; Home (US)</option>
+            <option value="everyday-life-uk">Everyday Life (UK)</option>
+            <option value="everyday-life-us">Everyday Life (US)</option>
+            <option value="travel-planner-uk">Travel Planners (UK)</option>
+            <option value="travel-planner-us">Travel Planners (US)</option>
+          </optgroup>
           </select>
         </label>
         <button id="loadTemplateBtn" type="button">Use template</button>
@@ -635,10 +673,50 @@ function onLinkDragEnd(){
 }
 const templateFiles = {
   "typical-uk-user":"templates/typical-uk-user.json",
-  "software-developer":"templates/software-developer.json",
-  "workplace":"templates/workplace.json",
   "typical-us-consumer":"templates/typical-us-consumer.json",
-  "blank":"templates/blank.json"
+  "workplace":"templates/workplace.json",
+  "software-developer":"templates/software-developer.json",
+  "blank":"templates/blank.json",
+  "student-primary-uk":"templates/student-primary-uk.json",
+  "student-primary-us":"templates/student-primary-us.json",
+  "student-school-uk":"templates/student-school-uk.json",
+  "student-school-us":"templates/student-school-us.json",
+  "student-uni-uk":"templates/student-uni-uk.json",
+  "student-uni-us":"templates/student-uni-us.json",
+  "teacher-uk":"templates/teacher-uk.json",
+  "teacher-us":"templates/teacher-us.json",
+  "small-business-uk":"templates/small-business-uk.json",
+  "small-business-us":"templates/small-business-us.json",
+  "freelancer-uk":"templates/freelancer-uk.json",
+  "freelancer-us":"templates/freelancer-us.json",
+  "dev-ops":"templates/dev-ops.json",
+  "newsroom-uk":"templates/newsroom-uk.json",
+  "newsroom-us":"templates/newsroom-us.json",
+  "ai-user":"templates/ai-user.json",
+  "creative-pro":"templates/creative-pro.json",
+  "creator":"templates/creator.json",
+  "news-buff-uk":"templates/news-buff-uk.json",
+  "news-buff-us":"templates/news-buff-us.json",
+  "health-wellness-uk":"templates/health-wellness-uk.json",
+  "health-wellness-us":"templates/health-wellness-us.json",
+  "family-home-uk":"templates/family-home-uk.json",
+  "family-home-us":"templates/family-home-us.json",
+  "everyday-life-uk":"templates/everyday-life-uk.json",
+  "everyday-life-us":"templates/everyday-life-us.json",
+  "travel-planner-uk":"templates/travel-planner-uk.json",
+  "travel-planner-us":"templates/travel-planner-us.json",
+  "sport-general-uk":"templates/sport-general-uk.json",
+  "sport-general-us":"templates/sport-general-us.json",
+  "football-uk-uk":"templates/football-uk-uk.json",
+  "local-history-uk":"templates/local-history-uk.json",
+  "local-history-us":"templates/local-history-us.json",
+  "reader-writer-uk":"templates/reader-writer-uk.json",
+  "reader-writer-us":"templates/reader-writer-us.json",
+  "movie-buff-uk":"templates/movie-buff-uk.json",
+  "movie-buff-us":"templates/movie-buff-us.json",
+  "kpop-fan":"templates/kpop-fan.json",
+  "music-fan-uk":"templates/music-fan-uk.json",
+  "music-fan-us":"templates/music-fan-us.json"
 };
 function getTemplateFromUrl(){
   const params = new URLSearchParams(location.search);
@@ -658,7 +736,47 @@ async function loadSelectedTemplate(saveAfterLoad=true){
       "typical-us-consumer":"start-page-us.html",
       "software-developer":"start-page-software.html",
       "workplace":"start-page-workplace.html",
-      "blank":"start-page.html"
+      "blank":"start-page.html",
+      "student-primary-uk":"start-page-student-primary-uk.html",
+      "student-primary-us":"start-page-student-primary-us.html",
+      "student-school-uk":"start-page-student-school-uk.html",
+      "student-school-us":"start-page-student-school-us.html",
+      "student-uni-uk":"start-page-student-uni-uk.html",
+      "student-uni-us":"start-page-student-uni-us.html",
+      "teacher-uk":"start-page-teacher-uk.html",
+      "teacher-us":"start-page-teacher-us.html",
+      "small-business-uk":"start-page-small-business-uk.html",
+      "small-business-us":"start-page-small-business-us.html",
+      "freelancer-uk":"start-page-freelancer-uk.html",
+      "freelancer-us":"start-page-freelancer-us.html",
+      "dev-ops":"start-page-dev-ops.html",
+      "newsroom-uk":"start-page-newsroom-uk.html",
+      "newsroom-us":"start-page-newsroom-us.html",
+      "ai-user":"start-page-ai-user.html",
+      "creative-pro":"start-page-creative-pro.html",
+      "creator":"start-page-creator.html",
+      "news-buff-uk":"start-page-news-buff-uk.html",
+      "news-buff-us":"start-page-news-buff-us.html",
+      "health-wellness-uk":"start-page-health-wellness-uk.html",
+      "health-wellness-us":"start-page-health-wellness-us.html",
+      "family-home-uk":"start-page-family-home-uk.html",
+      "family-home-us":"start-page-family-home-us.html",
+      "everyday-life-uk":"start-page-everyday-life-uk.html",
+      "everyday-life-us":"start-page-everyday-life-us.html",
+      "travel-planner-uk":"start-page-travel-planner-uk.html",
+      "travel-planner-us":"start-page-travel-planner-us.html",
+      "sport-general-uk":"start-page-sport-general-uk.html",
+      "sport-general-us":"start-page-sport-general-us.html",
+      "football-uk-uk":"start-page-football-uk-uk.html",
+      "local-history-uk":"start-page-local-history-uk.html",
+      "local-history-us":"start-page-local-history-us.html",
+      "reader-writer-uk":"start-page-reader-writer-uk.html",
+      "reader-writer-us":"start-page-reader-writer-us.html",
+      "movie-buff-uk":"start-page-movie-buff-uk.html",
+      "movie-buff-us":"start-page-movie-buff-us.html",
+      "kpop-fan":"start-page-kpop-fan.html",
+      "music-fan-uk":"start-page-music-fan-uk.html",
+      "music-fan-us":"start-page-music-fan-us.html"
     };
     project.filename = ensureHtmlFilename(project.filename || templateDefaultFilenames[key] || "start-page.html");
     if(saveAfterLoad) saveToBrowser();

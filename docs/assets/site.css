@@ -24,3 +24,17 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}.si
 .value-item strong{display:block;font-size:20px;margin-bottom:4px;color:#0f172a;}
 .value-item span{color:var(--muted);line-height:1.45;}
 @media(max-width:850px){.value-strip{grid-template-columns:1fr;}}
+
+
+/* Stage 1.18: Jump-start template catalogue */
+.jump-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:10px;}
+.featured-grid{margin-bottom:26px;}
+.template-card{display:flex;flex-direction:column;}
+.template-card .actions{margin-top:auto;}
+.card-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+.muted-badge{background:#f1f5f9;border-color:#dbe3ee;color:#64748b;}
+.disabled-button{cursor:not-allowed;opacity:.72;}
+.disabled-button:hover{text-decoration:none;filter:none;}
+.template-section-heading{scroll-margin-top:90px;}
+@media(max-width:1050px){.jump-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:700px){.jump-grid{grid-template-columns:1fr;}}

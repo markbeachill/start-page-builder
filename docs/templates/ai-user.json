@@ -1,0 +1,196 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "AI Users Start Page",
+  "description": "Quick access to daily LLMs, prompt hubs, and local model forums.",
+  "filename": "start-page-ai-user.html",
+  "sections": [
+    {
+      "name": "Daily Chatbots",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Claude",
+          "url": "https://claude.ai/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Gemini",
+          "url": "https://gemini.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Copilot",
+          "url": "https://copilot.microsoft.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Image Generation",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Midjourney",
+          "url": "https://www.midjourney.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Adobe Firefly",
+          "url": "https://firefly.adobe.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Stable Diffusion",
+          "url": "https://stablediffusionweb.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Prompt Libraries",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "PromptBase",
+          "url": "https://promptbase.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FlowGPT",
+          "url": "https://flowgpt.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "AI News",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "The Rundown",
+          "url": "https://www.therundown.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Ben's Bites",
+          "url": "https://bensbites.co/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Model Hubs",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Replicate",
+          "url": "https://replicate.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Local LLMs",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "r/LocalLLaMA",
+          "url": "https://www.reddit.com/r/LocalLLaMA/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "LM Studio",
+          "url": "https://lmstudio.ai/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ollama",
+          "url": "https://ollama.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Audio & Video AI",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "ElevenLabs",
+          "url": "https://elevenlabs.io/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Runway",
+          "url": "https://runwayml.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Suno",
+          "url": "https://suno.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Developer APIs",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "OpenAI API",
+          "url": "https://platform.openai.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Anthropic API",
+          "url": "https://console.anthropic.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google AI Studio",
+          "url": "https://aistudio.google.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

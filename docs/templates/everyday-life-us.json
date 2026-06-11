@@ -1,0 +1,60 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Everyday Life Start Page",
+  "description": "Simplified, clean interface for low-stress daily navigation.",
+  "filename": "start-page-everyday-life-us.html",
+  "sections": [
+    {
+      "name": "Email",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "News",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Public Services",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "USPS Tracker",
+          "url": "https://www.usps.com/manage/informed-delivery.htm",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Local Info",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Weather Und.",
+          "url": "https://www.wunderground.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

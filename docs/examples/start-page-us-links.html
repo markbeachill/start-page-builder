@@ -5,7 +5,7 @@
   <title>Typical US User Links</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-
+/* Skin: Classic Responsive */
 :root{--columns:5;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
 .searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
@@ -29,7 +29,6 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
 .hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
 .blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
 .hdr-para{margin:0;line-height:160%;}
-
   </style>
 </head>
 <body data-skin="classic" data-columns="5">
@@ -286,7 +285,7 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
   </div>
 </div>
 <script>
-  (function attachClassicMenuBehaviour(root=document, options = {}){
+  (function attachMenuBehaviour(root=document){
   const form = root.querySelector(".searchbar-form");
   if(form){
     form.addEventListener("submit", function(){
@@ -295,7 +294,7 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
       if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
     });
     const q = form.querySelector('input[name="q"]');
-    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
+    if(q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
   }
   root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
     h.addEventListener("click", function(ev){

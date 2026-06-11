@@ -1,0 +1,79 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Family & Home Start Page",
+  "description": "Shared logistics, grocery delivery, and public utility billing.",
+  "filename": "start-page-family-home-uk.html",
+  "sections": [
+    {
+      "name": "Search",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google",
+          "url": "https://www.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "School",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Arbor Parent",
+          "url": "https://arbor-education.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Streaming",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Netflix",
+          "url": "https://www.netflix.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Shopping",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Tesco Grocery",
+          "url": "https://www.tesco.com/groceries/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Utilities",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "British Gas",
+          "url": "https://www.britishgas.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bin Collection",
+          "url": "https://www.gov.uk/rubbish-collection-day",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

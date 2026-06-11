@@ -1,0 +1,167 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Newsroom Start Page",
+  "description": "OSINT research, public records, verification, and data tools.",
+  "filename": "start-page-newsroom-us.html",
+  "sections": [
+    {
+      "name": "News Wires",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AP News",
+          "url": "https://apnews.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Adv",
+          "url": "https://www.google.com/advanced_search",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Fact Checking",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Bellingcat",
+          "url": "https://www.bellingcat.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Companies",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Public Records",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "FOIA.gov",
+          "url": "https://www.foia.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PACER",
+          "url": "https://pacer.uscourts.gov/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Social Monitoring",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "X Pro",
+          "url": "https://pro.twitter.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hootsuite",
+          "url": "https://www.hootsuite.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Getty Images",
+          "url": "https://www.gettyimages.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "TinEye",
+          "url": "https://tineye.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing & Publishing",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Data Tools",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Datawrapper",
+          "url": "https://www.datawrapper.de/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Flourish",
+          "url": "https://flourish.studio/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

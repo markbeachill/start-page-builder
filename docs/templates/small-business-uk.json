@@ -1,0 +1,204 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Small Business Start Page",
+  "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+  "filename": "start-page-small-business-uk.html",
+  "sections": [
+    {
+      "name": "Email & Documents",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Workspace",
+          "url": "https://workspace.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft 365",
+          "url": "https://www.microsoft.com/en-us/microsoft-365",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Banking & Accounts",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Starling Biz",
+          "url": "https://www.starlingbank.com/business-account/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Monzo Biz",
+          "url": "https://monzo.com/business/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Tax & Government",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/log-in-register-hmrc-online-services",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Companies House",
+          "url": "https://www.gov.uk/government/organisations/companies-house",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Website & Domains",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Shopify",
+          "url": "https://www.shopify.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Social Media",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Meta Business",
+          "url": "https://business.facebook.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Buffer",
+          "url": "https://buffer.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Invoices",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Xero",
+          "url": "https://www.xero.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "QuickBooks",
+          "url": "https://quickbooks.intuit.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Customers",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "HubSpot",
+          "url": "https://www.hubspot.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Zendesk",
+          "url": "https://www.zendesk.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Shipping",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Royal Mail Biz",
+          "url": "https://www.royalmail.com/business",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Evri Biz",
+          "url": "https://www.evri.com/business",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "ShipStation",
+          "url": "https://www.shipstation.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Legal Basics",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "LawDepot",
+          "url": "https://www.lawdepot.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ICO",
+          "url": "https://ico.org.uk/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

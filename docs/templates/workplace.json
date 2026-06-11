@@ -1,4 +1,5 @@
 {
+  "format": "personal-start-page-creator-v1",
   "title": "Workplace Start Page",
   "description": "A workplace-focused start page for productivity, CRM, communications, market awareness, publishing, research, travel, learning, finance, admin and quick tools.",
   "filename": "start-page-workplace.html",
@@ -6,444 +7,640 @@
     {
       "name": "Company & Productivity",
       "colour": "green",
+      "included": true,
       "links": [
         {
           "label": "Outlook.com",
-          "url": "https://outlook.live.com/"
+          "url": "https://outlook.live.com/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Gmail",
-          "url": "https://mail.google.com/"
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Calendar",
-          "url": "https://calendar.google.com/"
+          "label": "G.Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Drive",
-          "url": "https://drive.google.com/"
+          "label": "G.Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Docs",
-          "url": "https://docs.google.com/"
+          "label": "G.Docs",
+          "url": "https://docs.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Sheets",
-          "url": "https://sheets.google.com/"
+          "label": "G.Sheets",
+          "url": "https://sheets.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Slides",
-          "url": "https://slides.google.com/"
+          "label": "G.Slides",
+          "url": "https://slides.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Meet",
-          "url": "https://meet.google.com/"
+          "label": "G.Meet",
+          "url": "https://meet.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Google Keep",
-          "url": "https://keep.google.com/"
+          "label": "G. Keep",
+          "url": "https://keep.google.com/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Microsoft To Do",
-          "url": "https://to-do.live.com/"
+          "label": "MS To Do",
+          "url": "https://to-do.live.com/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
       "name": "Sales & CRM",
       "colour": "orange",
+      "included": true,
       "links": [
         {
           "label": "HubSpot CRM",
-          "url": "https://www.hubspot.com/products/crm"
+          "url": "https://www.hubspot.com/products/crm",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Zoho CRM",
-          "url": "https://www.zoho.com/crm/"
+          "url": "https://www.zoho.com/crm/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Bitrix24 CRM",
-          "url": "https://www.bitrix24.com/tools/crm/"
+          "url": "https://www.bitrix24.com/tools/crm/",
+          "colour": "orange",
+          "included": true
         },
         {
-          "label": "Google Forms",
-          "url": "https://forms.google.com/"
+          "label": "G,Forms",
+          "url": "https://forms.google.com/",
+          "colour": "orange",
+          "included": true
         },
         {
-          "label": "Google Trends",
-          "url": "https://trends.google.com/"
+          "label": "G.Trends",
+          "url": "https://trends.google.com/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Hunter Email Finder",
-          "url": "https://hunter.io/"
+          "url": "https://hunter.io/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Apollo",
-          "url": "https://www.apollo.io/"
+          "url": "https://www.apollo.io/",
+          "colour": "orange",
+          "included": true
         },
         {
-          "label": "DocuSign Free Trial",
-          "url": "https://www.docusign.com/"
-        },
-        {
-          "label": "Canva Presentations",
-          "url": "https://www.canva.com/presentations/"
+          "label": "Canva",
+          "url": "https://www.canva.com/presentations",
+          "colour": "orange",
+          "included": true
         }
       ]
     },
     {
-      "name": "PR & Communications",
+      "name": "PR & Comms",
       "colour": "purple",
+      "included": true,
       "links": [
         {
-          "label": "Google Alerts",
-          "url": "https://www.google.com/alerts"
+          "label": "G.Alerts",
+          "url": "https://www.google.com/alerts",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Talkwalker Alerts",
-          "url": "https://www.talkwalker.com/alerts"
+          "url": "https://www.talkwalker.com/alerts",
+          "colour": "purple",
+          "included": true
         },
         {
-          "label": "HARO / Connectively",
-          "url": "https://www.connectively.us/"
+          "label": "Connectively",
+          "url": "https://www.connectively.us/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "PRLog",
-          "url": "https://www.prlog.org/"
+          "url": "https://www.prlog.org/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "OpenPR",
-          "url": "https://www.openpr.com/"
+          "url": "https://www.openpr.com/",
+          "colour": "purple",
+          "included": true
         },
         {
-          "label": "Muck Rack Daily",
-          "url": "https://muckrack.com/daily"
+          "label": "Muck Rack",
+          "url": "https://muckrack.com/daily",
+          "colour": "purple",
+          "included": true
         },
         {
-          "label": "Business Wire Newsroom",
-          "url": "https://www.businesswire.com/portal/site/home/news/"
+          "label": "Buss Wire Newsroom",
+          "url": "https://www.businesswire.com/portal/site/home/news/",
+          "colour": "purple",
+          "included": true
         },
         {
-          "label": "PR Newswire News Releases",
-          "url": "https://www.prnewswire.com/news-releases/"
+          "label": "PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/",
+          "colour": "purple",
+          "included": true
         }
       ]
     },
     {
       "name": "News & Market Awareness",
       "colour": "red",
+      "included": true,
       "links": [
         {
           "label": "BBC News",
-          "url": "https://www.bbc.co.uk/news"
+          "url": "https://www.bbc.co.uk/news",
+          "colour": "red",
+          "included": true
         },
         {
           "label": "Reuters",
-          "url": "https://www.reuters.com/"
+          "url": "https://www.reuters.com/",
+          "colour": "red",
+          "included": true
         },
         {
-          "label": "Associated Press",
-          "url": "https://apnews.com/"
+          "label": "Assoc Press",
+          "url": "https://apnews.com/",
+          "colour": "red",
+          "included": true
         },
         {
           "label": "NPR",
-          "url": "https://www.npr.org/"
+          "url": "https://www.npr.org/",
+          "colour": "red",
+          "included": true
         },
         {
-          "label": "The Guardian",
-          "url": "https://www.theguardian.com/"
+          "label": " Guardian",
+          "url": "https://www.theguardian.com/",
+          "colour": "red",
+          "included": true
         },
         {
-          "label": "Google News",
-          "url": "https://news.google.com/"
+          "label": "G.News",
+          "url": "https://news.google.com/",
+          "colour": "red",
+          "included": true
         },
         {
-          "label": "Yahoo Finance",
-          "url": "https://finance.yahoo.com/"
+          "label": "Yahoo Fince",
+          "url": "https://finance.yahoo.com/",
+          "colour": "red",
+          "included": true
         },
         {
           "label": "MarketWatch",
-          "url": "https://www.marketwatch.com/"
+          "url": "https://www.marketwatch.com/",
+          "colour": "red",
+          "included": true
         },
         {
           "label": "CNBC",
-          "url": "https://www.cnbc.com/"
+          "url": "https://www.cnbc.com/",
+          "colour": "red",
+          "included": true
         }
       ]
     },
     {
       "name": "Social Media & Publishing",
       "colour": "purple",
+      "included": true,
       "links": [
         {
           "label": "LinkedIn",
-          "url": "https://www.linkedin.com/"
+          "url": "https://www.linkedin.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "X",
-          "url": "https://x.com/"
+          "url": "https://x.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Facebook",
-          "url": "https://www.facebook.com/"
+          "url": "https://www.facebook.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Instagram",
-          "url": "https://www.instagram.com/"
+          "url": "https://www.instagram.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "YouTube",
-          "url": "https://www.youtube.com/"
+          "url": "https://www.youtube.com/",
+          "colour": "purple",
+          "included": true
         },
         {
-          "label": "Meta Business Suite",
-          "url": "https://business.facebook.com/"
+          "label": "Meta Bus",
+          "url": "https://business.facebook.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Buffer",
-          "url": "https://buffer.com/"
+          "url": "https://buffer.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Hootsuite",
-          "url": "https://www.hootsuite.com/"
+          "url": "https://www.hootsuite.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Later",
-          "url": "https://later.com/"
+          "url": "https://later.com/",
+          "colour": "purple",
+          "included": true
         },
         {
           "label": "Mastodon",
-          "url": "https://joinmastodon.org/"
+          "url": "https://joinmastodon.org/",
+          "colour": "purple",
+          "included": true
         }
       ]
     },
     {
       "name": "Research & Search",
       "colour": "blue",
+      "included": true,
       "links": [
         {
-          "label": "Google Search",
-          "url": "https://www.google.com/"
+          "label": "G. Search",
+          "url": "https://www.google.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Bing",
-          "url": "https://www.bing.com/"
+          "url": "https://www.bing.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "DuckDuckGo",
-          "url": "https://duckduckgo.com/"
+          "url": "https://duckduckgo.com/",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "Google Scholar",
-          "url": "https://scholar.google.com/"
+          "label": "G.Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Wikipedia",
-          "url": "https://www.wikipedia.org/"
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Wikidata",
-          "url": "https://www.wikidata.org/"
+          "url": "https://www.wikidata.org/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "OpenCorporates",
-          "url": "https://opencorporates.com/"
+          "url": "https://opencorporates.com/",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "Companies House",
-          "url": "https://www.gov.uk/government/organisations/companies-house"
+          "label": "Comps House",
+          "url": "https://www.gov.uk/government/organisations/companies-house",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "SEC EDGAR",
-          "url": "https://www.sec.gov/edgar/search/"
+          "label": "SEC Edgar",
+          "url": "https://www.sec.gov/edgar/search/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "ChatGPT",
-          "url": "https://chatgpt.com/"
+          "url": "https://chatgpt.com/",
+          "colour": "blue",
+          "included": true
         }
       ]
     },
     {
       "name": "Travel, Maps & Expenses",
       "colour": "orange",
+      "included": true,
       "links": [
         {
-          "label": "Google Maps",
-          "url": "https://maps.google.com/"
+          "label": "G.Maps",
+          "url": "https://maps.google.com/",
+          "colour": "orange",
+          "included": true
         },
         {
-          "label": "Google Travel",
-          "url": "https://www.google.com/travel/"
+          "label": "G.Travel",
+          "url": "https://www.google.com/travel/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Skyscanner",
-          "url": "https://www.skyscanner.net/"
+          "url": "https://www.skyscanner.net/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Kayak",
-          "url": "https://www.kayak.com/"
+          "url": "https://www.kayak.com/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Trainline",
-          "url": "https://www.thetrainline.com/"
+          "url": "https://www.thetrainline.com/",
+          "colour": "orange",
+          "included": true
         },
         {
-          "label": "National Rail",
-          "url": "https://www.nationalrail.co.uk/"
+          "label": "Nat Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Amtrak",
-          "url": "https://www.amtrak.com/"
+          "url": "https://www.amtrak.com/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Uber",
-          "url": "https://www.uber.com/"
+          "url": "https://www.uber.com/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "Wise Currency Converter",
-          "url": "https://wise.com/gb/currency-converter/"
+          "url": "https://wise.com/gb/currency-converter/",
+          "colour": "orange",
+          "included": true
         },
         {
           "label": "XE Currency Converter",
-          "url": "https://www.xe.com/currencyconverter/"
+          "url": "https://www.xe.com/currencyconverter/",
+          "colour": "orange",
+          "included": true
         }
       ]
     },
     {
-      "name": "HR, Learning & Workplace",
+      "name": "Learning",
       "colour": "green",
+      "included": true,
       "links": [
         {
-          "label": "LinkedIn Learning",
-          "url": "https://www.linkedin.com/learning/"
+          "label": "LinkedIn Lrn",
+          "url": "https://www.linkedin.com/learning/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Coursera",
-          "url": "https://www.coursera.org/"
+          "url": "https://www.coursera.org/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "edX",
-          "url": "https://www.edx.org/"
+          "url": "https://www.edx.org/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "OpenLearn",
-          "url": "https://www.open.edu/openlearn/"
+          "url": "https://www.open.edu/openlearn/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "FutureLearn",
-          "url": "https://www.futurelearn.com/"
+          "url": "https://www.futurelearn.com/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Google Skillshop",
-          "url": "https://skillshop.withgoogle.com/"
+          "url": "https://skillshop.withgoogle.com/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Microsoft Learn",
-          "url": "https://learn.microsoft.com/"
+          "url": "https://learn.microsoft.com/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "ACAS",
-          "url": "https://www.acas.org.uk/"
+          "url": "https://www.acas.org.uk/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "GOV.UK Working, Jobs and Pensions",
-          "url": "https://www.gov.uk/browse/working"
+          "label": "GOV.UK Work",
+          "url": "https://www.gov.uk/browse/working",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "U.S. Department of Labor",
-          "url": "https://www.dol.gov/"
+          "label": "US Dep Labor",
+          "url": "https://www.dol.gov/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
       "name": "Finance, Legal & Admin",
       "colour": "green",
+      "included": true,
       "links": [
         {
           "label": "GOV.UK",
-          "url": "https://www.gov.uk/"
+          "url": "https://www.gov.uk/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "HMRC",
-          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs"
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "IRS",
-          "url": "https://www.irs.gov/"
+          "url": "https://www.irs.gov/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "USA.gov",
-          "url": "https://www.usa.gov/"
+          "url": "https://www.usa.gov/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Find a UK Company",
-          "url": "https://find-and-update.company-information.service.gov.uk/"
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "SEC Company Search",
-          "url": "https://www.sec.gov/edgar/searchedgar/companysearch"
+          "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Citizens Advice",
-          "url": "https://www.citizensadvice.org.uk/"
+          "label": "Citizens Adv",
+          "url": "https://www.citizensadvice.org.uk/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Legal Information Institute",
-          "url": "https://www.law.cornell.edu/"
+          "label": "Legal Info Inst",
+          "url": "https://www.law.cornell.edu/",
+          "colour": "green",
+          "included": true
         },
         {
           "label": "Google Finance",
-          "url": "https://www.google.com/finance/"
+          "url": "https://www.google.com/finance/",
+          "colour": "green",
+          "included": true
         },
         {
-          "label": "Open Exchange Rates",
-          "url": "https://openexchangerates.org/"
+          "label": "Opn Exch Rates",
+          "url": "https://openexchangerates.org/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
-      "name": "Utilities & Quick Tools",
+      "name": "Tools",
       "colour": "blue",
+      "included": true,
       "links": [
         {
           "label": "Time.is",
-          "url": "https://time.is/"
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "World Time Buddy",
-          "url": "https://www.worldtimebuddy.com/"
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Smallpdf",
-          "url": "https://smallpdf.com/"
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "PDF24 Tools",
-          "url": "https://tools.pdf24.org/"
+          "url": "https://tools.pdf24.org/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "ILovePDF",
-          "url": "https://www.ilovepdf.com/"
+          "url": "https://www.ilovepdf.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Grammarly",
-          "url": "https://www.grammarly.com/"
+          "url": "https://www.grammarly.com/",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "Hemingway Editor",
-          "url": "https://hemingwayapp.com/"
+          "label": "Heming Edit",
+          "url": "https://hemingwayapp.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Bitwarden",
-          "url": "https://bitwarden.com/"
+          "url": "https://bitwarden.com/",
+          "colour": "blue",
+          "included": true
         },
         {
-          "label": "Have I Been Pwned",
-          "url": "https://haveibeenpwned.com/"
+          "label": "Pwned?",
+          "url": "https://haveibeenpwned.com/",
+          "colour": "blue",
+          "included": true
         },
         {
           "label": "Speedtest",
-          "url": "https://www.speedtest.net/"
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
         }
       ]
     }

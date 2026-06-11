@@ -1,0 +1,184 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Creative Pros Start Page",
+  "description": "Dynamic asset gathering, design portfolios, and asset tools.",
+  "filename": "start-page-creative-pro.html",
+  "sections": [
+    {
+      "name": "Inspiration",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Behance",
+          "url": "https://www.behance.net/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Dribbble",
+          "url": "https://dribbble.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Awwwards",
+          "url": "https://www.awwwards.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Pinterest",
+          "url": "https://www.pinterest.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Fonts",
+          "url": "https://fonts.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Typewolf",
+          "url": "https://www.typewolf.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Color Tools",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Coolors",
+          "url": "https://coolors.co/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Adobe Color",
+          "url": "https://color.adobe.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Stock Assets",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Unsplash",
+          "url": "https://unsplash.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Freepik",
+          "url": "https://www.freepik.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Noun Project",
+          "url": "https://thenounproject.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Portfolio",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Webflow",
+          "url": "https://webflow.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Readymag",
+          "url": "https://readymag.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Framer",
+          "url": "https://www.framer.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Client Delivery",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Figma",
+          "url": "https://www.figma.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WeTransfer",
+          "url": "https://wetransfer.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Communities",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Sidebar.io",
+          "url": "https://sidebar.io/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "r/Design",
+          "url": "https://www.reddit.com/r/Design/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Project Mgmt",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Milanote",
+          "url": "https://milanote.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

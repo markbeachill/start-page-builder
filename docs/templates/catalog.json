@@ -1,0 +1,402 @@
+[
+  {
+    "section": "A: Education",
+    "code": "student-primary-uk",
+    "title": "Students (Primary)",
+    "country": "UK",
+    "description": "Gamified foundational learning and parent-approved hubs.",
+    "template": "templates/student-primary-uk.json",
+    "example": "examples/start-page-student-primary-uk.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "student-primary-us",
+    "title": "Students (Elementary)",
+    "country": "US",
+    "description": "Gamified foundational learning and parent-approved hubs.",
+    "template": "templates/student-primary-us.json",
+    "example": "examples/start-page-student-primary-us.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "student-school-uk",
+    "title": "Students (Secondary)",
+    "country": "UK",
+    "description": "Curriculum-focused exam revision and study routine tools.",
+    "template": "templates/student-school-uk.json",
+    "example": "examples/start-page-student-school-uk.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "student-school-us",
+    "title": "Students (High School)",
+    "country": "US",
+    "description": "Curriculum-focused exam revision and study routine tools.",
+    "template": "templates/student-school-us.json",
+    "example": "examples/start-page-student-school-us.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "student-uni-uk",
+    "title": "Students (University)",
+    "country": "UK",
+    "description": "Independent academic research, campus portals, and life admin.",
+    "template": "templates/student-uni-uk.json",
+    "example": "examples/start-page-student-uni-uk.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "student-uni-us",
+    "title": "Students (College)",
+    "country": "US",
+    "description": "Independent academic research, campus portals, and life admin.",
+    "template": "templates/student-uni-us.json",
+    "example": "examples/start-page-student-uni-us.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "teacher-uk",
+    "title": "Teachers",
+    "country": "UK",
+    "description": "Aggregating fragmented lesson planning and grading systems.",
+    "template": "templates/teacher-uk.json",
+    "example": "examples/start-page-teacher-uk.html",
+    "available": true
+  },
+  {
+    "section": "A: Education",
+    "code": "teacher-us",
+    "title": "Teachers",
+    "country": "US",
+    "description": "Aggregating fragmented lesson planning and grading systems.",
+    "template": "templates/teacher-us.json",
+    "example": "examples/start-page-teacher-us.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "small-business-uk",
+    "title": "Small Business",
+    "country": "UK",
+    "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+    "template": "templates/small-business-uk.json",
+    "example": "examples/start-page-small-business-uk.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "small-business-us",
+    "title": "Small Business",
+    "country": "US",
+    "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+    "template": "templates/small-business-us.json",
+    "example": "examples/start-page-small-business-us.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "freelancer-uk",
+    "title": "Freelancers",
+    "country": "UK",
+    "description": "Independent client tracking, invoicing, and contract management.",
+    "template": "templates/freelancer-uk.json",
+    "example": "examples/start-page-freelancer-uk.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "freelancer-us",
+    "title": "Freelancers",
+    "country": "US",
+    "description": "Independent client tracking, invoicing, and contract management.",
+    "template": "templates/freelancer-us.json",
+    "example": "examples/start-page-freelancer-us.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "dev-ops",
+    "title": "DevOps",
+    "country": "",
+    "description": "Advanced infrastructure monitoring, repositories, and cloud hubs.",
+    "template": "templates/dev-ops.json",
+    "example": "examples/start-page-dev-ops.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "newsroom-uk",
+    "title": "Newsroom",
+    "country": "UK",
+    "description": "OSINT research, public records, verification, and data tools.",
+    "template": "templates/newsroom-uk.json",
+    "example": "examples/start-page-newsroom-uk.html",
+    "available": true
+  },
+  {
+    "section": "B: Work & Business",
+    "code": "newsroom-us",
+    "title": "Newsroom",
+    "country": "US",
+    "description": "OSINT research, public records, verification, and data tools.",
+    "template": "templates/newsroom-us.json",
+    "example": "examples/start-page-newsroom-us.html",
+    "available": true
+  },
+  {
+    "section": "C: Tech & Creative",
+    "code": "ai-user",
+    "title": "AI Users",
+    "country": "",
+    "description": "Quick access to daily LLMs, prompt hubs, and local model forums.",
+    "template": "templates/ai-user.json",
+    "example": "examples/start-page-ai-user.html",
+    "available": true
+  },
+  {
+    "section": "C: Tech & Creative",
+    "code": "creative-pro",
+    "title": "Creative Pros",
+    "country": "",
+    "description": "Dynamic asset gathering, design portfolios, and asset tools.",
+    "template": "templates/creative-pro.json",
+    "example": "examples/start-page-creative-pro.html",
+    "available": true
+  },
+  {
+    "section": "C: Tech & Creative",
+    "code": "creator",
+    "title": "Creators",
+    "country": "",
+    "description": "Multi-platform broadcast analytics and audience management.",
+    "template": "templates/creator.json",
+    "example": "examples/start-page-creator.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "news-buff-uk",
+    "title": "News Buffs",
+    "country": "UK",
+    "description": "Deep political, regional, and investigative media aggregation.",
+    "template": "templates/news-buff-uk.json",
+    "example": "examples/start-page-news-buff-uk.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "news-buff-us",
+    "title": "News Buffs",
+    "country": "US",
+    "description": "Deep political, regional, and investigative media aggregation.",
+    "template": "templates/news-buff-us.json",
+    "example": "examples/start-page-news-buff-us.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "health-wellness-uk",
+    "title": "Health & Wellness",
+    "country": "UK",
+    "description": "Patient portals, wellness trackers, and fitness communities.",
+    "template": "templates/health-wellness-uk.json",
+    "example": "examples/start-page-health-wellness-uk.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "health-wellness-us",
+    "title": "Health & Wellness",
+    "country": "US",
+    "description": "Patient portals, wellness trackers, and fitness communities.",
+    "template": "templates/health-wellness-us.json",
+    "example": "examples/start-page-health-wellness-us.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "family-home-uk",
+    "title": "Family & Home",
+    "country": "UK",
+    "description": "Shared logistics, grocery delivery, and public utility billing.",
+    "template": "templates/family-home-uk.json",
+    "example": "examples/start-page-family-home-uk.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "family-home-us",
+    "title": "Family & Home",
+    "country": "US",
+    "description": "Shared logistics, grocery delivery, and public utility billing.",
+    "template": "templates/family-home-us.json",
+    "example": "examples/start-page-family-home-us.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "everyday-life-uk",
+    "title": "Everyday Life",
+    "country": "UK",
+    "description": "Simplified, clean interface for low-stress daily navigation.",
+    "template": "templates/everyday-life-uk.json",
+    "example": "examples/start-page-everyday-life-uk.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "everyday-life-us",
+    "title": "Everyday Life",
+    "country": "US",
+    "description": "Simplified, clean interface for low-stress daily navigation.",
+    "template": "templates/everyday-life-us.json",
+    "example": "examples/start-page-everyday-life-us.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "travel-planner-uk",
+    "title": "Travel Planners",
+    "country": "UK",
+    "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
+    "template": "templates/travel-planner-uk.json",
+    "example": "examples/start-page-travel-planner-uk.html",
+    "available": true
+  },
+  {
+    "section": "D: Everyday Life",
+    "code": "travel-planner-us",
+    "title": "Travel Planners",
+    "country": "US",
+    "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
+    "template": "templates/travel-planner-us.json",
+    "example": "examples/start-page-travel-planner-us.html",
+    "available": true
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "sport-general-uk",
+    "title": "Sports",
+    "country": "UK",
+    "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+    "template": "templates/sport-general-uk.json",
+    "example": "examples/start-page-sport-general-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "sport-general-us",
+    "title": "Sports",
+    "country": "US",
+    "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+    "template": "templates/sport-general-us.json",
+    "example": "examples/start-page-sport-general-us.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "football-uk-uk",
+    "title": "UK Football",
+    "country": "UK",
+    "description": "Intense focus on the British football pyramid, media, and FPL.",
+    "template": "templates/football-uk-uk.json",
+    "example": "examples/start-page-football-uk-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "local-history-uk",
+    "title": "Local History",
+    "country": "UK",
+    "description": "Bouncing between archives, registries, and mapping engines.",
+    "template": "templates/local-history-uk.json",
+    "example": "examples/start-page-local-history-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "local-history-us",
+    "title": "Local History",
+    "country": "US",
+    "description": "Bouncing between archives, registries, and mapping engines.",
+    "template": "templates/local-history-us.json",
+    "example": "examples/start-page-local-history-us.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "reader-writer-uk",
+    "title": "Readers & Writers",
+    "country": "UK",
+    "description": "Literary tracking, publishing pipelines, and lexicography tools.",
+    "template": "templates/reader-writer-uk.json",
+    "example": "examples/start-page-reader-writer-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "reader-writer-us",
+    "title": "Readers & Writers",
+    "country": "US",
+    "description": "Literary tracking, publishing pipelines, and lexicography tools.",
+    "template": "templates/reader-writer-us.json",
+    "example": "examples/start-page-reader-writer-us.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "movie-buff-uk",
+    "title": "Movie Buffs",
+    "country": "UK",
+    "description": "Cinephile logging, industry tracking, and streaming finders.",
+    "template": "templates/movie-buff-uk.json",
+    "example": "examples/start-page-movie-buff-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "movie-buff-us",
+    "title": "Movie Buffs",
+    "country": "US",
+    "description": "Cinephile logging, industry tracking, and streaming finders.",
+    "template": "templates/movie-buff-us.json",
+    "example": "examples/start-page-movie-buff-us.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "kpop-fan",
+    "title": "K-Pop Fans",
+    "country": "",
+    "description": "Fast-paced tracking of music show voting, streams, and hubs.",
+    "template": "templates/kpop-fan.json",
+    "example": "examples/start-page-kpop-fan.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "music-fan-uk",
+    "title": "Music Fans",
+    "country": "UK",
+    "description": "Physical media indices, discovery platforms, and live gig finders.",
+    "template": "templates/music-fan-uk.json",
+    "example": "examples/start-page-music-fan-uk.html",
+    "available": false
+  },
+  {
+    "section": "E: Sport & Fandoms",
+    "code": "music-fan-us",
+    "title": "Music Fans",
+    "country": "US",
+    "description": "Physical media indices, discovery platforms, and live gig finders.",
+    "template": "templates/music-fan-us.json",
+    "example": "examples/start-page-music-fan-us.html",
+    "available": false
+  }
+]

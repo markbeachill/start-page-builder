@@ -1,0 +1,192 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "DevOps Start Page",
+  "description": "Advanced infrastructure monitoring, repositories, and cloud hubs.",
+  "filename": "start-page-dev-ops.html",
+  "sections": [
+    {
+      "name": "Code",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "GitLab",
+          "url": "https://about.gitlab.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Cloud",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "AWS Console",
+          "url": "https://aws.amazon.com/console/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "GCP Console",
+          "url": "https://console.cloud.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "DigitalOcean",
+          "url": "https://www.digitalocean.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Monitoring",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Datadog",
+          "url": "https://www.datadoghq.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Grafana",
+          "url": "https://grafana.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Databases",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "MongoDB Atlas",
+          "url": "https://www.mongodb.com/cloud/atlas",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Supabase",
+          "url": "https://supabase.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Security",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Vault",
+          "url": "https://www.vaultproject.io/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Snyk",
+          "url": "https://snyk.io/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Documentation",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ReadMe",
+          "url": "https://readme.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Packages",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Docker Hub",
+          "url": "https://hub.docker.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "npm",
+          "url": "https://www.npmjs.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "CI/CD",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "GitHub Actions",
+          "url": "https://github.com/features/actions",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "CircleCI",
+          "url": "https://circleci.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Design",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Figma",
+          "url": "https://www.figma.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "AI Coding Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Copilot",
+          "url": "https://github.com/features/copilot",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Cursor",
+          "url": "https://cursor.sh/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Creators Start Page",
+  "description": "Multi-platform broadcast analytics and audience management.",
+  "filename": "start-page-creator.html",
+  "sections": [
+    {
+      "name": "Dashboards",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "YT Studio",
+          "url": "https://studio.youtube.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Twitch Dash",
+          "url": "https://dashboard.twitch.tv/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "TikTok Creator",
+          "url": "https://www.tiktok.com/creators/creator-portal/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Analytics",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Social Blade",
+          "url": "https://socialblade.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "vidIQ",
+          "url": "https://vidiq.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Social Sched",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Metricool",
+          "url": "https://metricool.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Later",
+          "url": "https://later.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Audio & Music",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Epidemic Sound",
+          "url": "https://www.epidemicsound.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Artlist",
+          "url": "https://artlist.io/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Freesound",
+          "url": "https://freesound.org/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Video Assets",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Pexels Video",
+          "url": "https://www.pexels.com/videos/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Envato",
+          "url": "https://elements.envato.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Community",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Discord",
+          "url": "https://discord.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Patreon",
+          "url": "https://www.patreon.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ko-fi",
+          "url": "https://ko-fi.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Sponsorships",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Linktree",
+          "url": "https://linktr.ee/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Beacons",
+          "url": "https://beacons.ai/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Pearpop",
+          "url": "https://pearpop.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Schedules",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "G Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Notion Calendar",
+          "url": "https://calendar.notion.so/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

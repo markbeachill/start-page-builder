@@ -1,0 +1,141 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Students (High School) Start Page",
+  "description": "Curriculum-focused exam revision and study routine tools.",
+  "filename": "start-page-student-school-us.html",
+  "sections": [
+    {
+      "name": "Learning Platform",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Classroom",
+          "url": "https://classroom.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MS Teams",
+          "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Exam Revision",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Quizlet",
+          "url": "https://quizlet.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "AP Central",
+          "url": "https://apcentral.collegeboard.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing Tools",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Subject Helpers",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Desmos",
+          "url": "https://www.desmos.com/calculator",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Library",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Study Org",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Pomodoro Timer",
+          "url": "https://pomofocus.io/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Wellbeing",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Lofi Radio",
+          "url": "https://lofigirl.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trevor Project",
+          "url": "https://www.thetrevorproject.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Students (Primary) Start Page",
+  "description": "Gamified foundational learning and parent-approved hubs.",
+  "filename": "start-page-student-primary-uk.html",
+  "sections": [
+    {
+      "name": "School Dashboards",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ClassDojo",
+          "url": "https://www.classdojo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Seesaw",
+          "url": "https://web.seesaw.me/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Maths & Numbers",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "TTRS",
+          "url": "https://ttrockstars.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Mathletics",
+          "url": "https://www.mathletics.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Topmarks",
+          "url": "https://www.topmarks.co.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Reading & Phonics",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Oxford Owl",
+          "url": "https://www.oxfordowl.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "PhonicsPlay",
+          "url": "https://www.phonicsplay.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Epic!",
+          "url": "https://www.getepic.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Storyline Online",
+          "url": "https://storylineonline.net/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Safe Search",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Kiddle",
+          "url": "https://www.kiddle.co/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "DK Find Out!",
+          "url": "https://www.dkfindout.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Nat Geo Kids",
+          "url": "https://kids.nationalgeographic.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Coding & Making",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Code.org",
+          "url": "https://code.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Tinkercad",
+          "url": "https://www.tinkercad.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Fun & Games",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "CBBC",
+          "url": "https://www.bbc.co.uk/cbbc",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Funbrain",
+          "url": "https://www.funbrain.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Watch & Listen",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "YouTube Kids",
+          "url": "https://www.youtubekids.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Brains On!",
+          "url": "https://www.brainson.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

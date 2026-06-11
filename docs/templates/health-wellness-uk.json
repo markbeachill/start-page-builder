@@ -1,0 +1,92 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Health & Wellness Start Page",
+  "description": "Patient portals, wellness trackers, and fitness communities.",
+  "filename": "start-page-health-wellness-uk.html",
+  "sections": [
+    {
+      "name": "Local Services",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "NHS App",
+          "url": "https://www.nhs.uk/nhs-app/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Symptom Checkers",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "NICE Guidelines",
+          "url": "https://www.nice.org.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "WebMD",
+          "url": "https://www.webmd.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Diet & Nutrition",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "MyFitnessPal",
+          "url": "https://www.myfitnesspal.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Fitness",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Strava",
+          "url": "https://www.strava.com/dashboard",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Communities",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "r/Fitness",
+          "url": "https://www.reddit.com/r/Fitness/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Mental Wellness",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Headspace",
+          "url": "https://www.headspace.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    }
+  ]
+}

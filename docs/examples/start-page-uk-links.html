@@ -5,22 +5,9 @@
   <title>Typical UK User Links</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-/* Skin: Classic
-   The original start-page look: grey buttons with a coloured left edge and
-   solid coloured section headers. Palette and column count are driven by
-   CSS variables so the builder can override them.
-   Variables: --columns, --c-blue, --c-green, --c-orange, --c-purple, --c-red */
-:root{
-  --columns:5;
-  --c-blue:#4d90fe;
-  --c-green:#35aa47;
-  --c-orange:#d84a38;
-  --c-purple:#852b99;
-  --c-red:#bd121d;
-}
-body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#ffffff;color:#333333;}
-
-/* Search bar: same width as the menu content, input grows to fill it */
+/* Skin: Classic Responsive */
+:root{--columns:5;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
+body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
 .searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
 .searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
 .searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
@@ -29,36 +16,19 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
 .searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
 .searchbar-form button:hover{filter:brightness(.92);}
 .searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
-
 .page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
-
-.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333;line-height:1.5em;position:relative;}
+.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
 .section{clear:both;padding:0;margin:0;}
 .group{display:flex;flex-wrap:wrap;gap:0 2%;}
 .col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
-@media only screen and (max-width:767px){
-  .col{flex:1 1 100%;max-width:100%;margin:1% 0;}
-  .searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}
-  .maincontent{padding:1em 12px;width:auto;}
-}
-
+.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
 .btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
 .btn:hover{background-color:#aaa;color:#000;}
-.blue-btn{border-left-color:var(--c-blue);}
-.green-btn{border-left-color:var(--c-green);}
-.orange-btn{border-left-color:var(--c-orange);}
-.purple-btn{border-left-color:var(--c-purple);}
-.red-btn{border-left-color:var(--c-red);}
-
+.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
 .hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
-.blue-hdr{background-color:var(--c-blue);}
-.green-hdr{background-color:var(--c-green);}
-.orange-hdr{background-color:var(--c-orange);}
-.purple-hdr{background-color:var(--c-purple);}
-.red-hdr{background-color:var(--c-red);}
+.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
 .hdr-para{margin:0;line-height:160%;}
-
-:root{--columns:5;}
   </style>
 </head>
 <body data-skin="classic" data-columns="5">
@@ -75,7 +45,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
 </div>
 <div class="maincontent">
   <div class="section group">
-<div class="col">
+<div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>Search &amp; AI</b></a>
     </p>
@@ -183,7 +153,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
     <a class="btn purple-btn" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">
       Have I Been Pwned
     </a>
-</div><div class="col">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Email, Calendar &amp; Cloud</b></a>
     </p>
@@ -233,7 +203,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
     </a>
 
     <a class="btn orange-btn" href="https://www.sainsburys.co.uk/" target="_blank" rel="noopener noreferrer">
-      Sainsbury&#39;s
+      Sainsbury&#x27;s
     </a>
 
     <a class="btn orange-btn" href="https://www.asda.com/" target="_blank" rel="noopener noreferrer">
@@ -283,7 +253,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
     <a class="btn orange-btn" href="https://www.tripadvisor.co.uk/" target="_blank" rel="noopener noreferrer">
       Tripadvisor
     </a>
-</div><div class="col">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>Work</b></a>
     </p>
@@ -379,7 +349,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
     <a class="btn green-btn" href="https://www.metoffice.gov.uk/" target="_blank" rel="noopener noreferrer">
       Met Office
     </a>
-</div><div class="col">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr red-hdr" data-section-header="true"><b>News</b></a>
     </p>
@@ -483,7 +453,7 @@ body{margin:0;padding:0;font-family:Arial,Helvetica,sans-serif;background:#fffff
     <a class="btn blue-btn" href="https://www.evri.com/track-a-parcel" target="_blank" rel="noopener noreferrer">
       Evri Tracking
     </a>
-</div><div class="col">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Sport</b></a>
     </p>

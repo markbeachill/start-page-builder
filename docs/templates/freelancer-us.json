@@ -1,0 +1,192 @@
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Freelancers Start Page",
+  "description": "Independent client tracking, invoicing, and contract management.",
+  "filename": "start-page-freelancer-us.html",
+  "sections": [
+    {
+      "name": "Clients",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Asana",
+          "url": "https://asana.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Proposals",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Proposify",
+          "url": "https://www.proposify.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PandaDoc",
+          "url": "https://www.pandadoc.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Invoices",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Wave",
+          "url": "https://www.waveapps.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FreshBooks",
+          "url": "https://www.freshbooks.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Calendar & Time",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Toggl Track",
+          "url": "https://toggl.com/track/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Video Calls",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Meet",
+          "url": "https://meet.google.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Documents",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Research",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Statista",
+          "url": "https://www.statista.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Marketing",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Behance",
+          "url": "https://www.behance.net/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Contracts",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "HelloSign",
+          "url": "https://www.hellosign.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Finance",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "QB Self-Emp",
+          "url": "https://quickbooks.intuit.com/self-employed/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
+}
