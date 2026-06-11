@@ -1,157 +1,329 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Small Business Start Page",
-  "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+  "title": "Small Business Start Page US",
+  "description": "A US small-business start page for accounts, tax, registrations, banking, customers, marketing, sales, shipping, staff and everyday admin.",
   "filename": "start-page-small-business-us.html",
   "sections": [
     {
-      "name": "Email & Documents",
+      "name": "Daily Workspace",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Workspace",
-          "url": "https://workspace.google.com/",
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
           "colour": "green",
           "included": true
         },
         {
           "label": "Microsoft 365",
-          "url": "https://www.microsoft.com/en-us/microsoft-365",
+          "url": "https://www.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Banking & Accounts",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Chase Business",
-          "url": "https://www.chase.com/business",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Novo",
-          "url": "https://www.novo.co/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Tax & Government",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "IRS Business",
-          "url": "https://www.irs.gov/businesses",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Website & Domains",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Shopify",
-          "url": "https://www.shopify.com/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "WordPress",
-          "url": "https://wordpress.com/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Marketing",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Mailchimp",
-          "url": "https://mailchimp.com/",
-          "colour": "blue",
-          "included": true
-        },
-        {
-          "label": "Canva",
-          "url": "https://www.canva.com/",
-          "colour": "blue",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Social Media",
+      "name": "Money & Accounts",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Meta Business",
-          "url": "https://business.facebook.com/",
+          "label": "IRS Small Business",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Buffer",
-          "url": "https://buffer.com/",
+          "label": "EIN Application",
+          "url": "https://www.irs.gov/businesses/small-businesses-self-employed/apply-for-an-employer-identification-number-ein-online",
           "colour": "green",
           "included": true
-        }
-      ]
-    },
-    {
-      "name": "Invoices",
-      "colour": "orange",
-      "included": true,
-      "links": [
+        },
         {
-          "label": "Xero",
-          "url": "https://www.xero.com/",
-          "colour": "orange",
+          "label": "SBA",
+          "url": "https://www.sba.gov/",
+          "colour": "green",
           "included": true
         },
         {
           "label": "QuickBooks",
           "url": "https://quickbooks.intuit.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Xero US",
+          "url": "https://www.xero.com/us/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FreshBooks",
+          "url": "https://www.freshbooks.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PayPal Business",
+          "url": "https://www.paypal.com/us/business",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Banking & Payments",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Wise Business",
+          "url": "https://wise.com/us/business/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Relay",
+          "url": "https://relayfi.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Mercury",
+          "url": "https://mercury.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Square",
+          "url": "https://squareup.com/us/en",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Clover",
+          "url": "https://www.clover.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "GoCardless",
+          "url": "https://gocardless.com/en-us/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Bill.com",
+          "url": "https://www.bill.com/",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Customers",
+      "name": "Website & Shop",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Shopify",
+          "url": "https://www.shopify.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WooCommerce",
+          "url": "https://woocommerce.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Squarespace",
+          "url": "https://www.squarespace.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wix",
+          "url": "https://www.wix.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Business Profile",
+          "url": "https://www.google.com/business/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Yelp for Business",
+          "url": "https://business.yelp.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Marketing & Design",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "HubSpot",
-          "url": "https://www.hubspot.com/",
+          "label": "Canva",
+          "url": "https://www.canva.com/",
           "colour": "purple",
           "included": true
         },
         {
-          "label": "Zendesk",
-          "url": "https://www.zendesk.com/",
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Buffer",
+          "url": "https://buffer.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Meta Business Suite",
+          "url": "https://business.facebook.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Analytics",
+          "url": "https://analytics.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Ads",
+          "url": "https://ads.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Shipping",
+      "name": "Sales & Customers",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "HubSpot CRM",
+          "url": "https://www.hubspot.com/products/crm",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Zoho CRM",
+          "url": "https://www.zoho.com/crm/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Jotform",
+          "url": "https://www.jotform.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Typeform",
+          "url": "https://www.typeform.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Shipping & Stock",
       "colour": "red",
       "included": true,
       "links": [
@@ -162,8 +334,14 @@
           "included": true
         },
         {
-          "label": "Pirate Ship",
-          "url": "https://www.pirateship.com/",
+          "label": "UPS Small Business",
+          "url": "https://www.ups.com/us/en/business-solutions/small-business.page",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "FedEx Small Business",
+          "url": "https://www.fedex.com/en-us/small-business.html",
           "colour": "red",
           "included": true
         },
@@ -172,17 +350,126 @@
           "url": "https://www.shipstation.com/",
           "colour": "red",
           "included": true
+        },
+        {
+          "label": "eBay Seller Hub",
+          "url": "https://www.ebay.com/sh/ovw",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Amazon Seller Central",
+          "url": "https://sell.amazon.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Etsy Seller",
+          "url": "https://www.etsy.com/sell",
+          "colour": "red",
+          "included": true
         }
       ]
     },
     {
-      "name": "Legal Basics",
+      "name": "People & Legal",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "DOL",
+          "url": "https://www.dol.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "OSHA",
+          "url": "https://www.osha.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FTC Business",
+          "url": "https://www.ftc.gov/business-guidance",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "USA.gov Business",
+          "url": "https://www.usa.gov/business",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "SCORE",
+          "url": "https://www.score.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Legal Info Institute",
+          "url": "https://www.law.cornell.edu/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "USPTO",
+          "url": "https://www.uspto.gov/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Quick Tools",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "LawDepot",
-          "url": "https://www.lawdepot.com/",
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
           "colour": "blue",
           "included": true
         }

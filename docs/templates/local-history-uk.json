@@ -1,7 +1,431 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Local History Start Page",
-  "description": "Bouncing between archives, registries, and mapping engines.",
+  "title": "Local History Start Page UK",
+  "description": "A UK local history start page for archives, newspapers, maps, genealogy, photos, public records, writing and publishing.",
   "filename": "start-page-local-history-uk.html",
-  "sections": []
+  "sections": [
+    {
+      "name": "National Archives",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "The National Archives",
+          "url": "https://www.nationalarchives.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Discovery Catalogue",
+          "url": "https://discovery.nationalarchives.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "British Library",
+          "url": "https://www.bl.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "UK Parliament Archives",
+          "url": "https://archives.parliament.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Historic England Archive",
+          "url": "https://historicengland.org.uk/images-books/archive/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Records Scotland",
+          "url": "https://www.nrscotland.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PRONI",
+          "url": "https://www.nidirect.gov.uk/campaigns/public-record-office-northern-ireland-proni",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Local Archives",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Find an Archive",
+          "url": "https://discovery.nationalarchives.gov.uk/find-an-archive",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Archives Hub",
+          "url": "https://archiveshub.jisc.ac.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "AIM25 London",
+          "url": "https://aim25.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "The Gazette",
+          "url": "https://www.thegazette.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "GENUKI",
+          "url": "https://www.genuki.org.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "County Record Offices",
+          "url": "https://www.familysearch.org/en/wiki/England_Record_Office_Repositories",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Newspapers",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "British Newspaper Archive",
+          "url": "https://www.britishnewspaperarchive.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Newspapers.com",
+          "url": "https://www.newspapers.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google News Archive",
+          "url": "https://news.google.com/newspapers",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Gazette",
+          "url": "https://www.thegazette.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC Archive",
+          "url": "https://www.bbc.co.uk/archive",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Maps & Places",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "National Library of Scotland Maps",
+          "url": "https://maps.nls.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Old Maps Online",
+          "url": "https://www.oldmapsonline.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Historic England Map",
+          "url": "https://historicengland.org.uk/listing/the-list/map-search",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "StreetCheck",
+          "url": "https://www.streetcheck.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Vision of Britain",
+          "url": "https://www.visionofbritain.org.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Genealogy",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Ancestry UK",
+          "url": "https://www.ancestry.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Findmypast",
+          "url": "https://www.findmypast.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FamilySearch",
+          "url": "https://www.familysearch.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FreeBMD",
+          "url": "https://www.freebmd.org.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FreeCEN",
+          "url": "https://www.freecen.org.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FreeREG",
+          "url": "https://www.freereg.org.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ScotlandsPeople",
+          "url": "https://www.scotlandspeople.gov.uk/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Images & Buildings",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Historic England Photos",
+          "url": "https://historicengland.org.uk/images-books/photos/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Geograph Britain",
+          "url": "https://www.geograph.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Britain from Above",
+          "url": "https://www.britainfromabove.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Archives Image Library",
+          "url": "https://images.nationalarchives.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Listed Buildings",
+          "url": "https://britishlistedbuildings.co.uk/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Records & Data",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Open Plaques",
+          "url": "https://openplaques.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenStreetMap History",
+          "url": "https://www.openstreetmap.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Data.gov.uk",
+          "url": "https://www.data.gov.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ONS Nomis",
+          "url": "https://www.nomisweb.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Legislation.gov.uk",
+          "url": "https://www.legislation.gov.uk/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing & Publishing",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Zotero",
+          "url": "https://www.zotero.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Substack",
+          "url": "https://substack.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Flickr",
+          "url": "https://www.flickr.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Archive.org Upload",
+          "url": "https://archive.org/create/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Quick Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
 }

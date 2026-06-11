@@ -1,33 +1,93 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Students (High School) Start Page",
-  "description": "Curriculum-focused exam revision and study routine tools.",
+  "title": "High School Student Start Page",
+  "description": "A US high school start page for classes, homework, research, writing, college planning, test prep, wellbeing and everyday school admin.",
   "filename": "start-page-student-school-us.html",
   "sections": [
     {
-      "name": "Learning Platform",
+      "name": "School Systems",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Classroom",
+          "label": "Google Classroom",
           "url": "https://classroom.google.com/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "MS Teams",
+          "label": "Canvas",
+          "url": "https://www.instructure.com/canvas/login/free-for-teacher",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft Teams",
           "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Exam Revision",
+      "name": "Homework & Test Prep",
       "colour": "orange",
       "included": true,
       "links": [
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "College Board",
+          "url": "https://www.collegeboard.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "SAT Practice",
+          "url": "https://www.khanacademy.org/test-prep/sat",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ACT",
+          "url": "https://www.act.org/",
+          "colour": "orange",
+          "included": true
+        },
         {
           "label": "Quizlet",
           "url": "https://quizlet.com/",
@@ -35,15 +95,64 @@
           "included": true
         },
         {
-          "label": "AP Central",
-          "url": "https://apcentral.collegeboard.org/",
+          "label": "CK-12",
+          "url": "https://www.ck12.org/student/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "IXL",
+          "url": "https://www.ixl.com/",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Writing Tools",
+      "name": "Subjects",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Purdue OWL",
+          "url": "https://owl.purdue.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Desmos",
+          "url": "https://www.desmos.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "GeoGebra",
+          "url": "https://www.geogebra.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PhET Simulations",
+          "url": "https://phet.colorado.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Crash Course",
+          "url": "https://thecrashcourse.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smithsonian Learning Lab",
+          "url": "https://learninglab.si.edu/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing & Citations",
       "colour": "purple",
       "included": true,
       "links": [
@@ -54,37 +163,48 @@
           "included": true
         },
         {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
           "label": "Grammarly",
           "url": "https://www.grammarly.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Merriam-Webster",
+          "url": "https://www.merriam-webster.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Purdue OWL MLA",
+          "url": "https://owl.purdue.edu/owl/research_and_citation/mla_style/mla_style_introduction.html",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ZoteroBib",
+          "url": "https://zbib.org/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Subject Helpers",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Khan Academy",
-          "url": "https://www.khanacademy.org/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Desmos",
-          "url": "https://www.desmos.com/calculator",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Library",
+      "name": "Research",
       "colour": "blue",
       "included": true,
       "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "blue",
+          "included": true
+        },
         {
           "label": "Wikipedia",
           "url": "https://www.wikipedia.org/",
@@ -92,47 +212,156 @@
           "included": true
         },
         {
-          "label": "Britannica",
-          "url": "https://www.britannica.com/",
+          "label": "Library of Congress",
+          "url": "https://www.loc.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smithsonian",
+          "url": "https://www.si.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "National Archives DocsTeach",
+          "url": "https://www.docsteach.org/",
           "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Study Org",
+      "name": "AI Study Help",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Claude",
+          "url": "https://claude.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Microsoft Copilot",
+          "url": "https://copilot.microsoft.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google Gemini",
+          "url": "https://gemini.google.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Goblin Tools",
+          "url": "https://goblin.tools/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "College & Careers",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Notion",
-          "url": "https://www.notion.so/",
+          "label": "Common App",
+          "url": "https://www.commonapp.org/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Pomodoro Timer",
-          "url": "https://pomofocus.io/",
+          "label": "FAFSA",
+          "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "College Board BigFuture",
+          "url": "https://bigfuture.collegeboard.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CareerOneStop",
+          "url": "https://www.careeronestop.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Indeed",
+          "url": "https://www.indeed.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Wellbeing",
-      "colour": "orange",
+      "name": "Wellbeing & Life",
+      "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "Lofi Radio",
-          "url": "https://lofigirl.com/",
-          "colour": "orange",
+          "label": "988 Lifeline",
+          "url": "https://988lifeline.org/",
+          "colour": "purple",
           "included": true
         },
         {
-          "label": "Trevor Project",
-          "url": "https://www.thetrevorproject.org/",
-          "colour": "orange",
+          "label": "Teen Line",
+          "url": "https://www.teenline.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "KidsHealth Teens",
+          "url": "https://kidshealth.org/en/teens/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "StopBullying.gov",
+          "url": "https://www.stopbullying.gov/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Weather.gov",
+          "url": "https://www.weather.gov/",
+          "colour": "purple",
           "included": true
         }
       ]

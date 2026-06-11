@@ -1,55 +1,60 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Students (Primary) Start Page",
-  "description": "Gamified foundational learning and parent-approved hubs.",
+  "title": "Primary Student Start Page",
+  "description": "A child-friendly UK learning start page for homework, reading, maths, science, creativity, safety and school-life essentials.",
   "filename": "start-page-student-primary-uk.html",
   "sections": [
     {
-      "name": "School Dashboards",
+      "name": "School & Homework",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "ClassDojo",
-          "url": "https://www.classdojo.com/",
+          "label": "Google Classroom",
+          "url": "https://classroom.google.com/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Seesaw",
-          "url": "https://web.seesaw.me/",
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BBC Bitesize KS1",
+          "url": "https://www.bbc.co.uk/bitesize/levels/z3g4d2p",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BBC Bitesize KS2",
+          "url": "https://www.bbc.co.uk/bitesize/levels/zbr9wmn",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Oak Academy",
+          "url": "https://www.thenational.academy/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Twinkl",
+          "url": "https://www.twinkl.co.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Education Quizzes",
+          "url": "https://www.educationquizzes.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Maths & Numbers",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "TTRS",
-          "url": "https://ttrockstars.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Mathletics",
-          "url": "https://www.mathletics.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Topmarks",
-          "url": "https://www.topmarks.co.uk/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Reading & Phonics",
+      "name": "Reading & Words",
       "colour": "purple",
       "included": true,
       "links": [
@@ -60,14 +65,8 @@
           "included": true
         },
         {
-          "label": "PhonicsPlay",
-          "url": "https://www.phonicsplay.co.uk/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "Epic!",
-          "url": "https://www.getepic.com/",
+          "label": "BookTrust",
+          "url": "https://www.booktrust.org.uk/",
           "colour": "purple",
           "included": true
         },
@@ -76,93 +75,275 @@
           "url": "https://storylineonline.net/",
           "colour": "purple",
           "included": true
+        },
+        {
+          "label": "Merriam-Webster Kids",
+          "url": "https://www.merriam-webster.com/word-central",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Vocabulary.com",
+          "url": "https://www.vocabulary.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Project Gutenberg Kids",
+          "url": "https://www.gutenberg.org/ebooks/bookshelf/20",
+          "colour": "purple",
+          "included": true
         }
       ]
     },
     {
-      "name": "Safe Search",
+      "name": "Maths Practice",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Times Tables Rock Stars",
+          "url": "https://ttrockstars.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Mathsframe",
+          "url": "https://mathsframe.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Topmarks Maths",
+          "url": "https://www.topmarks.co.uk/maths-games",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Math Playground",
+          "url": "https://www.mathplayground.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Khan Academy Kids",
+          "url": "https://learn.khanacademy.org/khan-academy-kids/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NRICH Primary",
+          "url": "https://nrich.maths.org/primary",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Science & Nature",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Science",
+          "url": "https://www.bbc.co.uk/bitesize/subjects/z2pfb9q",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NASA Kids Club",
+          "url": "https://www.nasa.gov/learning-resources/nasa-kids-club/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "National Geographic Kids",
+          "url": "https://www.natgeokids.com/uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DK Find Out",
+          "url": "https://www.dkfindout.com/uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Science Museum",
+          "url": "https://www.sciencemuseum.org.uk/objects-and-stories",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Natural History Museum",
+          "url": "https://www.nhm.ac.uk/discover.html",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Creative & Making",
       "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Blockly Games",
+          "url": "https://blockly.games/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Tate Kids",
+          "url": "https://www.tate.org.uk/kids",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Blue Peter",
+          "url": "https://www.bbc.co.uk/cbbc/shows/blue-peter",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CBeebies Creative",
+          "url": "https://www.bbc.co.uk/cbeebies",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Safe Search & Video",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Kiddle",
           "url": "https://www.kiddle.co/",
-          "colour": "red",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "DK Find Out!",
-          "url": "https://www.dkfindout.com/",
-          "colour": "red",
+          "label": "Google SafeSearch",
+          "url": "https://www.google.com/safesearch",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "Nat Geo Kids",
-          "url": "https://kids.nationalgeographic.com/",
-          "colour": "red",
+          "label": "YouTube Kids",
+          "url": "https://www.youtubekids.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC iPlayer Kids",
+          "url": "https://www.bbc.co.uk/iplayer/categories/childrens",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "CBBC",
+          "url": "https://www.bbc.co.uk/cbbc",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "CBeebies",
+          "url": "https://www.bbc.co.uk/cbeebies",
+          "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Coding & Making",
-      "colour": "blue",
+      "name": "Coding & Logic",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "Scratch",
           "url": "https://scratch.mit.edu/",
-          "colour": "blue",
+          "colour": "green",
           "included": true
         },
         {
           "label": "Code.org",
           "url": "https://code.org/",
-          "colour": "blue",
+          "colour": "green",
           "included": true
         },
         {
-          "label": "Tinkercad",
-          "url": "https://www.tinkercad.com/",
-          "colour": "blue",
+          "label": "Blockly Games",
+          "url": "https://blockly.games/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hour of Code",
+          "url": "https://hourofcode.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Tynker",
+          "url": "https://www.tynker.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Raspberry Pi Projects",
+          "url": "https://projects.raspberrypi.org/en",
+          "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Fun & Games",
-      "colour": "green",
+      "name": "Wellbeing & Safety",
+      "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "CBBC",
-          "url": "https://www.bbc.co.uk/cbbc",
-          "colour": "green",
+          "label": "Childline",
+          "url": "https://www.childline.org.uk/",
+          "colour": "purple",
           "included": true
         },
         {
-          "label": "Funbrain",
-          "url": "https://www.funbrain.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Watch & Listen",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "YouTube Kids",
-          "url": "https://www.youtubekids.com/",
-          "colour": "orange",
+          "label": "BBC Own It",
+          "url": "https://www.bbc.com/ownit",
+          "colour": "purple",
           "included": true
         },
         {
-          "label": "Brains On!",
-          "url": "https://www.brainson.org/",
-          "colour": "orange",
+          "label": "NSPCC Online Safety",
+          "url": "https://www.nspcc.org.uk/keeping-children-safe/online-safety/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Thinkuknow",
+          "url": "https://www.thinkuknow.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "YoungMinds",
+          "url": "https://www.youngminds.org.uk/young-person/",
+          "colour": "purple",
           "included": true
         }
       ]

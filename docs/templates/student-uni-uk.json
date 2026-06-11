@@ -1,17 +1,23 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Students (University) Start Page",
-  "description": "Independent academic research, campus portals, and life admin.",
+  "title": "University Student Start Page",
+  "description": "A UK university start page for lectures, research, writing, referencing, money, housing, wellbeing, careers and everyday study admin.",
   "filename": "start-page-student-uni-uk.html",
   "sections": [
     {
-      "name": "Learning Platform",
+      "name": "University Systems",
       "colour": "green",
       "included": true,
       "links": [
         {
+          "label": "Moodle",
+          "url": "https://moodle.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
           "label": "Canvas",
-          "url": "https://canvas.instructure.com/",
+          "url": "https://www.instructure.com/canvas",
           "colour": "green",
           "included": true
         },
@@ -20,36 +26,151 @@
           "url": "https://www.blackboard.com/",
           "colour": "green",
           "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
-      "name": "Library & Research",
-      "colour": "orange",
+      "name": "Documents & Notes",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Sheets",
+          "url": "https://sheets.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Slides",
+          "url": "https://slides.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft 365",
+          "url": "https://www.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "OneDrive",
+          "url": "https://onedrive.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Keep",
+          "url": "https://keep.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Research & Library",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google Scholar",
           "url": "https://scholar.google.com/",
-          "colour": "orange",
+          "colour": "blue",
           "included": true
         },
         {
           "label": "JSTOR",
           "url": "https://www.jstor.org/",
-          "colour": "orange",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "ResearchGate",
-          "url": "https://www.researchgate.net/",
-          "colour": "orange",
+          "label": "PubMed",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "CORE",
+          "url": "https://core.ac.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Open Library",
+          "url": "https://openlibrary.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "British Library",
+          "url": "https://www.bl.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WorldCat",
+          "url": "https://search.worldcat.org/",
+          "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Writing Tools",
+      "name": "Writing & Referencing",
       "colour": "purple",
       "included": true,
       "links": [
@@ -60,21 +181,94 @@
           "included": true
         },
         {
+          "label": "ZoteroBib",
+          "url": "https://zbib.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
           "label": "Mendeley",
           "url": "https://www.mendeley.com/",
           "colour": "purple",
           "included": true
         },
         {
-          "label": "CiteThisForMe",
-          "url": "https://www.citethisforme.com/",
+          "label": "Purdue OWL",
+          "url": "https://owl.purdue.edu/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Overleaf",
+          "url": "https://www.overleaf.com/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "AI Study Tools",
+      "name": "Study & Revision",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Quizlet",
+          "url": "https://quizlet.com/en-gb",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "AnkiWeb",
+          "url": "https://ankiweb.net/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Forest",
+          "url": "https://www.forestapp.cc/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "OpenLearn",
+          "url": "https://www.open.edu/openlearn/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "AI Research Help",
       "colour": "red",
       "included": true,
       "links": [
@@ -85,63 +279,103 @@
           "included": true
         },
         {
-          "label": "DeepL Translate",
-          "url": "https://www.deepl.com/",
+          "label": "Claude",
+          "url": "https://claude.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Elicit",
+          "url": "https://elicit.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Consensus",
+          "url": "https://consensus.app/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Semantic Scholar",
+          "url": "https://www.semanticscholar.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Connected Papers",
+          "url": "https://www.connectedpapers.com/",
           "colour": "red",
           "included": true
         }
       ]
     },
     {
-      "name": "Student Finance",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Student Loans",
-          "url": "https://www.gov.uk/student-finance",
-          "colour": "blue",
-          "included": true
-        },
-        {
-          "label": "UNiDAYS",
-          "url": "https://www.myunidays.com/",
-          "colour": "blue",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Daily Life",
+      "name": "Money & Admin",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Splitwise",
-          "url": "https://www.splitwise.com/",
+          "label": "Student Finance England",
+          "url": "https://www.gov.uk/student-finance",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "UCAS",
+          "url": "https://www.ucas.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "GOV.UK",
+          "url": "https://www.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MoneySavingExpert Students",
+          "url": "https://www.moneysavingexpert.com/students/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "TOTUM",
+          "url": "https://www.totum.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Unidays",
+          "url": "https://www.myunidays.com/GB/en-GB",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Wellbeing",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Nightline",
-          "url": "https://nightline.ac.uk/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Careers",
+      "name": "Life, Work & Travel",
       "colour": "purple",
       "included": true,
       "links": [
+        {
+          "label": "Prospects",
+          "url": "https://www.prospects.ac.uk/",
+          "colour": "purple",
+          "included": true
+        },
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/",
@@ -149,8 +383,32 @@
           "included": true
         },
         {
-          "label": "Handshake",
-          "url": "https://joinhandshake.com/",
+          "label": "Indeed",
+          "url": "https://uk.indeed.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Student Minds",
+          "url": "https://www.studentminds.org.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "NHS",
+          "url": "https://www.nhs.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/",
           "colour": "purple",
           "included": true
         }

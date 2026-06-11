@@ -1,11 +1,11 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Everyday Life Start Page",
-  "description": "Simplified, clean interface for low-stress daily navigation.",
+  "title": "Retired / Everyday Life Start Page UK",
+  "description": "A low-stress UK everyday start page for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
   "filename": "start-page-everyday-life-uk.html",
   "sections": [
     {
-      "name": "Email",
+      "name": "Email & Calendar",
       "colour": "green",
       "included": true,
       "links": [
@@ -14,44 +14,384 @@
           "url": "https://mail.google.com/",
           "colour": "green",
           "included": true
+        },
+        {
+          "label": "Outlook.com",
+          "url": "https://outlook.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Yahoo Mail",
+          "url": "https://mail.yahoo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Contacts",
+          "url": "https://contacts.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "OneDrive",
+          "url": "https://onedrive.live.com/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
-      "name": "News",
-      "colour": "orange",
+      "name": "Search & Maps",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google",
+          "url": "https://www.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC Weather",
+          "url": "https://www.bbc.co.uk/weather",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Translate",
+          "url": "https://translate.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "StreetCheck",
+          "url": "https://www.streetcheck.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Met Office",
+          "url": "https://www.metoffice.gov.uk/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "News & Radio",
+      "colour": "red",
       "included": true,
       "links": [
         {
           "label": "BBC News",
-          "url": "https://www.bbc.co.uk/",
+          "url": "https://www.bbc.co.uk/news",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Sky News",
+          "url": "https://news.sky.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Guardian",
+          "url": "https://www.theguardian.com/uk",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC Sounds",
+          "url": "https://www.bbc.co.uk/sounds",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC Radio 4",
+          "url": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Classic FM",
+          "url": "https://www.classicfm.com/radio/player/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Health & Care",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "NHS",
+          "url": "https://www.nhs.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NHS App",
+          "url": "https://www.nhs.uk/nhs-app/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "111 Online",
+          "url": "https://111.nhs.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Age UK",
+          "url": "https://www.ageuk.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Carers UK",
+          "url": "https://www.carersuk.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mind",
+          "url": "https://www.mind.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Boots",
+          "url": "https://www.boots.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Money & Bills",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "GOV.UK",
+          "url": "https://www.gov.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "MoneySavingExpert",
+          "url": "https://www.moneysavingexpert.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Which?",
+          "url": "https://www.which.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Uswitch",
+          "url": "https://www.uswitch.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Compare the Market",
+          "url": "https://www.comparethemarket.com/",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Public Services",
+      "name": "Shopping & Food",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Amazon UK",
+          "url": "https://www.amazon.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "eBay UK",
+          "url": "https://www.ebay.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Tesco",
+          "url": "https://www.tesco.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sainsbury's",
+          "url": "https://www.sainsburys.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ASDA",
+          "url": "https://www.asda.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "John Lewis",
+          "url": "https://www.johnlewis.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Royal Mail Tracking",
+          "url": "https://www.royalmail.com/track-your-item",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Travel & Local",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "DVLA Portal",
-          "url": "https://www.gov.uk/browse/driving",
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TfL",
+          "url": "https://tfl.gov.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Bus Times",
+          "url": "https://bustimes.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Skyscanner",
+          "url": "https://www.skyscanner.net/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.co.uk/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Local Info",
-      "colour": "red",
+      "name": "TV, Hobbies & Tools",
+      "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "BBC Weather",
-          "url": "https://www.bbc.co.uk/weather",
-          "colour": "red",
+          "label": "BBC iPlayer",
+          "url": "https://www.bbc.co.uk/iplayer",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ITVX",
+          "url": "https://www.itv.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Channel 4",
+          "url": "https://www.channel4.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenLearn",
+          "url": "https://www.open.edu/openlearn/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Ancestry UK",
+          "url": "https://www.ancestry.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
           "included": true
         }
       ]

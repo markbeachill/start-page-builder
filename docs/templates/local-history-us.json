@@ -1,7 +1,431 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Local History Start Page",
-  "description": "Bouncing between archives, registries, and mapping engines.",
+  "title": "Local History Start Page US",
+  "description": "A US local history start page for archives, newspapers, maps, genealogy, photos, public records, writing and publishing.",
   "filename": "start-page-local-history-us.html",
-  "sections": []
+  "sections": [
+    {
+      "name": "National Archives",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "National Archives",
+          "url": "https://www.archives.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Catalog",
+          "url": "https://catalog.archives.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Library of Congress",
+          "url": "https://www.loc.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Digital Public Library",
+          "url": "https://dp.la/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Smithsonian Archives",
+          "url": "https://siarchives.si.edu/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "DocsTeach",
+          "url": "https://www.docsteach.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HathiTrust",
+          "url": "https://www.hathitrust.org/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "State & Local Archives",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "State Archives List",
+          "url": "https://www.archives.gov/research/alic/reference/state-archives.html",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ArchiveGrid",
+          "url": "https://researchworks.oclc.org/archivegrid/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WorldCat",
+          "url": "https://search.worldcat.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Local History Wiki",
+          "url": "https://localwiki.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "USGenWeb",
+          "url": "https://www.usgenweb.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "The Portal to Texas History",
+          "url": "https://texashistory.unt.edu/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Newspapers",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Chronicling America",
+          "url": "https://chroniclingamerica.loc.gov/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Newspapers.com",
+          "url": "https://www.newspapers.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google News Archive",
+          "url": "https://news.google.com/newspapers",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Fulton History",
+          "url": "https://fultonhistory.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "AP News Archive",
+          "url": "https://www.aparchive.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Maps & Places",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "LOC Maps",
+          "url": "https://www.loc.gov/maps/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "USGS TopoView",
+          "url": "https://ngmdb.usgs.gov/topoview/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Old Maps Online",
+          "url": "https://www.oldmapsonline.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sanborn Maps LOC",
+          "url": "https://www.loc.gov/collections/sanborn-maps/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "GNIS",
+          "url": "https://www.usgs.gov/tools/geographic-names-information-system-gnis",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Genealogy",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Ancestry",
+          "url": "https://www.ancestry.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FamilySearch",
+          "url": "https://www.familysearch.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Find a Grave",
+          "url": "https://www.findagrave.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Fold3",
+          "url": "https://www.fold3.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Ellis Island",
+          "url": "https://www.statueofliberty.org/discover/passenger-ship-search/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Cyndi's List",
+          "url": "https://www.cyndislist.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "RootsWeb",
+          "url": "https://home.rootsweb.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Images & Buildings",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Flickr Commons",
+          "url": "https://www.flickr.com/commons",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Historic American Buildings",
+          "url": "https://www.loc.gov/pictures/collection/hh/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NPGallery",
+          "url": "https://npgallery.nps.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Smithsonian Open Access",
+          "url": "https://www.si.edu/openaccess",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Digital Commonwealth",
+          "url": "https://www.digitalcommonwealth.org/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Records & Data",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Census Data",
+          "url": "https://data.census.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BLS Data",
+          "url": "https://www.bls.gov/data/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/search/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "USA.gov",
+          "url": "https://www.usa.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "GovInfo",
+          "url": "https://www.govinfo.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/companies/us",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing & Publishing",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Zotero",
+          "url": "https://www.zotero.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Substack",
+          "url": "https://substack.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Flickr",
+          "url": "https://www.flickr.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Archive.org Upload",
+          "url": "https://archive.org/create/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Quick Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    }
+  ]
 }

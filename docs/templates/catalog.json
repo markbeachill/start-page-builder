@@ -4,7 +4,7 @@
     "code": "student-primary-uk",
     "title": "Students (Primary)",
     "country": "UK",
-    "description": "Gamified foundational learning and parent-approved hubs.",
+    "description": "A fuller UK primary template for school platforms, reading, maths, science, creativity, safe search, coding and wellbeing.",
     "template": "templates/student-primary-uk.json",
     "example": "examples/start-page-student-primary-uk.html",
     "available": true
@@ -14,7 +14,7 @@
     "code": "student-primary-us",
     "title": "Students (Elementary)",
     "country": "US",
-    "description": "Gamified foundational learning and parent-approved hubs.",
+    "description": "A fuller US elementary template for school platforms, reading, math, science, creativity, safe search, coding and wellbeing.",
     "template": "templates/student-primary-us.json",
     "example": "examples/start-page-student-primary-us.html",
     "available": true
@@ -24,7 +24,7 @@
     "code": "student-school-uk",
     "title": "Students (Secondary)",
     "country": "UK",
-    "description": "Curriculum-focused exam revision and study routine tools.",
+    "description": "A fuller UK secondary template for GCSE revision, subject study, research, writing, AI study help, careers and wellbeing.",
     "template": "templates/student-school-uk.json",
     "example": "examples/start-page-student-school-uk.html",
     "available": true
@@ -34,7 +34,7 @@
     "code": "student-school-us",
     "title": "Students (High School)",
     "country": "US",
-    "description": "Curriculum-focused exam revision and study routine tools.",
+    "description": "A fuller US high-school template for homework, test prep, research, writing, AI study help, college planning and wellbeing.",
     "template": "templates/student-school-us.json",
     "example": "examples/start-page-student-school-us.html",
     "available": true
@@ -44,7 +44,7 @@
     "code": "student-uni-uk",
     "title": "Students (University)",
     "country": "UK",
-    "description": "Independent academic research, campus portals, and life admin.",
+    "description": "A fuller UK university template for campus systems, research, referencing, study planning, AI research help, money and student life.",
     "template": "templates/student-uni-uk.json",
     "example": "examples/start-page-student-uni-uk.html",
     "available": true
@@ -54,7 +54,7 @@
     "code": "student-uni-us",
     "title": "Students (College)",
     "country": "US",
-    "description": "Independent academic research, campus portals, and life admin.",
+    "description": "A fuller US college template for campus systems, research, citations, study planning, AI research help, money and student life.",
     "template": "templates/student-uni-us.json",
     "example": "examples/start-page-student-uni-us.html",
     "available": true
@@ -64,7 +64,7 @@
     "code": "teacher-uk",
     "title": "Teachers",
     "country": "UK",
-    "description": "Aggregating fragmented lesson planning and grading systems.",
+    "description": "A fuller UK teacher template for school systems, lesson planning, resources, assessment, safeguarding, CPD and admin.",
     "template": "templates/teacher-uk.json",
     "example": "examples/start-page-teacher-uk.html",
     "available": true
@@ -74,7 +74,7 @@
     "code": "teacher-us",
     "title": "Teachers",
     "country": "US",
-    "description": "Aggregating fragmented lesson planning and grading systems.",
+    "description": "A fuller US teacher template for school systems, lesson planning, resources, assessment, inclusion, professional learning and admin.",
     "template": "templates/teacher-us.json",
     "example": "examples/start-page-teacher-us.html",
     "available": true
@@ -84,7 +84,7 @@
     "code": "small-business-uk",
     "title": "Small Business",
     "country": "UK",
-    "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+    "description": "A fuller UK small-business template for accounts, tax, websites, customers, marketing, payments, shipping, legal and staff admin.",
     "template": "templates/small-business-uk.json",
     "example": "examples/start-page-small-business-uk.html",
     "available": true
@@ -94,7 +94,7 @@
     "code": "small-business-us",
     "title": "Small Business",
     "country": "US",
-    "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+    "description": "A fuller US small-business template for accounts, tax, websites, customers, marketing, payments, shipping, legal and staff admin.",
     "template": "templates/small-business-us.json",
     "example": "examples/start-page-small-business-us.html",
     "available": true
@@ -242,9 +242,9 @@
   {
     "section": "D: Everyday Life",
     "code": "everyday-life-uk",
-    "title": "Everyday Life",
+    "title": "Retired / Everyday Life",
     "country": "UK",
-    "description": "Simplified, clean interface for low-stress daily navigation.",
+    "description": "A fuller low-stress UK everyday template for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
     "template": "templates/everyday-life-uk.json",
     "example": "examples/start-page-everyday-life-uk.html",
     "available": true
@@ -252,9 +252,9 @@
   {
     "section": "D: Everyday Life",
     "code": "everyday-life-us",
-    "title": "Everyday Life",
+    "title": "Retired / Everyday Life",
     "country": "US",
-    "description": "Simplified, clean interface for low-stress daily navigation.",
+    "description": "A fuller low-stress US everyday template for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
     "template": "templates/everyday-life-us.json",
     "example": "examples/start-page-everyday-life-us.html",
     "available": true
@@ -280,7 +280,7 @@
     "available": true
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "F: Sport & Fandoms",
     "code": "sport-general-uk",
     "title": "Sports",
     "country": "UK",
@@ -290,7 +290,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "F: Sport & Fandoms",
     "code": "sport-general-us",
     "title": "Sports",
     "country": "US",
@@ -300,7 +300,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "F: Sport & Fandoms",
     "code": "football-uk-uk",
     "title": "UK Football",
     "country": "UK",
@@ -310,27 +310,27 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "local-history-uk",
     "title": "Local History",
     "country": "UK",
-    "description": "Bouncing between archives, registries, and mapping engines.",
+    "description": "A UK local-history template for archives, newspapers, maps, genealogy, photos, records, writing and publishing.",
     "template": "templates/local-history-uk.json",
     "example": "examples/start-page-local-history-uk.html",
-    "available": false
+    "available": true
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "local-history-us",
     "title": "Local History",
     "country": "US",
-    "description": "Bouncing between archives, registries, and mapping engines.",
+    "description": "A US local-history template for archives, newspapers, maps, genealogy, photos, records, writing and publishing.",
     "template": "templates/local-history-us.json",
     "example": "examples/start-page-local-history-us.html",
-    "available": false
+    "available": true
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "reader-writer-uk",
     "title": "Readers & Writers",
     "country": "UK",
@@ -340,7 +340,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "reader-writer-us",
     "title": "Readers & Writers",
     "country": "US",
@@ -350,7 +350,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "movie-buff-uk",
     "title": "Movie Buffs",
     "country": "UK",
@@ -360,7 +360,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "movie-buff-us",
     "title": "Movie Buffs",
     "country": "US",
@@ -370,7 +370,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "kpop-fan",
     "title": "K-Pop Fans",
     "country": "",
@@ -380,7 +380,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "music-fan-uk",
     "title": "Music Fans",
     "country": "UK",
@@ -390,7 +390,7 @@
     "available": false
   },
   {
-    "section": "E: Sport & Fandoms",
+    "section": "E: Hobbies",
     "code": "music-fan-us",
     "title": "Music Fans",
     "country": "US",

@@ -54,3 +54,6 @@ This folder contains standalone example start pages generated from the project t
 - kpop-fan
 - music-fan-uk
 - music-fan-us
+
+- `start-page-local-history-uk.html` — Local History UK example.
+- `start-page-local-history-us.html` — Local History US example.

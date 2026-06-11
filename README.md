@@ -1,11 +1,11 @@
-# Personal Start Page Creator — Stage 1.19
+# Personal Start Page Creator — Stage 1.20
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal start pages.
 
-## Stage 1.19 update
+## Stage 1.20 update
 
 - Tidied the home page featured examples to three cards: UK, US and Workplace.
 - Removed the Software Developer card from the home page featured row so the examples fit neatly three-abreast.
@@ -106,10 +106,22 @@ https://USERNAME.github.io/
 After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
 
 
-## Stage 1.18 update
+## Stage 1.20 update
 
 - Added the jump-start template catalogue from `menu_list(1).csv`.
 - Added 40 catalogue JSON templates from `start_page_menu_json_files(1).zip`.
 - Replaced the Workplace template with the updated `start-page-workplace-menu-config.json`.
 - Generated 28 jump-start example pages and marked 12 placeholder templates as coming soon.
 - Updated example links so standalone example pages open in a new tab/window.
+
+
+## Stage 1.20 template quality upgrade
+
+This stage replaces the first group of short jump-start templates with fuller ready-to-use menu configs and regenerated example pages:
+
+- Student templates: primary/elementary, secondary/high school, university/college, UK and US.
+- Teacher templates: UK and US.
+- Small Business templates: UK and US.
+- Workplace template: universal.
+- Retired / Everyday Life templates: UK and US.
+- Local History templates: UK and US, now grouped under Hobbies.

@@ -1,60 +1,65 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Students (Elementary) Start Page",
-  "description": "Gamified foundational learning and parent-approved hubs.",
+  "title": "Elementary Student Start Page",
+  "description": "A child-friendly US learning start page for homework, reading, maths, science, creativity, safety and school-life essentials.",
   "filename": "start-page-student-primary-us.html",
   "sections": [
     {
-      "name": "School Dashboards",
+      "name": "School & Homework",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "ClassDojo",
-          "url": "https://www.classdojo.com/",
+          "label": "Google Classroom",
+          "url": "https://classroom.google.com/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Seesaw",
-          "url": "https://web.seesaw.me/",
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Khan Academy Kids",
+          "url": "https://learn.khanacademy.org/khan-academy-kids/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PBS LearningMedia",
+          "url": "https://www.pbslearningmedia.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Geographic Kids",
+          "url": "https://kids.nationalgeographic.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Scholastic Learn",
+          "url": "https://www.scholastic.com/learnathome/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ReadWorks",
+          "url": "https://www.readworks.org/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Maths & Numbers",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "TTRS",
-          "url": "https://ttrockstars.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Mathletics",
-          "url": "https://www.mathletics.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Reading & Phonics",
+      "name": "Reading & Words",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "Oxford Owl",
-          "url": "https://www.oxfordowl.co.uk/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "Epic!",
+          "label": "Epic",
           "url": "https://www.getepic.com/",
           "colour": "purple",
           "included": true
@@ -64,93 +69,281 @@
           "url": "https://storylineonline.net/",
           "colour": "purple",
           "included": true
+        },
+        {
+          "label": "Merriam-Webster Kids",
+          "url": "https://www.merriam-webster.com/word-central",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Vocabulary.com",
+          "url": "https://www.vocabulary.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Library of Congress Kids",
+          "url": "https://www.loc.gov/families/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Project Gutenberg Kids",
+          "url": "https://www.gutenberg.org/ebooks/bookshelf/20",
+          "colour": "purple",
+          "included": true
         }
       ]
     },
     {
-      "name": "Safe Search",
+      "name": "Math Practice",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Khan Academy Kids",
+          "url": "https://learn.khanacademy.org/khan-academy-kids/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Math Playground",
+          "url": "https://www.mathplayground.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Coolmath4Kids",
+          "url": "https://www.coolmath4kids.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Prodigy Math",
+          "url": "https://www.prodigygame.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NRICH Primary",
+          "url": "https://nrich.maths.org/primary",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Multiplication.com",
+          "url": "https://www.multiplication.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Science & Nature",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "NASA Kids Club",
+          "url": "https://www.nasa.gov/learning-resources/nasa-kids-club/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smithsonian Learning Lab",
+          "url": "https://learninglab.si.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "National Geographic Kids",
+          "url": "https://kids.nationalgeographic.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DK Find Out",
+          "url": "https://www.dkfindout.com/us/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Exploratorium",
+          "url": "https://www.exploratorium.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "San Diego Zoo Kids",
+          "url": "https://sdzwildlifeexplorers.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Creative & Making",
       "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Blockly Games",
+          "url": "https://blockly.games/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Art for Kids Hub",
+          "url": "https://www.artforkidshub.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Crayola",
+          "url": "https://www.crayola.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PBS Kids Games",
+          "url": "https://pbskids.org/games/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Safe Search & Video",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Kiddle",
           "url": "https://www.kiddle.co/",
-          "colour": "red",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "DK Find Out!",
-          "url": "https://www.dkfindout.com/",
-          "colour": "red",
+          "label": "Google SafeSearch",
+          "url": "https://www.google.com/safesearch",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "Nat Geo Kids",
-          "url": "https://kids.nationalgeographic.com/",
-          "colour": "red",
+          "label": "YouTube Kids",
+          "url": "https://www.youtubekids.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PBS Kids Video",
+          "url": "https://pbskids.org/video/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "GoNoodle",
+          "url": "https://www.gonoodle.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Common Sense Media",
+          "url": "https://www.commonsensemedia.org/",
+          "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Coding & Making",
-      "colour": "blue",
+      "name": "Coding & Logic",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "Scratch",
           "url": "https://scratch.mit.edu/",
-          "colour": "blue",
+          "colour": "green",
           "included": true
         },
         {
           "label": "Code.org",
           "url": "https://code.org/",
-          "colour": "blue",
+          "colour": "green",
           "included": true
         },
         {
-          "label": "Tinkercad",
-          "url": "https://www.tinkercad.com/",
-          "colour": "blue",
+          "label": "Blockly Games",
+          "url": "https://blockly.games/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hour of Code",
+          "url": "https://hourofcode.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Tynker",
+          "url": "https://www.tynker.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Raspberry Pi Projects",
+          "url": "https://projects.raspberrypi.org/en",
+          "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Fun & Games",
-      "colour": "green",
+      "name": "Wellbeing & Safety",
+      "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "PBS Kids",
-          "url": "https://pbskids.org/",
-          "colour": "green",
+          "label": "KidsHealth",
+          "url": "https://kidshealth.org/en/kids/",
+          "colour": "purple",
           "included": true
         },
         {
-          "label": "Funbrain",
-          "url": "https://www.funbrain.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Watch & Listen",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "YouTube Kids",
-          "url": "https://www.youtubekids.com/",
-          "colour": "orange",
+          "label": "StopBullying.gov",
+          "url": "https://www.stopbullying.gov/",
+          "colour": "purple",
           "included": true
         },
         {
-          "label": "Brains On!",
-          "url": "https://www.brainson.org/",
-          "colour": "orange",
+          "label": "NetSmartz",
+          "url": "https://www.missingkids.org/netsmartz/home",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Common Sense Media",
+          "url": "https://www.commonsensemedia.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Child Mind Institute",
+          "url": "https://childmind.org/",
+          "colour": "purple",
           "included": true
         }
       ]

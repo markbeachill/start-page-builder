@@ -1,11 +1,11 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Everyday Life Start Page",
-  "description": "Simplified, clean interface for low-stress daily navigation.",
+  "title": "Retired / Everyday Life Start Page US",
+  "description": "A low-stress US everyday start page for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
   "filename": "start-page-everyday-life-us.html",
   "sections": [
     {
-      "name": "Email",
+      "name": "Email & Calendar",
       "colour": "green",
       "included": true,
       "links": [
@@ -14,44 +14,384 @@
           "url": "https://mail.google.com/",
           "colour": "green",
           "included": true
+        },
+        {
+          "label": "Outlook.com",
+          "url": "https://outlook.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Yahoo Mail",
+          "url": "https://mail.yahoo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Contacts",
+          "url": "https://contacts.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "OneDrive",
+          "url": "https://onedrive.live.com/",
+          "colour": "green",
+          "included": true
         }
       ]
     },
     {
-      "name": "News",
+      "name": "Search & Maps",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google",
+          "url": "https://www.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Weather.gov",
+          "url": "https://www.weather.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Translate",
+          "url": "https://translate.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "USA.gov",
+          "url": "https://www.usa.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "News & Radio",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "AP News",
+          "url": "https://apnews.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CNN",
+          "url": "https://www.cnn.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Local NPR Stations",
+          "url": "https://www.npr.org/stations/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Health & Care",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Medicare",
+          "url": "https://www.medicare.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MedlinePlus",
+          "url": "https://medlineplus.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CDC",
+          "url": "https://www.cdc.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HealthCare.gov",
+          "url": "https://www.healthcare.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AARP",
+          "url": "https://www.aarp.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "988 Lifeline",
+          "url": "https://988lifeline.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WebMD",
+          "url": "https://www.webmd.com/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Money & Bills",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "NPR",
-          "url": "https://www.npr.org/",
+          "label": "IRS",
+          "url": "https://www.irs.gov/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Social Security",
+          "url": "https://www.ssa.gov/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ConsumerFinance.gov",
+          "url": "https://www.consumerfinance.gov/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "USA.gov Benefits",
+          "url": "https://www.usa.gov/benefits",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "AARP Money",
+          "url": "https://www.aarp.org/money/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NerdWallet",
+          "url": "https://www.nerdwallet.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PayPal",
+          "url": "https://www.paypal.com/us/home",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Public Services",
+      "name": "Shopping & Food",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Walmart",
+          "url": "https://www.walmart.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Target",
+          "url": "https://www.target.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "eBay",
+          "url": "https://www.ebay.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Costco",
+          "url": "https://www.costco.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Instacart",
+          "url": "https://www.instacart.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "USPS Tracking",
+          "url": "https://tools.usps.com/go/TrackConfirmAction_input",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Travel & Local",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "USPS Tracker",
-          "url": "https://www.usps.com/manage/informed-delivery.htm",
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Amtrak",
+          "url": "https://www.amtrak.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Skyscanner",
+          "url": "https://www.skyscanner.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Kayak",
+          "url": "https://www.kayak.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "National Park Service",
+          "url": "https://www.nps.gov/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Local Info",
-      "colour": "red",
+      "name": "TV, Hobbies & Tools",
+      "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Weather Und.",
-          "url": "https://www.wunderground.com/",
-          "colour": "red",
+          "label": "PBS",
+          "url": "https://www.pbs.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Netflix",
+          "url": "https://www.netflix.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Hulu",
+          "url": "https://www.hulu.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Open Library",
+          "url": "https://openlibrary.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Ancestry",
+          "url": "https://www.ancestry.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
           "included": true
         }
       ]

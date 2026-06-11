@@ -1,200 +1,475 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Small Business Start Page",
-  "description": "Multi-hat logistics (accounting, marketing, shipping) for owners.",
+  "title": "Small Business Start Page UK",
+  "description": "A UK small-business start page for accounts, tax, companies, banking, customers, marketing, sales, shipping, staff and everyday admin.",
   "filename": "start-page-small-business-uk.html",
   "sections": [
     {
-      "name": "Email & Documents",
+      "name": "Daily Workspace",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Workspace",
-          "url": "https://workspace.google.com/",
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
           "colour": "green",
           "included": true
         },
         {
           "label": "Microsoft 365",
-          "url": "https://www.microsoft.com/en-us/microsoft-365",
+          "url": "https://www.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Banking & Accounts",
+      "name": "Money & Accounts",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "VAT Online",
+          "url": "https://www.gov.uk/log-in-register-hmrc-online-services",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Xero",
+          "url": "https://www.xero.com/uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "QuickBooks UK",
+          "url": "https://quickbooks.intuit.com/uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FreeAgent",
+          "url": "https://www.freeagent.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/gb",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PayPal Business",
+          "url": "https://www.paypal.com/uk/business",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Banking & Payments",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Starling Biz",
+          "label": "Wise Business",
+          "url": "https://wise.com/gb/business/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Revolut Business",
+          "url": "https://www.revolut.com/business/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Starling Business",
           "url": "https://www.starlingbank.com/business-account/",
           "colour": "orange",
           "included": true
         },
         {
-          "label": "Monzo Biz",
+          "label": "Monzo Business",
           "url": "https://monzo.com/business/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "SumUp",
+          "url": "https://www.sumup.com/en-gb/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Square UK",
+          "url": "https://squareup.com/gb/en",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "GoCardless",
+          "url": "https://gocardless.com/",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Tax & Government",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "HMRC",
-          "url": "https://www.gov.uk/log-in-register-hmrc-online-services",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "Companies House",
-          "url": "https://www.gov.uk/government/organisations/companies-house",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Website & Domains",
-      "colour": "red",
+      "name": "Website & Shop",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Shopify",
-          "url": "https://www.shopify.com/",
-          "colour": "red",
+          "url": "https://www.shopify.com/uk",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WooCommerce",
+          "url": "https://woocommerce.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Squarespace",
+          "url": "https://www.squarespace.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wix",
+          "url": "https://www.wix.com/",
+          "colour": "blue",
           "included": true
         },
         {
           "label": "WordPress",
           "url": "https://wordpress.com/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Marketing",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Mailchimp",
-          "url": "https://mailchimp.com/",
           "colour": "blue",
           "included": true
         },
         {
-          "label": "Canva",
-          "url": "https://www.canva.com/",
+          "label": "Google Business Profile",
+          "url": "https://www.google.com/business/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Trustpilot Business",
+          "url": "https://business.trustpilot.com/",
           "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Social Media",
-      "colour": "green",
+      "name": "Marketing & Design",
+      "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "Meta Business",
-          "url": "https://business.facebook.com/",
-          "colour": "green",
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "colour": "purple",
           "included": true
         },
         {
           "label": "Buffer",
           "url": "https://buffer.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Meta Business Suite",
+          "url": "https://business.facebook.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Analytics",
+          "url": "https://analytics.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Ads",
+          "url": "https://ads.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Sales & Customers",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "HubSpot CRM",
+          "url": "https://www.hubspot.com/products/crm",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Zoho CRM",
+          "url": "https://www.zoho.com/crm/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Jotform",
+          "url": "https://www.jotform.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Typeform",
+          "url": "https://www.typeform.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Shipping & Stock",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Royal Mail Click & Drop",
+          "url": "https://business.parcel.royalmail.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Evri Business",
+          "url": "https://www.evri.com/business",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "DPD Local",
+          "url": "https://www.dpdlocal.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Parcel2Go",
+          "url": "https://www.parcel2go.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Vinted Pro",
+          "url": "https://www.vinted.co.uk/pro",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "eBay Seller Hub",
+          "url": "https://www.ebay.co.uk/sh/ovw",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Amazon Seller Central",
+          "url": "https://sell.amazon.co.uk/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "People & Legal",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ACAS",
+          "url": "https://www.acas.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HSE",
+          "url": "https://www.hse.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ICO",
+          "url": "https://ico.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "GOV.UK Business",
+          "url": "https://www.gov.uk/browse/business",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Federation Small Businesses",
+          "url": "https://www.fsb.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "IP Office",
+          "url": "https://www.gov.uk/government/organisations/intellectual-property-office",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Invoices",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Xero",
-          "url": "https://www.xero.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "QuickBooks",
-          "url": "https://quickbooks.intuit.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Customers",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "HubSpot",
-          "url": "https://www.hubspot.com/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "Zendesk",
-          "url": "https://www.zendesk.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Shipping",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Royal Mail Biz",
-          "url": "https://www.royalmail.com/business",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Evri Biz",
-          "url": "https://www.evri.com/business",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "ShipStation",
-          "url": "https://www.shipstation.com/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Legal Basics",
+      "name": "Quick Tools",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "LawDepot",
-          "url": "https://www.lawdepot.com/",
+          "label": "Time.is",
+          "url": "https://time.is/",
           "colour": "blue",
           "included": true
         },
         {
-          "label": "ICO",
-          "url": "https://ico.org.uk/",
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
           "colour": "blue",
           "included": true
         }

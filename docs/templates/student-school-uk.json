@@ -1,55 +1,158 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Students (Secondary) Start Page",
-  "description": "Curriculum-focused exam revision and study routine tools.",
+  "title": "Secondary Student Start Page",
+  "description": "A UK secondary school start page for study systems, GCSE revision, research, writing, wellbeing, careers and everyday school admin.",
   "filename": "start-page-student-school-uk.html",
   "sections": [
     {
-      "name": "Learning Platform",
+      "name": "School Systems",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Classroom",
+          "label": "Google Classroom",
           "url": "https://classroom.google.com/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "MS Teams",
+          "label": "Microsoft Teams",
           "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Satchel One",
+          "url": "https://www.satchelone.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BBC Bitesize",
+          "url": "https://www.bbc.co.uk/bitesize",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Exam Revision",
+      "name": "GCSE Revision",
       "colour": "orange",
       "included": true,
       "links": [
         {
+          "label": "BBC Bitesize GCSE",
+          "url": "https://www.bbc.co.uk/bitesize/levels/z98jmp3",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Seneca Learning",
+          "url": "https://senecalearning.com/en-GB/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Physics & Maths Tutor",
+          "url": "https://www.physicsandmathstutor.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Maths Genie",
+          "url": "https://www.mathsgenie.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Corbettmaths",
+          "url": "https://corbettmaths.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Save My Exams",
+          "url": "https://www.savemyexams.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
           "label": "Quizlet",
-          "url": "https://quizlet.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Seneca",
-          "url": "https://senecalearning.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "BBC Bitesize",
-          "url": "https://www.bbc.co.uk/bitesize",
+          "url": "https://quizlet.com/en-gb",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Writing Tools",
+      "name": "Subjects",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NRICH",
+          "url": "https://nrich.maths.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Isaac Physics",
+          "url": "https://isaacphysics.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Royal Society of Chemistry",
+          "url": "https://edu.rsc.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC Teach",
+          "url": "https://www.bbc.co.uk/teach",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Oak Academy",
+          "url": "https://www.thenational.academy/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Writing & Referencing",
       "colour": "purple",
       "included": true,
       "links": [
@@ -60,43 +163,48 @@
           "included": true
         },
         {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
           "label": "Grammarly",
           "url": "https://www.grammarly.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Oxford Learners",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Cite This For Me",
+          "url": "https://www.citethisforme.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ZoteroBib",
+          "url": "https://zbib.org/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Subject Helpers",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Khan Academy",
-          "url": "https://www.khanacademy.org/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Sparx Maths",
-          "url": "https://sparxmaths.com/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Desmos",
-          "url": "https://www.desmos.com/calculator",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Library",
+      "name": "Research",
       "colour": "blue",
       "included": true,
       "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "blue",
+          "included": true
+        },
         {
           "label": "Wikipedia",
           "url": "https://www.wikipedia.org/",
@@ -104,47 +212,156 @@
           "included": true
         },
         {
-          "label": "Britannica",
-          "url": "https://www.britannica.com/",
+          "label": "Britannica School",
+          "url": "https://school.eb.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "The British Library",
+          "url": "https://www.bl.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "National Archives Education",
+          "url": "https://www.nationalarchives.gov.uk/education/",
           "colour": "blue",
           "included": true
         }
       ]
     },
     {
-      "name": "Study Org",
+      "name": "AI Study Help",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Claude",
+          "url": "https://claude.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Microsoft Copilot",
+          "url": "https://copilot.microsoft.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google Gemini",
+          "url": "https://gemini.google.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Goblin Tools",
+          "url": "https://goblin.tools/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Careers & Choices",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Notion",
-          "url": "https://www.notion.so/",
+          "label": "National Careers Service",
+          "url": "https://nationalcareers.service.gov.uk/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Pomodoro Timer",
-          "url": "https://pomofocus.io/",
+          "label": "UCAS",
+          "url": "https://www.ucas.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Apprenticeships",
+          "url": "https://www.apprenticeships.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Prospects",
+          "url": "https://www.prospects.ac.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BBC Bitesize Careers",
+          "url": "https://www.bbc.co.uk/bitesize/careers",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Indeed",
+          "url": "https://uk.indeed.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Wellbeing",
-      "colour": "orange",
+      "name": "Wellbeing & Life",
+      "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "Lofi Radio",
-          "url": "https://lofigirl.com/",
-          "colour": "orange",
+          "label": "Childline",
+          "url": "https://www.childline.org.uk/",
+          "colour": "purple",
           "included": true
         },
         {
           "label": "YoungMinds",
-          "url": "https://www.youngminds.org.uk/",
-          "colour": "orange",
+          "url": "https://www.youngminds.org.uk/young-person/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "NHS Mental Health",
+          "url": "https://www.nhs.uk/mental-health/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Kooth",
+          "url": "https://www.kooth.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "purple",
           "included": true
         }
       ]

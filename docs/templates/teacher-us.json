@@ -1,7 +1,7 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Teachers Start Page",
-  "description": "Aggregating fragmented lesson planning and grading systems.",
+  "title": "Teacher Start Page US",
+  "description": "A US teacher start page for planning, classroom platforms, resources, assessment, safeguarding, professional learning and everyday school admin.",
   "filename": "start-page-teacher-us.html",
   "sections": [
     {
@@ -10,37 +10,182 @@
       "included": true,
       "links": [
         {
-          "label": "PowerSchool",
-          "url": "https://www.powerschool.com/",
+          "label": "Google Classroom",
+          "url": "https://classroom.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Canvas",
+          "url": "https://www.instructure.com/canvas",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Schoology",
+          "url": "https://www.schoology.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.office.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ClassDojo",
+          "url": "https://www.classdojo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Remind",
+          "url": "https://www.remind.com/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Lesson Planning",
+      "name": "Planning & Lessons",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "PBS LearningMedia",
+          "url": "https://www.pbslearningmedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ReadWriteThink",
+          "url": "https://www.readwritethink.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Teachers Pay Teachers",
+          "url": "https://www.teacherspayteachers.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smithsonian Learning Lab",
+          "url": "https://learninglab.si.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Library of Congress Teachers",
+          "url": "https://www.loc.gov/programs/teachers/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "CommonLit",
+          "url": "https://www.commonlit.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Assessment & Feedback",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Twinkl",
-          "url": "https://www.twinkl.com/",
+          "label": "Google Forms",
+          "url": "https://forms.google.com/",
           "colour": "orange",
           "included": true
         },
         {
-          "label": "Padlet",
-          "url": "https://padlet.com/",
+          "label": "Microsoft Forms",
+          "url": "https://forms.office.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Quizizz",
+          "url": "https://quizizz.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kahoot",
+          "url": "https://kahoot.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Socrative",
+          "url": "https://www.socrative.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Quizlet",
+          "url": "https://quizlet.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Edpuzzle",
+          "url": "https://edpuzzle.com/",
           "colour": "orange",
           "included": true
         }
       ]
     },
     {
-      "name": "Assessment",
+      "name": "Classroom Tools",
       "colour": "purple",
       "included": true,
       "links": [
+        {
+          "label": "Canva Education",
+          "url": "https://www.canva.com/education/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Padlet",
+          "url": "https://padlet.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Mentimeter",
+          "url": "https://www.mentimeter.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Wakelet",
+          "url": "https://wakelet.com/",
+          "colour": "purple",
+          "included": true
+        },
         {
           "label": "Blooket",
           "url": "https://www.blooket.com/",
@@ -48,85 +193,187 @@
           "included": true
         },
         {
-          "label": "Kahoot!",
-          "url": "https://kahoot.com/",
+          "label": "Nearpod",
+          "url": "https://nearpod.com/",
           "colour": "purple",
           "included": true
         },
         {
-          "label": "Turnitin",
-          "url": "https://www.turnitin.com/",
+          "label": "FigJam",
+          "url": "https://www.figma.com/figjam/",
           "colour": "purple",
           "included": true
         }
       ]
     },
     {
-      "name": "Resources",
+      "name": "Safety & Inclusion",
       "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "TpT",
-          "url": "https://www.teacherspayteachers.com/",
+          "label": "StopBullying.gov",
+          "url": "https://www.stopbullying.gov/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Common Sense Education",
+          "url": "https://www.commonsense.org/education",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CASEL",
+          "url": "https://casel.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Understood",
+          "url": "https://www.understood.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Child Mind Institute",
+          "url": "https://childmind.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "National Center for Learning Disabilities",
+          "url": "https://www.ncld.org/",
           "colour": "red",
           "included": true
         }
       ]
     },
     {
-      "name": "Communication",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "ParentSquare",
-          "url": "https://www.parentsquare.com/",
-          "colour": "blue",
-          "included": true
-        },
-        {
-          "label": "Mailchimp",
-          "url": "https://mailchimp.com/",
-          "colour": "blue",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "AI Teaching Tools",
+      "name": "Professional Bodies",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "MagicSchool AI",
-          "url": "https://www.magicschool.ai/",
+          "label": "U.S. Dept of Education",
+          "url": "https://www.ed.gov/",
           "colour": "green",
           "included": true
         },
         {
-          "label": "Eduaide",
-          "url": "https://www.eduaide.ai/",
+          "label": "NEA",
+          "url": "https://www.nea.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AFT",
+          "url": "https://www.aft.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Board",
+          "url": "https://www.nbpts.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ISTE",
+          "url": "https://iste.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ASCD",
+          "url": "https://www.ascd.org/",
           "colour": "green",
           "included": true
         }
       ]
     },
     {
-      "name": "Professional Dev",
-      "colour": "orange",
+      "name": "PD & Learning",
+      "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "NEA Union",
-          "url": "https://www.nea.org/",
-          "colour": "orange",
+          "label": "Coursera",
+          "url": "https://www.coursera.org/",
+          "colour": "blue",
           "included": true
         },
         {
-          "label": "Edutopia",
-          "url": "https://www.edutopia.org/",
-          "colour": "orange",
+          "label": "edX",
+          "url": "https://www.edx.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PBS TeacherLine",
+          "url": "https://www.pbs.org/teacherline/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Skillshop",
+          "url": "https://skillshop.withgoogle.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Learning for Justice",
+          "url": "https://www.learningforjustice.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Wellbeing & Admin",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "988 Lifeline",
+          "url": "https://988lifeline.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "USA.gov Education",
+          "url": "https://www.usa.gov/education",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Weather.gov",
+          "url": "https://www.weather.gov/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "NPR Education",
+          "url": "https://www.npr.org/sections/education/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Education Week",
+          "url": "https://www.edweek.org/",
+          "colour": "purple",
           "included": true
         }
       ]
