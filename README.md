@@ -1,17 +1,18 @@
-# Personal Start Page Creator — Stage 1.18
+# Personal Start Page Creator — Stage 1.19
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal start pages.
 
-## Stage 1.18 update
+## Stage 1.19 update
 
-- Added a **Workplace** starter template.
-- Added `docs/templates/workplace.json`.
-- Added `docs/examples/start-page-workplace.html`.
-- Added Workplace to the builder template selector.
-- Added Workplace cards/links to the home and templates pages.
+- Tidied the home page featured examples to three cards: UK, US and Workplace.
+- Removed the Software Developer card from the home page featured row so the examples fit neatly three-abreast.
+- Kept Software Developer available on the Jump-start Templates page and in the builder.
+- Removed public **View JSON** buttons from template cards.
+- Kept template JSON files available behind the scenes for the builder and for direct use if needed.
+- Added a short note on the templates page explaining that templates open in the builder for editing.
 
 ## GitHub Pages
 
@@ -39,7 +40,7 @@ Then put `index.html` at the top of the chosen GitHub Pages publishing source:
 ```text
 docs/
   index.html              integrated public home page
-  templates.html          templates and example pages
+  templates.html          jump-start template catalogue and example pages
   why-start-page.html     explanation of why a custom start page is useful
   ai-menu-help.html       instructions for building a menu with AI
   github-pages.html       publishing guide
@@ -59,8 +60,8 @@ The public informational pages use the integrated site design. The builder uses 
 
 - Integrated home, templates, AI help, publishing, about and help pages.
 - Light-wrapper builder page with wide editor and preview panes.
-- Template selector: Typical UK User, Typical US User, Software Developer, Workplace and Blank.
-- Real example start pages for UK, US, Software Developer and Workplace menus.
+- Template selector with everyday, workplace, software, education, business, creative, life and fandom templates.
+- Real example start pages for ready-to-use templates.
 - Save/load start page as first-class actions.
 - Save/load menu config as first-class actions.
 - Import list dropdown: Markdown, CSV and plain text.
