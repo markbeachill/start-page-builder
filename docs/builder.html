@@ -38,11 +38,11 @@
     .import-group,.toolbar-group{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
     .toolbar-group{border-left:1px solid #555;padding-left:8px}
     .toolbar-label{font-size:11px;color:#ccc;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
-    .toolbar-more{display:inline-flex;align-items:center;position:relative}
+    .toolbar-more{display:inline-flex;align-items:center;position:static}
     .toolbar-more summary{border:1px solid #777;background:#555;color:#fff;border-radius:3px;padding:4px 8px;font-weight:650;font-size:12px;cursor:pointer;list-style:none}
     .toolbar-more summary::-webkit-details-marker{display:none}
     .toolbar-more[open] .toolbar-more-panel{display:flex}
-    .toolbar-more-panel{display:none;position:absolute;right:0;top:28px;background:#333;border:1px solid #666;border-radius:4px;padding:8px;gap:6px;z-index:200;min-width:240px;box-shadow:0 8px 24px rgba(0,0,0,.25);flex-wrap:wrap}
+    .toolbar-more-panel{display:none;position:static;background:#333;border:1px solid #666;border-radius:4px;padding:4px 6px;gap:6px;z-index:200;min-width:0;box-shadow:none;flex-wrap:wrap;margin-left:6px}
     .status{font-size:12px;color:#ddd;margin-left:auto;min-width:240px;text-align:right}
 
     .builder-main{flex:1;min-height:0;display:flex;background:#e9ecef}
@@ -81,13 +81,13 @@
       </span>
       <span class="toolbar-group">
         <span class="toolbar-label">Start page</span>
-        <button id="exportHtmlBtn" type="button">Save start page</button>
         <label class="file-label secondary">Load existing start page <input id="importHtmlInput" type="file" accept=".html,.htm,text/html"></label>
+        <button id="exportHtmlBtn" type="button">Save start page</button>
       </span>
       <span class="toolbar-group">
         <span class="toolbar-label">Menu config</span>
-        <button id="exportConfigBtn" type="button" class="secondary">Save menu config</button>
         <label class="file-label secondary">Load menu config <input id="importConfigInput" type="file" accept="application/json,.json"></label>
+        <button id="exportConfigBtn" type="button" class="secondary">Save menu config</button>
       </span>
       <span class="toolbar-group">
         <label>Import list
@@ -109,10 +109,10 @@
         <button id="exportListBtn" type="button" class="secondary">Export</button>
       </span>
       <details class="toolbar-more">
-        <summary>Browser save</summary>
+        <summary>Previous draft</summary>
         <span class="toolbar-more-panel">
-          <button id="restoreSavedBtn" type="button" class="secondary" hidden>Restore browser save</button>
-          <button id="clearSavedBtn" type="button" class="danger">Clear browser save</button>
+          <button id="restoreSavedBtn" type="button" class="secondary" hidden>Restore previous draft</button>
+          <button id="clearSavedBtn" type="button" class="danger">Clear previous draft</button>
         </span>
       </details>
       <span id="status" class="status">Loading starter template…</span>
@@ -545,6 +545,10 @@ function onSectionListInput(event){
 function onSectionListClick(event){
   const action = event.target.dataset.action;
   if(!action) return;
+  // Only structural buttons should trigger a full editor rebuild.
+  // Text inputs/selects also have data-action attributes for the input handler;
+  // handling their click here destroys the focused field and makes the cursor jump out.
+  if(event.target.tagName !== "BUTTON") return;
   const card = event.target.closest(".section-card");
   if(!card) return;
   const si = Number(card.dataset.sectionIndex);
@@ -657,7 +661,7 @@ async function loadSelectedTemplate(saveAfterLoad=true){
     renderAll();
     updateRestoreButton();
     if(!saveAfterLoad && hadBrowserSave){
-      setStatus("Loaded starter template. Browser auto-save found; use Restore browser save if needed.");
+      setStatus("Started from the selected template. A previous draft is available if you need it.");
     }else{
       setStatus("Loaded template: " + (project.title || key));
     }
@@ -666,8 +670,8 @@ async function loadSelectedTemplate(saveAfterLoad=true){
 function loadTemplate(saveAfterLoad=true){ return loadSelectedTemplate(saveAfterLoad); }
 function restoreBrowserSave(){
   const saved = loadFromBrowser();
-  if(saved){ project = saved; renderAll(); setStatus("Restored browser auto-save."); }
-  else { setStatus("No browser auto-save found."); updateRestoreButton(); }
+  if(saved){ project = saved; renderAll(); setStatus("Restored previous draft."); }
+  else { setStatus("No previous draft found."); updateRestoreButton(); }
 }
 function importJsonFile(file){
   const reader = new FileReader();
@@ -844,15 +848,15 @@ function initialiseEvents(){
   });
   document.getElementById("restoreSavedBtn").addEventListener("click", restoreBrowserSave);
   document.getElementById("clearSavedBtn").addEventListener("click", () => {
-    if(confirm("Clear the auto-saved menu from this browser? The current screen will stay as it is.")){
-      localStorage.removeItem(STORAGE_KEY); updateRestoreButton(); setStatus("Browser auto-save cleared.");
+    if(confirm("Clear the previous draft saved in this browser? The current screen will stay as it is.")){
+      localStorage.removeItem(STORAGE_KEY); updateRestoreButton(); setStatus("Previous draft cleared.");
     }
   });
   updateRestoreButton();
 }
 initialiseEvents();
-// Initial load should show the selected starter template, not silently restore an old browser save.
-// This prevents a previous “Exclude all” session from making the preview appear empty.
+// Initial load should show the selected starter template, not silently restore an old previous draft.
+// The user can restore a previous draft explicitly if they need it.
 loadTemplate(false);
 </script>
 </body>

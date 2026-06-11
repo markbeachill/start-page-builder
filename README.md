@@ -1,4 +1,4 @@
-# Personal Start Page Creator — Stage 1.14
+# Personal Start Page Creator — Stage 1.15
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
@@ -48,13 +48,13 @@ docs/
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
 
-## Stage 1.14 update
+## Stage 1.15 update
 
 - Added `docs/about.html`.
 - Added footer links to the About page across the integrated site pages.
 - Kept the builder page as a light workspace without a heavy footer.
 
-## Stage 1.11 features
+## Stage 1.15 features
 
 - Added a **Why use a start page?** page explaining deep links, reduced distraction, spatial familiarity, no-extension use, and digital autonomy.
 - Link rows now have ↑ / ↓ controls and can be dragged within their section to reorder links.
@@ -106,7 +106,7 @@ https://USERNAME.github.io/
 
 After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
 
-## Stage 1.14 update
+## Stage 1.15 update
 
 - Updated the exported start-page search area so it feels more like a search-first browser start page.
 - The search bar is now aligned with the menu content width.
@@ -115,6 +115,6 @@ After publishing, add the URL to the user's `README.md` and choose a shortcut me
 - The builder preview does not steal focus while editing.
 
 
-## Stage 1.14 note
+## Stage 1.15 note
 
 This point release fixes editor focus loss while typing. Text edits now update the preview without rebuilding the editor form, so inputs should keep focus as expected.
