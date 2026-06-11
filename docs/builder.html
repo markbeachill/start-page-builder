@@ -335,6 +335,7 @@ ${body}
 /* Project data and conversion */
 let project = defaultProject();
 let renderQueued = false;
+let renderQueuedMode = "all";
 function normaliseFriendlyProject(input){
   const p = defaultProject();
   p.title = input.title || input.settings?.pageTitle || "Personal Start Page";
@@ -428,16 +429,28 @@ function loadFromBrowser(){
 function colourOptions(selected){
   return allowedColours.map(c => `<option value="${c}" ${c === selected ? "selected" : ""}>${c}</option>`).join("");
 }
-function scheduleRender(save=true){
+function scheduleRender(save=true, mode="all"){
   if(save) saveToBrowser();
+  // If any queued update needs a full editor rebuild, keep the queued mode as "all".
+  // Otherwise preview-only updates must not rebuild the editor, because that destroys
+  // the focused input while the user is typing.
+  if(mode === "all") renderQueuedMode = "all";
+  else if(!renderQueued) renderQueuedMode = "preview";
   if(renderQueued) return;
   renderQueued = true;
-  requestAnimationFrame(() => { renderQueued = false; renderAll(); });
+  requestAnimationFrame(() => {
+    const modeToRun = renderQueuedMode;
+    renderQueued = false;
+    renderQueuedMode = "all";
+    if(modeToRun === "preview") renderPreview();
+    else renderAll();
+  });
 }
+function schedulePreviewRender(save=true){ scheduleRender(save, "preview"); }
 function bindInput(id, key){
   const el = document.getElementById(id);
   el.value = project[key] || "";
-  el.addEventListener("input", () => { project[key] = key === "filename" ? ensureHtmlFilename(el.value) : el.value; scheduleRender(); });
+  el.addEventListener("input", () => { project[key] = key === "filename" ? ensureHtmlFilename(el.value) : el.value; schedulePreviewRender(); });
 }
 function renderSettings(){
   document.getElementById("titleInput").value = project.title || "";
@@ -526,7 +539,8 @@ function onSectionListInput(event){
       if(action === "link-colour") link.colour = cleanColour(event.target.value);
     }
   }
-  scheduleRender();
+  const needsFullRender = action === "section-colour" || action === "toggle-section";
+  scheduleRender(true, needsFullRender ? "all" : "preview");
 }
 function onSectionListClick(event){
   const action = event.target.dataset.action;
@@ -779,9 +793,9 @@ function exportPlainText(){
   return lines.join("\n");
 }
 function initialiseEvents(){
-  document.getElementById("titleInput").addEventListener("input", e => { project.title = e.target.value; scheduleRender(); });
-  document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; scheduleRender(); });
-  document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; scheduleRender(); });
+  document.getElementById("titleInput").addEventListener("input", e => { project.title = e.target.value; schedulePreviewRender(); });
+  document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; schedulePreviewRender(); });
+  document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; schedulePreviewRender(); });
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
   document.getElementById("sectionList").addEventListener("change", onSectionListInput);
   document.getElementById("sectionList").addEventListener("click", onSectionListClick);
