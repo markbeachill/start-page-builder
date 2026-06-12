@@ -257,5 +257,7 @@
       ]
     }
   ],
-  "filename": "start-page-us.html"
+  "filename": "start-page-us.html",
+  "columns": 5,
+  "format": "personal-start-page-creator-v1"
 }

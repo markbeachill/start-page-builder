@@ -3,5 +3,6 @@
   "title": "Readers & Writers Start Page",
   "description": "Literary tracking, publishing pipelines, and lexicography tools.",
   "filename": "start-page-reader-writer-uk.html",
-  "sections": []
+  "sections": [],
+  "columns": 4
 }

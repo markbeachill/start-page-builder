@@ -13,5 +13,7 @@
       ]
     }
   ],
-  "filename": "start-page.html"
+  "filename": "start-page.html",
+  "columns": 3,
+  "format": "personal-start-page-creator-v1"
 }

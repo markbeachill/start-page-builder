@@ -173,12 +173,21 @@
             <label for="filenameInput">Start page filename</label>
             <input id="filenameInput" type="text" autocomplete="off" placeholder="start-page.html">
           </div>
+          <div class="field">
+            <label for="columnsInput">Columns</label>
+            <select id="columnsInput" aria-label="Number of columns">
+              <option value="2">2 columns</option>
+              <option value="3">3 columns</option>
+              <option value="4">4 columns</option>
+              <option value="5">5 columns</option>
+            </select>
+          </div>
           <div class="field full">
             <label for="descriptionInput">Description / notes</label>
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
-        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Drag links within a section to reorder them, or use the ↑ ↓ buttons.</p>
+        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column.</p>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
@@ -191,7 +200,7 @@
       </aside>
 
       <section class="builder-preview-wrapper" aria-label="Menu preview">
-        <h2>Classic Five-Column Preview <span id="previewMeta" class="preview-meta">0 sections · 0 links · 5 columns</span></h2>
+        <h2>Classic Preview <span id="previewMeta" class="preview-meta">0 sections · 0 links · 5 columns</span></h2>
         <div id="preview" class="preview-frame"></div>
       </section>
     </div>
@@ -199,10 +208,10 @@
 
 <script>
 /*
-  Protected Classic Five-Column Renderer
-  --------------------------------------
+  Protected Classic Responsive Renderer
+  -------------------------------------
   This section is deliberately based on the known-good menu output.
-  Do not redesign the five-column layout while building the editor around it.
+  Keep the classic structure, but allow a controlled 2–5 column desktop layout.
 */
 const defaultPalette = {
   blue:   "#4d90fe",
@@ -212,6 +221,9 @@ const defaultPalette = {
   red:    "#bd121d"
 };
 const allowedColours = ["blue","green","orange","purple","red"];
+const MIN_COLUMNS = 2;
+const MAX_COLUMNS = 5;
+const DEFAULT_COLUMNS = 5;
 const STORAGE_KEY = "personalStartPageCreatorStage1";
 
 function escapeHtml(str){
@@ -223,25 +235,38 @@ function escapeHtml(str){
     .replace(/'/g,"&#39;");
 }
 function cleanColour(colour){ return allowedColours.includes(colour) ? colour : "blue"; }
+function cleanColumnCount(value){
+  const n = Number.parseInt(value, 10);
+  return n >= MIN_COLUMNS && n <= MAX_COLUMNS ? n : DEFAULT_COLUMNS;
+}
+function makeColumns(count){
+  return Array.from({length:cleanColumnCount(count)}, () => ({items:[]}));
+}
 function ensureHtmlFilename(name){
   let filename = String(name || "start-page.html").trim() || "start-page.html";
   if(!/\.html?$/i.test(filename)) filename += ".html";
   return filename.replace(/[\\/:*?"<>|]+/g,"-");
 }
 function defaultProject(){
-  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",sections:[]};
+  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",columns:DEFAULT_COLUMNS,sections:[]};
 }
 function defaultState(){
   return {
-    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"start-page.html",columns:5,theme:"light",palette:{...defaultPalette}},
-    menu:{columns:[{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}]}
+    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"start-page.html",columns:DEFAULT_COLUMNS,theme:"light",palette:{...defaultPalette}},
+    menu:{columns:makeColumns(DEFAULT_COLUMNS)}
   };
 }
-function ensureFiveColumns(menu){
-  const desired = 5;
+function ensureColumnCount(menu, columns){
+  const desired = cleanColumnCount(columns);
   const cols = menu.columns || [];
   if(cols.length < desired){ while(cols.length < desired) cols.push({items:[]}); menu.columns = cols; }
-  else if(cols.length > desired){ const keep = cols.slice(0, desired); const extra = cols.slice(desired); const target = keep[keep.length - 1]; extra.forEach(c => target.items.push(...(c.items || []))); menu.columns = keep; }
+  else if(cols.length > desired){
+    const keep = cols.slice(0, desired);
+    const extra = cols.slice(desired);
+    const target = keep[keep.length - 1];
+    extra.forEach(c => target.items.push(...(c.items || [])));
+    menu.columns = keep;
+  }
 }
 function colorToClasses(color){ const c = cleanColour(color || "blue"); return {btn:c + "-btn", hdr:c + "-hdr"}; }
 function buildClassicMenuCss(settings){
@@ -251,7 +276,7 @@ function buildClassicMenuCss(settings){
   const searchBg = settings.theme === "dark" ? "#222" : "#f1f1f1";
   const searchBorder = settings.theme === "dark" ? "#444" : "#ddd";
   return `
-:root{--columns:5;--c-blue:${pal.blue};--c-green:${pal.green};--c-orange:${pal.orange};--c-purple:${pal.purple};--c-red:${pal.red};}
+:root{--columns:${cleanColumnCount(settings.columns)};--c-blue:${pal.blue};--c-green:${pal.green};--c-orange:${pal.orange};--c-purple:${pal.purple};--c-red:${pal.red};}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bodyBg};color:${bodyColor};}
 .searchbar-wrapper{background:${searchBg};padding:12px 15px;border-bottom:1px solid ${searchBorder};}
 .searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
@@ -277,7 +302,8 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bo
 `;
 }
 function renderClassicMenuBody(menu, settings, options = {}){
-  ensureFiveColumns(menu);
+  const columnCount = cleanColumnCount(settings.columns);
+  ensureColumnCount(menu, columnCount);
   const colClass = "span_1_of_5";
   let body = "";
   const autofocusAttr = options.autofocusSearch ? " autofocus" : "";
@@ -367,7 +393,7 @@ function exportClassicStandaloneHtml(state){
 ${css}
   </style>
 </head>
-<body data-skin="classic" data-columns="5">
+<body data-skin="classic" data-columns="${cleanColumnCount(state.settings.columns)}">
 ${body}
 <script>
   (${attachClassicMenuBehaviour.toString()})(document);
@@ -385,6 +411,7 @@ function normaliseFriendlyProject(input){
   p.title = input.title || input.settings?.pageTitle || "Personal Start Page";
   p.description = input.description || "";
   p.filename = ensureHtmlFilename(input.filename || input.settings?.menuFilename || "start-page.html");
+  p.columns = cleanColumnCount(input.columns ?? input.settings?.columns ?? input.settings?.columnCount ?? DEFAULT_COLUMNS);
   p.sections = (input.sections || []).map(section => ({
     name: section.name || section.text || "Section",
     colour: cleanColour(section.colour || section.color || "blue"),
@@ -403,6 +430,7 @@ function internalStateToProject(input){
   p.title = input.settings?.pageTitle || "Personal Start Page";
   p.description = input.settings?.pageHeadline || "";
   p.filename = ensureHtmlFilename(input.settings?.menuFilename || "start-page.html");
+  p.columns = cleanColumnCount(input.settings?.columns ?? input.menu?.columns?.length ?? DEFAULT_COLUMNS);
   const sections = [];
   (input.menu?.columns || []).forEach(col => {
     let current = null;
@@ -424,7 +452,8 @@ function projectToInternalState(p){
   state.settings.pageTitle = p.title || "Personal Start Page";
   state.settings.pageHeadline = "";
   state.settings.menuFilename = ensureHtmlFilename(p.filename || "start-page.html");
-  state.menu.columns = [{items:[]},{items:[]},{items:[]},{items:[]},{items:[]}];
+  state.settings.columns = cleanColumnCount(p.columns);
+  state.menu.columns = makeColumns(state.settings.columns);
   (p.sections || []).filter(s => s.included !== false).forEach(section => {
     const colour = cleanColour(section.colour || "blue");
     const block = [{type:"header", text:section.name || "Section", color:colour}];
@@ -439,7 +468,7 @@ function projectToInternalState(p){
     });
     state.menu.columns[targetIndex].items.push(...block);
   });
-  ensureFiveColumns(state.menu);
+  ensureColumnCount(state.menu, state.settings.columns);
   return state;
 }
 function getCurrentState(){ return projectToInternalState(project); }
@@ -500,7 +529,8 @@ function renderSettings(){
   document.getElementById("titleInput").value = project.title || "";
   document.getElementById("filenameInput").value = project.filename || "start-page.html";
   document.getElementById("descriptionInput").value = project.description || "";
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Drag links within a section to reorder them, or use the ↑ ↓ buttons.";
+  document.getElementById("columnsInput").value = String(cleanColumnCount(project.columns));
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -556,7 +586,7 @@ function renderPreview(){
     preview.innerHTML = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings, {autofocusSearch:false});
     attachClassicMenuBehaviour(preview, {focusSearch:false});
   }
-  document.getElementById("previewMeta").textContent = `${includedSections.length} sections · ${linkCount} links · 5 columns`;
+  document.getElementById("previewMeta").textContent = `${includedSections.length} sections · ${linkCount} links · ${cleanColumnCount(state.settings.columns)} columns`;
 }
 function renderAll(){ renderSettings(); renderEditor(); renderPreview(); }
 function onSectionListInput(event){
@@ -818,12 +848,23 @@ function colourFromClass(el, suffix){
   const cls = Array.from(el.classList || []).find(c => c.endsWith(suffix));
   return cls ? cleanColour(cls.slice(0, -suffix.length)) : "blue";
 }
+function detectColumnCountFromHtml(doc){
+  const fromBody = cleanColumnCount(doc.body?.getAttribute("data-columns"));
+  if(String(doc.body?.getAttribute("data-columns") || "").trim()) return fromBody;
+  const cssText = Array.from(doc.querySelectorAll("style")).map(el => el.textContent || "").join("\n");
+  const cssMatch = cssText.match(/--columns\s*:\s*(\d+)/);
+  if(cssMatch) return cleanColumnCount(cssMatch[1]);
+  const count = doc.querySelectorAll(".col").length;
+  return cleanColumnCount(count);
+}
+
 function importHtmlStartPage(file){
   readTextFile(file, html => {
     try{
       const doc = new DOMParser().parseFromString(html, "text/html");
       const columns = Array.from(doc.querySelectorAll(".col"));
       if(!columns.length) throw new Error("No classic start page columns were found.");
+      const detectedColumns = detectColumnCountFromHtml(doc);
       const sections = [];
       columns.forEach(col => {
         let current = null;
@@ -841,7 +882,7 @@ function importHtmlStartPage(file){
         });
       });
       if(!sections.length) throw new Error("No sections or links were found in that start page.");
-      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), sections});
+      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), columns:detectedColumns, sections});
       saveToBrowser(); renderAll(); setStatus("Loaded existing start page.");
     }catch(err){ alert("Could not load existing start page: " + err.message); }
   });
@@ -926,6 +967,7 @@ function initialiseEvents(){
   document.getElementById("titleInput").addEventListener("input", e => { project.title = e.target.value; schedulePreviewRender(); });
   document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; schedulePreviewRender(); });
   document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; schedulePreviewRender(); });
+  document.getElementById("columnsInput").addEventListener("change", e => { project.columns = cleanColumnCount(e.target.value); setStatus(`Layout set to ${project.columns} columns.`); schedulePreviewRender(); });
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
   document.getElementById("sectionList").addEventListener("change", onSectionListInput);
   document.getElementById("sectionList").addEventListener("click", onSectionListClick);

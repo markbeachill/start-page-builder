@@ -1,59 +1,38 @@
-# Examples
+# Example start pages
 
-This folder contains standalone example start pages generated from the project templates. Example-page links on the public site open in a new tab/window so users can view them as independent start pages.
+These are exported standalone start pages generated from the ready templates. Stage 1.21 adds recommended desktop column counts; all examples still stack to one column on mobile.
 
-## Core examples
-
-- start-page-uk-links.html
-- start-page-us-links.html
-- start-page-software.html
-- start-page-workplace.html
-
-## Jump-start examples
-
-- start-page-student-primary-uk.html
-- start-page-student-primary-us.html
-- start-page-student-school-uk.html
-- start-page-student-school-us.html
-- start-page-student-uni-uk.html
-- start-page-student-uni-us.html
-- start-page-teacher-uk.html
-- start-page-teacher-us.html
-- start-page-small-business-uk.html
-- start-page-small-business-us.html
-- start-page-freelancer-uk.html
-- start-page-freelancer-us.html
-- start-page-dev-ops.html
-- start-page-newsroom-uk.html
-- start-page-newsroom-us.html
-- start-page-ai-user.html
-- start-page-creative-pro.html
-- start-page-creator.html
-- start-page-news-buff-uk.html
-- start-page-news-buff-us.html
-- start-page-health-wellness-uk.html
-- start-page-health-wellness-us.html
-- start-page-family-home-uk.html
-- start-page-family-home-us.html
-- start-page-everyday-life-uk.html
-- start-page-everyday-life-us.html
-- start-page-travel-planner-uk.html
-- start-page-travel-planner-us.html
-
-## Coming soon
-
-- sport-general-uk
-- sport-general-us
-- football-uk-uk
-- local-history-uk
-- local-history-us
-- reader-writer-uk
-- reader-writer-us
-- movie-buff-uk
-- movie-buff-us
-- kpop-fan
-- music-fan-uk
-- music-fan-us
-
-- `start-page-local-history-uk.html` — Local History UK example.
-- `start-page-local-history-us.html` — Local History US example.
+- `start-page-ai-user.html` — AI Users Start Page (4 columns)
+- `start-page-creative-pro.html` — Creative Pros Start Page (4 columns)
+- `start-page-creator.html` — Creators Start Page (4 columns)
+- `start-page-dev-ops.html` — DevOps Start Page (5 columns)
+- `start-page-everyday-life-uk.html` — Retired / Everyday Life Start Page UK (3 columns)
+- `start-page-everyday-life-us.html` — Retired / Everyday Life Start Page US (3 columns)
+- `start-page-family-home-uk.html` — Family & Home Start Page (3 columns)
+- `start-page-family-home-us.html` — Family & Home Start Page (3 columns)
+- `start-page-freelancer-uk.html` — Freelancers Start Page (4 columns)
+- `start-page-freelancer-us.html` — Freelancers Start Page (4 columns)
+- `start-page-health-wellness-uk.html` — Health & Wellness Start Page (3 columns)
+- `start-page-health-wellness-us.html` — Health & Wellness Start Page (3 columns)
+- `start-page-local-history-uk.html` — Local History Start Page UK (4 columns)
+- `start-page-local-history-us.html` — Local History Start Page US (4 columns)
+- `start-page-news-buff-uk.html` — News Buffs Start Page (4 columns)
+- `start-page-news-buff-us.html` — News Buffs Start Page (4 columns)
+- `start-page-newsroom-uk.html` — Newsroom Start Page (5 columns)
+- `start-page-newsroom-us.html` — Newsroom Start Page (5 columns)
+- `start-page-small-business-uk.html` — Small Business Start Page UK (4 columns)
+- `start-page-small-business-us.html` — Small Business Start Page US (4 columns)
+- `start-page-software.html` — Software Developer Start Page (5 columns)
+- `start-page-student-primary-uk.html` — Primary Student Start Page (3 columns)
+- `start-page-student-primary-us.html` — Elementary Student Start Page (3 columns)
+- `start-page-student-school-uk.html` — Secondary Student Start Page (4 columns)
+- `start-page-student-school-us.html` — High School Student Start Page (4 columns)
+- `start-page-student-uni-uk.html` — University Student Start Page (4 columns)
+- `start-page-student-uni-us.html` — College Student Start Page (4 columns)
+- `start-page-teacher-uk.html` — Teacher Start Page UK (4 columns)
+- `start-page-teacher-us.html` — Teacher Start Page US (4 columns)
+- `start-page-travel-planner-uk.html` — Travel Planners Start Page (4 columns)
+- `start-page-travel-planner-us.html` — Travel Planners Start Page (4 columns)
+- `start-page-uk-links.html` — Typical UK User Links (5 columns)
+- `start-page-us-links.html` — Typical US User Links (5 columns)
+- `start-page-workplace.html` — Workplace Start Page (5 columns)

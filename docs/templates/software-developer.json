@@ -187,5 +187,7 @@
       ]
     }
   ],
-  "filename": "start-page-software.html"
+  "filename": "start-page-software.html",
+  "columns": 5,
+  "format": "personal-start-page-creator-v1"
 }

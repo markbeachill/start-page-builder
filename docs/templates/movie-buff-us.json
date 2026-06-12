@@ -3,5 +3,6 @@
   "title": "Movie Buffs Start Page",
   "description": "Cinephile logging, industry tracking, and streaming finders.",
   "filename": "start-page-movie-buff-us.html",
-  "sections": []
+  "sections": [],
+  "columns": 4
 }

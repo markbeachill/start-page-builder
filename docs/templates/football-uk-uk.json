@@ -3,5 +3,6 @@
   "title": "UK Football Start Page",
   "description": "Intense focus on the British football pyramid, media, and FPL.",
   "filename": "start-page-football-uk-uk.html",
-  "sections": []
+  "sections": [],
+  "columns": 5
 }

@@ -7,7 +7,8 @@
     "description": "A fuller UK primary template for school platforms, reading, maths, science, creativity, safe search, coding and wellbeing.",
     "template": "templates/student-primary-uk.json",
     "example": "examples/start-page-student-primary-uk.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "A: Education",
@@ -17,7 +18,8 @@
     "description": "A fuller US elementary template for school platforms, reading, math, science, creativity, safe search, coding and wellbeing.",
     "template": "templates/student-primary-us.json",
     "example": "examples/start-page-student-primary-us.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "A: Education",
@@ -27,7 +29,8 @@
     "description": "A fuller UK secondary template for GCSE revision, subject study, research, writing, AI study help, careers and wellbeing.",
     "template": "templates/student-school-uk.json",
     "example": "examples/start-page-student-school-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "A: Education",
@@ -37,7 +40,8 @@
     "description": "A fuller US high-school template for homework, test prep, research, writing, AI study help, college planning and wellbeing.",
     "template": "templates/student-school-us.json",
     "example": "examples/start-page-student-school-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "A: Education",
@@ -47,7 +51,8 @@
     "description": "A fuller UK university template for campus systems, research, referencing, study planning, AI research help, money and student life.",
     "template": "templates/student-uni-uk.json",
     "example": "examples/start-page-student-uni-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "A: Education",
@@ -57,7 +62,8 @@
     "description": "A fuller US college template for campus systems, research, citations, study planning, AI research help, money and student life.",
     "template": "templates/student-uni-us.json",
     "example": "examples/start-page-student-uni-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "A: Education",
@@ -67,7 +73,8 @@
     "description": "A fuller UK teacher template for school systems, lesson planning, resources, assessment, safeguarding, CPD and admin.",
     "template": "templates/teacher-uk.json",
     "example": "examples/start-page-teacher-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "A: Education",
@@ -77,7 +84,8 @@
     "description": "A fuller US teacher template for school systems, lesson planning, resources, assessment, inclusion, professional learning and admin.",
     "template": "templates/teacher-us.json",
     "example": "examples/start-page-teacher-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "B: Work & Business",
@@ -87,7 +95,8 @@
     "description": "A fuller UK small-business template for accounts, tax, websites, customers, marketing, payments, shipping, legal and staff admin.",
     "template": "templates/small-business-uk.json",
     "example": "examples/start-page-small-business-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "B: Work & Business",
@@ -97,7 +106,8 @@
     "description": "A fuller US small-business template for accounts, tax, websites, customers, marketing, payments, shipping, legal and staff admin.",
     "template": "templates/small-business-us.json",
     "example": "examples/start-page-small-business-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "B: Work & Business",
@@ -107,7 +117,8 @@
     "description": "Independent client tracking, invoicing, and contract management.",
     "template": "templates/freelancer-uk.json",
     "example": "examples/start-page-freelancer-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "B: Work & Business",
@@ -117,7 +128,8 @@
     "description": "Independent client tracking, invoicing, and contract management.",
     "template": "templates/freelancer-us.json",
     "example": "examples/start-page-freelancer-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "B: Work & Business",
@@ -127,7 +139,8 @@
     "description": "Advanced infrastructure monitoring, repositories, and cloud hubs.",
     "template": "templates/dev-ops.json",
     "example": "examples/start-page-dev-ops.html",
-    "available": true
+    "available": true,
+    "columns": 5
   },
   {
     "section": "B: Work & Business",
@@ -137,7 +150,8 @@
     "description": "OSINT research, public records, verification, and data tools.",
     "template": "templates/newsroom-uk.json",
     "example": "examples/start-page-newsroom-uk.html",
-    "available": true
+    "available": true,
+    "columns": 5
   },
   {
     "section": "B: Work & Business",
@@ -147,7 +161,8 @@
     "description": "OSINT research, public records, verification, and data tools.",
     "template": "templates/newsroom-us.json",
     "example": "examples/start-page-newsroom-us.html",
-    "available": true
+    "available": true,
+    "columns": 5
   },
   {
     "section": "C: Tech & Creative",
@@ -157,7 +172,8 @@
     "description": "Quick access to daily LLMs, prompt hubs, and local model forums.",
     "template": "templates/ai-user.json",
     "example": "examples/start-page-ai-user.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "C: Tech & Creative",
@@ -167,7 +183,8 @@
     "description": "Dynamic asset gathering, design portfolios, and asset tools.",
     "template": "templates/creative-pro.json",
     "example": "examples/start-page-creative-pro.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "C: Tech & Creative",
@@ -177,7 +194,8 @@
     "description": "Multi-platform broadcast analytics and audience management.",
     "template": "templates/creator.json",
     "example": "examples/start-page-creator.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "D: Everyday Life",
@@ -187,7 +205,8 @@
     "description": "Deep political, regional, and investigative media aggregation.",
     "template": "templates/news-buff-uk.json",
     "example": "examples/start-page-news-buff-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "D: Everyday Life",
@@ -197,7 +216,8 @@
     "description": "Deep political, regional, and investigative media aggregation.",
     "template": "templates/news-buff-us.json",
     "example": "examples/start-page-news-buff-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "D: Everyday Life",
@@ -207,7 +227,8 @@
     "description": "Patient portals, wellness trackers, and fitness communities.",
     "template": "templates/health-wellness-uk.json",
     "example": "examples/start-page-health-wellness-uk.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -217,7 +238,8 @@
     "description": "Patient portals, wellness trackers, and fitness communities.",
     "template": "templates/health-wellness-us.json",
     "example": "examples/start-page-health-wellness-us.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -227,7 +249,8 @@
     "description": "Shared logistics, grocery delivery, and public utility billing.",
     "template": "templates/family-home-uk.json",
     "example": "examples/start-page-family-home-uk.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -237,7 +260,8 @@
     "description": "Shared logistics, grocery delivery, and public utility billing.",
     "template": "templates/family-home-us.json",
     "example": "examples/start-page-family-home-us.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -247,7 +271,8 @@
     "description": "A fuller low-stress UK everyday template for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
     "template": "templates/everyday-life-uk.json",
     "example": "examples/start-page-everyday-life-uk.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -257,7 +282,8 @@
     "description": "A fuller low-stress US everyday template for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
     "template": "templates/everyday-life-us.json",
     "example": "examples/start-page-everyday-life-us.html",
-    "available": true
+    "available": true,
+    "columns": 3
   },
   {
     "section": "D: Everyday Life",
@@ -267,7 +293,8 @@
     "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
     "template": "templates/travel-planner-uk.json",
     "example": "examples/start-page-travel-planner-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "D: Everyday Life",
@@ -277,7 +304,8 @@
     "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
     "template": "templates/travel-planner-us.json",
     "example": "examples/start-page-travel-planner-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "F: Sport & Fandoms",
@@ -287,7 +315,8 @@
     "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
     "template": "templates/sport-general-uk.json",
     "example": "examples/start-page-sport-general-uk.html",
-    "available": false
+    "available": false,
+    "columns": 5
   },
   {
     "section": "F: Sport & Fandoms",
@@ -297,7 +326,8 @@
     "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
     "template": "templates/sport-general-us.json",
     "example": "examples/start-page-sport-general-us.html",
-    "available": false
+    "available": false,
+    "columns": 5
   },
   {
     "section": "F: Sport & Fandoms",
@@ -307,7 +337,8 @@
     "description": "Intense focus on the British football pyramid, media, and FPL.",
     "template": "templates/football-uk-uk.json",
     "example": "examples/start-page-football-uk-uk.html",
-    "available": false
+    "available": false,
+    "columns": 5
   },
   {
     "section": "E: Hobbies",
@@ -317,7 +348,8 @@
     "description": "A UK local-history template for archives, newspapers, maps, genealogy, photos, records, writing and publishing.",
     "template": "templates/local-history-uk.json",
     "example": "examples/start-page-local-history-uk.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -327,7 +359,8 @@
     "description": "A US local-history template for archives, newspapers, maps, genealogy, photos, records, writing and publishing.",
     "template": "templates/local-history-us.json",
     "example": "examples/start-page-local-history-us.html",
-    "available": true
+    "available": true,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -337,7 +370,8 @@
     "description": "Literary tracking, publishing pipelines, and lexicography tools.",
     "template": "templates/reader-writer-uk.json",
     "example": "examples/start-page-reader-writer-uk.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -347,7 +381,8 @@
     "description": "Literary tracking, publishing pipelines, and lexicography tools.",
     "template": "templates/reader-writer-us.json",
     "example": "examples/start-page-reader-writer-us.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -357,7 +392,8 @@
     "description": "Cinephile logging, industry tracking, and streaming finders.",
     "template": "templates/movie-buff-uk.json",
     "example": "examples/start-page-movie-buff-uk.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -367,7 +403,8 @@
     "description": "Cinephile logging, industry tracking, and streaming finders.",
     "template": "templates/movie-buff-us.json",
     "example": "examples/start-page-movie-buff-us.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -377,7 +414,8 @@
     "description": "Fast-paced tracking of music show voting, streams, and hubs.",
     "template": "templates/kpop-fan.json",
     "example": "examples/start-page-kpop-fan.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -387,7 +425,8 @@
     "description": "Physical media indices, discovery platforms, and live gig finders.",
     "template": "templates/music-fan-uk.json",
     "example": "examples/start-page-music-fan-uk.html",
-    "available": false
+    "available": false,
+    "columns": 4
   },
   {
     "section": "E: Hobbies",
@@ -397,6 +436,7 @@
     "description": "Physical media indices, discovery platforms, and live gig finders.",
     "template": "templates/music-fan-us.json",
     "example": "examples/start-page-music-fan-us.html",
-    "available": false
+    "available": false,
+    "columns": 4
   }
 ]

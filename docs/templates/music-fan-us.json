@@ -3,5 +3,6 @@
   "title": "Music Fans Start Page",
   "description": "Physical media indices, discovery platforms, and live gig finders.",
   "filename": "start-page-music-fan-us.html",
-  "sections": []
+  "sections": [],
+  "columns": 4
 }

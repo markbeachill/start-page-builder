@@ -3,5 +3,6 @@
   "title": "K-Pop Fans Start Page",
   "description": "Fast-paced tracking of music show voting, streams, and hubs.",
   "filename": "start-page-kpop-fan.html",
-  "sections": []
+  "sections": [],
+  "columns": 4
 }

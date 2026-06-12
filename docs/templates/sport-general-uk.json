@@ -3,5 +3,6 @@
   "title": "Sports Start Page",
   "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
   "filename": "start-page-sport-general-uk.html",
-  "sections": []
+  "sections": [],
+  "columns": 5
 }

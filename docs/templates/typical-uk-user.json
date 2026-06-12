@@ -529,5 +529,7 @@
       ]
     }
   ],
-  "filename": "start-page-uk.html"
+  "filename": "start-page-uk.html",
+  "columns": 5,
+  "format": "personal-start-page-creator-v1"
 }
