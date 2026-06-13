@@ -1,6 +1,11 @@
 {
+  "format": "personal-start-page-creator-v1",
   "title": "Typical US User Links",
   "description": "A general-purpose US web-user menu for search, email, news, shopping, money, entertainment, travel, health, utilities and tools.",
+  "filename": "start-page-us.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Search & AI",
@@ -256,8 +261,5 @@
         }
       ]
     }
-  ],
-  "filename": "start-page-us.html",
-  "columns": 5,
-  "format": "personal-start-page-creator-v1"
+  ]
 }

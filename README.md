@@ -1,25 +1,35 @@
-# Personal Start Page Creator — Stage 1.21
+# Personal Start Page Creator — Stage 1.22
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal start pages.
 
-## Stage 1.21 update
+## Stage 1.22 update
 
-This stage implements the adjustable-column proposal.
+This stage adds two new presentation options to the builder and exported start pages.
 
-- Added a **Columns** setting to the builder.
+- Added a **Colours** setting with **Primary** and **Pastel** options.
+- Added a **Show title** setting.
+- **Show title** defaults to on for new templates and new menus.
+- When shown, the page title appears beside the search box on wider screens.
+- On narrower screens, the title and search area wrap naturally so the search remains usable.
+- Menu config JSON now saves top-level `colours` and `showTitle` values.
+- Existing menu configs without these values still load safely: `colours` defaults to `primary`, and `showTitle` defaults to `true`.
+- Exported standalone start pages now write `data-colours` and `data-show-title` onto the `<body>` tag.
+- Loading an existing start page now tries to detect the colour style and title display state.
+- Regenerated example start pages so they use the title beside search by default.
+
+## Previous Stage 1.21 update
+
+Stage 1.21 implemented adjustable desktop columns.
+
 - Users can choose **2, 3, 4 or 5 columns** for wider screens.
 - Phones and small screens still stack to one column automatically.
 - The default remains **5 columns** for backwards compatibility.
-- Menu config JSON now saves a top-level `columns` value.
-- Existing menu configs without `columns` still load as 5-column menus.
-- Loading an existing start page now tries to detect the column count from `data-columns`, the `--columns` CSS variable, or the number of `.col` elements.
-- Exported standalone start pages now write the selected column count into both the CSS variable and `body[data-columns]`.
-- Templates now include recommended default column counts.
-- Regenerated example start pages using their template column defaults.
-- Updated the public templates page to show recommended column counts on ready templates.
+- Menu config JSON saves a top-level `columns` value.
+- Loading an existing start page tries to detect the column count from `data-columns`, the `--columns` CSS variable, or the number of `.col` elements.
+- Templates include recommended default column counts.
 
 ## GitHub Pages
 
@@ -63,7 +73,7 @@ docs/
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
-The classic menu structure is still protected: sections, headers, buttons, search bar and collapse behaviour are preserved. Stage 1.21 only adds a controlled 2–5 column desktop layout setting.
+The classic menu structure is still protected: sections, headers, buttons, search bar and collapse behaviour are preserved. Stage 1.22 only adds controlled presentation settings: colour strength and title display.
 
 ## Current features
 
@@ -72,6 +82,8 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 - Template selector with everyday, workplace, software, education, business, creative, life, hobbies and fandom templates.
 - Real example start pages for ready-to-use templates.
 - Adjustable desktop column count: 2, 3, 4 or 5 columns.
+- Primary or Pastel colour style.
+- Show/hide page title beside search.
 - Mobile layout automatically stacks to one column.
 - Save/load start page as first-class actions.
 - Save/load menu config as first-class actions.
@@ -88,7 +100,7 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 ## File concepts
 
 - **Start page**: the finished `.html` page used in a browser or published online.
-- **Menu config**: the `.json` configuration file that lets this builder reload sections, links, colours, column count and settings later.
+- **Menu config**: the `.json` configuration file that lets this builder reload sections, links, colours, column count, title display and settings later.
 - **List**: Markdown, CSV or plain text used for importing/exporting links.
 
 ## Local testing

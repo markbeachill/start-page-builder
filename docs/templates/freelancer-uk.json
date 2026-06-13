@@ -3,6 +3,9 @@
   "title": "Freelancers Start Page",
   "description": "Independent client tracking, invoicing, and contract management.",
   "filename": "start-page-freelancer-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Clients",
@@ -194,6 +197,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

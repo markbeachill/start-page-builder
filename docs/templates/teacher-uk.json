@@ -3,6 +3,9 @@
   "title": "Teacher Start Page UK",
   "description": "A UK teacher start page for planning, classroom platforms, resources, assessment, safeguarding, CPD and everyday school admin.",
   "filename": "start-page-teacher-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "School Systems",
@@ -378,6 +381,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

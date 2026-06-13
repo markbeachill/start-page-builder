@@ -1,6 +1,11 @@
 {
+  "format": "personal-start-page-creator-v1",
   "title": "Software Developer Start Page",
   "description": "A practical menu for software developers: coding, documentation, hosting, cloud, databases, DevOps, design, testing, learning and community.",
+  "filename": "start-page-software.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Search & AI",
@@ -186,8 +191,5 @@
         }
       ]
     }
-  ],
-  "filename": "start-page-software.html",
-  "columns": 5,
-  "format": "personal-start-page-creator-v1"
+  ]
 }

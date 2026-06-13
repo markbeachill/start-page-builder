@@ -3,6 +3,9 @@
   "title": "Creative Pros Start Page",
   "description": "Dynamic asset gathering, design portfolios, and asset tools.",
   "filename": "start-page-creative-pro.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Inspiration",
@@ -180,6 +183,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

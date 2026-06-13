@@ -3,6 +3,9 @@
   "title": "Newsroom Start Page",
   "description": "OSINT research, public records, verification, and data tools.",
   "filename": "start-page-newsroom-uk.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "News Wires",
@@ -163,6 +166,5 @@
         }
       ]
     }
-  ],
-  "columns": 5
+  ]
 }

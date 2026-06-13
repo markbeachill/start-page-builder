@@ -3,6 +3,9 @@
   "title": "AI Users Start Page",
   "description": "Quick access to daily LLMs, prompt hubs, and local model forums.",
   "filename": "start-page-ai-user.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Daily Chatbots",
@@ -192,6 +195,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

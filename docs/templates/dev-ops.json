@@ -3,6 +3,9 @@
   "title": "DevOps Start Page",
   "description": "Advanced infrastructure monitoring, repositories, and cloud hubs.",
   "filename": "start-page-dev-ops.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Code",
@@ -188,6 +191,5 @@
         }
       ]
     }
-  ],
-  "columns": 5
+  ]
 }

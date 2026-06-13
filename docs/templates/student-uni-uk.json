@@ -3,6 +3,9 @@
   "title": "University Student Start Page",
   "description": "A UK university start page for lectures, research, writing, referencing, money, housing, wellbeing, careers and everyday study admin.",
   "filename": "start-page-student-uni-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "University Systems",
@@ -414,6 +417,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

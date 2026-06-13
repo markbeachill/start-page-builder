@@ -3,6 +3,9 @@
   "title": "Workplace Start Page",
   "description": "A workplace-focused start page for productivity, CRM, communications, market awareness, publishing, research, travel, learning, finance, admin and quick tools.",
   "filename": "start-page-workplace.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Company & Productivity",
@@ -644,6 +647,5 @@
         }
       ]
     }
-  ],
-  "columns": 5
+  ]
 }

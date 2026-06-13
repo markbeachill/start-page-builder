@@ -3,6 +3,9 @@
   "title": "Primary Student Start Page",
   "description": "A child-friendly UK learning start page for homework, reading, maths, science, creativity, safety and school-life essentials.",
   "filename": "start-page-student-primary-uk.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "School & Homework",
@@ -348,6 +351,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

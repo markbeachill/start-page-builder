@@ -182,12 +182,22 @@
               <option value="5">5 columns</option>
             </select>
           </div>
+          <div class="field">
+            <label for="coloursInput">Colours</label>
+            <select id="coloursInput" aria-label="Colour style">
+              <option value="primary">Primary</option>
+              <option value="pastel">Pastel</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="toggle-line" for="showTitleInput"><input id="showTitleInput" type="checkbox"> Show title</label>
+          </div>
           <div class="field full">
             <label for="descriptionInput">Description / notes</label>
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
-        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column.</p>
+        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title beside search.</p>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
@@ -220,7 +230,15 @@ const defaultPalette = {
   purple: "#852b99",
   red:    "#bd121d"
 };
+const pastelPalette = {
+  blue:   "#8bbcff",
+  green:  "#8fd6a3",
+  orange: "#f3aa8f",
+  purple: "#c69ad6",
+  red:    "#e88f96"
+};
 const allowedColours = ["blue","green","orange","purple","red"];
+const allowedColourStyles = ["primary","pastel"];
 const MIN_COLUMNS = 2;
 const MAX_COLUMNS = 5;
 const DEFAULT_COLUMNS = 5;
@@ -235,6 +253,8 @@ function escapeHtml(str){
     .replace(/'/g,"&#39;");
 }
 function cleanColour(colour){ return allowedColours.includes(colour) ? colour : "blue"; }
+function cleanColourStyle(value){ return allowedColourStyles.includes(value) ? value : "primary"; }
+function cleanShowTitle(value){ return value !== false && value !== "false" && value !== 0 && value !== "0"; }
 function cleanColumnCount(value){
   const n = Number.parseInt(value, 10);
   return n >= MIN_COLUMNS && n <= MAX_COLUMNS ? n : DEFAULT_COLUMNS;
@@ -248,11 +268,11 @@ function ensureHtmlFilename(name){
   return filename.replace(/[\\/:*?"<>|]+/g,"-");
 }
 function defaultProject(){
-  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",columns:DEFAULT_COLUMNS,sections:[]};
+  return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,sections:[]};
 }
 function defaultState(){
   return {
-    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"start-page.html",columns:DEFAULT_COLUMNS,theme:"light",palette:{...defaultPalette}},
+    settings:{pageTitle:"Personal Start Page",pageHeadline:"",menuFilename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,theme:"light",palette:{...defaultPalette}},
     menu:{columns:makeColumns(DEFAULT_COLUMNS)}
   };
 }
@@ -270,20 +290,26 @@ function ensureColumnCount(menu, columns){
 }
 function colorToClasses(color){ const c = cleanColour(color || "blue"); return {btn:c + "-btn", hdr:c + "-hdr"}; }
 function buildClassicMenuCss(settings){
-  const pal = settings.palette || defaultPalette;
+  const colourStyle = cleanColourStyle(settings.colours || settings.colourStyle || "primary");
+  const pal = colourStyle === "pastel" ? pastelPalette : (settings.palette || defaultPalette);
+  const isPastel = colourStyle === "pastel";
   const bodyBg = settings.theme === "dark" ? "#111" : "#ffffff";
   const bodyColor = settings.theme === "dark" ? "#e6e6e6" : "#333333";
-  const searchBg = settings.theme === "dark" ? "#222" : "#f1f1f1";
-  const searchBorder = settings.theme === "dark" ? "#444" : "#ddd";
+  const searchBg = settings.theme === "dark" ? "#222" : (isPastel ? "#f8f3f6" : "#f1f1f1");
+  const searchBorder = settings.theme === "dark" ? "#444" : (isPastel ? "#eadde6" : "#ddd");
+  const headerText = isPastel ? "#222" : "#fff";
+  const btnBg = isPastel ? "#f7f5f2" : "#eee";
+  const btnHoverBg = isPastel ? "#e9e3dc" : "#aaa";
   return `
 :root{--columns:${cleanColumnCount(settings.columns)};--c-blue:${pal.blue};--c-green:${pal.green};--c-orange:${pal.orange};--c-purple:${pal.purple};--c-red:${pal.red};}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bodyBg};color:${bodyColor};}
 .searchbar-wrapper{background:${searchBg};padding:12px 15px;border-bottom:1px solid ${searchBorder};}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
-.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:${bodyColor};white-space:nowrap;}
+.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
 .searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
 .searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
+.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:${isPastel ? "#222" : "#fff"};cursor:pointer;font-size:14px;font-weight:700;}
 .searchbar-form button:hover{filter:brightness(.92);}
 .searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
 .page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
@@ -292,11 +318,11 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bo
 .group{display:flex;flex-wrap:wrap;gap:0 2%;}
 .col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
 .span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
-.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
-.btn:hover{background-color:#aaa;color:#000;}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
+.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:${btnBg};z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
+.btn:hover{background-color:${btnHoverBg};color:#000;}
 .blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
+.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:${headerText};position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
 .blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
 .hdr-para{margin:0;line-height:160%;}
 `;
@@ -307,11 +333,14 @@ function renderClassicMenuBody(menu, settings, options = {}){
   const colClass = "span_1_of_5";
   let body = "";
   const autofocusAttr = options.autofocusSearch ? " autofocus" : "";
+  const showTitle = cleanShowTitle(settings.showTitle);
+  const titleMarkup = showTitle ? `<div class="menu-title">${escapeHtml(settings.pageTitle || "Personal Start Page")}</div>` : "";
   if(settings.pageHeadline){ body += `<div class="page-headline">${escapeHtml(settings.pageHeadline)}</div>
 `; }
   body += `
 <div class="searchbar-wrapper">
   <div class="searchbar-inner">
+    ${titleMarkup}
     <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web"${autofocusAttr}>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
@@ -393,7 +422,7 @@ function exportClassicStandaloneHtml(state){
 ${css}
   </style>
 </head>
-<body data-skin="classic" data-columns="${cleanColumnCount(state.settings.columns)}">
+<body data-skin="classic" data-columns="${cleanColumnCount(state.settings.columns)}" data-colours="${cleanColourStyle(state.settings.colours)}" data-show-title="${cleanShowTitle(state.settings.showTitle) ? "true" : "false"}">
 ${body}
 <script>
   (${attachClassicMenuBehaviour.toString()})(document);
@@ -412,6 +441,8 @@ function normaliseFriendlyProject(input){
   p.description = input.description || "";
   p.filename = ensureHtmlFilename(input.filename || input.settings?.menuFilename || "start-page.html");
   p.columns = cleanColumnCount(input.columns ?? input.settings?.columns ?? input.settings?.columnCount ?? DEFAULT_COLUMNS);
+  p.colours = cleanColourStyle(input.colours ?? input.colourStyle ?? input.settings?.colours ?? input.settings?.colourStyle ?? "primary");
+  p.showTitle = cleanShowTitle(input.showTitle ?? input.settings?.showTitle ?? true);
   p.sections = (input.sections || []).map(section => ({
     name: section.name || section.text || "Section",
     colour: cleanColour(section.colour || section.color || "blue"),
@@ -431,6 +462,8 @@ function internalStateToProject(input){
   p.description = input.settings?.pageHeadline || "";
   p.filename = ensureHtmlFilename(input.settings?.menuFilename || "start-page.html");
   p.columns = cleanColumnCount(input.settings?.columns ?? input.menu?.columns?.length ?? DEFAULT_COLUMNS);
+  p.colours = cleanColourStyle(input.settings?.colours ?? input.settings?.colourStyle ?? "primary");
+  p.showTitle = cleanShowTitle(input.settings?.showTitle ?? true);
   const sections = [];
   (input.menu?.columns || []).forEach(col => {
     let current = null;
@@ -453,6 +486,9 @@ function projectToInternalState(p){
   state.settings.pageHeadline = "";
   state.settings.menuFilename = ensureHtmlFilename(p.filename || "start-page.html");
   state.settings.columns = cleanColumnCount(p.columns);
+  state.settings.colours = cleanColourStyle(p.colours || "primary");
+  state.settings.palette = state.settings.colours === "pastel" ? {...pastelPalette} : {...defaultPalette};
+  state.settings.showTitle = cleanShowTitle(p.showTitle);
   state.menu.columns = makeColumns(state.settings.columns);
   (p.sections || []).filter(s => s.included !== false).forEach(section => {
     const colour = cleanColour(section.colour || "blue");
@@ -530,7 +566,9 @@ function renderSettings(){
   document.getElementById("filenameInput").value = project.filename || "start-page.html";
   document.getElementById("descriptionInput").value = project.description || "";
   document.getElementById("columnsInput").value = String(cleanColumnCount(project.columns));
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column.";
+  document.getElementById("coloursInput").value = cleanColourStyle(project.colours || "primary");
+  document.getElementById("showTitleInput").checked = cleanShowTitle(project.showTitle);
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title beside search.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -865,6 +903,8 @@ function importHtmlStartPage(file){
       const columns = Array.from(doc.querySelectorAll(".col"));
       if(!columns.length) throw new Error("No classic start page columns were found.");
       const detectedColumns = detectColumnCountFromHtml(doc);
+      const detectedColours = detectColourStyleFromHtml(doc);
+      const detectedShowTitle = detectShowTitleFromHtml(doc);
       const sections = [];
       columns.forEach(col => {
         let current = null;
@@ -882,7 +922,7 @@ function importHtmlStartPage(file){
         });
       });
       if(!sections.length) throw new Error("No sections or links were found in that start page.");
-      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), columns:detectedColumns, sections});
+      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), columns:detectedColumns, colours:detectedColours, showTitle:detectedShowTitle, sections});
       saveToBrowser(); renderAll(); setStatus("Loaded existing start page.");
     }catch(err){ alert("Could not load existing start page: " + err.message); }
   });
@@ -895,7 +935,7 @@ function readTextFile(file, callback){
 }
 function parseMarkdownMenu(text){
   const lines = text.split(/\r?\n/);
-  const out = {format:"personal-start-page-creator-v1", title:"Imported Markdown Menu", description:"Imported from Markdown.", filename:"start-page.html", sections:[]};
+  const out = {format:"personal-start-page-creator-v1", title:"Imported Markdown Menu", description:"Imported from Markdown.", filename:"start-page.html", columns:DEFAULT_COLUMNS, colours:"primary", showTitle:true, sections:[]};
   let current = null;
   for(const raw of lines){
     const line = raw.trim();
@@ -926,7 +966,7 @@ function parseCsvMenu(text){
   const header = rows[0].map(h=>h.toLowerCase());
   const idx = name => header.indexOf(name);
   const si=idx("section"), li=idx("label"), ui=idx("url"), ci=idx("colour")>=0?idx("colour"):idx("color");
-  const out={format:"personal-start-page-creator-v1",title:"Imported CSV Menu",description:"Imported from CSV.",filename:"start-page.html",sections:[]};
+  const out={format:"personal-start-page-creator-v1",title:"Imported CSV Menu",description:"Imported from CSV.",filename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,sections:[]};
   const byName=new Map();
   for(const row of rows.slice(1)){
     const sectionName = row[si>=0?si:0] || "Links";
@@ -941,7 +981,7 @@ function parseCsvMenu(text){
   return normaliseFriendlyProject(out);
 }
 function parsePlainTextMenu(text){
-  const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"start-page.html",sections:[]};
+  const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,sections:[]};
   let current=null;
   for(const raw of text.split(/\r?\n/)){
     const line=raw.trim(); if(!line) continue;
@@ -968,6 +1008,8 @@ function initialiseEvents(){
   document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; schedulePreviewRender(); });
   document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; schedulePreviewRender(); });
   document.getElementById("columnsInput").addEventListener("change", e => { project.columns = cleanColumnCount(e.target.value); setStatus(`Layout set to ${project.columns} columns.`); schedulePreviewRender(); });
+  document.getElementById("coloursInput").addEventListener("change", e => { project.colours = cleanColourStyle(e.target.value); setStatus(`Colours set to ${project.colours === "pastel" ? "Pastel" : "Primary"}.`); schedulePreviewRender(); });
+  document.getElementById("showTitleInput").addEventListener("change", e => { project.showTitle = e.target.checked; setStatus(project.showTitle ? "Title will be shown beside search." : "Title hidden from search row."); schedulePreviewRender(); });
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
   document.getElementById("sectionList").addEventListener("change", onSectionListInput);
   document.getElementById("sectionList").addEventListener("click", onSectionListClick);

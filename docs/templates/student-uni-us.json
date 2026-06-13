@@ -3,6 +3,9 @@
   "title": "College Student Start Page",
   "description": "A US college start page for classes, research, writing, citations, money, campus life, wellbeing, careers and everyday study admin.",
   "filename": "start-page-student-uni-us.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Campus Systems",
@@ -414,6 +417,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

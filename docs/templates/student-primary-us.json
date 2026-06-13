@@ -3,6 +3,9 @@
   "title": "Elementary Student Start Page",
   "description": "A child-friendly US learning start page for homework, reading, maths, science, creativity, safety and school-life essentials.",
   "filename": "start-page-student-primary-us.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "School & Homework",
@@ -348,6 +351,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

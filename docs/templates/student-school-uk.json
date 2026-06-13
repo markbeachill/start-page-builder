@@ -3,6 +3,9 @@
   "title": "Secondary Student Start Page",
   "description": "A UK secondary school start page for study systems, GCSE revision, research, writing, wellbeing, careers and everyday school admin.",
   "filename": "start-page-student-school-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "School Systems",
@@ -366,6 +369,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

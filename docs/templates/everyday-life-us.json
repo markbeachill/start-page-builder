@@ -3,6 +3,9 @@
   "title": "Retired / Everyday Life Start Page US",
   "description": "A low-stress US everyday start page for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
   "filename": "start-page-everyday-life-us.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Email & Calendar",
@@ -396,6 +399,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

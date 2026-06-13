@@ -3,6 +3,8 @@
   "title": "Music Fans Start Page",
   "description": "Physical media indices, discovery platforms, and live gig finders.",
   "filename": "start-page-music-fan-uk.html",
-  "sections": [],
-  "columns": 4
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
+  "sections": []
 }

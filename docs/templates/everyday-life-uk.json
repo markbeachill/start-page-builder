@@ -3,6 +3,9 @@
   "title": "Retired / Everyday Life Start Page UK",
   "description": "A low-stress UK everyday start page for email, news, health, money, shopping, travel, public services, hobbies and quick tools.",
   "filename": "start-page-everyday-life-uk.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Email & Calendar",
@@ -396,6 +399,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

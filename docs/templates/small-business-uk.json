@@ -3,6 +3,9 @@
   "title": "Small Business Start Page UK",
   "description": "A UK small-business start page for accounts, tax, companies, banking, customers, marketing, sales, shipping, staff and everyday admin.",
   "filename": "start-page-small-business-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Daily Workspace",
@@ -475,6 +478,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

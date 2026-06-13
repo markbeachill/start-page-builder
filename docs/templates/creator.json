@@ -3,6 +3,9 @@
   "title": "Creators Start Page",
   "description": "Multi-platform broadcast analytics and audience management.",
   "filename": "start-page-creator.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Dashboards",
@@ -180,6 +183,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

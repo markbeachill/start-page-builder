@@ -1,6 +1,11 @@
 {
+  "format": "personal-start-page-creator-v1",
   "title": "My Start Page",
   "description": "A blank start page template.",
+  "filename": "start-page.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "My Links",
@@ -12,8 +17,5 @@
         }
       ]
     }
-  ],
-  "filename": "start-page.html",
-  "columns": 3,
-  "format": "personal-start-page-creator-v1"
+  ]
 }

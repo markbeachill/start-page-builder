@@ -3,6 +3,9 @@
   "title": "Local History Start Page UK",
   "description": "A UK local history start page for archives, newspapers, maps, genealogy, photos, public records, writing and publishing.",
   "filename": "start-page-local-history-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "National Archives",
@@ -427,6 +430,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

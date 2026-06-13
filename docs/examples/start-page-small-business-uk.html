@@ -5,35 +5,37 @@
   <title>Small Business Start Page UK</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-/* Skin: Classic Responsive */
 :root{--columns:4;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
 .searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
-.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
+.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
 .searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
 .searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
+.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
 .searchbar-form button:hover{filter:brightness(.92);}
 .searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
 .maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
 .section{clear:both;padding:0;margin:0;}
 .group{display:flex;flex-wrap:wrap;gap:0 2%;}
 .col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
 .span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
 .btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
 .btn:hover{background-color:#aaa;color:#000;}
 .blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
+.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
 .blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
 .hdr-para{margin:0;line-height:160%;}
   </style>
 </head>
-<body data-skin="classic" data-columns="4">
+<body data-skin="classic" data-columns="4" data-colours="primary" data-show-title="true">
 
 <div class="searchbar-wrapper">
   <div class="searchbar-inner">
+    <div class="menu-title">Small Business Start Page UK</div>
     <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web" autofocus>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
@@ -48,249 +50,315 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Daily Workspace</b></a>
     </p>
+
     <a class="btn green-btn" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
       Gmail
     </a>
+
     <a class="btn green-btn" href="https://outlook.office.com/" target="_blank" rel="noopener noreferrer">
       Outlook
     </a>
+
     <a class="btn green-btn" href="https://calendar.google.com/" target="_blank" rel="noopener noreferrer">
       Google Calendar
     </a>
+
     <a class="btn green-btn" href="https://www.office.com/" target="_blank" rel="noopener noreferrer">
       Microsoft 365
     </a>
+
     <a class="btn green-btn" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">
       Google Drive
     </a>
+
     <a class="btn green-btn" href="https://www.dropbox.com/" target="_blank" rel="noopener noreferrer">
       Dropbox
     </a>
+
     <a class="btn green-btn" href="https://zoom.us/" target="_blank" rel="noopener noreferrer">
       Zoom
     </a>
+
     <a class="btn green-btn" href="https://teams.microsoft.com/" target="_blank" rel="noopener noreferrer">
       Microsoft Teams
     </a>
+
     <p class="hdr-para">
       <a class="hdr red-hdr" data-section-header="true"><b>Shipping &amp; Stock</b></a>
     </p>
+
     <a class="btn red-btn" href="https://business.parcel.royalmail.com/" target="_blank" rel="noopener noreferrer">
       Royal Mail Click &amp; Drop
     </a>
+
     <a class="btn red-btn" href="https://www.evri.com/business" target="_blank" rel="noopener noreferrer">
       Evri Business
     </a>
+
     <a class="btn red-btn" href="https://www.dpdlocal.co.uk/" target="_blank" rel="noopener noreferrer">
       DPD Local
     </a>
+
     <a class="btn red-btn" href="https://www.parcel2go.com/" target="_blank" rel="noopener noreferrer">
       Parcel2Go
     </a>
+
     <a class="btn red-btn" href="https://www.vinted.co.uk/pro" target="_blank" rel="noopener noreferrer">
       Vinted Pro
     </a>
+
     <a class="btn red-btn" href="https://www.ebay.co.uk/sh/ovw" target="_blank" rel="noopener noreferrer">
       eBay Seller Hub
     </a>
+
     <a class="btn red-btn" href="https://sell.amazon.co.uk/" target="_blank" rel="noopener noreferrer">
       Amazon Seller Central
     </a>
+
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>Quick Tools</b></a>
     </p>
+
     <a class="btn blue-btn" href="https://time.is/" target="_blank" rel="noopener noreferrer">
       Time.is
     </a>
+
     <a class="btn blue-btn" href="https://www.worldtimebuddy.com/" target="_blank" rel="noopener noreferrer">
       World Time
     </a>
+
     <a class="btn blue-btn" href="https://smallpdf.com/" target="_blank" rel="noopener noreferrer">
       Smallpdf
     </a>
+
     <a class="btn blue-btn" href="https://tools.pdf24.org/" target="_blank" rel="noopener noreferrer">
       PDF24 Tools
     </a>
+
     <a class="btn blue-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">
       Grammarly
     </a>
+
     <a class="btn blue-btn" href="https://hemingwayapp.com/" target="_blank" rel="noopener noreferrer">
       Hemingway
     </a>
+
     <a class="btn blue-btn" href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
       Speedtest
     </a>
+
     <a class="btn blue-btn" href="https://haveibeenpwned.com/" target="_blank" rel="noopener noreferrer">
       Have I Been Pwned
     </a>
-
-</div>
-<div class="col span_1_of_5">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Money &amp; Accounts</b></a>
     </p>
+
     <a class="btn green-btn" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank" rel="noopener noreferrer">
       HMRC
     </a>
+
     <a class="btn green-btn" href="https://www.gov.uk/log-in-register-hmrc-online-services" target="_blank" rel="noopener noreferrer">
       VAT Online
     </a>
+
     <a class="btn green-btn" href="https://find-and-update.company-information.service.gov.uk/" target="_blank" rel="noopener noreferrer">
       Companies House
     </a>
+
     <a class="btn green-btn" href="https://www.xero.com/uk/" target="_blank" rel="noopener noreferrer">
       Xero
     </a>
+
     <a class="btn green-btn" href="https://quickbooks.intuit.com/uk/" target="_blank" rel="noopener noreferrer">
       QuickBooks UK
     </a>
+
     <a class="btn green-btn" href="https://www.freeagent.com/" target="_blank" rel="noopener noreferrer">
       FreeAgent
     </a>
+
     <a class="btn green-btn" href="https://stripe.com/gb" target="_blank" rel="noopener noreferrer">
       Stripe
     </a>
+
     <a class="btn green-btn" href="https://www.paypal.com/uk/business" target="_blank" rel="noopener noreferrer">
       PayPal Business
     </a>
+
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>People &amp; Legal</b></a>
     </p>
+
     <a class="btn green-btn" href="https://www.acas.org.uk/" target="_blank" rel="noopener noreferrer">
       ACAS
     </a>
+
     <a class="btn green-btn" href="https://www.hse.gov.uk/" target="_blank" rel="noopener noreferrer">
       HSE
     </a>
+
     <a class="btn green-btn" href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">
       ICO
     </a>
+
     <a class="btn green-btn" href="https://www.gov.uk/browse/business" target="_blank" rel="noopener noreferrer">
       GOV.UK Business
     </a>
+
     <a class="btn green-btn" href="https://www.fsb.org.uk/" target="_blank" rel="noopener noreferrer">
       Federation Small Businesses
     </a>
+
     <a class="btn green-btn" href="https://www.citizensadvice.org.uk/" target="_blank" rel="noopener noreferrer">
       Citizens Advice
     </a>
+
     <a class="btn green-btn" href="https://www.gov.uk/government/organisations/intellectual-property-office" target="_blank" rel="noopener noreferrer">
       IP Office
     </a>
-
-</div>
-<div class="col span_1_of_5">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr orange-hdr" data-section-header="true"><b>Banking &amp; Payments</b></a>
     </p>
+
     <a class="btn orange-btn" href="https://wise.com/gb/business/" target="_blank" rel="noopener noreferrer">
       Wise Business
     </a>
+
     <a class="btn orange-btn" href="https://www.revolut.com/business/" target="_blank" rel="noopener noreferrer">
       Revolut Business
     </a>
+
     <a class="btn orange-btn" href="https://www.starlingbank.com/business-account/" target="_blank" rel="noopener noreferrer">
       Starling Business
     </a>
+
     <a class="btn orange-btn" href="https://monzo.com/business/" target="_blank" rel="noopener noreferrer">
       Monzo Business
     </a>
+
     <a class="btn orange-btn" href="https://www.sumup.com/en-gb/" target="_blank" rel="noopener noreferrer">
       SumUp
     </a>
+
     <a class="btn orange-btn" href="https://squareup.com/gb/en" target="_blank" rel="noopener noreferrer">
       Square UK
     </a>
+
     <a class="btn orange-btn" href="https://gocardless.com/" target="_blank" rel="noopener noreferrer">
       GoCardless
     </a>
+
     <p class="hdr-para">
       <a class="hdr purple-hdr" data-section-header="true"><b>Marketing &amp; Design</b></a>
     </p>
+
     <a class="btn purple-btn" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">
       Canva
     </a>
+
     <a class="btn purple-btn" href="https://mailchimp.com/" target="_blank" rel="noopener noreferrer">
       Mailchimp
     </a>
+
     <a class="btn purple-btn" href="https://buffer.com/" target="_blank" rel="noopener noreferrer">
       Buffer
     </a>
+
     <a class="btn purple-btn" href="https://business.facebook.com/" target="_blank" rel="noopener noreferrer">
       Meta Business Suite
     </a>
+
     <a class="btn purple-btn" href="https://trends.google.com/" target="_blank" rel="noopener noreferrer">
       Google Trends
     </a>
+
     <a class="btn purple-btn" href="https://analytics.google.com/" target="_blank" rel="noopener noreferrer">
       Google Analytics
     </a>
+
     <a class="btn purple-btn" href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">
       Google Ads
     </a>
+
     <a class="btn purple-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
       LinkedIn
     </a>
-
-</div>
-<div class="col span_1_of_5">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>Website &amp; Shop</b></a>
     </p>
+
     <a class="btn blue-btn" href="https://www.shopify.com/uk" target="_blank" rel="noopener noreferrer">
       Shopify
     </a>
+
     <a class="btn blue-btn" href="https://woocommerce.com/" target="_blank" rel="noopener noreferrer">
       WooCommerce
     </a>
+
     <a class="btn blue-btn" href="https://www.squarespace.com/" target="_blank" rel="noopener noreferrer">
       Squarespace
     </a>
+
     <a class="btn blue-btn" href="https://www.wix.com/" target="_blank" rel="noopener noreferrer">
       Wix
     </a>
+
     <a class="btn blue-btn" href="https://wordpress.com/" target="_blank" rel="noopener noreferrer">
       WordPress
     </a>
+
     <a class="btn blue-btn" href="https://www.google.com/business/" target="_blank" rel="noopener noreferrer">
       Google Business Profile
     </a>
+
     <a class="btn blue-btn" href="https://business.trustpilot.com/" target="_blank" rel="noopener noreferrer">
       Trustpilot Business
     </a>
+
     <p class="hdr-para">
       <a class="hdr orange-hdr" data-section-header="true"><b>Sales &amp; Customers</b></a>
     </p>
+
     <a class="btn orange-btn" href="https://www.hubspot.com/products/crm" target="_blank" rel="noopener noreferrer">
       HubSpot CRM
     </a>
+
     <a class="btn orange-btn" href="https://www.zoho.com/crm/" target="_blank" rel="noopener noreferrer">
       Zoho CRM
     </a>
+
     <a class="btn orange-btn" href="https://trello.com/" target="_blank" rel="noopener noreferrer">
       Trello
     </a>
+
     <a class="btn orange-btn" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
       Notion
     </a>
+
     <a class="btn orange-btn" href="https://calendly.com/" target="_blank" rel="noopener noreferrer">
       Calendly
     </a>
+
     <a class="btn orange-btn" href="https://www.docusign.com/" target="_blank" rel="noopener noreferrer">
       DocuSign
     </a>
+
     <a class="btn orange-btn" href="https://www.jotform.com/" target="_blank" rel="noopener noreferrer">
       Jotform
     </a>
+
     <a class="btn orange-btn" href="https://www.typeform.com/" target="_blank" rel="noopener noreferrer">
       Typeform
     </a>
-
 </div>
   </div>
 </div>
 <script>
-  (function attachMenuBehaviour(root=document){
+(function attachMenuBehaviour(root=document){
   const form = root.querySelector(".searchbar-form");
   if(form){
     form.addEventListener("submit", function(){

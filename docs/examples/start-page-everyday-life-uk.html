@@ -5,35 +5,37 @@
   <title>Retired / Everyday Life Start Page UK</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-/* Skin: Classic Responsive */
 :root{--columns:3;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
 body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
 .searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;}
-.searchbar-form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;}
+.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
+.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
 .searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
 .searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;}
+.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
 .searchbar-form button:hover{filter:brightness(.92);}
 .searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
 .maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
 .section{clear:both;padding:0;margin:0;}
 .group{display:flex;flex-wrap:wrap;gap:0 2%;}
 .col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
 .span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.maincontent{padding:1em 12px;width:auto;}}
+@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
 .btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
 .btn:hover{background-color:#aaa;color:#000;}
 .blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;}
+.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
 .blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
 .hdr-para{margin:0;line-height:160%;}
   </style>
 </head>
-<body data-skin="classic" data-columns="3">
+<body data-skin="classic" data-columns="3" data-colours="primary" data-show-title="true">
 
 <div class="searchbar-wrapper">
   <div class="searchbar-inner">
+    <div class="menu-title">Retired / Everyday Life Start Page UK</div>
     <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web" autofocus>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
@@ -48,207 +50,263 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Email &amp; Calendar</b></a>
     </p>
+
     <a class="btn green-btn" href="https://mail.google.com/" target="_blank" rel="noopener noreferrer">
       Gmail
     </a>
+
     <a class="btn green-btn" href="https://outlook.live.com/" target="_blank" rel="noopener noreferrer">
       Outlook.com
     </a>
+
     <a class="btn green-btn" href="https://mail.yahoo.com/" target="_blank" rel="noopener noreferrer">
       Yahoo Mail
     </a>
+
     <a class="btn green-btn" href="https://calendar.google.com/" target="_blank" rel="noopener noreferrer">
       Google Calendar
     </a>
+
     <a class="btn green-btn" href="https://contacts.google.com/" target="_blank" rel="noopener noreferrer">
       Google Contacts
     </a>
+
     <a class="btn green-btn" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">
       Google Drive
     </a>
+
     <a class="btn green-btn" href="https://onedrive.live.com/" target="_blank" rel="noopener noreferrer">
       OneDrive
     </a>
+
     <p class="hdr-para">
       <a class="hdr green-hdr" data-section-header="true"><b>Health &amp; Care</b></a>
     </p>
+
     <a class="btn green-btn" href="https://www.nhs.uk/" target="_blank" rel="noopener noreferrer">
       NHS
     </a>
+
     <a class="btn green-btn" href="https://www.nhs.uk/nhs-app/" target="_blank" rel="noopener noreferrer">
       NHS App
     </a>
+
     <a class="btn green-btn" href="https://111.nhs.uk/" target="_blank" rel="noopener noreferrer">
       111 Online
     </a>
+
     <a class="btn green-btn" href="https://www.ageuk.org.uk/" target="_blank" rel="noopener noreferrer">
       Age UK
     </a>
+
     <a class="btn green-btn" href="https://www.carersuk.org/" target="_blank" rel="noopener noreferrer">
       Carers UK
     </a>
+
     <a class="btn green-btn" href="https://www.mind.org.uk/" target="_blank" rel="noopener noreferrer">
       Mind
     </a>
+
     <a class="btn green-btn" href="https://www.boots.com/" target="_blank" rel="noopener noreferrer">
       Boots
     </a>
+
     <p class="hdr-para">
       <a class="hdr purple-hdr" data-section-header="true"><b>Travel &amp; Local</b></a>
     </p>
+
     <a class="btn purple-btn" href="https://www.nationalrail.co.uk/" target="_blank" rel="noopener noreferrer">
       National Rail
     </a>
+
     <a class="btn purple-btn" href="https://www.thetrainline.com/" target="_blank" rel="noopener noreferrer">
       Trainline
     </a>
+
     <a class="btn purple-btn" href="https://tfl.gov.uk/" target="_blank" rel="noopener noreferrer">
       TfL
     </a>
+
     <a class="btn purple-btn" href="https://bustimes.org/" target="_blank" rel="noopener noreferrer">
       Bus Times
     </a>
+
     <a class="btn purple-btn" href="https://www.google.com/travel/" target="_blank" rel="noopener noreferrer">
       Google Travel
     </a>
+
     <a class="btn purple-btn" href="https://www.skyscanner.net/" target="_blank" rel="noopener noreferrer">
       Skyscanner
     </a>
+
     <a class="btn purple-btn" href="https://www.tripadvisor.co.uk/" target="_blank" rel="noopener noreferrer">
       Tripadvisor
     </a>
-
-</div>
-<div class="col span_1_of_5">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>Search &amp; Maps</b></a>
     </p>
+
     <a class="btn blue-btn" href="https://www.google.co.uk/" target="_blank" rel="noopener noreferrer">
       Google
     </a>
+
     <a class="btn blue-btn" href="https://www.bbc.co.uk/weather" target="_blank" rel="noopener noreferrer">
       BBC Weather
     </a>
+
     <a class="btn blue-btn" href="https://maps.google.co.uk/" target="_blank" rel="noopener noreferrer">
       Google Maps
     </a>
+
     <a class="btn blue-btn" href="https://translate.google.co.uk/" target="_blank" rel="noopener noreferrer">
       Google Translate
     </a>
+
     <a class="btn blue-btn" href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">
       Wikipedia
     </a>
+
     <a class="btn blue-btn" href="https://www.streetcheck.co.uk/" target="_blank" rel="noopener noreferrer">
       StreetCheck
     </a>
+
     <a class="btn blue-btn" href="https://www.metoffice.gov.uk/" target="_blank" rel="noopener noreferrer">
       Met Office
     </a>
+
     <p class="hdr-para">
       <a class="hdr orange-hdr" data-section-header="true"><b>Money &amp; Bills</b></a>
     </p>
+
     <a class="btn orange-btn" href="https://www.gov.uk/" target="_blank" rel="noopener noreferrer">
       GOV.UK
     </a>
+
     <a class="btn orange-btn" href="https://www.gov.uk/government/organisations/hm-revenue-customs" target="_blank" rel="noopener noreferrer">
       HMRC
     </a>
+
     <a class="btn orange-btn" href="https://www.moneysavingexpert.com/" target="_blank" rel="noopener noreferrer">
       MoneySavingExpert
     </a>
+
     <a class="btn orange-btn" href="https://www.citizensadvice.org.uk/" target="_blank" rel="noopener noreferrer">
       Citizens Advice
     </a>
+
     <a class="btn orange-btn" href="https://www.which.co.uk/" target="_blank" rel="noopener noreferrer">
       Which?
     </a>
+
     <a class="btn orange-btn" href="https://www.uswitch.com/" target="_blank" rel="noopener noreferrer">
       Uswitch
     </a>
+
     <a class="btn orange-btn" href="https://www.comparethemarket.com/" target="_blank" rel="noopener noreferrer">
       Compare the Market
     </a>
+
     <p class="hdr-para">
       <a class="hdr blue-hdr" data-section-header="true"><b>TV, Hobbies &amp; Tools</b></a>
     </p>
+
     <a class="btn blue-btn" href="https://www.bbc.co.uk/iplayer" target="_blank" rel="noopener noreferrer">
       BBC iPlayer
     </a>
+
     <a class="btn blue-btn" href="https://www.itv.com/" target="_blank" rel="noopener noreferrer">
       ITVX
     </a>
+
     <a class="btn blue-btn" href="https://www.channel4.com/" target="_blank" rel="noopener noreferrer">
       Channel 4
     </a>
+
     <a class="btn blue-btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
       YouTube
     </a>
+
     <a class="btn blue-btn" href="https://www.open.edu/openlearn/" target="_blank" rel="noopener noreferrer">
       OpenLearn
     </a>
+
     <a class="btn blue-btn" href="https://www.ancestry.co.uk/" target="_blank" rel="noopener noreferrer">
       Ancestry UK
     </a>
+
     <a class="btn blue-btn" href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
       Speedtest
     </a>
-
-</div>
-<div class="col span_1_of_5">
+</div><div class="col span_1_of_5">
     <p class="hdr-para">
       <a class="hdr red-hdr" data-section-header="true"><b>News &amp; Radio</b></a>
     </p>
+
     <a class="btn red-btn" href="https://www.bbc.co.uk/news" target="_blank" rel="noopener noreferrer">
       BBC News
     </a>
+
     <a class="btn red-btn" href="https://news.sky.com/" target="_blank" rel="noopener noreferrer">
       Sky News
     </a>
+
     <a class="btn red-btn" href="https://www.theguardian.com/uk" target="_blank" rel="noopener noreferrer">
       Guardian
     </a>
+
     <a class="btn red-btn" href="https://news.google.com/" target="_blank" rel="noopener noreferrer">
       Google News
     </a>
+
     <a class="btn red-btn" href="https://www.bbc.co.uk/sounds" target="_blank" rel="noopener noreferrer">
       BBC Sounds
     </a>
+
     <a class="btn red-btn" href="https://www.bbc.co.uk/sounds/play/live:bbc_radio_fourfm" target="_blank" rel="noopener noreferrer">
       BBC Radio 4
     </a>
+
     <a class="btn red-btn" href="https://www.classicfm.com/radio/player/" target="_blank" rel="noopener noreferrer">
       Classic FM
     </a>
+
     <p class="hdr-para">
       <a class="hdr orange-hdr" data-section-header="true"><b>Shopping &amp; Food</b></a>
     </p>
+
     <a class="btn orange-btn" href="https://www.amazon.co.uk/" target="_blank" rel="noopener noreferrer">
       Amazon UK
     </a>
+
     <a class="btn orange-btn" href="https://www.ebay.co.uk/" target="_blank" rel="noopener noreferrer">
       eBay UK
     </a>
+
     <a class="btn orange-btn" href="https://www.tesco.com/" target="_blank" rel="noopener noreferrer">
       Tesco
     </a>
+
     <a class="btn orange-btn" href="https://www.sainsburys.co.uk/" target="_blank" rel="noopener noreferrer">
       Sainsbury&#x27;s
     </a>
+
     <a class="btn orange-btn" href="https://www.asda.com/" target="_blank" rel="noopener noreferrer">
       ASDA
     </a>
+
     <a class="btn orange-btn" href="https://www.johnlewis.com/" target="_blank" rel="noopener noreferrer">
       John Lewis
     </a>
+
     <a class="btn orange-btn" href="https://www.royalmail.com/track-your-item" target="_blank" rel="noopener noreferrer">
       Royal Mail Tracking
     </a>
-
 </div>
   </div>
 </div>
 <script>
-  (function attachMenuBehaviour(root=document){
+(function attachMenuBehaviour(root=document){
   const form = root.querySelector(".searchbar-form");
   if(form){
     form.addEventListener("submit", function(){

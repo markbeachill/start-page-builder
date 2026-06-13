@@ -3,6 +3,9 @@
   "title": "Health & Wellness Start Page",
   "description": "Patient portals, wellness trackers, and fitness communities.",
   "filename": "start-page-health-wellness-us.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Local Services",
@@ -88,6 +91,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

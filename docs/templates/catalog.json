@@ -8,7 +8,9 @@
     "template": "templates/student-primary-uk.json",
     "example": "examples/start-page-student-primary-uk.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -19,7 +21,9 @@
     "template": "templates/student-primary-us.json",
     "example": "examples/start-page-student-primary-us.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -30,7 +34,9 @@
     "template": "templates/student-school-uk.json",
     "example": "examples/start-page-student-school-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -41,7 +47,9 @@
     "template": "templates/student-school-us.json",
     "example": "examples/start-page-student-school-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -52,7 +60,9 @@
     "template": "templates/student-uni-uk.json",
     "example": "examples/start-page-student-uni-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -63,7 +73,9 @@
     "template": "templates/student-uni-us.json",
     "example": "examples/start-page-student-uni-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -74,7 +86,9 @@
     "template": "templates/teacher-uk.json",
     "example": "examples/start-page-teacher-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "A: Education",
@@ -85,7 +99,9 @@
     "template": "templates/teacher-us.json",
     "example": "examples/start-page-teacher-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -96,7 +112,9 @@
     "template": "templates/small-business-uk.json",
     "example": "examples/start-page-small-business-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -107,7 +125,9 @@
     "template": "templates/small-business-us.json",
     "example": "examples/start-page-small-business-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -118,7 +138,9 @@
     "template": "templates/freelancer-uk.json",
     "example": "examples/start-page-freelancer-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -129,7 +151,9 @@
     "template": "templates/freelancer-us.json",
     "example": "examples/start-page-freelancer-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -140,7 +164,9 @@
     "template": "templates/dev-ops.json",
     "example": "examples/start-page-dev-ops.html",
     "available": true,
-    "columns": 5
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -151,7 +177,9 @@
     "template": "templates/newsroom-uk.json",
     "example": "examples/start-page-newsroom-uk.html",
     "available": true,
-    "columns": 5
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "B: Work & Business",
@@ -162,7 +190,9 @@
     "template": "templates/newsroom-us.json",
     "example": "examples/start-page-newsroom-us.html",
     "available": true,
-    "columns": 5
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "C: Tech & Creative",
@@ -173,7 +203,9 @@
     "template": "templates/ai-user.json",
     "example": "examples/start-page-ai-user.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "C: Tech & Creative",
@@ -184,7 +216,9 @@
     "template": "templates/creative-pro.json",
     "example": "examples/start-page-creative-pro.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "C: Tech & Creative",
@@ -195,7 +229,9 @@
     "template": "templates/creator.json",
     "example": "examples/start-page-creator.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -206,7 +242,9 @@
     "template": "templates/news-buff-uk.json",
     "example": "examples/start-page-news-buff-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -217,7 +255,9 @@
     "template": "templates/news-buff-us.json",
     "example": "examples/start-page-news-buff-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -228,7 +268,9 @@
     "template": "templates/health-wellness-uk.json",
     "example": "examples/start-page-health-wellness-uk.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -239,7 +281,9 @@
     "template": "templates/health-wellness-us.json",
     "example": "examples/start-page-health-wellness-us.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -250,7 +294,9 @@
     "template": "templates/family-home-uk.json",
     "example": "examples/start-page-family-home-uk.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -261,7 +307,9 @@
     "template": "templates/family-home-us.json",
     "example": "examples/start-page-family-home-us.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -272,7 +320,9 @@
     "template": "templates/everyday-life-uk.json",
     "example": "examples/start-page-everyday-life-uk.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -283,7 +333,9 @@
     "template": "templates/everyday-life-us.json",
     "example": "examples/start-page-everyday-life-us.html",
     "available": true,
-    "columns": 3
+    "columns": 3,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -294,7 +346,9 @@
     "template": "templates/travel-planner-uk.json",
     "example": "examples/start-page-travel-planner-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "D: Everyday Life",
@@ -305,7 +359,9 @@
     "template": "templates/travel-planner-us.json",
     "example": "examples/start-page-travel-planner-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "F: Sport & Fandoms",
@@ -349,7 +405,9 @@
     "template": "templates/local-history-uk.json",
     "example": "examples/start-page-local-history-uk.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
@@ -360,7 +418,9 @@
     "template": "templates/local-history-us.json",
     "example": "examples/start-page-local-history-us.html",
     "available": true,
-    "columns": 4
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",

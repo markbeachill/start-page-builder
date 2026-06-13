@@ -3,6 +3,9 @@
   "title": "News Buffs Start Page",
   "description": "Deep political, regional, and investigative media aggregation.",
   "filename": "start-page-news-buff-us.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Aggregators",
@@ -100,6 +103,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

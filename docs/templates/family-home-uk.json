@@ -3,6 +3,9 @@
   "title": "Family & Home Start Page",
   "description": "Shared logistics, grocery delivery, and public utility billing.",
   "filename": "start-page-family-home-uk.html",
+  "columns": 3,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Search",
@@ -75,6 +78,5 @@
         }
       ]
     }
-  ],
-  "columns": 3
+  ]
 }

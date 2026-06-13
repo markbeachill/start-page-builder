@@ -3,6 +3,9 @@
   "title": "Travel Planners Start Page",
   "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
   "filename": "start-page-travel-planner-uk.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Maps",
@@ -88,6 +91,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }

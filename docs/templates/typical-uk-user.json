@@ -1,6 +1,11 @@
 {
+  "format": "personal-start-page-creator-v1",
   "title": "Typical UK User Links",
   "description": "A general-purpose UK web-user menu organised by everyday usage: search, communication, work, news, sport, shopping, money, entertainment, radio, travel, health, utilities and tools.",
+  "filename": "start-page-uk.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "Search & AI",
@@ -528,8 +533,5 @@
         }
       ]
     }
-  ],
-  "filename": "start-page-uk.html",
-  "columns": 5,
-  "format": "personal-start-page-creator-v1"
+  ]
 }

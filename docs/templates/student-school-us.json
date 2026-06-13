@@ -3,6 +3,9 @@
   "title": "High School Student Start Page",
   "description": "A US high school start page for classes, homework, research, writing, college planning, test prep, wellbeing and everyday school admin.",
   "filename": "start-page-student-school-us.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
   "sections": [
     {
       "name": "School Systems",
@@ -366,6 +369,5 @@
         }
       ]
     }
-  ],
-  "columns": 4
+  ]
 }
