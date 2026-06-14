@@ -1,199 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Freelancers Start Page",
-  "description": "Independent client tracking, invoicing, and contract management.",
+  "title": "Freelancer Start Page",
+  "description": "A practical UK freelancer start page for clients, projects, proposals, invoices, tax, marketing, payments, learning and quick tools.",
   "filename": "start-page-freelancer-uk.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Clients",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "Trello",
-          "url": "https://trello.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Asana",
-          "url": "https://asana.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Proposals",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Proposify",
-          "url": "https://www.proposify.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "PandaDoc",
-          "url": "https://www.pandadoc.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Invoices",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Wave",
-          "url": "https://www.waveapps.com/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "FreshBooks",
-          "url": "https://www.freshbooks.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Calendar & Time",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Calendly",
-          "url": "https://calendly.com/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Toggl Track",
-          "url": "https://toggl.com/track/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Video Calls",
+      "name": "Clients & CRM",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Zoom",
-          "url": "https://zoom.us/",
-          "colour": "blue",
-          "included": true
+          "label": "HubSpot CRM",
+          "url": "https://www.hubspot.com/products/crm",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Google Meet",
-          "url": "https://meet.google.com/",
-          "colour": "blue",
-          "included": true
+          "label": "Zoho CRM",
+          "url": "https://www.zoho.com/crm/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Airtable",
+          "url": "https://www.airtable.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Asana",
+          "url": "https://asana.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google Forms",
+          "url": "https://forms.google.com/",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
-      "name": "Documents",
+      "name": "Email, Calendar & Cloud",
       "colour": "green",
       "included": true,
       "links": [
         {
+          "label": "Gmail",
+          "url": "https://mail.google.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Outlook",
+          "url": "https://outlook.live.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
           "label": "Google Drive",
           "url": "https://drive.google.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "OneDrive",
+          "url": "https://onedrive.live.com/",
+          "included": true,
+          "colour": "green"
         },
         {
           "label": "Dropbox",
           "url": "https://www.dropbox.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "WeTransfer",
+          "url": "https://wetransfer.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "DocHub",
+          "url": "https://dochub.com/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Research",
+      "name": "Proposals & Contracts",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Google Trends",
-          "url": "https://trends.google.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Statista",
-          "url": "https://www.statista.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Canva Docs",
+          "url": "https://www.canva.com/docs/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Canva Presentations",
+          "url": "https://www.canva.com/presentations/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "PandaDoc",
+          "url": "https://www.pandadoc.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Adobe Acrobat Sign",
+          "url": "https://www.adobe.com/sign.html",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Rocket Lawyer UK",
+          "url": "https://www.rocketlawyer.com/gb/en",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "LawDepot UK",
+          "url": "https://www.lawdepot.co.uk/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     },
     {
-      "name": "Marketing",
+      "name": "Invoices & Accounts",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "FreeAgent",
+          "url": "https://www.freeagent.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Xero",
+          "url": "https://www.xero.com/uk/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "QuickBooks UK",
+          "url": "https://quickbooks.intuit.com/uk/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "FreshBooks",
+          "url": "https://www.freshbooks.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/gb",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "PayPal Business",
+          "url": "https://www.paypal.com/uk/business",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Wise Business",
+          "url": "https://wise.com/gb/business/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Dext",
+          "url": "https://dext.com/uk",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Tax, Legal & Admin",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Self Assessment",
+          "url": "https://www.gov.uk/self-assessment-tax-returns",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "ICO",
+          "url": "https://ico.org.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "ACAS",
+          "url": "https://www.acas.org.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "IPSE",
+          "url": "https://www.ipse.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Federation Small Bus",
+          "url": "https://www.fsb.org.uk/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Marketing & Presence",
       "colour": "purple",
       "included": true,
       "links": [
         {
           "label": "LinkedIn",
           "url": "https://www.linkedin.com/",
-          "colour": "purple",
-          "included": true
+          "included": true,
+          "colour": "purple"
         },
         {
-          "label": "Behance",
-          "url": "https://www.behance.net/",
-          "colour": "purple",
-          "included": true
+          "label": "Google Business",
+          "url": "https://www.google.com/business/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Buffer",
+          "url": "https://buffer.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Meta Business",
+          "url": "https://business.facebook.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "AnswerThePublic",
+          "url": "https://answerthepublic.com/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     },
     {
-      "name": "Contracts",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "DocuSign",
-          "url": "https://www.docusign.com/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "HelloSign",
-          "url": "https://www.hellosign.com/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Finance",
+      "name": "Research & AI",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "FreeAgent",
-          "url": "https://www.freeagent.com/",
-          "colour": "blue",
-          "included": true
+          "label": "Google Search",
+          "url": "https://www.google.co.uk/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "QB Self-Emp",
-          "url": "https://quickbooks.intuit.com/self-employed/",
-          "colour": "blue",
-          "included": true
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Claude",
+          "url": "https://claude.ai/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "GOV.UK",
+          "url": "https://www.gov.uk/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Money & Payments",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "PayPal",
+          "url": "https://www.paypal.com/uk/home",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Stripe Dashboard",
+          "url": "https://dashboard.stripe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Wise",
+          "url": "https://wise.com/gb/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Monzo Business",
+          "url": "https://monzo.com/business/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Starling Business",
+          "url": "https://www.starlingbank.com/business-account/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Tide",
+          "url": "https://www.tide.co/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "XE Currency",
+          "url": "https://www.xe.com/currencyconverter/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "MoneySavingExpert",
+          "url": "https://www.moneysavingexpert.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Learning & Community",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "LinkedIn Learning",
+          "url": "https://www.linkedin.com/learning/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Coursera",
+          "url": "https://www.coursera.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "FutureLearn",
+          "url": "https://www.futurelearn.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "OpenLearn",
+          "url": "https://www.open.edu/openlearn/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Enterprise Nation",
+          "url": "https://www.enterprisenation.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Business Gateway",
+          "url": "https://www.bgateway.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Reddit Freelance",
+          "url": "https://www.reddit.com/r/freelance/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Indie Hackers",
+          "url": "https://www.indiehackers.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Quick Tools",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "PDF24 Tools",
+          "url": "https://tools.pdf24.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Bitwarden",
+          "url": "https://bitwarden.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     }

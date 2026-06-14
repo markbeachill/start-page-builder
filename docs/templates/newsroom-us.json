@@ -1,168 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Newsroom Start Page",
-  "description": "OSINT research, public records, verification, and data tools.",
+  "description": "A fuller US newsroom start page for news wires, research, public records, verification, monitoring, data, FOIA, publishing and safety.",
   "filename": "start-page-newsroom-us.html",
   "columns": 5,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "News Wires",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "Reuters",
-          "url": "https://www.reuters.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "AP News",
-          "url": "https://apnews.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Search",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Google Adv",
-          "url": "https://www.google.com/advanced_search",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Fact Checking",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Bellingcat",
-          "url": "https://www.bellingcat.com/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "PolitiFact",
-          "url": "https://www.politifact.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Companies",
+      "name": "News Wires & Front Pages",
       "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "SEC EDGAR",
-          "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
-          "colour": "red",
-          "included": true
+          "label": "Associated Press",
+          "url": "https://apnews.com/",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "OpenCorporates",
-          "url": "https://opencorporates.com/",
-          "colour": "red",
-          "included": true
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CNN",
+          "url": "https://www.cnn.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "NYTimes",
+          "url": "https://www.nytimes.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Washington Post",
+          "url": "https://www.washingtonpost.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "included": true,
+          "colour": "red"
         }
       ]
     },
     {
-      "name": "Public Records",
+      "name": "Search & Research",
       "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Search",
+          "url": "https://www.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "DuckDuckGo",
+          "url": "https://duckduckgo.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Wikidata",
+          "url": "https://www.wikidata.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Wayback Machine",
+          "url": "https://web.archive.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "US Public Records",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/search/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "FEC",
+          "url": "https://www.fec.gov/data/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Congress.gov",
+          "url": "https://www.congress.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "PACER",
+          "url": "https://pacer.uscourts.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Census Data",
+          "url": "https://data.census.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Data.gov",
+          "url": "https://data.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "USAspending",
+          "url": "https://www.usaspending.gov/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Verification & OSINT",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Bellingcat Toolkit",
+          "url": "https://bellingcat.gitbook.io/toolkit",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "OSINT Framework",
+          "url": "https://osintframework.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "InVID Verification",
+          "url": "https://www.invid-project.eu/tools-and-services/invid-verification-plugin/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "TinEye",
+          "url": "https://tineye.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Lens",
+          "url": "https://lens.google/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "ExifTool",
+          "url": "https://exiftool.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "SunCalc",
+          "url": "https://www.suncalc.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "MapChecking",
+          "url": "https://www.mapchecking.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Social & Monitoring",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "TikTok",
+          "url": "https://www.tiktok.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Reddit",
+          "url": "https://www.reddit.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Talkwalker Alerts",
+          "url": "https://www.talkwalker.com/alerts",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Data & Visuals",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Sheets",
+          "url": "https://sheets.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "OpenRefine",
+          "url": "https://openrefine.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Datawrapper",
+          "url": "https://www.datawrapper.de/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Flourish",
+          "url": "https://flourish.studio/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Observable",
+          "url": "https://observablehq.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Tableau Public",
+          "url": "https://public.tableau.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Mapbox",
+          "url": "https://www.mapbox.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Press & PR Sources",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Business Wire",
+          "url": "https://www.businesswire.com/portal/site/home/news/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PRLog",
+          "url": "https://www.prlog.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "OpenPR",
+          "url": "https://www.openpr.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Muck Rack Daily",
+          "url": "https://muckrack.com/daily",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "AP Newsroom",
+          "url": "https://newsroom.ap.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PR Daily",
+          "url": "https://www.prdaily.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Newswire",
+          "url": "https://www.newswire.com/newsroom",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "FOIA & Archives",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "FOIA.gov",
           "url": "https://www.foia.gov/",
-          "colour": "blue",
-          "included": true
+          "included": true,
+          "colour": "green"
         },
         {
-          "label": "PACER",
-          "url": "https://pacer.uscourts.gov/",
-          "colour": "blue",
-          "included": true
+          "label": "National Archives",
+          "url": "https://www.archives.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Library of Congress",
+          "url": "https://www.loc.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Chronicling America",
+          "url": "https://chroniclingamerica.loc.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "GovInfo",
+          "url": "https://www.govinfo.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "ProPublica Nonprofits",
+          "url": "https://projects.propublica.org/nonprofits/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Archive Today",
+          "url": "https://archive.ph/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Social Monitoring",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "X Pro",
-          "url": "https://pro.twitter.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Hootsuite",
-          "url": "https://www.hootsuite.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Images",
+      "name": "Law, Ethics & Safety",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Getty Images",
-          "url": "https://www.gettyimages.com/",
-          "colour": "orange",
-          "included": true
+          "label": "SPJ Code",
+          "url": "https://www.spj.org/ethicscode.asp",
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "TinEye",
-          "url": "https://tineye.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Reporters Committee",
+          "url": "https://www.rcfp.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Reporters Without Borders",
+          "url": "https://rsf.org/en",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "CPJ",
+          "url": "https://cpj.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Supreme Court",
+          "url": "https://www.supremecourt.gov/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Cornell LII",
+          "url": "https://www.law.cornell.edu/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Snopes",
+          "url": "https://www.snopes.com/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     },
     {
-      "name": "Writing & Publishing",
+      "name": "Publishing & Workflow",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "WordPress",
-          "url": "https://wordpress.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Data Tools",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Datawrapper",
-          "url": "https://www.datawrapper.de/",
-          "colour": "red",
-          "included": true
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "included": true,
+          "colour": "purple"
         },
         {
-          "label": "Flourish",
-          "url": "https://flourish.studio/",
-          "colour": "red",
-          "included": true
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Slack",
+          "url": "https://slack.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WeTransfer",
+          "url": "https://wetransfer.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     }

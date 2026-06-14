@@ -1,193 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "DevOps Start Page",
-  "description": "Advanced infrastructure monitoring, repositories, and cloud hubs.",
+  "description": "A fuller DevOps start page for repos, CI/CD, cloud consoles, containers, monitoring, incidents, security, infrastructure and team workflow.",
   "filename": "start-page-dev-ops.html",
   "columns": 5,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Code",
-      "colour": "green",
+      "name": "Code & Repos",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "GitHub",
           "url": "https://github.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "blue"
         },
         {
           "label": "GitLab",
-          "url": "https://about.gitlab.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Cloud",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "AWS Console",
-          "url": "https://aws.amazon.com/console/",
-          "colour": "orange",
-          "included": true
+          "url": "https://gitlab.com/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "GCP Console",
-          "url": "https://console.cloud.google.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Bitbucket",
+          "url": "https://bitbucket.org/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "DigitalOcean",
-          "url": "https://www.digitalocean.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Monitoring",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Datadog",
-          "url": "https://www.datadoghq.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Azure DevOps",
+          "url": "https://dev.azure.com/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Grafana",
-          "url": "https://grafana.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Databases",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "MongoDB Atlas",
-          "url": "https://www.mongodb.com/cloud/atlas",
-          "colour": "red",
-          "included": true
+          "label": "Sourcegraph",
+          "url": "https://sourcegraph.com/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Supabase",
-          "url": "https://supabase.com/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Security",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Vault",
-          "url": "https://www.vaultproject.io/",
-          "colour": "blue",
-          "included": true
+          "label": "GitHub Gists",
+          "url": "https://gist.github.com/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Snyk",
-          "url": "https://snyk.io/",
-          "colour": "blue",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Documentation",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "ReadMe",
-          "url": "https://readme.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Packages",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Docker Hub",
-          "url": "https://hub.docker.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Dependabot",
+          "url": "https://github.com/dependabot",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "npm",
-          "url": "https://www.npmjs.com/",
-          "colour": "orange",
-          "included": true
+          "label": "GitHub Security",
+          "url": "https://github.com/advisories",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
       "name": "CI/CD",
-      "colour": "purple",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "GitHub Actions",
           "url": "https://github.com/features/actions",
-          "colour": "purple",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "GitLab CI",
+          "url": "https://docs.gitlab.com/ee/ci/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Jenkins",
+          "url": "https://www.jenkins.io/",
+          "included": true,
+          "colour": "green"
         },
         {
           "label": "CircleCI",
           "url": "https://circleci.com/",
-          "colour": "purple",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Buildkite",
+          "url": "https://buildkite.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Argo CD",
+          "url": "https://argo-cd.readthedocs.io/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Flux CD",
+          "url": "https://fluxcd.io/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Drone CI",
+          "url": "https://www.drone.io/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Design",
-      "colour": "red",
+      "name": "Cloud Consoles",
+      "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Figma",
-          "url": "https://www.figma.com/",
-          "colour": "red",
-          "included": true
+          "label": "AWS Console",
+          "url": "https://console.aws.amazon.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Azure Portal",
+          "url": "https://portal.azure.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Cloud",
+          "url": "https://console.cloud.google.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Cloudflare",
+          "url": "https://dash.cloudflare.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "DigitalOcean",
+          "url": "https://cloud.digitalocean.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Heroku",
+          "url": "https://dashboard.heroku.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Vercel",
+          "url": "https://vercel.com/dashboard",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Netlify",
+          "url": "https://app.netlify.com/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     },
     {
-      "name": "AI Coding Tools",
+      "name": "Containers & Kubernetes",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Docker Hub",
+          "url": "https://hub.docker.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Kubernetes Docs",
+          "url": "https://kubernetes.io/docs/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Helm",
+          "url": "https://helm.sh/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Artifact Hub",
+          "url": "https://artifacthub.io/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Lens",
+          "url": "https://k8slens.dev/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "K9s",
+          "url": "https://k9scli.io/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Rancher",
+          "url": "https://www.rancher.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "CNCF Landscape",
+          "url": "https://landscape.cncf.io/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Monitoring & Uptime",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Grafana",
+          "url": "https://grafana.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Prometheus",
+          "url": "https://prometheus.io/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Datadog",
+          "url": "https://www.datadoghq.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "New Relic",
+          "url": "https://newrelic.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Sentry",
+          "url": "https://sentry.io/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "UptimeRobot",
+          "url": "https://uptimerobot.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Better Stack",
+          "url": "https://betterstack.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Pingdom",
+          "url": "https://www.pingdom.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Logs & APM",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Copilot",
-          "url": "https://github.com/features/copilot",
-          "colour": "blue",
-          "included": true
+          "label": "Elastic",
+          "url": "https://www.elastic.co/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Cursor",
-          "url": "https://cursor.sh/",
-          "colour": "blue",
-          "included": true
+          "label": "Splunk",
+          "url": "https://www.splunk.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Grafana Loki",
+          "url": "https://grafana.com/oss/loki/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Logtail",
+          "url": "https://betterstack.com/logtail",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "OpenTelemetry",
+          "url": "https://opentelemetry.io/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Jaeger",
+          "url": "https://www.jaegertracing.io/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Honeycomb",
+          "url": "https://www.honeycomb.io/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Fluent Bit",
+          "url": "https://fluentbit.io/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Security & Trust",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Snyk",
+          "url": "https://snyk.io/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "OWASP",
+          "url": "https://owasp.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CISA KEV",
+          "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "VirusTotal",
+          "url": "https://www.virustotal.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "SSL Labs",
+          "url": "https://www.ssllabs.com/ssltest/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "NVD",
+          "url": "https://nvd.nist.gov/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Security Headers",
+          "url": "https://securityheaders.com/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Infrastructure as Code",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Terraform",
+          "url": "https://www.terraform.io/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "OpenTofu",
+          "url": "https://opentofu.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Pulumi",
+          "url": "https://www.pulumi.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Ansible",
+          "url": "https://www.ansible.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Packer",
+          "url": "https://www.packer.io/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Vault",
+          "url": "https://www.vaultproject.io/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Consul",
+          "url": "https://www.consul.io/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "AWS CDK",
+          "url": "https://aws.amazon.com/cdk/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Incidents & Status",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "PagerDuty",
+          "url": "https://www.pagerduty.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Opsgenie",
+          "url": "https://www.atlassian.com/software/opsgenie",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Statuspage",
+          "url": "https://www.atlassian.com/software/statuspage",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Rootly",
+          "url": "https://rootly.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "FireHydrant",
+          "url": "https://firehydrant.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Incident.io",
+          "url": "https://incident.io/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Google Status",
+          "url": "https://status.cloud.google.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "AWS Health",
+          "url": "https://health.aws.amazon.com/health/status",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Docs & Team",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Confluence",
+          "url": "https://www.atlassian.com/software/confluence",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Slack",
+          "url": "https://slack.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Microsoft Teams",
+          "url": "https://teams.microsoft.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Miro",
+          "url": "https://miro.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Mermaid Live",
+          "url": "https://mermaid.live/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Stack Overflow",
+          "url": "https://stackoverflow.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "DevDocs",
+          "url": "https://devdocs.io/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     }

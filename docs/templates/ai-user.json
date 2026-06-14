@@ -1,197 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "AI Users Start Page",
-  "description": "Quick access to daily LLMs, prompt hubs, and local model forums.",
+  "description": "A fuller AI-user start page for chatbots, research, writing, image tools, coding, local models, prompt guides, automation and safety checks.",
   "filename": "start-page-ai-user.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Daily Chatbots",
-      "colour": "green",
+      "name": "AI Chat & Search",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "ChatGPT",
           "url": "https://chatgpt.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "blue"
         },
         {
           "label": "Claude",
           "url": "https://claude.ai/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "blue"
         },
         {
           "label": "Gemini",
           "url": "https://gemini.google.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Copilot",
+          "label": "Microsoft Copilot",
           "url": "https://copilot.microsoft.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Poe",
+          "url": "https://poe.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "You.com",
+          "url": "https://you.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Phind",
+          "url": "https://www.phind.com/",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
-      "name": "Image Generation",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Midjourney",
-          "url": "https://www.midjourney.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Adobe Firefly",
-          "url": "https://firefly.adobe.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "Stable Diffusion",
-          "url": "https://stablediffusionweb.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Prompt Libraries",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "PromptBase",
-          "url": "https://promptbase.com/",
-          "colour": "purple",
-          "included": true
-        },
-        {
-          "label": "FlowGPT",
-          "url": "https://flowgpt.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "AI News",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "The Rundown",
-          "url": "https://www.therundown.ai/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Ben's Bites",
-          "url": "https://bensbites.co/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Model Hubs",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Hugging Face",
-          "url": "https://huggingface.co/",
-          "colour": "blue",
-          "included": true
-        },
-        {
-          "label": "Replicate",
-          "url": "https://replicate.com/",
-          "colour": "blue",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Local LLMs",
+      "name": "Writing & Editing",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "r/LocalLLaMA",
-          "url": "https://www.reddit.com/r/LocalLLaMA/",
-          "colour": "green",
-          "included": true
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "included": true,
+          "colour": "green"
         },
         {
-          "label": "LM Studio",
-          "url": "https://lmstudio.ai/",
-          "colour": "green",
-          "included": true
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "included": true,
+          "colour": "green"
         },
         {
-          "label": "Ollama",
-          "url": "https://ollama.com/",
-          "colour": "green",
-          "included": true
+          "label": "LanguageTool",
+          "url": "https://languagetool.org/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "DeepL Write",
+          "url": "https://www.deepl.com/write",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "QuillBot",
+          "url": "https://quillbot.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Wordtune",
+          "url": "https://www.wordtune.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Audio & Video AI",
+      "name": "Research & Papers",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "ElevenLabs",
-          "url": "https://elevenlabs.io/",
-          "colour": "orange",
-          "included": true
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Runway",
-          "url": "https://runwayml.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Semantic Scholar",
+          "url": "https://www.semanticscholar.org/",
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Suno",
-          "url": "https://suno.com/",
-          "colour": "orange",
-          "included": true
+          "label": "Elicit",
+          "url": "https://elicit.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Consensus",
+          "url": "https://consensus.app/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Connected Papers",
+          "url": "https://www.connectedpapers.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "ResearchRabbit",
+          "url": "https://www.researchrabbit.ai/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "NotebookLM",
+          "url": "https://notebooklm.google.com/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     },
     {
-      "name": "Developer APIs",
+      "name": "Images & Design",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "OpenAI API",
-          "url": "https://platform.openai.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "purple"
         },
         {
-          "label": "Anthropic API",
-          "url": "https://console.anthropic.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Adobe Firefly",
+          "url": "https://firefly.adobe.com/",
+          "included": true,
+          "colour": "purple"
         },
         {
-          "label": "Google AI Studio",
-          "url": "https://aistudio.google.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Microsoft Designer",
+          "url": "https://designer.microsoft.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Ideogram",
+          "url": "https://ideogram.ai/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Leonardo.Ai",
+          "url": "https://leonardo.ai/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Runway",
+          "url": "https://runwayml.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Clipdrop",
+          "url": "https://clipdrop.co/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Remove.bg",
+          "url": "https://www.remove.bg/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Coding & Prototyping",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "GitHub Copilot",
+          "url": "https://github.com/features/copilot",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Cursor",
+          "url": "https://www.cursor.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Replit",
+          "url": "https://replit.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "StackBlitz",
+          "url": "https://stackblitz.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "CodePen",
+          "url": "https://codepen.io/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Hugging Face",
+          "url": "https://huggingface.co/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "OpenAI Docs",
+          "url": "https://platform.openai.com/docs",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Local & Open Models",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Hugging Face Models",
+          "url": "https://huggingface.co/models",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Ollama",
+          "url": "https://ollama.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "LM Studio",
+          "url": "https://lmstudio.ai/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Open WebUI",
+          "url": "https://openwebui.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Replicate",
+          "url": "https://replicate.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Kaggle Models",
+          "url": "https://www.kaggle.com/models",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Papers with Code",
+          "url": "https://paperswithcode.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "LMSYS Chatbot Arena",
+          "url": "https://lmarena.ai/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Prompts & Guides",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "OpenAI Cookbook",
+          "url": "https://cookbook.openai.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Anthropic Prompting",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Prompting",
+          "url": "https://ai.google.dev/gemini-api/docs/prompting-strategies",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Prompting Guide",
+          "url": "https://www.promptingguide.ai/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Learn Prompting",
+          "url": "https://learnprompting.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "FlowGPT",
+          "url": "https://flowgpt.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "AIPRM",
+          "url": "https://www.aiprm.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Awesome ChatGPT",
+          "url": "https://github.com/f/awesome-chatgpt-prompts",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Automation & Productivity",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Zapier",
+          "url": "https://zapier.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Make",
+          "url": "https://www.make.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "IFTTT",
+          "url": "https://ifttt.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Gamma",
+          "url": "https://gamma.app/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Tome",
+          "url": "https://tome.app/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Otter.ai",
+          "url": "https://otter.ai/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Descript",
+          "url": "https://www.descript.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "ElevenLabs",
+          "url": "https://elevenlabs.io/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Safety & Checking",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Full Fact",
+          "url": "https://fullfact.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Snopes",
+          "url": "https://www.snopes.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Google Fact Check",
+          "url": "https://toolbox.google.com/factcheck/explorer",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "VirusTotal",
+          "url": "https://www.virustotal.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Commonsense AI",
+          "url": "https://www.commonsense.org/ai",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "AI Incident Database",
+          "url": "https://incidentdatabase.ai/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Learning AI",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Elements of AI",
+          "url": "https://www.elementsofai.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google AI Essentials",
+          "url": "https://grow.google/ai-essentials/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Microsoft Learn AI",
+          "url": "https://learn.microsoft.com/en-us/ai/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "DeepLearning.AI",
+          "url": "https://www.deeplearning.ai/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Hugging Face Learn",
+          "url": "https://huggingface.co/learn",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Kaggle Learn",
+          "url": "https://www.kaggle.com/learn",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Coursera AI",
+          "url": "https://www.coursera.org/browse/data-science/machine-learning",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "edX AI",
+          "url": "https://www.edx.org/learn/artificial-intelligence",
+          "included": true,
+          "colour": "blue"
         }
       ]
     }

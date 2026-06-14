@@ -1,185 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Creative Pros Start Page",
-  "description": "Dynamic asset gathering, design portfolios, and asset tools.",
+  "description": "A fuller creative-professional start page for inspiration, branding, typography, assets, image tools, video, UX, portfolios, clients and learning.",
   "filename": "start-page-creative-pro.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Inspiration",
-      "colour": "green",
+      "name": "Design Inspiration",
+      "colour": "purple",
       "included": true,
       "links": [
         {
           "label": "Behance",
           "url": "https://www.behance.net/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "purple"
         },
         {
           "label": "Dribbble",
           "url": "https://dribbble.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Awwwards",
-          "url": "https://www.awwwards.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "purple"
         },
         {
           "label": "Pinterest",
           "url": "https://www.pinterest.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Awwwards",
+          "url": "https://www.awwwards.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "SiteInspire",
+          "url": "https://www.siteinspire.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Muzli",
+          "url": "https://muz.li/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Designspiration",
+          "url": "https://www.designspiration.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Creative Bloq",
+          "url": "https://www.creativebloq.com/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     },
     {
-      "name": "Typography",
+      "name": "Brand & Colour",
       "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Adobe Express",
+          "url": "https://www.adobe.com/express/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Figma",
+          "url": "https://www.figma.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "FigJam",
+          "url": "https://www.figma.com/figjam/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Coolors",
+          "url": "https://coolors.co/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Adobe Color",
+          "url": "https://color.adobe.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Realtime Colors",
+          "url": "https://www.realtimecolors.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Paletton",
+          "url": "https://paletton.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Type & Icons",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google Fonts",
           "url": "https://fonts.google.com/",
-          "colour": "orange",
-          "included": true
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Adobe Fonts",
+          "url": "https://fonts.adobe.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Fontpair",
+          "url": "https://www.fontpair.co/",
+          "included": true,
+          "colour": "blue"
         },
         {
           "label": "Typewolf",
           "url": "https://www.typewolf.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Color Tools",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Coolors",
-          "url": "https://coolors.co/",
-          "colour": "purple",
-          "included": true
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Adobe Color",
-          "url": "https://color.adobe.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Font Awesome",
+          "url": "https://fontawesome.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Noun Project",
+          "url": "https://thenounproject.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Material Symbols",
+          "url": "https://fonts.google.com/icons",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Icons8",
+          "url": "https://icons8.com/",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
       "name": "Stock Assets",
-      "colour": "red",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "Unsplash",
           "url": "https://unsplash.com/",
-          "colour": "red",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Pexels",
+          "url": "https://www.pexels.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Pixabay",
+          "url": "https://pixabay.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/",
+          "included": true,
+          "colour": "green"
         },
         {
           "label": "Freepik",
           "url": "https://www.freepik.com/",
-          "colour": "red",
-          "included": true
+          "included": true,
+          "colour": "green"
         },
         {
-          "label": "Noun Project",
-          "url": "https://thenounproject.com/",
-          "colour": "red",
-          "included": true
+          "label": "Adobe Stock",
+          "url": "https://stock.adobe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Shutterstock",
+          "url": "https://www.shutterstock.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Envato Elements",
+          "url": "https://elements.envato.com/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Portfolio",
+      "name": "Image Tools",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Webflow",
-          "url": "https://webflow.com/",
-          "colour": "blue",
-          "included": true
+          "label": "Photopea",
+          "url": "https://www.photopea.com/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Readymag",
-          "url": "https://readymag.com/",
-          "colour": "blue",
-          "included": true
+          "label": "Pixlr",
+          "url": "https://pixlr.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Remove.bg",
+          "url": "https://www.remove.bg/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "TinyPNG",
+          "url": "https://tinypng.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Squoosh",
+          "url": "https://squoosh.app/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "SVGOMG",
+          "url": "https://jakearchibald.github.io/svgomg/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Cleanup.pictures",
+          "url": "https://cleanup.pictures/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "EZGIF",
+          "url": "https://ezgif.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Video & Motion",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Vimeo",
+          "url": "https://vimeo.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Mixkit",
+          "url": "https://mixkit.co/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Storyblocks",
+          "url": "https://www.storyblocks.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Motion Array",
+          "url": "https://motionarray.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Kapwing",
+          "url": "https://www.kapwing.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "DaVinci Resolve",
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "HandBrake",
+          "url": "https://handbrake.fr/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "UX & Web",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Figma Community",
+          "url": "https://www.figma.com/community",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Webflow",
+          "url": "https://webflow.com/",
+          "included": true,
+          "colour": "purple"
         },
         {
           "label": "Framer",
           "url": "https://www.framer.com/",
-          "colour": "blue",
-          "included": true
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WebAIM",
+          "url": "https://webaim.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Bootstrap",
+          "url": "https://getbootstrap.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Tailwind CSS",
+          "url": "https://tailwindcss.com/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     },
     {
-      "name": "Client Delivery",
+      "name": "Portfolio & Delivery",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Figma",
-          "url": "https://www.figma.com/",
-          "colour": "green",
-          "included": true
+          "label": "Adobe Portfolio",
+          "url": "https://portfolio.adobe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Behance Portfolio",
+          "url": "https://www.behance.net/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Dribbble Jobs",
+          "url": "https://dribbble.com/jobs",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Carbonmade",
+          "url": "https://carbonmade.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Format",
+          "url": "https://www.format.com/",
+          "included": true,
+          "colour": "green"
         },
         {
           "label": "WeTransfer",
           "url": "https://wetransfer.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Communities",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Sidebar.io",
-          "url": "https://sidebar.io/",
-          "colour": "orange",
-          "included": true
+          "included": true,
+          "colour": "green"
         },
         {
-          "label": "r/Design",
-          "url": "https://www.reddit.com/r/Design/",
-          "colour": "orange",
-          "included": true
+          "label": "Dropbox Transfer",
+          "url": "https://www.dropbox.com/transfer",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "included": true,
+          "colour": "green"
         }
       ]
     },
     {
-      "name": "Project Mgmt",
-      "colour": "purple",
+      "name": "Clients & Projects",
+      "colour": "orange",
       "included": true,
       "links": [
         {
           "label": "Notion",
           "url": "https://www.notion.so/",
-          "colour": "purple",
-          "included": true
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Milanote",
-          "url": "https://milanote.com/",
-          "colour": "purple",
-          "included": true
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Asana",
+          "url": "https://asana.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Miro",
+          "url": "https://miro.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Bonsai",
+          "url": "https://www.hellobonsai.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Learning & Community",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Adobe Learn",
+          "url": "https://www.adobe.com/learn/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Figma Learn",
+          "url": "https://www.figma.com/resource-library/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "LinkedIn Learning",
+          "url": "https://www.linkedin.com/learning/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Skillshare",
+          "url": "https://www.skillshare.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Domestika",
+          "url": "https://www.domestika.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "IxDF",
+          "url": "https://www.interaction-design.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CreativeMornings",
+          "url": "https://creativemornings.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Reddit Design",
+          "url": "https://www.reddit.com/r/design/",
+          "included": true,
+          "colour": "red"
         }
       ]
     }

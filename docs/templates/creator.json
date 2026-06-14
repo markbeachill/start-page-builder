@@ -1,185 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Creators Start Page",
-  "description": "Multi-platform broadcast analytics and audience management.",
+  "description": "A fuller creator start page for platform dashboards, planning, production, audio, thumbnails, publishing, analytics, monetisation, community and safety.",
   "filename": "start-page-creator.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Dashboards",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "YT Studio",
-          "url": "https://studio.youtube.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Twitch Dash",
-          "url": "https://dashboard.twitch.tv/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "TikTok Creator",
-          "url": "https://www.tiktok.com/creators/creator-portal/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Analytics",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "Social Blade",
-          "url": "https://socialblade.com/",
-          "colour": "orange",
-          "included": true
-        },
-        {
-          "label": "vidIQ",
-          "url": "https://vidiq.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Social Sched",
+      "name": "Creator Dashboards",
       "colour": "purple",
       "included": true,
       "links": [
         {
-          "label": "Metricool",
-          "url": "https://metricool.com/",
-          "colour": "purple",
-          "included": true
+          "label": "YouTube Studio",
+          "url": "https://studio.youtube.com/",
+          "included": true,
+          "colour": "purple"
         },
         {
-          "label": "Later",
-          "url": "https://later.com/",
-          "colour": "purple",
-          "included": true
+          "label": "TikTok Studio",
+          "url": "https://www.tiktok.com/tiktokstudio",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Meta Business",
+          "url": "https://business.facebook.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "X",
+          "url": "https://x.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Twitch Creator",
+          "url": "https://dashboard.twitch.tv/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Spotify Creators",
+          "url": "https://creators.spotify.com/",
+          "included": true,
+          "colour": "purple"
         }
       ]
     },
     {
-      "name": "Audio & Music",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Epidemic Sound",
-          "url": "https://www.epidemicsound.com/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Artlist",
-          "url": "https://artlist.io/",
-          "colour": "red",
-          "included": true
-        },
-        {
-          "label": "Freesound",
-          "url": "https://freesound.org/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Video Assets",
+      "name": "Planning & Ideas",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Pexels Video",
-          "url": "https://www.pexels.com/videos/",
-          "colour": "blue",
-          "included": true
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "blue"
         },
         {
-          "label": "Envato",
-          "url": "https://elements.envato.com/",
-          "colour": "blue",
-          "included": true
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google Trends",
+          "url": "https://trends.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "AnswerThePublic",
+          "url": "https://answerthepublic.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Exploding Topics",
+          "url": "https://explodingtopics.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Reddit",
+          "url": "https://www.reddit.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Quora",
+          "url": "https://www.quora.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Feedly",
+          "url": "https://feedly.com/",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
-      "name": "Community",
+      "name": "Video Production",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva Video",
+          "url": "https://www.canva.com/video-editor/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CapCut",
+          "url": "https://www.capcut.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "DaVinci Resolve",
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Adobe Express",
+          "url": "https://www.adobe.com/express/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "VEED",
+          "url": "https://www.veed.io/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Descript",
+          "url": "https://www.descript.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "OBS Studio",
+          "url": "https://obsproject.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "HandBrake",
+          "url": "https://handbrake.fr/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Audio & Podcasting",
       "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Spotify Creators",
+          "url": "https://creators.spotify.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Audacity",
+          "url": "https://www.audacityteam.org/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Auphonic",
+          "url": "https://auphonic.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Buzzsprout",
+          "url": "https://www.buzzsprout.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Libsyn",
+          "url": "https://libsyn.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Podbean",
+          "url": "https://www.podbean.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Riverside",
+          "url": "https://riverside.fm/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Graphics & Thumbnails",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Photopea",
+          "url": "https://www.photopea.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Remove.bg",
+          "url": "https://www.remove.bg/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Unsplash",
+          "url": "https://unsplash.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Pexels",
+          "url": "https://www.pexels.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "TinyPNG",
+          "url": "https://tinypng.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Fonts",
+          "url": "https://fonts.google.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Coolors",
+          "url": "https://coolors.co/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Publish & Schedule",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Buffer",
+          "url": "https://buffer.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Hootsuite",
+          "url": "https://www.hootsuite.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Later",
+          "url": "https://later.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Metricool",
+          "url": "https://metricool.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Mailchimp",
+          "url": "https://mailchimp.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Substack",
+          "url": "https://substack.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "beehiiv",
+          "url": "https://www.beehiiv.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.com/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Analytics & SEO",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Analytics",
+          "url": "https://analytics.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Search Console",
+          "url": "https://search.google.com/search-console/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Social Blade",
+          "url": "https://socialblade.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "vidIQ",
+          "url": "https://vidiq.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "TubeBuddy",
+          "url": "https://www.tubebuddy.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Similarweb",
+          "url": "https://www.similarweb.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Ubersuggest",
+          "url": "https://neilpatel.com/ubersuggest/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Monetisation",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Patreon",
+          "url": "https://www.patreon.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Ko-fi",
+          "url": "https://ko-fi.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Buy Me a Coffee",
+          "url": "https://www.buymeacoffee.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Gumroad",
+          "url": "https://gumroad.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Shopify",
+          "url": "https://www.shopify.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "PayPal",
+          "url": "https://www.paypal.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Amazon Associates",
+          "url": "https://affiliate-program.amazon.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Community & Live",
+      "colour": "orange",
       "included": true,
       "links": [
         {
           "label": "Discord",
           "url": "https://discord.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Patreon",
-          "url": "https://www.patreon.com/",
-          "colour": "green",
-          "included": true
+          "label": "Twitch",
+          "url": "https://www.twitch.tv/",
+          "included": true,
+          "colour": "orange"
         },
         {
-          "label": "Ko-fi",
-          "url": "https://ko-fi.com/",
-          "colour": "green",
-          "included": true
+          "label": "YouTube Live",
+          "url": "https://www.youtube.com/live",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Reddit",
+          "url": "https://www.reddit.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Circle",
+          "url": "https://circle.so/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Mighty Networks",
+          "url": "https://www.mightynetworks.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "StreamYard",
+          "url": "https://streamyard.com/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     },
     {
-      "name": "Sponsorships",
-      "colour": "orange",
+      "name": "Rights & Safety",
+      "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "Linktree",
-          "url": "https://linktr.ee/",
-          "colour": "orange",
-          "included": true
+          "label": "Creative Commons",
+          "url": "https://creativecommons.org/",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "Beacons",
-          "url": "https://beacons.ai/",
-          "colour": "orange",
-          "included": true
+          "label": "YouTube Copyright",
+          "url": "https://support.google.com/youtube/topic/2676339",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "Pearpop",
-          "url": "https://pearpop.com/",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Schedules",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "G Calendar",
-          "url": "https://calendar.google.com/",
-          "colour": "purple",
-          "included": true
+          "label": "FTC Disclosures",
+          "url": "https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "Notion Calendar",
-          "url": "https://calendar.notion.so/",
-          "colour": "purple",
-          "included": true
+          "label": "ASA Advice",
+          "url": "https://www.asa.org.uk/advice-online.html",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "TermsFeed",
+          "url": "https://www.termsfeed.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Unsplash License",
+          "url": "https://unsplash.com/license",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Pixabay License",
+          "url": "https://pixabay.com/service/license-summary/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/",
+          "included": true,
+          "colour": "red"
         }
       ]
     }

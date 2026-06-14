@@ -5,38 +5,42 @@
   <title>Creative Pros Start Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-:root{--columns:4;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
-body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
-.searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
-.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
-.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
-.searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
-.searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
-.searchbar-form button:hover{filter:brightness(.92);}
-.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
-.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
-.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
-.section{clear:both;padding:0;margin:0;}
-.group{display:flex;flex-wrap:wrap;gap:0 2%;}
-.col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
-.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
-.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
-.btn:hover{background-color:#aaa;color:#000;}
-.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
-.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
-.hdr-para{margin:0;line-height:160%;}
+
+:root{--spb-columns:4;--spb-c-blue:#4d90fe;--spb-c-green:#35aa47;--spb-c-orange:#d84a38;--spb-c-purple:#852b99;--spb-c-red:#bd121d;}
+body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#333333;}
+.spb-start-page{font-family:Arial,Helvetica,sans-serif;background:#ffffff;color:#333333;}
+.spb-searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
+.spb-searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.spb-menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
+.spb-searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
+.spb-searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
+.spb-searchbar-form input[type="text"]:focus{outline:2px solid var(--spb-c-blue);outline-offset:0;border-color:var(--spb-c-blue);}
+.spb-searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--spb-c-blue);background:var(--spb-c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
+.spb-searchbar-form button:hover{filter:brightness(.92);}
+.spb-searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.spb-page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
+.spb-maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
+.spb-section{clear:both;padding:0;margin:0;}
+.spb-group{display:flex;flex-wrap:wrap;gap:0 2%;}
+.spb-col{box-sizing:border-box;flex:0 0 calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));max-width:calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));margin:1% 0;}
+@media only screen and (max-width:767px){.spb-col{flex:1 1 100%;max-width:100%;margin:1% 0;}.spb-searchbar-inner,.spb-maincontent{width:100%;padding-left:0;padding-right:0;}.spb-searchbar-inner{display:block;}.spb-menu-title{white-space:normal;margin-bottom:8px;}.spb-maincontent{padding:1em 12px;width:auto;}}
+.spb-btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
+.spb-btn:hover{background-color:#aaa;color:#000;}
+.spb-btn[hidden]{display:none;}
+.spb-blue-btn{border-left-color:var(--spb-c-blue);}.spb-green-btn{border-left-color:var(--spb-c-green);}.spb-orange-btn{border-left-color:var(--spb-c-orange);}.spb-purple-btn{border-left-color:var(--spb-c-purple);}.spb-red-btn{border-left-color:var(--spb-c-red);}
+.spb-hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;appearance:none;-webkit-appearance:none;}
+.spb-hdr:focus{outline:2px solid #111;outline-offset:2px;}
+.spb-blue-hdr{background-color:var(--spb-c-blue);}.spb-green-hdr{background-color:var(--spb-c-green);}.spb-orange-hdr{background-color:var(--spb-c-orange);}.spb-purple-hdr{background-color:var(--spb-c-purple);}.spb-red-hdr{background-color:var(--spb-c-red);}
+.spb-hdr-para{margin:0;line-height:160%;}
+
   </style>
 </head>
-<body data-skin="classic" data-columns="4" data-colours="primary" data-show-title="true">
-
-<div class="searchbar-wrapper">
-  <div class="searchbar-inner">
-    <div class="menu-title">Creative Pros Start Page</div>
-    <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+<body data-spb-skin="classic" data-spb-columns="4" data-spb-colours="primary" data-spb-show-title="true">
+<div class="spb-start-page" data-spb-menu-root="true">
+<div class="spb-searchbar-wrapper">
+  <div class="spb-searchbar-inner">
+    <div class="spb-menu-title">Creative Pros Start Page</div>
+    <form class="spb-searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web" autofocus>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
       <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
@@ -44,153 +48,987 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
     </form>
   </div>
 </div>
-<div class="maincontent">
-  <div class="section group">
-<div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr green-hdr" data-section-header="true"><b>Inspiration</b></a>
+<div class="spb-maincontent">
+  <div class="spb-section spb-group">
+<div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-purple-hdr" data-spb-section-header="true" aria-expanded="true">Design Inspiration</button>
     </p>
 
-    <a class="btn green-btn" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-purple-btn" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
       Behance
     </a>
 
-    <a class="btn green-btn" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-purple-btn" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer">
       Dribbble
     </a>
 
-    <a class="btn green-btn" href="https://www.awwwards.com/" target="_blank" rel="noopener noreferrer">
-      Awwwards
-    </a>
-
-    <a class="btn green-btn" href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-purple-btn" href="https://www.pinterest.com/" target="_blank" rel="noopener noreferrer">
       Pinterest
     </a>
 
-    <p class="hdr-para">
-      <a class="hdr purple-hdr" data-section-header="true"><b>Project Mgmt</b></a>
+    <a class="spb-btn spb-purple-btn" href="https://www.awwwards.com/" target="_blank" rel="noopener noreferrer">
+      Awwwards
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.siteinspire.com/" target="_blank" rel="noopener noreferrer">
+      SiteInspire
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://muz.li/" target="_blank" rel="noopener noreferrer">
+      Muzli
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.designspiration.com/" target="_blank" rel="noopener noreferrer">
+      Designspiration
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.creativebloq.com/" target="_blank" rel="noopener noreferrer">
+      Creative Bloq
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-blue-hdr" data-spb-section-header="true" aria-expanded="true">Image Tools</button>
     </p>
 
-    <a class="btn purple-btn" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-blue-btn" href="https://www.photopea.com/" target="_blank" rel="noopener noreferrer">
+      Photopea
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://pixlr.com/" target="_blank" rel="noopener noreferrer">
+      Pixlr
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.remove.bg/" target="_blank" rel="noopener noreferrer">
+      Remove.bg
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://tinypng.com/" target="_blank" rel="noopener noreferrer">
+      TinyPNG
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://squoosh.app/" target="_blank" rel="noopener noreferrer">
+      Squoosh
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://jakearchibald.github.io/svgomg/" target="_blank" rel="noopener noreferrer">
+      SVGOMG
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://cleanup.pictures/" target="_blank" rel="noopener noreferrer">
+      Cleanup.pictures
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://ezgif.com/" target="_blank" rel="noopener noreferrer">
+      EZGIF
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-orange-hdr" data-spb-section-header="true" aria-expanded="true">Clients &amp; Projects</button>
+    </p>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
       Notion
     </a>
 
-    <a class="btn purple-btn" href="https://milanote.com/" target="_blank" rel="noopener noreferrer">
-      Milanote
+    <a class="spb-btn spb-orange-btn" href="https://trello.com/" target="_blank" rel="noopener noreferrer">
+      Trello
     </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr orange-hdr" data-section-header="true"><b>Typography</b></a>
+
+    <a class="spb-btn spb-orange-btn" href="https://asana.com/" target="_blank" rel="noopener noreferrer">
+      Asana
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://miro.com/" target="_blank" rel="noopener noreferrer">
+      Miro
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.hellobonsai.com/" target="_blank" rel="noopener noreferrer">
+      Bonsai
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://calendly.com/" target="_blank" rel="noopener noreferrer">
+      Calendly
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.docusign.com/" target="_blank" rel="noopener noreferrer">
+      DocuSign
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://stripe.com/" target="_blank" rel="noopener noreferrer">
+      Stripe
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-orange-hdr" data-spb-section-header="true" aria-expanded="true">Brand &amp; Colour</button>
     </p>
 
-    <a class="btn orange-btn" href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">
-      Google Fonts
+    <a class="spb-btn spb-orange-btn" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">
+      Canva
     </a>
 
-    <a class="btn orange-btn" href="https://www.typewolf.com/" target="_blank" rel="noopener noreferrer">
-      Typewolf
+    <a class="spb-btn spb-orange-btn" href="https://www.adobe.com/express/" target="_blank" rel="noopener noreferrer">
+      Adobe Express
     </a>
 
-    <p class="hdr-para">
-      <a class="hdr blue-hdr" data-section-header="true"><b>Portfolio</b></a>
-    </p>
-
-    <a class="btn blue-btn" href="https://webflow.com/" target="_blank" rel="noopener noreferrer">
-      Webflow
-    </a>
-
-    <a class="btn blue-btn" href="https://readymag.com/" target="_blank" rel="noopener noreferrer">
-      Readymag
-    </a>
-
-    <a class="btn blue-btn" href="https://www.framer.com/" target="_blank" rel="noopener noreferrer">
-      Framer
-    </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr purple-hdr" data-section-header="true"><b>Color Tools</b></a>
-    </p>
-
-    <a class="btn purple-btn" href="https://coolors.co/" target="_blank" rel="noopener noreferrer">
-      Coolors
-    </a>
-
-    <a class="btn purple-btn" href="https://color.adobe.com/" target="_blank" rel="noopener noreferrer">
-      Adobe Color
-    </a>
-
-    <p class="hdr-para">
-      <a class="hdr green-hdr" data-section-header="true"><b>Client Delivery</b></a>
-    </p>
-
-    <a class="btn green-btn" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-orange-btn" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">
       Figma
     </a>
 
-    <a class="btn green-btn" href="https://wetransfer.com/" target="_blank" rel="noopener noreferrer">
-      WeTransfer
+    <a class="spb-btn spb-orange-btn" href="https://www.figma.com/figjam/" target="_blank" rel="noopener noreferrer">
+      FigJam
     </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr red-hdr" data-section-header="true"><b>Stock Assets</b></a>
+
+    <a class="spb-btn spb-orange-btn" href="https://coolors.co/" target="_blank" rel="noopener noreferrer">
+      Coolors
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://color.adobe.com/" target="_blank" rel="noopener noreferrer">
+      Adobe Color
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.realtimecolors.com/" target="_blank" rel="noopener noreferrer">
+      Realtime Colors
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://paletton.com/" target="_blank" rel="noopener noreferrer">
+      Paletton
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-red-hdr" data-spb-section-header="true" aria-expanded="true">Video &amp; Motion</button>
     </p>
 
-    <a class="btn red-btn" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">
-      Unsplash
+    <a class="spb-btn spb-red-btn" href="https://vimeo.com/" target="_blank" rel="noopener noreferrer">
+      Vimeo
     </a>
 
-    <a class="btn red-btn" href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">
-      Freepik
+    <a class="spb-btn spb-red-btn" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+      YouTube
     </a>
 
-    <a class="btn red-btn" href="https://thenounproject.com/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-red-btn" href="https://mixkit.co/" target="_blank" rel="noopener noreferrer">
+      Mixkit
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.storyblocks.com/" target="_blank" rel="noopener noreferrer">
+      Storyblocks
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://motionarray.com/" target="_blank" rel="noopener noreferrer">
+      Motion Array
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.kapwing.com/" target="_blank" rel="noopener noreferrer">
+      Kapwing
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blank" rel="noopener noreferrer">
+      DaVinci Resolve
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://handbrake.fr/" target="_blank" rel="noopener noreferrer">
+      HandBrake
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-red-hdr" data-spb-section-header="true" aria-expanded="true">Learning &amp; Community</button>
+    </p>
+
+    <a class="spb-btn spb-red-btn" href="https://www.adobe.com/learn/" target="_blank" rel="noopener noreferrer">
+      Adobe Learn
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.figma.com/resource-library/" target="_blank" rel="noopener noreferrer">
+      Figma Learn
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.linkedin.com/learning/" target="_blank" rel="noopener noreferrer">
+      LinkedIn Learning
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.skillshare.com/" target="_blank" rel="noopener noreferrer">
+      Skillshare
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.domestika.org/" target="_blank" rel="noopener noreferrer">
+      Domestika
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.interaction-design.org/" target="_blank" rel="noopener noreferrer">
+      IxDF
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://creativemornings.com/" target="_blank" rel="noopener noreferrer">
+      CreativeMornings
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.reddit.com/r/design/" target="_blank" rel="noopener noreferrer">
+      Reddit Design
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-blue-hdr" data-spb-section-header="true" aria-expanded="true">Type &amp; Icons</button>
+    </p>
+
+    <a class="spb-btn spb-blue-btn" href="https://fonts.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Fonts
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://fonts.adobe.com/" target="_blank" rel="noopener noreferrer">
+      Adobe Fonts
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.fontpair.co/" target="_blank" rel="noopener noreferrer">
+      Fontpair
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.typewolf.com/" target="_blank" rel="noopener noreferrer">
+      Typewolf
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">
+      Font Awesome
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://thenounproject.com/" target="_blank" rel="noopener noreferrer">
       Noun Project
     </a>
 
-    <p class="hdr-para">
-      <a class="hdr orange-hdr" data-section-header="true"><b>Communities</b></a>
-    </p>
-
-    <a class="btn orange-btn" href="https://sidebar.io/" target="_blank" rel="noopener noreferrer">
-      Sidebar.io
+    <a class="spb-btn spb-blue-btn" href="https://fonts.google.com/icons" target="_blank" rel="noopener noreferrer">
+      Material Symbols
     </a>
 
-    <a class="btn orange-btn" href="https://www.reddit.com/r/Design/" target="_blank" rel="noopener noreferrer">
-      r/Design
+    <a class="spb-btn spb-blue-btn" href="https://icons8.com/" target="_blank" rel="noopener noreferrer">
+      Icons8
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-purple-hdr" data-spb-section-header="true" aria-expanded="true">UX &amp; Web</button>
+    </p>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.figma.com/community" target="_blank" rel="noopener noreferrer">
+      Figma Community
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://webflow.com/" target="_blank" rel="noopener noreferrer">
+      Webflow
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.framer.com/" target="_blank" rel="noopener noreferrer">
+      Framer
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://wordpress.org/" target="_blank" rel="noopener noreferrer">
+      WordPress
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://webaim.org/" target="_blank" rel="noopener noreferrer">
+      WebAIM
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">
+      MDN Web Docs
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">
+      Bootstrap
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer">
+      Tailwind CSS
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-green-hdr" data-spb-section-header="true" aria-expanded="true">Stock Assets</button>
+    </p>
+
+    <a class="spb-btn spb-green-btn" href="https://unsplash.com/" target="_blank" rel="noopener noreferrer">
+      Unsplash
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.pexels.com/" target="_blank" rel="noopener noreferrer">
+      Pexels
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://pixabay.com/" target="_blank" rel="noopener noreferrer">
+      Pixabay
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://commons.wikimedia.org/" target="_blank" rel="noopener noreferrer">
+      Wikimedia Commons
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.freepik.com/" target="_blank" rel="noopener noreferrer">
+      Freepik
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://stock.adobe.com/" target="_blank" rel="noopener noreferrer">
+      Adobe Stock
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.shutterstock.com/" target="_blank" rel="noopener noreferrer">
+      Shutterstock
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://elements.envato.com/" target="_blank" rel="noopener noreferrer">
+      Envato Elements
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-green-hdr" data-spb-section-header="true" aria-expanded="true">Portfolio &amp; Delivery</button>
+    </p>
+
+    <a class="spb-btn spb-green-btn" href="https://portfolio.adobe.com/" target="_blank" rel="noopener noreferrer">
+      Adobe Portfolio
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+      Behance Portfolio
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://dribbble.com/jobs" target="_blank" rel="noopener noreferrer">
+      Dribbble Jobs
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://carbonmade.com/" target="_blank" rel="noopener noreferrer">
+      Carbonmade
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.format.com/" target="_blank" rel="noopener noreferrer">
+      Format
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://wetransfer.com/" target="_blank" rel="noopener noreferrer">
+      WeTransfer
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.dropbox.com/transfer" target="_blank" rel="noopener noreferrer">
+      Dropbox Transfer
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://drive.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Drive
     </a>
 </div>
   </div>
 </div>
+</div>
+<script type="application/json" id="spb-menu-config">
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Creative Pros Start Page",
+  "description": "Embedded menu config for reloading this exported start page in the Start Page Builder.",
+  "filename": "start-page-creative-pro.html",
+  "columns": 4,
+  "colours": "primary",
+  "showTitle": true,
+  "sections": [
+    {
+      "name": "Design Inspiration",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Behance",
+          "url": "https://www.behance.net/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Dribbble",
+          "url": "https://dribbble.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Pinterest",
+          "url": "https://www.pinterest.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Awwwards",
+          "url": "https://www.awwwards.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "SiteInspire",
+          "url": "https://www.siteinspire.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Muzli",
+          "url": "https://muz.li/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Designspiration",
+          "url": "https://www.designspiration.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Creative Bloq",
+          "url": "https://www.creativebloq.com/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Brand & Colour",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Adobe Express",
+          "url": "https://www.adobe.com/express/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Figma",
+          "url": "https://www.figma.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "FigJam",
+          "url": "https://www.figma.com/figjam/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Coolors",
+          "url": "https://coolors.co/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Adobe Color",
+          "url": "https://color.adobe.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Realtime Colors",
+          "url": "https://www.realtimecolors.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Paletton",
+          "url": "https://paletton.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Type & Icons",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Fonts",
+          "url": "https://fonts.google.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Adobe Fonts",
+          "url": "https://fonts.adobe.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Fontpair",
+          "url": "https://www.fontpair.co/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Typewolf",
+          "url": "https://www.typewolf.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Font Awesome",
+          "url": "https://fontawesome.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Noun Project",
+          "url": "https://thenounproject.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Material Symbols",
+          "url": "https://fonts.google.com/icons",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Icons8",
+          "url": "https://icons8.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Stock Assets",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Unsplash",
+          "url": "https://unsplash.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Pexels",
+          "url": "https://www.pexels.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Pixabay",
+          "url": "https://pixabay.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Wikimedia Commons",
+          "url": "https://commons.wikimedia.org/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Freepik",
+          "url": "https://www.freepik.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Adobe Stock",
+          "url": "https://stock.adobe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Shutterstock",
+          "url": "https://www.shutterstock.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Envato Elements",
+          "url": "https://elements.envato.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Image Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Photopea",
+          "url": "https://www.photopea.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Pixlr",
+          "url": "https://pixlr.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Remove.bg",
+          "url": "https://www.remove.bg/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "TinyPNG",
+          "url": "https://tinypng.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Squoosh",
+          "url": "https://squoosh.app/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "SVGOMG",
+          "url": "https://jakearchibald.github.io/svgomg/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Cleanup.pictures",
+          "url": "https://cleanup.pictures/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "EZGIF",
+          "url": "https://ezgif.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Video & Motion",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Vimeo",
+          "url": "https://vimeo.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Mixkit",
+          "url": "https://mixkit.co/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Storyblocks",
+          "url": "https://www.storyblocks.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Motion Array",
+          "url": "https://motionarray.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Kapwing",
+          "url": "https://www.kapwing.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "DaVinci Resolve",
+          "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "HandBrake",
+          "url": "https://handbrake.fr/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "UX & Web",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Figma Community",
+          "url": "https://www.figma.com/community",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Webflow",
+          "url": "https://webflow.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Framer",
+          "url": "https://www.framer.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WordPress",
+          "url": "https://wordpress.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "WebAIM",
+          "url": "https://webaim.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Bootstrap",
+          "url": "https://getbootstrap.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Tailwind CSS",
+          "url": "https://tailwindcss.com/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Portfolio & Delivery",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Adobe Portfolio",
+          "url": "https://portfolio.adobe.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Behance Portfolio",
+          "url": "https://www.behance.net/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Dribbble Jobs",
+          "url": "https://dribbble.com/jobs",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Carbonmade",
+          "url": "https://carbonmade.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Format",
+          "url": "https://www.format.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "WeTransfer",
+          "url": "https://wetransfer.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Dropbox Transfer",
+          "url": "https://www.dropbox.com/transfer",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Clients & Projects",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Asana",
+          "url": "https://asana.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Miro",
+          "url": "https://miro.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Bonsai",
+          "url": "https://www.hellobonsai.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Calendly",
+          "url": "https://calendly.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "DocuSign",
+          "url": "https://www.docusign.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://stripe.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Learning & Community",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Adobe Learn",
+          "url": "https://www.adobe.com/learn/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Figma Learn",
+          "url": "https://www.figma.com/resource-library/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "LinkedIn Learning",
+          "url": "https://www.linkedin.com/learning/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Skillshare",
+          "url": "https://www.skillshare.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Domestika",
+          "url": "https://www.domestika.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "IxDF",
+          "url": "https://www.interaction-design.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CreativeMornings",
+          "url": "https://creativemornings.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Reddit Design",
+          "url": "https://www.reddit.com/r/design/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    }
+  ]
+}
+</script>
 <script>
-(function attachMenuBehaviour(root=document){
-  const form = root.querySelector(".searchbar-form");
+  (function attachClassicMenuBehaviour(root=document, options = {}){
+  // Search form: submit a normal Google search, or append a Wikipedia site filter.
+  const form = root.querySelector(".spb-searchbar-form, .searchbar-form");
   if(form){
     form.addEventListener("submit", function(){
       const type = form.querySelector('input[name="searchtype"]:checked');
       const q = form.querySelector('input[name="q"]');
       if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
     });
+
+    // Exported pages autofocus the search box. Builder preview disables this.
     const q = form.querySelector('input[name="q"]');
-    if(q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
+    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){
+      try{ q.focus(); }catch(err){}
+    }
   }
-  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
-    h.addEventListener("click", function(ev){
+
+  // Section headers collapse or expand the link buttons beneath them.
+  // New exports use data-spb-section-header and .spb-btn. The old selectors are
+  // retained here so copied/older menu fragments remain understandable.
+  const headerSelector = '[data-spb-section-header="true"], [data-section-header="true"]';
+  const linkSelector = 'a.spb-btn, a.btn';
+  const headerParaSelector = '.spb-hdr-para, .hdr-para';
+  const containsHeader = el => !!(el && (el.matches?.(headerSelector) || el.querySelector?.(headerSelector)));
+  const isLink = el => !!(el && el.matches?.(linkSelector));
+
+  root.querySelectorAll(headerSelector).forEach(function(header){
+    header.addEventListener("click", function(ev){
       ev.preventDefault();
-      let current = h.parentElement.nextElementSibling;
-      let hiding = false;
+
+      let current = (header.closest(headerParaSelector) || header).nextElementSibling;
+      let shouldHide = false;
       while(current){
-        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          shouldHide = !current.hidden && current.style.display !== "none";
+          break;
+        }
         current = current.nextElementSibling;
       }
-      current = h.parentElement.nextElementSibling;
+
+      current = (header.closest(headerParaSelector) || header).nextElementSibling;
       while(current){
-        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader2) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          current.hidden = shouldHide;
+          current.style.display = "";
+        }
         current = current.nextElementSibling;
       }
+      header.setAttribute("aria-expanded", String(!shouldHide));
     });
   });
 })(document);

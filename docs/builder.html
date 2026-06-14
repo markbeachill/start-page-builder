@@ -43,6 +43,13 @@
     .toolbar-more summary::-webkit-details-marker{display:none}
     .toolbar-more[open] .toolbar-more-panel{display:flex}
     .toolbar-more-panel{display:none;position:static;background:#333;border:1px solid #666;border-radius:4px;padding:4px 6px;gap:6px;z-index:200;min-width:0;box-shadow:none;flex-wrap:wrap;margin-left:6px}
+    .paste-list-panel{margin:8px 0;padding:0;border:1px solid #d6dbe4;border-radius:5px;background:#fff}
+    .paste-list-panel summary{cursor:pointer;padding:8px 10px;font-weight:800;color:#1f2937;list-style:none}
+    .paste-list-panel summary::-webkit-details-marker{display:none}
+    .paste-list-body{border-top:1px solid #e5e7eb;padding:10px;display:flex;flex-direction:column;gap:8px}
+    .paste-list-body textarea{width:100%;min-height:150px;resize:vertical;border:1px solid #cbd5e1;border-radius:4px;padding:8px;font:12px/1.45 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#fbfdff;color:#111827}
+    .paste-list-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .paste-list-actions label{display:inline-flex;align-items:center;gap:6px}
     .status{font-size:12px;color:#ddd;margin-left:auto;min-width:240px;text-align:right}
 
     .builder-main{flex:1;min-height:0;display:flex;background:#e9ecef}
@@ -120,7 +127,7 @@
           </optgroup>
           </select>
         </label>
-        <button id="loadTemplateBtn" type="button">Use template</button>
+        <button id="loadTemplateBtn" type="button">Build with selected</button>
       </span>
       <span class="toolbar-group">
         <span class="toolbar-label">Start page</span>
@@ -141,6 +148,7 @@
           </select>
         </label>
         <label class="file-label secondary">Import <input id="importListInput" type="file" accept=".md,.markdown,.csv,.txt,text/plain,text/markdown,text/csv"></label>
+        <button id="showPastePanelBtn" type="button" class="secondary">Paste list from AI</button>
       </span>
       <span class="toolbar-group">
         <label>Export list
@@ -197,7 +205,27 @@
             <textarea id="descriptionInput"></textarea>
           </div>
         </div>
-        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title beside search.</p>
+        <p id="templateDescription" class="subtle-help">Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title.</p>
+
+        <details id="pasteListDetails" class="paste-list-panel">
+          <summary>Paste list from AI</summary>
+          <div class="paste-list-body">
+            <p class="subtle-help">Paste a Markdown, CSV or plain-text link list. If the text includes <strong>START OF LIST</strong> and <strong>END OF LIST</strong>, the builder imports only the marked list and ignores everything else.</p>
+            <textarea id="pasteListText" spellcheck="false" placeholder="Paste from START OF LIST to END OF LIST, or paste the whole AI reply and the builder will look for the marked list block."></textarea>
+            <div class="paste-list-actions">
+              <label for="pasteListType">Format
+                <select id="pasteListType">
+                  <option value="auto">Auto-detect</option>
+                  <option value="markdown">Markdown</option>
+                  <option value="csv">CSV</option>
+                  <option value="text">Plain text</option>
+                </select>
+              </label>
+              <button id="importPastedListBtn" type="button">Build from pasted list</button>
+              <button id="clearPastedListBtn" type="button" class="secondary">Clear pasted text</button>
+            </div>
+          </div>
+        </details>
 
         <div class="editor-actions">
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
@@ -267,6 +295,14 @@ function ensureHtmlFilename(name){
   if(!/\.html?$/i.test(filename)) filename += ".html";
   return filename.replace(/[\\/:*?"<>|]+/g,"-");
 }
+function deriveHtmlFilenameFromFile(name){
+  const base = String(name || "start-page.html").split(/[\\/]/).pop().trim() || "start-page.html";
+  return ensureHtmlFilename(base.replace(/\.(json|md|markdown|csv|txt)$/i, ".html"));
+}
+function isGenericFilename(name){
+  const cleaned = ensureHtmlFilename(name || "start-page.html").toLowerCase();
+  return !cleaned || cleaned === "start-page.html" || cleaned === "personal-start-page.html";
+}
 function defaultProject(){
   return {format:"personal-start-page-creator-v1",title:"Personal Start Page",description:"",filename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,sections:[]};
 }
@@ -288,7 +324,10 @@ function ensureColumnCount(menu, columns){
     menu.columns = keep;
   }
 }
-function colorToClasses(color){ const c = cleanColour(color || "blue"); return {btn:c + "-btn", hdr:c + "-hdr"}; }
+function colorToClasses(color){
+  const c = cleanColour(color || "blue");
+  return {btn:`spb-${c}-btn`, hdr:`spb-${c}-hdr`};
+}
 function buildClassicMenuCss(settings){
   const colourStyle = cleanColourStyle(settings.colours || settings.colourStyle || "primary");
   const pal = colourStyle === "pastel" ? pastelPalette : (settings.palette || defaultPalette);
@@ -301,47 +340,49 @@ function buildClassicMenuCss(settings){
   const btnBg = isPastel ? "#f7f5f2" : "#eee";
   const btnHoverBg = isPastel ? "#e9e3dc" : "#aaa";
   return `
-:root{--columns:${cleanColumnCount(settings.columns)};--c-blue:${pal.blue};--c-green:${pal.green};--c-orange:${pal.orange};--c-purple:${pal.purple};--c-red:${pal.red};}
-body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:${bodyBg};color:${bodyColor};}
-.searchbar-wrapper{background:${searchBg};padding:12px 15px;border-bottom:1px solid ${searchBorder};}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
-.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:${bodyColor};white-space:nowrap;}
-.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
-.searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
-.searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:${isPastel ? "#222" : "#fff"};cursor:pointer;font-size:14px;font-weight:700;}
-.searchbar-form button:hover{filter:brightness(.92);}
-.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
-.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
-.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:${bodyColor};line-height:1.5em;position:relative;}
-.section{clear:both;padding:0;margin:0;}
-.group{display:flex;flex-wrap:wrap;gap:0 2%;}
-.col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
-.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
-.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:${btnBg};z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
-.btn:hover{background-color:${btnHoverBg};color:#000;}
-.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:${headerText};position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
-.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
-.hdr-para{margin:0;line-height:160%;}
+:root{--spb-columns:${cleanColumnCount(settings.columns)};--spb-c-blue:${pal.blue};--spb-c-green:${pal.green};--spb-c-orange:${pal.orange};--spb-c-purple:${pal.purple};--spb-c-red:${pal.red};}
+body[data-spb-skin="classic"]{margin:0;padding:0;background:${bodyBg};color:${bodyColor};}
+.spb-start-page{font-family:Arial,Helvetica,sans-serif;background:${bodyBg};color:${bodyColor};}
+.spb-searchbar-wrapper{background:${searchBg};padding:12px 15px;border-bottom:1px solid ${searchBorder};}
+.spb-searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.spb-menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:${bodyColor};white-space:nowrap;}
+.spb-searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
+.spb-searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
+.spb-searchbar-form input[type="text"]:focus{outline:2px solid var(--spb-c-blue);outline-offset:0;border-color:var(--spb-c-blue);}
+.spb-searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--spb-c-blue);background:var(--spb-c-blue);color:${isPastel ? "#222" : "#fff"};cursor:pointer;font-size:14px;font-weight:700;}
+.spb-searchbar-form button:hover{filter:brightness(.92);}
+.spb-searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.spb-page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
+.spb-maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:${bodyColor};line-height:1.5em;position:relative;}
+.spb-section{clear:both;padding:0;margin:0;}
+.spb-group{display:flex;flex-wrap:wrap;gap:0 2%;}
+.spb-col{box-sizing:border-box;flex:0 0 calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));max-width:calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));margin:1% 0;}
+@media only screen and (max-width:767px){.spb-col{flex:1 1 100%;max-width:100%;margin:1% 0;}.spb-searchbar-inner,.spb-maincontent{width:100%;padding-left:0;padding-right:0;}.spb-searchbar-inner{display:block;}.spb-menu-title{white-space:normal;margin-bottom:8px;}.spb-maincontent{padding:1em 12px;width:auto;}}
+.spb-btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:${btnBg};z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
+.spb-btn:hover{background-color:${btnHoverBg};color:#000;}
+.spb-btn[hidden]{display:none;}
+.spb-blue-btn{border-left-color:var(--spb-c-blue);}.spb-green-btn{border-left-color:var(--spb-c-green);}.spb-orange-btn{border-left-color:var(--spb-c-orange);}.spb-purple-btn{border-left-color:var(--spb-c-purple);}.spb-red-btn{border-left-color:var(--spb-c-red);}
+.spb-hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:${headerText};position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;appearance:none;-webkit-appearance:none;}
+.spb-hdr:focus{outline:2px solid #111;outline-offset:2px;}
+.spb-blue-hdr{background-color:var(--spb-c-blue);}.spb-green-hdr{background-color:var(--spb-c-green);}.spb-orange-hdr{background-color:var(--spb-c-orange);}.spb-purple-hdr{background-color:var(--spb-c-purple);}.spb-red-hdr{background-color:var(--spb-c-red);}
+.spb-hdr-para{margin:0;line-height:160%;}
 `;
 }
 function renderClassicMenuBody(menu, settings, options = {}){
   const columnCount = cleanColumnCount(settings.columns);
   ensureColumnCount(menu, columnCount);
-  const colClass = "span_1_of_5";
   let body = "";
   const autofocusAttr = options.autofocusSearch ? " autofocus" : "";
   const showTitle = cleanShowTitle(settings.showTitle);
-  const titleMarkup = showTitle ? `<div class="menu-title">${escapeHtml(settings.pageTitle || "Personal Start Page")}</div>` : "";
-  if(settings.pageHeadline){ body += `<div class="page-headline">${escapeHtml(settings.pageHeadline)}</div>
+  const titleMarkup = showTitle ? `<div class="spb-menu-title">${escapeHtml(settings.pageTitle || "Personal Start Page")}</div>` : "";
+  body += `<div class="spb-start-page" data-spb-menu-root="true">`;
+  if(settings.pageHeadline){ body += `<div class="spb-page-headline">${escapeHtml(settings.pageHeadline)}</div>
 `; }
   body += `
-<div class="searchbar-wrapper">
-  <div class="searchbar-inner">
+<div class="spb-searchbar-wrapper">
+  <div class="spb-searchbar-inner">
     ${titleMarkup}
-    <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+    <form class="spb-searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web"${autofocusAttr}>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
       <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
@@ -349,22 +390,22 @@ function renderClassicMenuBody(menu, settings, options = {}){
     </form>
   </div>
 </div>
-<div class="maincontent">
-  <div class="section group">
+<div class="spb-maincontent">
+  <div class="spb-section spb-group">
 `;
   menu.columns.forEach(col => {
-    body += `<div class="col ${colClass}">`;
+    body += `<div class="spb-col">`;
     (col.items || []).forEach(item => {
       const classes = colorToClasses(item.color || "blue");
       if(item.type === "header"){
         body += `
-    <p class="hdr-para">
-      <a class="hdr ${classes.hdr}" data-section-header="true"><b>${escapeHtml(item.text || "")}</b></a>
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr ${classes.hdr}" data-spb-section-header="true" aria-expanded="true">${escapeHtml(item.text || "")}</button>
     </p>
 `;
       }else{
         body += `
-    <a class="btn ${classes.btn}" href="${escapeHtml(item.url || "#")}" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn ${classes.btn}" href="${escapeHtml(item.url || "#")}" target="_blank" rel="noopener noreferrer">
       ${escapeHtml(item.text || "")}
     </a>
 `;
@@ -374,44 +415,83 @@ function renderClassicMenuBody(menu, settings, options = {}){
   });
   body += `
   </div>
+</div>
 </div>`;
   return body;
 }
 function attachClassicMenuBehaviour(root=document, options = {}){
-  const form = root.querySelector(".searchbar-form");
+  // Search form: submit a normal Google search, or append a Wikipedia site filter.
+  const form = root.querySelector(".spb-searchbar-form, .searchbar-form");
   if(form){
     form.addEventListener("submit", function(){
       const type = form.querySelector('input[name="searchtype"]:checked');
       const q = form.querySelector('input[name="q"]');
       if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
     });
+
+    // Exported pages autofocus the search box. Builder preview disables this.
     const q = form.querySelector('input[name="q"]');
-    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
+    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){
+      try{ q.focus(); }catch(err){}
+    }
   }
-  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
-    h.addEventListener("click", function(ev){
+
+  // Section headers collapse or expand the link buttons beneath them.
+  // New exports use data-spb-section-header and .spb-btn. The old selectors are
+  // retained here so copied/older menu fragments remain understandable.
+  const headerSelector = '[data-spb-section-header="true"], [data-section-header="true"]';
+  const linkSelector = 'a.spb-btn, a.btn';
+  const headerParaSelector = '.spb-hdr-para, .hdr-para';
+  const containsHeader = el => !!(el && (el.matches?.(headerSelector) || el.querySelector?.(headerSelector)));
+  const isLink = el => !!(el && el.matches?.(linkSelector));
+
+  root.querySelectorAll(headerSelector).forEach(function(header){
+    header.addEventListener("click", function(ev){
       ev.preventDefault();
-      let current = h.parentElement.nextElementSibling;
-      let hiding = false;
+
+      let current = (header.closest(headerParaSelector) || header).nextElementSibling;
+      let shouldHide = false;
       while(current){
-        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          shouldHide = !current.hidden && current.style.display !== "none";
+          break;
+        }
         current = current.nextElementSibling;
       }
-      current = h.parentElement.nextElementSibling;
+
+      current = (header.closest(headerParaSelector) || header).nextElementSibling;
       while(current){
-        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader2) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          current.hidden = shouldHide;
+          current.style.display = "";
+        }
         current = current.nextElementSibling;
       }
+      header.setAttribute("aria-expanded", String(!shouldHide));
     });
   });
+}
+function escapeJsonForScript(json){
+  return String(json)
+    .replace(/<\/script/gi, "<\\/script")
+    .replace(/<!--/g, "<\u0021--")
+    .replace(/-->/g, "--\u003e");
+}
+function exportedProjectFromState(state){
+  const exported = internalStateToProject(state);
+  exported.description = "Embedded menu config for reloading this exported start page in the Start Page Builder.";
+  return normaliseFriendlyProject(exported);
+}
+function buildEmbeddedMenuConfigScript(state){
+  const json = JSON.stringify(exportedProjectFromState(state), null, 2);
+  return `<script type="application/json" id="spb-menu-config">\n${escapeJsonForScript(json)}\n<\/script>`;
 }
 function exportClassicStandaloneHtml(state){
   const css = buildClassicMenuCss(state.settings);
   const body = renderClassicMenuBody(JSON.parse(JSON.stringify(state.menu)), state.settings, {autofocusSearch:true});
+  const embeddedConfig = buildEmbeddedMenuConfigScript(state);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -422,8 +502,9 @@ function exportClassicStandaloneHtml(state){
 ${css}
   </style>
 </head>
-<body data-skin="classic" data-columns="${cleanColumnCount(state.settings.columns)}" data-colours="${cleanColourStyle(state.settings.colours)}" data-show-title="${cleanShowTitle(state.settings.showTitle) ? "true" : "false"}">
+<body data-spb-skin="classic" data-spb-columns="${cleanColumnCount(state.settings.columns)}" data-spb-colours="${cleanColourStyle(state.settings.colours)}" data-spb-show-title="${cleanShowTitle(state.settings.showTitle) ? "true" : "false"}">
 ${body}
+${embeddedConfig}
 <script>
   (${attachClassicMenuBehaviour.toString()})(document);
 <\/script>
@@ -568,7 +649,7 @@ function renderSettings(){
   document.getElementById("columnsInput").value = String(cleanColumnCount(project.columns));
   document.getElementById("coloursInput").value = cleanColourStyle(project.colours || "primary");
   document.getElementById("showTitleInput").checked = cleanShowTitle(project.showTitle);
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title beside search.";
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -872,35 +953,83 @@ function importJsonFile(file){
   reader.onload = e => {
     try{
       const parsed = JSON.parse(e.target.result);
-      if(parsed.settings && parsed.menu) project = internalStateToProject(parsed);
-      else if(parsed.sections) project = normaliseFriendlyProject(parsed);
-      else if(Array.isArray(parsed)) project = normaliseFriendlyProject({title:"Imported links", sections:parsed});
+      let imported;
+      if(parsed.settings && parsed.menu) imported = internalStateToProject(parsed);
+      else if(parsed.sections) imported = normaliseFriendlyProject(parsed);
+      else if(Array.isArray(parsed)) imported = normaliseFriendlyProject({title:"Imported links", sections:parsed});
       else throw new Error("Unrecognised JSON format. Use a menu config, an older builder config, or a template JSON with a sections array.");
-      saveToBrowser(); renderAll(); setStatus("Loaded menu config/template.");
+      const hasExplicitFilename = !!(parsed.filename || parsed.settings?.menuFilename);
+      if(!hasExplicitFilename) imported.filename = deriveHtmlFilenameFromFile(file?.name || imported.filename);
+      project = imported;
+      saveToBrowser(); renderAll(); setStatus("Loaded menu config: " + (file?.name || project.filename));
     }catch(err){ alert("Could not load menu config: " + err.message); }
   };
   reader.readAsText(file);
 }
 
 function colourFromClass(el, suffix){
-  const cls = Array.from(el.classList || []).find(c => c.endsWith(suffix));
-  return cls ? cleanColour(cls.slice(0, -suffix.length)) : "blue";
+  const classes = Array.from(el.classList || []);
+  for(const cls of classes){
+    if(cls.endsWith(suffix)){
+      const base = cls.slice(0, -suffix.length).replace(/^spb-/, "");
+      return cleanColour(base);
+    }
+  }
+  return "blue";
 }
 function detectColumnCountFromHtml(doc){
-  const fromBody = cleanColumnCount(doc.body?.getAttribute("data-columns"));
-  if(String(doc.body?.getAttribute("data-columns") || "").trim()) return fromBody;
+  const bodyValue = doc.body?.getAttribute("data-spb-columns") || doc.body?.getAttribute("data-columns") || "";
+  if(String(bodyValue).trim()) return cleanColumnCount(bodyValue);
   const cssText = Array.from(doc.querySelectorAll("style")).map(el => el.textContent || "").join("\n");
-  const cssMatch = cssText.match(/--columns\s*:\s*(\d+)/);
+  const cssMatch = cssText.match(/--spb-columns\s*:\s*(\d+)/) || cssText.match(/--columns\s*:\s*(\d+)/);
   if(cssMatch) return cleanColumnCount(cssMatch[1]);
-  const count = doc.querySelectorAll(".col").length;
+  const count = doc.querySelectorAll(".spb-col, .col").length;
   return cleanColumnCount(count);
+}
+function detectColourStyleFromHtml(doc){
+  const bodyValue = String(doc.body?.getAttribute("data-spb-colours") || doc.body?.getAttribute("data-colours") || doc.body?.getAttribute("data-colors") || "").trim().toLowerCase();
+  if(bodyValue) return cleanColourStyle(bodyValue);
+  const cssText = Array.from(doc.querySelectorAll("style")).map(el => el.textContent || "").join("\n").toLowerCase();
+  if(cssText.includes("#8bbcff") || cssText.includes("#8fd6a3") || cssText.includes("#f3aa8f") || cssText.includes("#c69ad6") || cssText.includes("#e88f96")) return "pastel";
+  return "primary";
+}
+function detectShowTitleFromHtml(doc){
+  const attr = String(doc.body?.getAttribute("data-spb-show-title") || doc.body?.getAttribute("data-show-title") || "").trim().toLowerCase();
+  if(attr === "false" || attr === "0" || attr === "no") return false;
+  if(attr === "true" || attr === "1" || attr === "yes") return true;
+  return true;
+}
+function detectTitleFromHtml(doc){
+  const visibleTitle = (doc.querySelector(".spb-menu-title, .menu-title")?.textContent || "").trim();
+  const docTitle = (doc.title || "").trim();
+  return visibleTitle || docTitle || "Imported Start Page";
+}
+function getEmbeddedProjectFromHtml(doc){
+  const node = doc.querySelector('script#spb-menu-config[type="application/json"], script#spb-menu-config');
+  if(!node) return null;
+  const raw = (node.textContent || "").trim();
+  if(!raw) return null;
+  try{
+    const parsed = JSON.parse(raw);
+    if(parsed && (parsed.sections || parsed.settings || parsed.menu)) return parsed;
+  }catch(err){
+    throw new Error("Embedded menu config could not be read: " + err.message);
+  }
+  return null;
 }
 
 function importHtmlStartPage(file){
   readTextFile(file, html => {
     try{
       const doc = new DOMParser().parseFromString(html, "text/html");
-      const columns = Array.from(doc.querySelectorAll(".col"));
+      const embeddedProject = getEmbeddedProjectFromHtml(doc);
+      if(embeddedProject){
+        project = normaliseFriendlyProject(embeddedProject);
+        project.filename = ensureHtmlFilename(file?.name || project.filename || "start-page.html");
+        saveToBrowser(); renderAll(); setStatus("Loaded existing start page from embedded config: " + (file?.name || project.filename));
+        return;
+      }
+      const columns = Array.from(doc.querySelectorAll(".spb-col, .col"));
       if(!columns.length) throw new Error("No classic start page columns were found.");
       const detectedColumns = detectColumnCountFromHtml(doc);
       const detectedColours = detectColourStyleFromHtml(doc);
@@ -909,21 +1038,21 @@ function importHtmlStartPage(file){
       columns.forEach(col => {
         let current = null;
         Array.from(col.children).forEach(el => {
-          const header = el.matches("p.hdr-para") ? el.querySelector(".hdr") : (el.matches(".hdr") ? el : null);
+          const header = el.matches(".spb-hdr-para, .hdr-para") ? el.querySelector(".spb-hdr, .hdr, [data-spb-section-header=\"true\"], [data-section-header=\"true\"]") : (el.matches(".spb-hdr, .hdr, [data-spb-section-header=\"true\"], [data-section-header=\"true\"]") ? el : null);
           if(header){
             current = {name:(header.textContent || "Section").trim(), colour:colourFromClass(header, "-hdr"), included:true, links:[]};
             sections.push(current);
             return;
           }
-          if(el.matches("a.btn")){
+          if(el.matches("a.spb-btn, a.btn")){
             if(!current){ current = {name:"Links", colour:colourFromClass(el, "-btn"), included:true, links:[]}; sections.push(current); }
             current.links.push({label:(el.textContent || "Link").trim(), url:el.getAttribute("href") || "#", colour:colourFromClass(el, "-btn") || current.colour, included:true});
           }
         });
       });
       if(!sections.length) throw new Error("No sections or links were found in that start page.");
-      project = normaliseFriendlyProject({title:(doc.title || "Imported Start Page").trim(), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), columns:detectedColumns, colours:detectedColours, showTitle:detectedShowTitle, sections});
-      saveToBrowser(); renderAll(); setStatus("Loaded existing start page.");
+      project = normaliseFriendlyProject({title:detectTitleFromHtml(doc), description:"Loaded from an existing start page.", filename:ensureHtmlFilename(file.name || "start-page.html"), columns:detectedColumns, colours:detectedColours, showTitle:detectedShowTitle, sections});
+      saveToBrowser(); renderAll(); setStatus("Loaded existing start page: " + (file?.name || project.filename));
     }catch(err){ alert("Could not load existing start page: " + err.message); }
   });
 }
@@ -932,6 +1061,77 @@ function readTextFile(file, callback){
   const reader = new FileReader();
   reader.onload = e => callback(String(e.target.result || ""));
   reader.readAsText(file);
+}
+function countProjectLinks(obj){
+  return (obj.sections || []).reduce((total, section) => total + (section.links || []).length, 0);
+}
+function extractMarkedListBlock(text){
+  const source = String(text || "");
+  const startRe = /START\s+OF\s+LIST/ig;
+  const endRe = /END\s+OF\s+(?:LIST|:IST)/ig;
+  const starts = Array.from(source.matchAll(startRe));
+  const ends = Array.from(source.matchAll(endRe));
+  if(!starts.length && !ends.length) return {text:source, usedMarkers:false, note:""};
+
+  // Prefer the last complete START/END block, because it is usually the final version from the AI conversation.
+  for(let i=starts.length-1; i>=0; i--){
+    const start = starts[i];
+    const end = ends.find(e => e.index > start.index + start[0].length);
+    if(end){
+      return {
+        text:source.slice(start.index + start[0].length, end.index).trim(),
+        usedMarkers:true,
+        note:"Imported the marked START OF LIST / END OF LIST block."
+      };
+    }
+  }
+
+  // Partial marker support: be forgiving when the user copies only one marker.
+  if(starts.length){
+    const start = starts[starts.length-1];
+    return {
+      text:source.slice(start.index + start[0].length).trim(),
+      usedMarkers:true,
+      note:"Imported text after START OF LIST. END OF LIST was not found."
+    };
+  }
+  const end = ends[ends.length-1];
+  return {
+    text:source.slice(0, end.index).trim(),
+    usedMarkers:true,
+    note:"Imported text before END OF LIST. START OF LIST was not found."
+  };
+}
+function detectListType(text){
+  const sample = String(text || "").trim();
+  if(/^\s*section\s*,\s*label\s*,\s*url/im.test(sample)) return "csv";
+  if(/^[#]{1,2}\s+/m.test(sample) || /^\s*[-*]\s*\[[^\]]+\]\([^)]+\)/m.test(sample)) return "markdown";
+  if(/^\s*\[[^\]]+\]\s*$/m.test(sample) || /\|\s*https?:\/\//i.test(sample)) return "text";
+  return "markdown";
+}
+function parseListByType(text, type){
+  const marked = extractMarkedListBlock(text);
+  const source = marked.text;
+  const chosen = type === "auto" ? detectListType(source) : type;
+  if(chosen === "csv") return {project:parseCsvMenu(source), type:"CSV", markerNote:marked.note};
+  if(chosen === "text") return {project:parsePlainTextMenu(source), type:"plain text", markerNote:marked.note};
+  return {project:parseMarkdownMenu(source), type:"Markdown", markerNote:marked.note};
+}
+function importPastedList(){
+  const input = document.getElementById("pasteListText");
+  const typeInput = document.getElementById("pasteListType");
+  const raw = input ? input.value : "";
+  if(!raw.trim()){ alert("Paste a Markdown, CSV or plain-text link list first."); return; }
+  const extracted = extractMarkedListBlock(raw);
+  if(!extracted.text.trim()){ alert("The marked list block was empty. Paste links between START OF LIST and END OF LIST."); return; }
+  const parsed = parseListByType(extracted.text, typeInput ? typeInput.value : "auto");
+  const links = countProjectLinks(parsed.project);
+  if(!links){
+    alert("No links were found. Paste a Markdown list such as:\n\n## Search\n* [Google](https://www.google.com/)");
+    return;
+  }
+  importProjectObject(parsed.project, "pasted " + parsed.type + " list");
+  setStatus((extracted.note ? extracted.note + " " : "") + "Pasted list imported. You can now edit and save your start page.");
 }
 function parseMarkdownMenu(text){
   const lines = text.split(/\r?\n/);
@@ -983,16 +1183,41 @@ function parseCsvMenu(text){
 function parsePlainTextMenu(text){
   const out={format:"personal-start-page-creator-v1",title:"Imported Text Menu",description:"Imported from plain text.",filename:"start-page.html",columns:DEFAULT_COLUMNS,colours:"primary",showTitle:true,sections:[]};
   let current=null;
+  const ensureCurrent = () => {
+    if(!current){ current={name:"Imported Links",colour:"blue",included:true,links:[]}; out.sections.push(current); }
+    return current;
+  };
   for(const raw of text.split(/\r?\n/)){
     const line=raw.trim(); if(!line) continue;
     const sec=line.match(/^\[([^\]]+)\]$/);
     if(sec){ current={name:sec[1].trim(), colour:"blue", included:true, links:[]}; out.sections.push(current); continue; }
     const parts=line.split("|");
-    if(parts.length>=2){ if(!current){current={name:"Links",colour:"blue",included:true,links:[]}; out.sections.push(current);} current.links.push({label:parts[0].trim(), url:parts.slice(1).join("|").trim(), colour:current.colour, included:true}); }
+    if(parts.length>=2){
+      const section = ensureCurrent();
+      section.links.push({label:parts[0].trim() || "Link", url:parts.slice(1).join("|").trim(), colour:section.colour, included:true});
+      continue;
+    }
+    const mdLike = line.match(/^[-*]?\s*([^|<>]+?)\s+(https?:\/\/\S+)$/i);
+    const bareUrl = line.match(/^(https?:\/\/\S+)$/i);
+    if(mdLike || bareUrl){
+      const section = ensureCurrent();
+      const url = bareUrl ? bareUrl[1] : mdLike[2];
+      let label = bareUrl ? url.replace(/^https?:\/\//i, "").replace(/\/$/, "") : mdLike[1].replace(/^[-*]\s*/, "").trim();
+      section.links.push({label:label || "Link", url, colour:section.colour, included:true});
+    }
   }
   return normaliseFriendlyProject(out);
 }
-function importProjectObject(obj, label){ project = normaliseFriendlyProject(obj); saveToBrowser(); renderAll(); setStatus("Imported " + label + "."); }
+function importProjectObject(obj, label, sourceFileName){
+  const imported = normaliseFriendlyProject(obj);
+  if(sourceFileName && isGenericFilename(project.filename) && isGenericFilename(imported.filename)){
+    imported.filename = deriveHtmlFilenameFromFile(sourceFileName);
+  }else if(sourceFileName && !isGenericFilename(project.filename) && isGenericFilename(imported.filename)){
+    imported.filename = ensureHtmlFilename(project.filename);
+  }
+  project = imported;
+  saveToBrowser(); renderAll(); setStatus("Imported " + label + (sourceFileName ? ": " + sourceFileName : "") + ".");
+}
 function exportMarkdown(){
   const lines=["# "+(project.title||"My Start Page"), ""];
   project.sections.filter(s=>s.included!==false).forEach(sec=>{ lines.push("## "+(sec.name||"Links")); (sec.links||[]).filter(l=>l.included!==false).forEach(l=>lines.push(`- [${l.label||"Link"}](${l.url||"#"})`)); lines.push(""); });
@@ -1025,7 +1250,7 @@ function initialiseEvents(){
   document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); setStatus("No sections are currently used. Tick Use beside sections to add them back."); scheduleRender(); });
   const templateFromUrl = getTemplateFromUrl();
   if(templateFiles[templateFromUrl]) document.getElementById("templateSelect").value = templateFromUrl;
-  document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Use template to replace the current menu."));
+  document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Build with selected to replace the current menu."));
   document.getElementById("loadTemplateBtn").addEventListener("click", () => {
     if(confirm("Use the selected template? This replaces the current menu in this browser.")) loadTemplate(true);
   });
@@ -1045,11 +1270,21 @@ function initialiseEvents(){
     const file=event.target.files[0];
     const type=document.getElementById("importListType").value;
     if(file) readTextFile(file, text => {
-      if(type === "csv") importProjectObject(parseCsvMenu(text), "CSV list");
-      else if(type === "text") importProjectObject(parsePlainTextMenu(text), "plain text list");
-      else importProjectObject(parseMarkdownMenu(text), "Markdown list");
+      const parsed = parseListByType(text, type);
+      importProjectObject(parsed.project, parsed.type + " list", file.name);
     });
     event.target.value="";
+  });
+  document.getElementById("showPastePanelBtn").addEventListener("click", () => {
+    const panel = document.getElementById("pasteListDetails");
+    const box = document.getElementById("pasteListText");
+    if(panel) panel.open = true;
+    if(box){ box.scrollIntoView({block:"center", behavior:"smooth"}); box.focus(); }
+  });
+  document.getElementById("importPastedListBtn").addEventListener("click", importPastedList);
+  document.getElementById("clearPastedListBtn").addEventListener("click", () => {
+    const box = document.getElementById("pasteListText");
+    if(box){ box.value = ""; box.focus(); }
   });
   document.getElementById("exportListBtn").addEventListener("click", () => {
     const type=document.getElementById("exportListType").value;

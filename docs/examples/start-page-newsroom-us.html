@@ -5,38 +5,42 @@
   <title>Newsroom Start Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-:root{--columns:5;--c-blue:#4d90fe;--c-green:#35aa47;--c-orange:#d84a38;--c-purple:#852b99;--c-red:#bd121d;}
-body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#ffffff;color:#333333;}
-.searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
-.searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
-.menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
-.searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
-.searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
-.searchbar-form input[type="text"]:focus{outline:2px solid var(--c-blue);outline-offset:0;border-color:var(--c-blue);}
-.searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--c-blue);background:var(--c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
-.searchbar-form button:hover{filter:brightness(.92);}
-.searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
-.page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
-.maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
-.section{clear:both;padding:0;margin:0;}
-.group{display:flex;flex-wrap:wrap;gap:0 2%;}
-.col{box-sizing:border-box;flex:0 0 calc((100% - (var(--columns) - 1)*2%)/var(--columns));max-width:calc((100% - (var(--columns) - 1)*2%)/var(--columns));margin:1% 0;}
-.span_1_of_5,.span_2_of_5,.span_3_of_5,.span_4_of_5,.span_5_of_5{}
-@media only screen and (max-width:767px){.col{flex:1 1 100%;max-width:100%;margin:1% 0;}.searchbar-inner,.maincontent{width:100%;padding-left:0;padding-right:0;}.searchbar-inner{display:block;}.menu-title{white-space:normal;margin-bottom:8px;}.maincontent{padding:1em 12px;width:auto;}}
-.btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
-.btn:hover{background-color:#aaa;color:#000;}
-.blue-btn{border-left-color:var(--c-blue);}.green-btn{border-left-color:var(--c-green);}.orange-btn{border-left-color:var(--c-orange);}.purple-btn{border-left-color:var(--c-purple);}.red-btn{border-left-color:var(--c-red);}
-.hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;}
-.blue-hdr{background-color:var(--c-blue);}.green-hdr{background-color:var(--c-green);}.orange-hdr{background-color:var(--c-orange);}.purple-hdr{background-color:var(--c-purple);}.red-hdr{background-color:var(--c-red);}
-.hdr-para{margin:0;line-height:160%;}
+
+:root{--spb-columns:5;--spb-c-blue:#4d90fe;--spb-c-green:#35aa47;--spb-c-orange:#d84a38;--spb-c-purple:#852b99;--spb-c-red:#bd121d;}
+body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#333333;}
+.spb-start-page{font-family:Arial,Helvetica,sans-serif;background:#ffffff;color:#333333;}
+.spb-searchbar-wrapper{background:#f1f1f1;padding:12px 15px;border-bottom:1px solid #ddd;}
+.spb-searchbar-inner{width:84%;max-width:96em;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;}
+.spb-menu-title{font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:20px;line-height:1.2;font-weight:700;color:#333333;white-space:nowrap;}
+.spb-searchbar-form{flex:1 1 520px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px;min-width:260px;}
+.spb-searchbar-form input[type="text"]{flex:1 1 320px;padding:8px 10px;border:1px solid #ccc;border-radius:2px;font-size:15px;min-width:0;}
+.spb-searchbar-form input[type="text"]:focus{outline:2px solid var(--spb-c-blue);outline-offset:0;border-color:var(--spb-c-blue);}
+.spb-searchbar-form button{padding:8px 16px;border-radius:2px;border:1px solid var(--spb-c-blue);background:var(--spb-c-blue);color:#fff;cursor:pointer;font-size:14px;font-weight:700;}
+.spb-searchbar-form button:hover{filter:brightness(.92);}
+.spb-searchbar-form label{display:inline-flex;align-items:center;gap:4px;font-size:13px;}
+.spb-page-headline{padding:12px 15px 0 15px;font-size:20px;font-weight:bold;text-align:center;}
+.spb-maincontent{clear:both;width:84%;font-size:.8125em;max-width:96em;margin:0 auto;padding:1em 0;color:#333333;line-height:1.5em;position:relative;}
+.spb-section{clear:both;padding:0;margin:0;}
+.spb-group{display:flex;flex-wrap:wrap;gap:0 2%;}
+.spb-col{box-sizing:border-box;flex:0 0 calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));max-width:calc((100% - (var(--spb-columns) - 1)*2%)/var(--spb-columns));margin:1% 0;}
+@media only screen and (max-width:767px){.spb-col{flex:1 1 100%;max-width:100%;margin:1% 0;}.spb-searchbar-inner,.spb-maincontent{width:100%;padding-left:0;padding-right:0;}.spb-searchbar-inner{display:block;}.spb-menu-title{white-space:normal;margin-bottom:8px;}.spb-maincontent{padding:1em 12px;width:auto;}}
+.spb-btn{box-sizing:border-box;text-align:left;display:block;width:100%;color:#333;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border-style:none none none solid;border-width:0 0 0 3px;background:#eee;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;line-height:18px;text-shadow:#fff 0 1px 0;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:600;}
+.spb-btn:hover{background-color:#aaa;color:#000;}
+.spb-btn[hidden]{display:none;}
+.spb-blue-btn{border-left-color:var(--spb-c-blue);}.spb-green-btn{border-left-color:var(--spb-c-green);}.spb-orange-btn{border-left-color:var(--spb-c-orange);}.spb-purple-btn{border-left-color:var(--spb-c-purple);}.spb-red-btn{border-left-color:var(--spb-c-red);}
+.spb-hdr{box-sizing:border-box;text-align:left;display:block;width:100%;color:#fff;position:relative;overflow:hidden;margin:8px 0 0;padding:10px 14px;cursor:pointer;outline:0;border:0;z-index:1;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-size:14px;line-height:14px;text-decoration:none;white-space:nowrap;text-overflow:ellipsis;font-weight:700;appearance:none;-webkit-appearance:none;}
+.spb-hdr:focus{outline:2px solid #111;outline-offset:2px;}
+.spb-blue-hdr{background-color:var(--spb-c-blue);}.spb-green-hdr{background-color:var(--spb-c-green);}.spb-orange-hdr{background-color:var(--spb-c-orange);}.spb-purple-hdr{background-color:var(--spb-c-purple);}.spb-red-hdr{background-color:var(--spb-c-red);}
+.spb-hdr-para{margin:0;line-height:160%;}
+
   </style>
 </head>
-<body data-skin="classic" data-columns="5" data-colours="primary" data-show-title="true">
-
-<div class="searchbar-wrapper">
-  <div class="searchbar-inner">
-    <div class="menu-title">Newsroom Start Page</div>
-    <form class="searchbar-form" method="get" action="https://www.google.co.uk/search">
+<body data-spb-skin="classic" data-spb-columns="5" data-spb-colours="primary" data-spb-show-title="true">
+<div class="spb-start-page" data-spb-menu-root="true">
+<div class="spb-searchbar-wrapper">
+  <div class="spb-searchbar-inner">
+    <div class="spb-menu-title">Newsroom Start Page</div>
+    <form class="spb-searchbar-form" method="get" action="https://www.google.co.uk/search">
       <input type="text" name="q" placeholder="Search…" aria-label="Search the web" autofocus>
       <label><input type="radio" name="searchtype" value="web" checked> Web</label>
       <label><input type="radio" name="searchtype" value="wiki"> Wikipedia</label>
@@ -44,141 +48,987 @@ body{margin:0;padding:0;font-family:Arial, Helvetica, sans-serif;background:#fff
     </form>
   </div>
 </div>
-<div class="maincontent">
-  <div class="section group">
-<div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr green-hdr" data-section-header="true"><b>News Wires</b></a>
+<div class="spb-maincontent">
+  <div class="spb-section spb-group">
+<div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-red-hdr" data-spb-section-header="true" aria-expanded="true">News Wires &amp; Front Pages</button>
     </p>
 
-    <a class="btn green-btn" href="https://www.reuters.com/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-red-btn" href="https://apnews.com/" target="_blank" rel="noopener noreferrer">
+      Associated Press
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.reuters.com/" target="_blank" rel="noopener noreferrer">
       Reuters
     </a>
 
-    <a class="btn green-btn" href="https://apnews.com/" target="_blank" rel="noopener noreferrer">
-      AP News
+    <a class="spb-btn spb-red-btn" href="https://www.npr.org/" target="_blank" rel="noopener noreferrer">
+      NPR
     </a>
 
-    <p class="hdr-para">
-      <a class="hdr orange-hdr" data-section-header="true"><b>Images</b></a>
+    <a class="spb-btn spb-red-btn" href="https://www.pbs.org/newshour/" target="_blank" rel="noopener noreferrer">
+      PBS NewsHour
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.cnn.com/" target="_blank" rel="noopener noreferrer">
+      CNN
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.nytimes.com/" target="_blank" rel="noopener noreferrer">
+      NYTimes
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.washingtonpost.com/" target="_blank" rel="noopener noreferrer">
+      Washington Post
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://news.google.com/" target="_blank" rel="noopener noreferrer">
+      Google News
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-blue-hdr" data-spb-section-header="true" aria-expanded="true">Data &amp; Visuals</button>
     </p>
 
-    <a class="btn orange-btn" href="https://www.gettyimages.com/" target="_blank" rel="noopener noreferrer">
-      Getty Images
+    <a class="spb-btn spb-blue-btn" href="https://sheets.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Sheets
     </a>
 
-    <a class="btn orange-btn" href="https://tineye.com/" target="_blank" rel="noopener noreferrer">
-      TinEye
-    </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr orange-hdr" data-section-header="true"><b>Search</b></a>
-    </p>
-
-    <a class="btn orange-btn" href="https://www.google.com/advanced_search" target="_blank" rel="noopener noreferrer">
-      Google Adv
+    <a class="spb-btn spb-blue-btn" href="https://openrefine.org/" target="_blank" rel="noopener noreferrer">
+      OpenRefine
     </a>
 
-    <p class="hdr-para">
-      <a class="hdr green-hdr" data-section-header="true"><b>Social Monitoring</b></a>
-    </p>
-
-    <a class="btn green-btn" href="https://pro.twitter.com/" target="_blank" rel="noopener noreferrer">
-      X Pro
-    </a>
-
-    <a class="btn green-btn" href="https://www.hootsuite.com/" target="_blank" rel="noopener noreferrer">
-      Hootsuite
-    </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr purple-hdr" data-section-header="true"><b>Fact Checking</b></a>
-    </p>
-
-    <a class="btn purple-btn" href="https://www.bellingcat.com/" target="_blank" rel="noopener noreferrer">
-      Bellingcat
-    </a>
-
-    <a class="btn purple-btn" href="https://www.politifact.com/" target="_blank" rel="noopener noreferrer">
-      PolitiFact
-    </a>
-
-    <p class="hdr-para">
-      <a class="hdr purple-hdr" data-section-header="true"><b>Writing &amp; Publishing</b></a>
-    </p>
-
-    <a class="btn purple-btn" href="https://wordpress.com/" target="_blank" rel="noopener noreferrer">
-      WordPress
-    </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr red-hdr" data-section-header="true"><b>Companies</b></a>
-    </p>
-
-    <a class="btn red-btn" href="https://www.sec.gov/edgar/searchedgar/companysearch" target="_blank" rel="noopener noreferrer">
-      SEC EDGAR
-    </a>
-
-    <a class="btn red-btn" href="https://opencorporates.com/" target="_blank" rel="noopener noreferrer">
-      OpenCorporates
-    </a>
-
-    <p class="hdr-para">
-      <a class="hdr red-hdr" data-section-header="true"><b>Data Tools</b></a>
-    </p>
-
-    <a class="btn red-btn" href="https://www.datawrapper.de/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-blue-btn" href="https://www.datawrapper.de/" target="_blank" rel="noopener noreferrer">
       Datawrapper
     </a>
 
-    <a class="btn red-btn" href="https://flourish.studio/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-blue-btn" href="https://flourish.studio/" target="_blank" rel="noopener noreferrer">
       Flourish
     </a>
-</div><div class="col span_1_of_5">
-    <p class="hdr-para">
-      <a class="hdr blue-hdr" data-section-header="true"><b>Public Records</b></a>
+
+    <a class="spb-btn spb-blue-btn" href="https://observablehq.com/" target="_blank" rel="noopener noreferrer">
+      Observable
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://public.tableau.com/" target="_blank" rel="noopener noreferrer">
+      Tableau Public
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.canva.com/" target="_blank" rel="noopener noreferrer">
+      Canva
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.mapbox.com/" target="_blank" rel="noopener noreferrer">
+      Mapbox
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-blue-hdr" data-spb-section-header="true" aria-expanded="true">Search &amp; Research</button>
     </p>
 
-    <a class="btn blue-btn" href="https://www.foia.gov/" target="_blank" rel="noopener noreferrer">
+    <a class="spb-btn spb-blue-btn" href="https://www.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Search
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://duckduckgo.com/" target="_blank" rel="noopener noreferrer">
+      DuckDuckGo
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Scholar
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.wikipedia.org/" target="_blank" rel="noopener noreferrer">
+      Wikipedia
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://www.wikidata.org/" target="_blank" rel="noopener noreferrer">
+      Wikidata
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://archive.org/" target="_blank" rel="noopener noreferrer">
+      Internet Archive
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://web.archive.org/" target="_blank" rel="noopener noreferrer">
+      Wayback Machine
+    </a>
+
+    <a class="spb-btn spb-blue-btn" href="https://chatgpt.com/" target="_blank" rel="noopener noreferrer">
+      ChatGPT
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-red-hdr" data-spb-section-header="true" aria-expanded="true">Press &amp; PR Sources</button>
+    </p>
+
+    <a class="spb-btn spb-red-btn" href="https://www.businesswire.com/portal/site/home/news/" target="_blank" rel="noopener noreferrer">
+      Business Wire
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.prnewswire.com/news-releases/" target="_blank" rel="noopener noreferrer">
+      PR Newswire
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.prlog.org/" target="_blank" rel="noopener noreferrer">
+      PRLog
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.openpr.com/" target="_blank" rel="noopener noreferrer">
+      OpenPR
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://muckrack.com/daily" target="_blank" rel="noopener noreferrer">
+      Muck Rack Daily
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://newsroom.ap.org/" target="_blank" rel="noopener noreferrer">
+      AP Newsroom
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.prdaily.com/" target="_blank" rel="noopener noreferrer">
+      PR Daily
+    </a>
+
+    <a class="spb-btn spb-red-btn" href="https://www.newswire.com/newsroom" target="_blank" rel="noopener noreferrer">
+      Newswire
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-green-hdr" data-spb-section-header="true" aria-expanded="true">US Public Records</button>
+    </p>
+
+    <a class="spb-btn spb-green-btn" href="https://www.sec.gov/edgar/search/" target="_blank" rel="noopener noreferrer">
+      SEC EDGAR
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.fec.gov/data/" target="_blank" rel="noopener noreferrer">
+      FEC
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.congress.gov/" target="_blank" rel="noopener noreferrer">
+      Congress.gov
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.courtlistener.com/" target="_blank" rel="noopener noreferrer">
+      CourtListener
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://pacer.uscourts.gov/" target="_blank" rel="noopener noreferrer">
+      PACER
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://data.census.gov/" target="_blank" rel="noopener noreferrer">
+      Census Data
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://data.gov/" target="_blank" rel="noopener noreferrer">
+      Data.gov
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.usaspending.gov/" target="_blank" rel="noopener noreferrer">
+      USAspending
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-green-hdr" data-spb-section-header="true" aria-expanded="true">FOIA &amp; Archives</button>
+    </p>
+
+    <a class="spb-btn spb-green-btn" href="https://www.foia.gov/" target="_blank" rel="noopener noreferrer">
       FOIA.gov
     </a>
 
-    <a class="btn blue-btn" href="https://pacer.uscourts.gov/" target="_blank" rel="noopener noreferrer">
-      PACER
+    <a class="spb-btn spb-green-btn" href="https://www.archives.gov/" target="_blank" rel="noopener noreferrer">
+      National Archives
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.loc.gov/" target="_blank" rel="noopener noreferrer">
+      Library of Congress
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://chroniclingamerica.loc.gov/" target="_blank" rel="noopener noreferrer">
+      Chronicling America
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://www.govinfo.gov/" target="_blank" rel="noopener noreferrer">
+      GovInfo
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://projects.propublica.org/nonprofits/" target="_blank" rel="noopener noreferrer">
+      ProPublica Nonprofits
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://opencorporates.com/" target="_blank" rel="noopener noreferrer">
+      OpenCorporates
+    </a>
+
+    <a class="spb-btn spb-green-btn" href="https://archive.ph/" target="_blank" rel="noopener noreferrer">
+      Archive Today
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-orange-hdr" data-spb-section-header="true" aria-expanded="true">Verification &amp; OSINT</button>
+    </p>
+
+    <a class="spb-btn spb-orange-btn" href="https://bellingcat.gitbook.io/toolkit" target="_blank" rel="noopener noreferrer">
+      Bellingcat Toolkit
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://osintframework.com/" target="_blank" rel="noopener noreferrer">
+      OSINT Framework
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.invid-project.eu/tools-and-services/invid-verification-plugin/" target="_blank" rel="noopener noreferrer">
+      InVID Verification
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://tineye.com/" target="_blank" rel="noopener noreferrer">
+      TinEye
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://lens.google/" target="_blank" rel="noopener noreferrer">
+      Google Lens
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://exiftool.org/" target="_blank" rel="noopener noreferrer">
+      ExifTool
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.suncalc.org/" target="_blank" rel="noopener noreferrer">
+      SunCalc
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.mapchecking.com/" target="_blank" rel="noopener noreferrer">
+      MapChecking
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-orange-hdr" data-spb-section-header="true" aria-expanded="true">Law, Ethics &amp; Safety</button>
+    </p>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.spj.org/ethicscode.asp" target="_blank" rel="noopener noreferrer">
+      SPJ Code
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.rcfp.org/" target="_blank" rel="noopener noreferrer">
+      Reporters Committee
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://rsf.org/en" target="_blank" rel="noopener noreferrer">
+      Reporters Without Borders
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://cpj.org/" target="_blank" rel="noopener noreferrer">
+      CPJ
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.supremecourt.gov/" target="_blank" rel="noopener noreferrer">
+      Supreme Court
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.law.cornell.edu/" target="_blank" rel="noopener noreferrer">
+      Cornell LII
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.politifact.com/" target="_blank" rel="noopener noreferrer">
+      PolitiFact
+    </a>
+
+    <a class="spb-btn spb-orange-btn" href="https://www.snopes.com/" target="_blank" rel="noopener noreferrer">
+      Snopes
+    </a>
+</div><div class="spb-col">
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-purple-hdr" data-spb-section-header="true" aria-expanded="true">Social &amp; Monitoring</button>
+    </p>
+
+    <a class="spb-btn spb-purple-btn" href="https://x.com/" target="_blank" rel="noopener noreferrer">
+      X
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+      LinkedIn
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+      Facebook
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">
+      TikTok
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.reddit.com/" target="_blank" rel="noopener noreferrer">
+      Reddit
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.google.com/alerts" target="_blank" rel="noopener noreferrer">
+      Google Alerts
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.talkwalker.com/alerts" target="_blank" rel="noopener noreferrer">
+      Talkwalker Alerts
+    </a>
+
+    <p class="spb-hdr-para">
+      <button type="button" class="spb-hdr spb-purple-hdr" data-spb-section-header="true" aria-expanded="true">Publishing &amp; Workflow</button>
+    </p>
+
+    <a class="spb-btn spb-purple-btn" href="https://docs.google.com/" target="_blank" rel="noopener noreferrer">
+      Google Docs
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.notion.so/" target="_blank" rel="noopener noreferrer">
+      Notion
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://trello.com/" target="_blank" rel="noopener noreferrer">
+      Trello
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://slack.com/" target="_blank" rel="noopener noreferrer">
+      Slack
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://zoom.us/" target="_blank" rel="noopener noreferrer">
+      Zoom
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.dropbox.com/" target="_blank" rel="noopener noreferrer">
+      Dropbox
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://wetransfer.com/" target="_blank" rel="noopener noreferrer">
+      WeTransfer
+    </a>
+
+    <a class="spb-btn spb-purple-btn" href="https://www.grammarly.com/" target="_blank" rel="noopener noreferrer">
+      Grammarly
     </a>
 </div>
   </div>
 </div>
+</div>
+<script type="application/json" id="spb-menu-config">
+{
+  "format": "personal-start-page-creator-v1",
+  "title": "Newsroom Start Page",
+  "description": "Embedded menu config for reloading this exported start page in the Start Page Builder.",
+  "filename": "start-page-newsroom-us.html",
+  "columns": 5,
+  "colours": "primary",
+  "showTitle": true,
+  "sections": [
+    {
+      "name": "News Wires & Front Pages",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Associated Press",
+          "url": "https://apnews.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CNN",
+          "url": "https://www.cnn.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NYTimes",
+          "url": "https://www.nytimes.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Washington Post",
+          "url": "https://www.washingtonpost.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Data & Visuals",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Sheets",
+          "url": "https://sheets.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenRefine",
+          "url": "https://openrefine.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Datawrapper",
+          "url": "https://www.datawrapper.de/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Flourish",
+          "url": "https://flourish.studio/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Observable",
+          "url": "https://observablehq.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Tableau Public",
+          "url": "https://public.tableau.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Canva",
+          "url": "https://www.canva.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Mapbox",
+          "url": "https://www.mapbox.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Search & Research",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Search",
+          "url": "https://www.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DuckDuckGo",
+          "url": "https://duckduckgo.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikidata",
+          "url": "https://www.wikidata.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wayback Machine",
+          "url": "https://web.archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Press & PR Sources",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Business Wire",
+          "url": "https://www.businesswire.com/portal/site/home/news/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PRLog",
+          "url": "https://www.prlog.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "OpenPR",
+          "url": "https://www.openpr.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Muck Rack Daily",
+          "url": "https://muckrack.com/daily",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "AP Newsroom",
+          "url": "https://newsroom.ap.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PR Daily",
+          "url": "https://www.prdaily.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Newswire",
+          "url": "https://www.newswire.com/newsroom",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "US Public Records",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/search/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FEC",
+          "url": "https://www.fec.gov/data/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Congress.gov",
+          "url": "https://www.congress.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CourtListener",
+          "url": "https://www.courtlistener.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PACER",
+          "url": "https://pacer.uscourts.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Census Data",
+          "url": "https://data.census.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Data.gov",
+          "url": "https://data.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "USAspending",
+          "url": "https://www.usaspending.gov/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "FOIA & Archives",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "FOIA.gov",
+          "url": "https://www.foia.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Archives",
+          "url": "https://www.archives.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Library of Congress",
+          "url": "https://www.loc.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Chronicling America",
+          "url": "https://chroniclingamerica.loc.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "GovInfo",
+          "url": "https://www.govinfo.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ProPublica Nonprofits",
+          "url": "https://projects.propublica.org/nonprofits/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "OpenCorporates",
+          "url": "https://opencorporates.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Archive Today",
+          "url": "https://archive.ph/",
+          "colour": "green",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Verification & OSINT",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Bellingcat Toolkit",
+          "url": "https://bellingcat.gitbook.io/toolkit",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "OSINT Framework",
+          "url": "https://osintframework.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "InVID Verification",
+          "url": "https://www.invid-project.eu/tools-and-services/invid-verification-plugin/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "TinEye",
+          "url": "https://tineye.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Google Lens",
+          "url": "https://lens.google/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ExifTool",
+          "url": "https://exiftool.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "SunCalc",
+          "url": "https://www.suncalc.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "MapChecking",
+          "url": "https://www.mapchecking.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Law, Ethics & Safety",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "SPJ Code",
+          "url": "https://www.spj.org/ethicscode.asp",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reporters Committee",
+          "url": "https://www.rcfp.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reporters Without Borders",
+          "url": "https://rsf.org/en",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "CPJ",
+          "url": "https://cpj.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Supreme Court",
+          "url": "https://www.supremecourt.gov/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Cornell LII",
+          "url": "https://www.law.cornell.edu/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Snopes",
+          "url": "https://www.snopes.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Social & Monitoring",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "LinkedIn",
+          "url": "https://www.linkedin.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Facebook",
+          "url": "https://www.facebook.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TikTok",
+          "url": "https://www.tiktok.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Reddit",
+          "url": "https://www.reddit.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Talkwalker Alerts",
+          "url": "https://www.talkwalker.com/alerts",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Publishing & Workflow",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Slack",
+          "url": "https://slack.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Zoom",
+          "url": "https://zoom.us/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "WeTransfer",
+          "url": "https://wetransfer.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    }
+  ]
+}
+</script>
 <script>
-(function attachMenuBehaviour(root=document){
-  const form = root.querySelector(".searchbar-form");
+  (function attachClassicMenuBehaviour(root=document, options = {}){
+  // Search form: submit a normal Google search, or append a Wikipedia site filter.
+  const form = root.querySelector(".spb-searchbar-form, .searchbar-form");
   if(form){
     form.addEventListener("submit", function(){
       const type = form.querySelector('input[name="searchtype"]:checked');
       const q = form.querySelector('input[name="q"]');
       if(type && type.value === "wiki" && q){ q.value = q.value + " site:wikipedia.org"; }
     });
+
+    // Exported pages autofocus the search box. Builder preview disables this.
     const q = form.querySelector('input[name="q"]');
-    if(q && q.hasAttribute("autofocus")){ try{ q.focus(); }catch(err){} }
+    if(options.focusSearch !== false && q && q.hasAttribute("autofocus")){
+      try{ q.focus(); }catch(err){}
+    }
   }
-  root.querySelectorAll('[data-section-header="true"]').forEach(function(h){
-    h.addEventListener("click", function(ev){
+
+  // Section headers collapse or expand the link buttons beneath them.
+  // New exports use data-spb-section-header and .spb-btn. The old selectors are
+  // retained here so copied/older menu fragments remain understandable.
+  const headerSelector = '[data-spb-section-header="true"], [data-section-header="true"]';
+  const linkSelector = 'a.spb-btn, a.btn';
+  const headerParaSelector = '.spb-hdr-para, .hdr-para';
+  const containsHeader = el => !!(el && (el.matches?.(headerSelector) || el.querySelector?.(headerSelector)));
+  const isLink = el => !!(el && el.matches?.(linkSelector));
+
+  root.querySelectorAll(headerSelector).forEach(function(header){
+    header.addEventListener("click", function(ev){
       ev.preventDefault();
-      let current = h.parentElement.nextElementSibling;
-      let hiding = false;
+
+      let current = (header.closest(headerParaSelector) || header).nextElementSibling;
+      let shouldHide = false;
       while(current){
-        const nextHeader = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ hiding = current.style.display !== "none"; break; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          shouldHide = !current.hidden && current.style.display !== "none";
+          break;
+        }
         current = current.nextElementSibling;
       }
-      current = h.parentElement.nextElementSibling;
+
+      current = (header.closest(headerParaSelector) || header).nextElementSibling;
       while(current){
-        const nextHeader2 = current.querySelector && current.querySelector('[data-section-header="true"]');
-        if(nextHeader2) break;
-        if(current.tagName === "A" && current.classList.contains("btn")){ current.style.display = hiding ? "none" : ""; }
+        if(containsHeader(current)) break;
+        if(isLink(current)){
+          current.hidden = shouldHide;
+          current.style.display = "";
+        }
         current = current.nextElementSibling;
       }
+      header.setAttribute("aria-expanded", String(!shouldHide));
     });
   });
 })(document);

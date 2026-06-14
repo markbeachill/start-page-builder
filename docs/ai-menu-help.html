@@ -1,46 +1,94 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build with AI · Personal Start Page Creator</title><link rel="stylesheet" href="assets/site.css"></head><body>
 <nav class="site-nav"><div class="site-nav-inner"><a class="brand" href="index.html">Personal Start Page Creator</a><a class="nav-link" href="templates.html">Templates</a><a class="nav-link" href="why-start-page.html">Why a start page?</a><a class="nav-link" href="ai-menu-help.html">Build with AI</a><a class="nav-link" href="github-pages.html">Publish</a><a class="nav-link" href="help.html">Help</a><a class="nav-cta" href="builder.html">Start building</a></div></nav>
-<main class="page"><section class="hero"><span class="badge">Ask · refine · import</span><h1>Ask an AI to help design your start page.</h1><p>The easiest route is to ask an AI assistant to interview you first, suggest sections, then create a Markdown list you can import into the builder.</p><div class="actions"><a class="button" href="builder.html">Open builder</a><a class="button secondary" href="help.html">Import help</a></div></section>
-<section class="section-title"><h2>Recommended workflow</h2><p>Use AI for the thinking and first draft, then use the builder for final editing and saving.</p></section>
-<section class="steps"><div class="step"><div><strong>1. Ask the AI to interview you</strong><br><span class="tiny-note">Country, work, study, services, interests, media, travel, shopping, public services and tools.</span></div></div><div class="step"><div><strong>2. Review the proposed sections</strong><br><span class="tiny-note">Ask the AI to add, remove or rename sections before it creates the full list.</span></div></div><div class="step"><div><strong>3. Ask for Markdown</strong><br><span class="tiny-note">Markdown is readable, easy to check, and imports well into the builder.</span></div></div><div class="step"><div><strong>4. Import and edit</strong><br><span class="tiny-note">Use <strong>Import list</strong> in the builder, then save your start page and menu config.</span></div></div></section>
-<section class="card"><h2>Best prompt to copy</h2><div class="copy-block"><button type="button" class="copy-btn" data-copy-target="ai-best-prompt">Copy</button><pre id="ai-best-prompt" class="codeblock">I want to create a personal start page of useful website links.
+<main class="page"><section class="hero"><span class="badge">Chat · refine · finish · paste</span><h1>Build your start page with AI.</h1><p>Use an AI assistant as a menu coach. Chat with it, ask for changes, then type <strong>Menu finished</strong> when you want a clean list for the builder.</p><div class="actions"><a class="button" href="builder.html">Open builder</a><a class="button secondary" href="help.html">Import help</a></div></section>
+<section class="section-title"><h2>Interactive workflow</h2><p>The best results usually come from a short conversation, not a one-shot prompt.</p></section>
+<section class="steps"><div class="step"><div><strong>1. Copy the prompt</strong><br><span class="tiny-note">Paste it into ChatGPT, Claude, Gemini or another assistant.</span></div></div><div class="step"><div><strong>2. Chat and refine</strong><br><span class="tiny-note">Ask the AI to add links, remove links, rename sections, change the country focus or reorganise the menu.</span></div></div><div class="step"><div><strong>3. Type “Menu finished”</strong><br><span class="tiny-note">The AI should then output a marked Markdown block between START OF LIST and END OF LIST.</span></div></div><div class="step"><div><strong>4. Paste into the builder</strong><br><span class="tiny-note">Use <strong>Paste list from AI</strong> and click <strong>Build from pasted list</strong>. The builder will ignore anything outside the marked block.</span></div></div></section>
+<section class="card"><h2>Best prompt to copy</h2><p>This prompt tells the AI to explain the process first, work with you interactively, and only produce the final import list when you type <strong>Menu finished</strong>.</p><div class="copy-block"><button type="button" class="copy-btn" data-copy-target="ai-best-prompt">Copy</button><pre id="ai-best-prompt" class="codeblock">I want you to help me build a personal browser start page of useful website links.
 
-Please ask me a few questions first about:
+At the start, explain that you are helping me create a personalised start page. Tell me that we will work interactively: I can describe what I need, add links, remove links, rename sections, change the country focus, or reorganise the menu.
+
+Do not output the final import list until I type this exact command:
+
+Menu finished
+
+First, ask me a few helpful questions about:
 - my country or region
-- the services I use
-- my work, study or daily routine
-- hobbies and interests
-- news, media, sport or entertainment preferences
+- who the start page is for
+- work, study or daily routines
+- services and websites I already use
+- hobbies, interests, media, sport or entertainment
 - shopping, money, travel, health or public-service needs
+- whether I prefer a simple menu or a fuller menu
 
-After I answer, suggest a set of menu sections and wait for me to approve or edit them.
-Then create the menu as Markdown using this exact format:
+During the conversation, suggest sections and links. Let me ask for changes. Keep track of the current version of the menu as we work.
+
+When I type “Menu finished”, output the final menu in this structure:
+
+1. Start with a short sentence saying the menu is ready.
+2. Then output the complete Markdown menu between these exact marker lines:
+
+START OF LIST
 
 # My Start Page
 
-## Section name
-- [Website label](https://example.com/)
-- [Website label](https://example.com/)
+## Section Name
+* [Link label](https://example.com/)
+* [Link label](https://example.com/)
 
-Use real website URLs. Keep each section manageable. Do not include explanations after the Markdown.</pre></div></section>
-<section class="grid"><article class="card"><h2>Quick profile prompt</h2><p>Use this when you already know what you want.</p><div class="copy-block"><button type="button" class="copy-btn" data-copy-target="ai-quick-profile">Copy</button><pre><code id="ai-quick-profile">Create a start-page menu in Markdown for a retired teacher in the UK who uses Gmail, BBC iPlayer, online banking, gardening sites, local history websites, train travel, NHS services and radio. Group the links into useful sections. Use real URLs.</code></pre></div></article><article class="card"><h2>Developer prompt</h2><p>Useful for specialist menus.</p><div class="copy-block"><button type="button" class="copy-btn" data-copy-target="ai-developer-prompt">Copy</button><pre><code id="ai-developer-prompt">Create a start-page menu in Markdown for a freelance software developer in the US who uses GitHub, AWS, Vercel, React, Python, Figma, Stripe, Google Workspace and online learning sites. Group links by daily workflow.</code></pre></div></article><article class="card"><h2>Family computer prompt</h2><p>Good for shared household start pages.</p><div class="copy-block"><button type="button" class="copy-btn" data-copy-target="ai-family-prompt">Copy</button><pre><code id="ai-family-prompt">Create a start-page menu for a family computer shared by adults and children. Include search, school, streaming, shopping, travel, health, public services and safety tools. Use UK websites where possible. Output Markdown only.</code></pre></div></article></section>
-<section class="section-title"><h2>Import formats</h2><p>Markdown is the best default for AI-generated menus. CSV and JSON are available if you need them.</p></section>
+## Another Section
+* [Link label](https://example.com/)
+* [Link label](https://example.com/)
+
+END OF LIST
+
+3. After END OF LIST, add brief instructions telling me:
+- copy everything from START OF LIST to END OF LIST, including both marker lines
+- go back to the Start Page Builder
+- choose Paste list from AI
+- paste the block into the box
+- click Build from pasted list
+- then edit the menu and save the finished start page
+
+Rules for the final marked list:
+- Use Markdown headings and bullet links.
+- Use # for the menu title.
+- Use ## for section headings.
+- Use * [Label](https://example.com/) for each link.
+- Keep link labels short enough to fit on buttons.
+- Prefer official, reliable and practical websites.
+- Use country-specific links where useful.
+- Do not include explanations inside the START OF LIST / END OF LIST block.
+- The instructions after END OF LIST are allowed and helpful.</pre></div></section>
+<section class="grid"><article class="card"><h2>What to paste</h2><p>After you type <strong>Menu finished</strong>, copy the marked block from the AI reply.</p><pre><code>START OF LIST
+
+# My Start Page
+
+## Search &amp; AI
+* [Google](https://www.google.co.uk/)
+* [ChatGPT](https://chatgpt.com/)
+
+END OF LIST</code></pre><p class="tiny-note">The builder uses the markers if they are present. You can also paste the whole AI reply and it will try to find the marked block.</p></article><article class="card"><h2>Where to paste it</h2><p>Open the builder and choose <strong>Paste list from AI</strong>. Paste the marked list into the box and click <strong>Build from pasted list</strong>.</p><p>The menu then becomes editable: you can change labels, delete links, add sections, choose columns, pick Primary or Pastel colours, and save your start page.</p></article><article class="card"><h2>Useful follow-up requests</h2><p>During the chat, ask the AI for changes before you finish.</p><pre><code>Add more official UK public-service links.
+Make the labels shorter.
+Remove shopping links.
+Split travel into trains and maps.
+Make it simpler for an older user.
+Menu finished</code></pre></article></section>
+<section class="section-title"><h2>Import formats</h2><p>Markdown is the best default for AI-generated menus. CSV and plain text also work, and exported start pages now contain embedded menu config for easier reloading.</p></section>
 <section class="grid"><article class="card"><h2>Markdown format</h2><pre><code># My Start Page
 
 ## Search &amp; AI
-- [Google](https://www.google.co.uk/)
-- [ChatGPT](https://chatgpt.com/)
+* [Google](https://www.google.co.uk/)
+* [ChatGPT](https://chatgpt.com/)
 
 ## News
-- [BBC News](https://www.bbc.co.uk/news)</code></pre></article><article class="card"><h2>CSV format</h2><pre><code>section,label,url,colour
+* [BBC News](https://www.bbc.co.uk/news)</code></pre></article><article class="card"><h2>CSV format</h2><pre><code>section,label,url,colour
 Search,Google,https://www.google.co.uk/,blue
-News,BBC News,https://www.bbc.co.uk/news,red</code></pre></article><article class="card"><h2>Menu config JSON</h2><p>More advanced. This is the builder-readable configuration format.</p><pre><code>{
-  "title": "My Start Page",
-  "filename": "start-page.html",
-  "sections": [
-    {"name":"Search","colour":"blue","links":[{"label":"Google","url":"https://www.google.co.uk/"}]}
-  ]
-}</code></pre></article></section>
+News,BBC News,https://www.bbc.co.uk/news,red</code></pre></article><article class="card"><h2>Plain text format</h2><pre><code>[Search]
+Google | https://www.google.co.uk/
+ChatGPT | https://chatgpt.com/
+
+[News]
+BBC News | https://www.bbc.co.uk/news</code></pre></article></section>
 <section class="inline-note"><strong>Tip:</strong> ask the AI for links you recognise and trust, then review the result before importing. You can delete or edit anything in the builder.</section>
 </main><footer class="site-footer">The exported start pages are standalone-friendly and work on desktop, tablet and mobile.<div class="footer-links"><a href="about.html">About</a><a href="help.html">Help</a><a href="why-start-page.html">Why start pages?</a><a href="ai-menu-help.html">Build with AI</a><a href="github-pages.html">Publish with GitHub Pages</a><a href="https://github.com/markbeachill/start-page-builder">GitHub repository</a></div></footer><script>
 (function(){

@@ -1,105 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "News Buffs Start Page",
-  "description": "Deep political, regional, and investigative media aggregation.",
+  "title": "News Buffs UK Start Page",
+  "description": "A fuller UK news-reader start page for headlines, newspapers, global sources, politics, local news, fact checking, data, markets, long reads and alerts.",
   "filename": "start-page-news-buff-uk.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Aggregators",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "Techmeme",
-          "url": "https://www.techmeme.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Memeorandum",
-          "url": "https://www.memeorandum.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Feedly",
-          "url": "https://feedly.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Live News",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "BBC News Live",
-          "url": "https://www.bbc.co.uk/news/live",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Opinion",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Substack",
-          "url": "https://substack.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Polling Data",
+      "name": "UK Headlines",
       "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "Elec. Calculus",
-          "url": "https://www.electoralcalculus.co.uk/",
-          "colour": "red",
-          "included": true
+          "label": "BBC News",
+          "url": "https://www.bbc.co.uk/news",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "YouGov",
-          "url": "https://yougov.co.uk/",
-          "colour": "red",
-          "included": true
+          "label": "Sky News",
+          "url": "https://news.sky.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "ITV News",
+          "url": "https://www.itv.com/news",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Channel 4 News",
+          "url": "https://www.channel4.com/news",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The Guardian",
+          "url": "https://www.theguardian.com/uk",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The Telegraph",
+          "url": "https://www.telegraph.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The Independent",
+          "url": "https://www.independent.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Evening Standard",
+          "url": "https://www.standard.co.uk/",
+          "included": true,
+          "colour": "red"
         }
       ]
     },
     {
-      "name": "Long-form",
+      "name": "UK Newspapers",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "The Times",
+          "url": "https://www.thetimes.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Financial Times",
+          "url": "https://www.ft.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Daily Mail",
+          "url": "https://www.dailymail.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Mirror",
+          "url": "https://www.mirror.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The Sun",
+          "url": "https://www.thesun.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Metro",
+          "url": "https://metro.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The i Paper",
+          "url": "https://inews.co.uk/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Daily Express",
+          "url": "https://www.express.co.uk/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Wires & Global",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Longform",
-          "url": "https://longform.org/",
-          "colour": "blue",
-          "included": true
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "AP News",
+          "url": "https://apnews.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "AFP",
+          "url": "https://www.afp.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Al Jazeera",
+          "url": "https://www.aljazeera.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "BBC World",
+          "url": "https://www.bbc.com/news/world",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "DW News",
+          "url": "https://www.dw.com/en/top-stories/s-9097",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "France 24",
+          "url": "https://www.france24.com/en/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "The Conversation",
+          "url": "https://theconversation.com/uk",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
-      "name": "Financial News",
+      "name": "Politics & Parliament",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "UK Parliament",
+          "url": "https://www.parliament.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Hansard",
+          "url": "https://hansard.parliament.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "GOV.UK",
+          "url": "https://www.gov.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "TheyWorkForYou",
+          "url": "https://www.theyworkforyou.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Parliament TV",
+          "url": "https://www.parliamentlive.tv/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Electoral Commission",
+          "url": "https://www.electoralcommission.org.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "ONS",
+          "url": "https://www.ons.gov.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Institute for Gov",
+          "url": "https://www.instituteforgovernment.org.uk/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Local & Regions",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Local News",
+          "url": "https://www.bbc.co.uk/news/localnews",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "InYourArea",
+          "url": "https://www.inyourarea.co.uk/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "LocalGov",
+          "url": "https://www.localgov.co.uk/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "London Assembly",
+          "url": "https://www.london.gov.uk/who-we-are/what-london-assembly-does",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Scottish Gov",
+          "url": "https://www.gov.scot/news/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Welsh Gov",
+          "url": "https://www.gov.wales/news",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "NI Executive",
+          "url": "https://www.northernireland.gov.uk/news",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Local Democracy",
+          "url": "https://www.bbc.co.uk/news/topics/c1xp19421p1t",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Fact Checking",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Bloomberg",
-          "url": "https://www.bloomberg.com/",
-          "colour": "green",
-          "included": true
+          "label": "Full Fact",
+          "url": "https://fullfact.org/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "BBC Verify",
+          "url": "https://www.bbc.co.uk/news/reality_check",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Reuters Fact Check",
+          "url": "https://www.reuters.com/fact-check/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "AP Fact Check",
+          "url": "https://apnews.com/hub/ap-fact-check",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Snopes",
+          "url": "https://www.snopes.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Fact Check",
+          "url": "https://toolbox.google.com/factcheck/explorer",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "First Draft Archive",
+          "url": "https://firstdraftnews.org/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Data & Polls",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "ONS Data",
+          "url": "https://www.ons.gov.uk/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Data.gov.uk",
+          "url": "https://www.data.gov.uk/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "YouGov",
+          "url": "https://yougov.co.uk/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Ipsos UK",
+          "url": "https://www.ipsos.com/en-uk",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "British Polling",
+          "url": "https://www.britishpollingcouncil.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Electoral Calculus",
+          "url": "https://www.electoralcalculus.co.uk/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Ofcom Data",
+          "url": "https://www.ofcom.org.uk/research-and-data",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "UK Data Service",
+          "url": "https://ukdataservice.ac.uk/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Business & Markets",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "FT Markets",
+          "url": "https://www.ft.com/markets",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "BBC Business",
+          "url": "https://www.bbc.co.uk/news/business",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Yahoo Finance UK",
+          "url": "https://uk.finance.yahoo.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "MarketWatch",
+          "url": "https://www.marketwatch.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Bank of England",
+          "url": "https://www.bankofengland.co.uk/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Trading Economics",
+          "url": "https://tradingeconomics.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Long Reads",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "The Conversation",
+          "url": "https://theconversation.com/uk",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "New Statesman",
+          "url": "https://www.newstatesman.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Prospect",
+          "url": "https://www.prospectmagazine.co.uk/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "The Atlantic",
+          "url": "https://www.theatlantic.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "The New Yorker",
+          "url": "https://www.newyorker.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Aeon",
+          "url": "https://aeon.co/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Longreads",
+          "url": "https://longreads.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "BBC Future",
+          "url": "https://www.bbc.com/future",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Alerts & Reading",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Feedly",
+          "url": "https://feedly.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Pocket",
+          "url": "https://getpocket.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Instapaper",
+          "url": "https://www.instapaper.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Ground News",
+          "url": "https://ground.news/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "AllSides",
+          "url": "https://www.allsides.com/unbiased-balanced-news",
+          "included": true,
+          "colour": "orange"
         }
       ]
     }

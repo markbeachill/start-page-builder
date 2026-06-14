@@ -1,35 +1,52 @@
-# Personal Start Page Creator — Stage 1.22
+# Personal Start Page Creator — Stage 1.26 — template quality batch 3
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
-A static GitHub Pages website for creating standalone personal start pages.
+A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.22 update
+## Stage 1.26 — template quality batch 3
 
-This stage adds two new presentation options to the builder and exported start pages.
+This stage improves another six jump-start templates with fuller, more practical menus and regenerated examples.
 
-- Added a **Colours** setting with **Primary** and **Pastel** options.
-- Added a **Show title** setting.
-- **Show title** defaults to on for new templates and new menus.
-- When shown, the page title appears beside the search box on wider screens.
-- On narrower screens, the title and search area wrap naturally so the search remains usable.
-- Menu config JSON now saves top-level `colours` and `showTitle` values.
-- Existing menu configs without these values still load safely: `colours` defaults to `primary`, and `showTitle` defaults to `true`.
-- Exported standalone start pages now write `data-colours` and `data-show-title` onto the `<body>` tag.
-- Loading an existing start page now tries to detect the colour style and title display state.
-- Regenerated example start pages so they use the title beside search by default.
+Enhanced templates:
 
-## Previous Stage 1.21 update
+- Creative Pros
+- Creators
+- News Buffs — UK
+- News Buffs — US
+- Health & Wellness — UK
+- Health & Wellness — US
 
-Stage 1.21 implemented adjustable desktop columns.
+Each upgraded template now has a richer set of sections, practical short button labels, country-specific official links where useful, recommended columns, colour style and title display settings, and a regenerated standalone example page.
 
-- Users can choose **2, 3, 4 or 5 columns** for wider screens.
-- Phones and small screens still stack to one column automatically.
-- The default remains **5 columns** for backwards compatibility.
-- Menu config JSON saves a top-level `columns` value.
-- Loading an existing start page tries to detect the column count from `data-columns`, the `--columns` CSS variable, or the number of `.col` elements.
-- Templates include recommended default column counts.
+## Previous Stage 1.25 update
+
+Stage 1.25 improved portability and the AI-assisted menu workflow.
+
+- Exported start pages embed a builder-readable menu config in:
+
+  ```html
+  <script type="application/json" id="spb-menu-config">
+  ```
+
+- Loading an existing start page checks for that embedded config first, then falls back to parsing older visible HTML.
+- The embedded config contains the exported/visible menu content and settings, making saved start pages easier to reload into the builder.
+- The builder includes **Paste list from AI**.
+- Pasted Markdown, CSV and plain-text lists can be imported without first saving a temporary file.
+- If pasted text contains `START OF LIST` and `END OF LIST`, the builder imports only the marked block and ignores surrounding AI commentary.
+- The AI Help page explains an interactive workflow: chat, refine, type **Menu finished**, copy the marked list, then paste it into the builder.
+
+## Previous Stage 1.24 update
+
+Stage 1.24 namespaced the exported menu HTML/CSS/JS so it is safer to copy into, or adapt for, an existing website.
+
+- Exported menu CSS classes use an `spb-` prefix, for example `spb-btn`, `spb-hdr`, `spb-col`, `spb-searchbar-form` and `spb-menu-title`.
+- Exported CSS variables use an `--spb-` prefix, for example `--spb-columns` and `--spb-c-blue`.
+- Exported body data attributes use `data-spb-*`, for example `data-spb-columns`, `data-spb-colours` and `data-spb-show-title`.
+- Section headers are real `<button type="button">` controls with `aria-expanded`.
+- Collapse behaviour uses the `hidden` attribute.
+- Import compatibility is retained for older exported files using `.btn`, `.hdr`, `.col`, `data-columns`, `data-colours`, `data-show-title` and `--columns`.
 
 ## GitHub Pages
 
@@ -73,13 +90,14 @@ docs/
 
 The public informational pages use the integrated site design. The builder uses only a light top navigation wrapper. Exported start pages remain standalone HTML and do not depend on the website design.
 
-The classic menu structure is still protected: sections, headers, buttons, search bar and collapse behaviour are preserved. Stage 1.22 only adds controlled presentation settings: colour strength and title display.
+The classic menu structure is still protected: sections, headers, buttons, search bar and collapse behaviour are preserved. The renderer now supports controlled 2–5 column layouts, Primary/Pastel colour styles, optional title display, namespaced exported classes, and embedded reload config.
 
 ## Current features
 
 - Integrated home, templates, AI help, publishing, about and help pages.
 - Light-wrapper builder page with wide editor and preview panes.
-- Template selector with everyday, workplace, software, education, business, creative, life, hobbies and fandom templates.
+- Jump-start template catalogue with **Build with this** and **Try it** actions.
+- Template selector with everyday, workplace, software, education, business, creative, life and hobbies templates.
 - Real example start pages for ready-to-use templates.
 - Adjustable desktop column count: 2, 3, 4 or 5 columns.
 - Primary or Pastel colour style.
@@ -87,12 +105,15 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 - Mobile layout automatically stacks to one column.
 - Save/load start page as first-class actions.
 - Save/load menu config as first-class actions.
-- Import list dropdown: Markdown, CSV and plain text.
-- Export list dropdown: Markdown and plain text.
 - Load existing exported start page HTML back into the builder.
+- Exported start pages include embedded builder config for easier reloading.
+- Import list from file: Markdown, CSV and plain text.
+- Paste list from AI: Markdown, CSV and plain text, with START/END marker support.
+- Export list dropdown: Markdown and plain text.
 - Link rows have ↑ / ↓ controls and can be dragged within their section to reorder links.
 - Section **Use** control remains, with sections used by default.
 - Responsive classic renderer with full-width buttons, calculated column widths and search-first behaviour.
+- Namespaced exported menu classes and attributes reduce clashes when adapting the menu for other sites.
 - Publishing page recommends renaming saved start pages to `index.html` for GitHub Pages.
 - AI instruction blocks include copy-to-clipboard buttons.
 - No framework, no backend, no account, no external library dependency.
@@ -110,31 +131,14 @@ cd docs
 python3 -m http.server 8000
 ```
 
-Open `http://localhost:8000`.
-
-## Publishing URL pattern
-
-For a normal GitHub Pages project repository, the live URL is usually:
+Then open:
 
 ```text
-https://USERNAME.github.io/REPOSITORY/
+http://localhost:8000/
 ```
 
-For a special user site repository named `USERNAME.github.io`, the live URL is usually:
+## Notes for future stages
 
-```text
-https://USERNAME.github.io/
-```
-
-After publishing, add the URL to the user's `README.md` and choose a shortcut method such as a browser bookmark, browser homepage, desktop shortcut, phone/tablet home-screen shortcut, or another launcher system.
-
-## Template quality work retained from Stage 1.20
-
-Stage 1.20 replaced the first group of short jump-start templates with fuller ready-to-use menu configs and regenerated example pages:
-
-- Student templates: primary/elementary, secondary/high school, university/college, UK and US.
-- Teacher templates: UK and US.
-- Small Business templates: UK and US.
-- Workplace template: universal.
-- Retired / Everyday Life templates: UK and US.
-- Local History templates: UK and US, grouped under Hobbies.
+- Continue improving thin jump-start templates in editorial batches.
+- Keep exported menu compatibility with older files.
+- Keep public wording aimed at ordinary users rather than technical users.

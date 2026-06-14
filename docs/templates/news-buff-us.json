@@ -1,105 +1,559 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "News Buffs Start Page",
-  "description": "Deep political, regional, and investigative media aggregation.",
+  "title": "News Buffs US Start Page",
+  "description": "A fuller US news-reader start page for headlines, newspapers, global sources, government, local news, fact checking, data, markets, long reads and alerts.",
   "filename": "start-page-news-buff-us.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Aggregators",
-      "colour": "green",
-      "included": true,
-      "links": [
-        {
-          "label": "Techmeme",
-          "url": "https://www.techmeme.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Memeorandum",
-          "url": "https://www.memeorandum.com/",
-          "colour": "green",
-          "included": true
-        },
-        {
-          "label": "Feedly",
-          "url": "https://feedly.com/",
-          "colour": "green",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Live News",
-      "colour": "orange",
-      "included": true,
-      "links": [
-        {
-          "label": "CNN Live",
-          "url": "https://www.cnn.com/go",
-          "colour": "orange",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Opinion",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Substack",
-          "url": "https://substack.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
-    },
-    {
-      "name": "Polling Data",
+      "name": "US Headlines",
       "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "FiveThirtyEight",
-          "url": "https://fivethirtyeight.com/",
-          "colour": "red",
-          "included": true
+          "label": "AP News",
+          "url": "https://apnews.com/",
+          "included": true,
+          "colour": "red"
         },
         {
-          "label": "YouGov",
-          "url": "https://yougov.co.uk/",
-          "colour": "red",
-          "included": true
+          "label": "Reuters",
+          "url": "https://www.reuters.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "PBS NewsHour",
+          "url": "https://www.pbs.org/newshour/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CNN",
+          "url": "https://www.cnn.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "NBC News",
+          "url": "https://www.nbcnews.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "CBS News",
+          "url": "https://www.cbsnews.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "ABC News",
+          "url": "https://abcnews.go.com/",
+          "included": true,
+          "colour": "red"
         }
       ]
     },
     {
-      "name": "Long-form",
+      "name": "US Newspapers",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "New York Times",
+          "url": "https://www.nytimes.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Washington Post",
+          "url": "https://www.washingtonpost.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Wall Street Journal",
+          "url": "https://www.wsj.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "LA Times",
+          "url": "https://www.latimes.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "USA Today",
+          "url": "https://www.usatoday.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Politico",
+          "url": "https://www.politico.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "Axios",
+          "url": "https://www.axios.com/",
+          "included": true,
+          "colour": "red"
+        },
+        {
+          "label": "The Hill",
+          "url": "https://thehill.com/",
+          "included": true,
+          "colour": "red"
+        }
+      ]
+    },
+    {
+      "name": "Global Sources",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "Longform",
-          "url": "https://longform.org/",
-          "colour": "blue",
-          "included": true
+          "label": "BBC News",
+          "url": "https://www.bbc.com/news",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Al Jazeera",
+          "url": "https://www.aljazeera.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "DW News",
+          "url": "https://www.dw.com/en/top-stories/s-9097",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "France 24",
+          "url": "https://www.france24.com/en/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "The Guardian US",
+          "url": "https://www.theguardian.com/us",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "The Conversation",
+          "url": "https://theconversation.com/us",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "The Economist",
+          "url": "https://www.economist.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Christian Science Monitor",
+          "url": "https://www.csmonitor.com/",
+          "included": true,
+          "colour": "blue"
         }
       ]
     },
     {
-      "name": "Financial News",
+      "name": "Government & Politics",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "White House",
+          "url": "https://www.whitehouse.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Congress.gov",
+          "url": "https://www.congress.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "House",
+          "url": "https://www.house.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Senate",
+          "url": "https://www.senate.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Supreme Court",
+          "url": "https://www.supremecourt.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Federal Register",
+          "url": "https://www.federalregister.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "USA.gov",
+          "url": "https://www.usa.gov/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "GovTrack",
+          "url": "https://www.govtrack.us/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "State & Local",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "NPR Stations",
+          "url": "https://www.npr.org/stations/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "States Newsroom",
+          "url": "https://statesnewsroom.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "USA.gov States",
+          "url": "https://www.usa.gov/states-and-territories",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Ballotpedia",
+          "url": "https://ballotpedia.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Patch",
+          "url": "https://patch.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Local Newspapers",
+          "url": "https://www.usnpl.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "County Explorer",
+          "url": "https://ce.naco.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "City-Data",
+          "url": "https://www.city-data.com/",
+          "included": true,
+          "colour": "orange"
+        }
+      ]
+    },
+    {
+      "name": "Fact Checking",
       "colour": "green",
       "included": true,
       "links": [
         {
+          "label": "AP Fact Check",
+          "url": "https://apnews.com/hub/ap-fact-check",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Reuters Fact Check",
+          "url": "https://www.reuters.com/fact-check/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "PolitiFact",
+          "url": "https://www.politifact.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "FactCheck.org",
+          "url": "https://www.factcheck.org/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Snopes",
+          "url": "https://www.snopes.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Google Fact Check",
+          "url": "https://toolbox.google.com/factcheck/explorer",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Lead Stories",
+          "url": "https://leadstories.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Poynter",
+          "url": "https://www.poynter.org/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Data & Polls",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "US Census",
+          "url": "https://www.census.gov/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "BLS",
+          "url": "https://www.bls.gov/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "FRED",
+          "url": "https://fred.stlouisfed.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Data.gov",
+          "url": "https://data.gov/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "FiveThirtyEight",
+          "url": "https://abcnews.go.com/538",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "RealClearPolitics",
+          "url": "https://www.realclearpolitics.com/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Pew Research",
+          "url": "https://www.pewresearch.org/",
+          "included": true,
+          "colour": "blue"
+        },
+        {
+          "label": "Gallup",
+          "url": "https://www.gallup.com/",
+          "included": true,
+          "colour": "blue"
+        }
+      ]
+    },
+    {
+      "name": "Business & Markets",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Yahoo Finance",
+          "url": "https://finance.yahoo.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "MarketWatch",
+          "url": "https://www.marketwatch.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "CNBC",
+          "url": "https://www.cnbc.com/",
+          "included": true,
+          "colour": "green"
+        },
+        {
           "label": "Bloomberg",
           "url": "https://www.bloomberg.com/",
-          "colour": "green",
-          "included": true
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "WSJ Markets",
+          "url": "https://www.wsj.com/market-data",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "SEC EDGAR",
+          "url": "https://www.sec.gov/edgar/search/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Federal Reserve",
+          "url": "https://www.federalreserve.gov/",
+          "included": true,
+          "colour": "green"
+        },
+        {
+          "label": "Trading Economics",
+          "url": "https://tradingeconomics.com/",
+          "included": true,
+          "colour": "green"
+        }
+      ]
+    },
+    {
+      "name": "Long Reads",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "The Atlantic",
+          "url": "https://www.theatlantic.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "The New Yorker",
+          "url": "https://www.newyorker.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "ProPublica",
+          "url": "https://www.propublica.org/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "The Conversation",
+          "url": "https://theconversation.com/us",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Longreads",
+          "url": "https://longreads.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Vox",
+          "url": "https://www.vox.com/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Brookings",
+          "url": "https://www.brookings.edu/",
+          "included": true,
+          "colour": "purple"
+        },
+        {
+          "label": "Council on Foreign Relations",
+          "url": "https://www.cfr.org/",
+          "included": true,
+          "colour": "purple"
+        }
+      ]
+    },
+    {
+      "name": "Alerts & Reading",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google News",
+          "url": "https://news.google.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Google Alerts",
+          "url": "https://www.google.com/alerts",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Feedly",
+          "url": "https://feedly.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Pocket",
+          "url": "https://getpocket.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Instapaper",
+          "url": "https://www.instapaper.com/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "AllSides",
+          "url": "https://www.allsides.com/unbiased-balanced-news",
+          "included": true,
+          "colour": "orange"
+        },
+        {
+          "label": "Ground News",
+          "url": "https://ground.news/",
+          "included": true,
+          "colour": "orange"
         }
       ]
     }
