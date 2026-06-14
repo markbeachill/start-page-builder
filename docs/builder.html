@@ -304,6 +304,85 @@ function cleanColumnCount(value){
   const n = Number.parseInt(value, 10);
   return n >= MIN_COLUMNS && n <= MAX_COLUMNS ? n : DEFAULT_COLUMNS;
 }
+function cleanSectionColumn(value, columns){
+  const n = Number.parseInt(value, 10);
+  const max = cleanColumnCount(columns);
+  return n >= 1 && n <= max ? n : null;
+}
+function sectionWeight(section){
+  return 1 + (section.links || []).filter(link => link.included !== false).length;
+}
+function assignMissingSectionColumns(p){
+  const columnCount = cleanColumnCount(p.columns);
+  const counts = Array.from({length:columnCount}, () => 0);
+
+  // First honour any valid existing column choices, clamping them to the
+  // current column count and adding their weight to that column.
+  (p.sections || []).forEach(section => {
+    const existing = cleanSectionColumn(section.column ?? section.col ?? section.columnNumber, columnCount);
+    if(existing){
+      section.column = existing;
+      counts[existing - 1] += sectionWeight(section);
+    }else{
+      section.column = null;
+    }
+  });
+
+  // Sections without a column are assigned once using the old balancing logic.
+  // After that, column placement is stable and controlled by the user.
+  (p.sections || []).forEach(section => {
+    if(section.column) return;
+    let targetIndex = 0;
+    let fewest = Infinity;
+    counts.forEach((count, i) => {
+      if(count < fewest){ fewest = count; targetIndex = i; }
+    });
+    section.column = targetIndex + 1;
+    counts[targetIndex] += sectionWeight(section);
+  });
+  return p;
+}
+function setProjectColumnCount(value){
+  const next = cleanColumnCount(value);
+  project.columns = next;
+  (project.sections || []).forEach(section => {
+    const current = Number.parseInt(section.column, 10);
+    section.column = current >= 1 ? Math.min(current, next) : null;
+  });
+  assignMissingSectionColumns(project);
+}
+function findSectionIndexInColumn(sectionIndex, direction){
+  const section = project.sections[sectionIndex];
+  if(!section) return -1;
+  const column = cleanSectionColumn(section.column, project.columns);
+  if(!column) return -1;
+  if(direction < 0){
+    for(let i = sectionIndex - 1; i >= 0; i--){
+      if(cleanSectionColumn(project.sections[i]?.column, project.columns) === column) return i;
+    }
+  }else{
+    for(let i = sectionIndex + 1; i < project.sections.length; i++){
+      if(cleanSectionColumn(project.sections[i]?.column, project.columns) === column) return i;
+    }
+  }
+  return -1;
+}
+function moveSectionWithinColumn(sectionIndex, direction){
+  const targetIndex = findSectionIndexInColumn(sectionIndex, direction);
+  if(targetIndex === -1) return false;
+  [project.sections[sectionIndex], project.sections[targetIndex]] = [project.sections[targetIndex], project.sections[sectionIndex]];
+  return true;
+}
+function moveSectionSideways(sectionIndex, direction){
+  const section = project.sections[sectionIndex];
+  if(!section) return false;
+  const columnCount = cleanColumnCount(project.columns);
+  const current = cleanSectionColumn(section.column, columnCount) || 1;
+  const next = current + direction;
+  if(next < 1 || next > columnCount) return false;
+  section.column = next;
+  return true;
+}
 function makeColumns(count){
   return Array.from({length:cleanColumnCount(count)}, () => ({items:[]}));
 }
@@ -545,6 +624,7 @@ function normaliseFriendlyProject(input){
     name: section.name || section.text || "Section",
     colour: cleanColour(section.colour || section.color || "blue"),
     included: section.included !== false,
+    column: cleanSectionColumn(section.column ?? section.col ?? section.columnNumber, p.columns),
     links: (section.links || []).map(link => ({
       label: link.label || link.text || "Link",
       url: link.url || "#",
@@ -552,7 +632,7 @@ function normaliseFriendlyProject(input){
       included: link.included !== false
     }))
   }));
-  return p;
+  return assignMissingSectionColumns(p);
 }
 function internalStateToProject(input){
   const p = defaultProject();
@@ -563,20 +643,20 @@ function internalStateToProject(input){
   p.colours = cleanColourStyle(input.settings?.colours ?? input.settings?.colourStyle ?? "primary");
   p.showTitle = cleanShowTitle(input.settings?.showTitle ?? true);
   const sections = [];
-  (input.menu?.columns || []).forEach(col => {
+  (input.menu?.columns || []).forEach((col, colIndex) => {
     let current = null;
     (col.items || []).forEach(item => {
       if(item.type === "header"){
-        current = {name:item.text || "Section", colour:cleanColour(item.color || "blue"), included:true, links:[]};
+        current = {name:item.text || "Section", colour:cleanColour(item.color || "blue"), included:true, column:colIndex + 1, links:[]};
         sections.push(current);
       }else if(item.type === "link"){
-        if(!current){ current = {name:"Links", colour:cleanColour(item.color || "blue"), included:true, links:[]}; sections.push(current); }
+        if(!current){ current = {name:"Links", colour:cleanColour(item.color || "blue"), included:true, column:colIndex + 1, links:[]}; sections.push(current); }
         current.links.push({label:item.text || "Link", url:item.url || "#", colour:cleanColour(item.color || current.colour), included:true});
       }
     });
   });
   p.sections = sections;
-  return p;
+  return assignMissingSectionColumns(p);
 }
 function projectToInternalState(p){
   const state = defaultState();
@@ -588,18 +668,14 @@ function projectToInternalState(p){
   state.settings.palette = state.settings.colours === "pastel" ? {...pastelPalette} : {...defaultPalette};
   state.settings.showTitle = cleanShowTitle(p.showTitle);
   state.menu.columns = makeColumns(state.settings.columns);
+  assignMissingSectionColumns(p);
   (p.sections || []).filter(s => s.included !== false).forEach(section => {
     const colour = cleanColour(section.colour || "blue");
     const block = [{type:"header", text:section.name || "Section", color:colour}];
     (section.links || []).filter(link => link.included !== false).forEach(link => {
       block.push({type:"link", text:link.label || "Link", url:link.url || "#", color:cleanColour(link.colour || colour)});
     });
-    let targetIndex = 0;
-    let fewest = Infinity;
-    state.menu.columns.forEach((col, i) => {
-      const count = (col.items || []).length;
-      if(count < fewest){ fewest = count; targetIndex = i; }
-    });
+    const targetIndex = (cleanSectionColumn(section.column, state.settings.columns) || 1) - 1;
     state.menu.columns[targetIndex].items.push(...block);
   });
   ensureColumnCount(state.menu, state.settings.columns);
@@ -666,7 +742,7 @@ function renderSettings(){
   document.getElementById("columnsInput").value = String(cleanColumnCount(project.columns));
   document.getElementById("coloursInput").value = cleanColourStyle(project.colours || "primary");
   document.getElementById("showTitleInput").checked = cleanShowTitle(project.showTitle);
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Pick primary or pastel colours and choose whether to show the title.";
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Use <strong>←</strong>/<strong>→</strong> to move sections between columns and <strong>↑</strong>/<strong>↓</strong> to reorder within a column.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -679,6 +755,11 @@ function renderEditor(){
     const included = section.included !== false;
     const linkCount = (section.links || []).length;
     const linkLabel = linkCount === 1 ? "1 link" : `${linkCount} links`;
+    const sectionColumn = cleanSectionColumn(section.column, project.columns) || 1;
+    const canMoveUp = findSectionIndexInColumn(si, -1) !== -1;
+    const canMoveDown = findSectionIndexInColumn(si, 1) !== -1;
+    const canMoveLeft = sectionColumn > 1;
+    const canMoveRight = sectionColumn < cleanColumnCount(project.columns);
     const linkRows = (section.links || []).map((link, li) => `
       <div class="link-row" data-section-index="${si}" data-link-index="${li}">
         <span class="drag-handle" draggable="true" title="Drag to reorder this link" aria-label="Drag to reorder this link">↕</span>
@@ -701,10 +782,12 @@ function renderEditor(){
             <input type="text" value="${escapeHtml(section.name || "")}" data-action="section-name" aria-label="Section name">
             <select data-action="section-colour" aria-label="Section colour">${colourOptions(cleanColour(section.colour || "blue"))}</select>
           </div>
-          <span class="section-count">${escapeHtml(linkLabel)}</span>
+          <span class="section-count">${escapeHtml(linkLabel)} · Col ${sectionColumn}</span>
           <div class="section-controls">
-            <button type="button" class="mini secondary" data-action="move-section-up" ${si === 0 ? "disabled" : ""}>↑</button>
-            <button type="button" class="mini secondary" data-action="move-section-down" ${si === project.sections.length - 1 ? "disabled" : ""}>↓</button>
+            <button type="button" class="mini secondary" data-action="move-section-up" title="Move this section up within column ${sectionColumn}" ${canMoveUp ? "" : "disabled"}>↑</button>
+            <button type="button" class="mini secondary" data-action="move-section-down" title="Move this section down within column ${sectionColumn}" ${canMoveDown ? "" : "disabled"}>↓</button>
+            <button type="button" class="mini secondary" data-action="move-section-left" title="Move this section one column left" ${canMoveLeft ? "" : "disabled"}>←</button>
+            <button type="button" class="mini secondary" data-action="move-section-right" title="Move this section one column right" ${canMoveRight ? "" : "disabled"}>→</button>
             <button type="button" class="mini secondary" data-action="duplicate-section">Copy</button>
             <button type="button" class="mini danger" data-action="delete-section">Delete</button>
           </div>
@@ -774,10 +857,14 @@ function onSectionListClick(event){
     if(confirm(`Delete section “${section.name || "Section"}”?`)) project.sections.splice(si, 1);
   }else if(action === "duplicate-section"){
     project.sections.splice(si + 1, 0, JSON.parse(JSON.stringify({...section, name:(section.name || "Section") + " copy"})));
-  }else if(action === "move-section-up" && si > 0){
-    [project.sections[si - 1], project.sections[si]] = [project.sections[si], project.sections[si - 1]];
-  }else if(action === "move-section-down" && si < project.sections.length - 1){
-    [project.sections[si + 1], project.sections[si]] = [project.sections[si], project.sections[si + 1]];
+  }else if(action === "move-section-up"){
+    moveSectionWithinColumn(si, -1);
+  }else if(action === "move-section-down"){
+    moveSectionWithinColumn(si, 1);
+  }else if(action === "move-section-left"){
+    if(moveSectionSideways(si, -1)) setStatus(`Moved “${section.name || "Section"}” to column ${section.column}.`);
+  }else if(action === "move-section-right"){
+    if(moveSectionSideways(si, 1)) setStatus(`Moved “${section.name || "Section"}” to column ${section.column}.`);
   }else if(action === "add-link"){
     section.links = section.links || [];
     section.links.push({label:"New link", url:"https://", colour:cleanColour(section.colour || "blue"), included:true});
@@ -827,6 +914,10 @@ function onEditorDragOver(event){
   if(draggedSection){
     const card = event.target.closest(".section-card");
     if(!card || card.dataset.sectionIndex === undefined) return;
+    const targetIndex = Number(card.dataset.sectionIndex);
+    const sourceColumn = cleanSectionColumn(project.sections[draggedSection.sectionIndex]?.column, project.columns);
+    const targetColumn = cleanSectionColumn(project.sections[targetIndex]?.column, project.columns);
+    if(sourceColumn !== targetColumn) return;
     event.preventDefault();
     event.dataTransfer.dropEffect = "move";
     document.querySelectorAll(".section-card.section-drag-over").forEach(el => {
@@ -853,9 +944,12 @@ function onEditorDrop(event){
   if(draggedSection){
     const card = event.target.closest(".section-card");
     if(!card || card.dataset.sectionIndex === undefined) return;
-    event.preventDefault();
     const from = draggedSection.sectionIndex;
     let to = Number(card.dataset.sectionIndex);
+    const sourceColumn = cleanSectionColumn(project.sections[from]?.column, project.columns);
+    const targetColumn = cleanSectionColumn(project.sections[to]?.column, project.columns);
+    if(sourceColumn !== targetColumn) return;
+    event.preventDefault();
     if(Number.isNaN(from) || Number.isNaN(to) || from === to) return;
     const rect = card.getBoundingClientRect();
     const after = event.clientY > rect.top + rect.height / 2;
@@ -1110,17 +1204,17 @@ function importHtmlStartPage(file){
       const detectedColours = detectColourStyleFromHtml(doc);
       const detectedShowTitle = detectShowTitleFromHtml(doc);
       const sections = [];
-      columns.forEach(col => {
+      columns.forEach((col, colIndex) => {
         let current = null;
         Array.from(col.children).forEach(el => {
           const header = el.matches(".spb-hdr-para, .hdr-para") ? el.querySelector(".spb-hdr, .hdr, [data-spb-section-header=\"true\"], [data-section-header=\"true\"]") : (el.matches(".spb-hdr, .hdr, [data-spb-section-header=\"true\"], [data-section-header=\"true\"]") ? el : null);
           if(header){
-            current = {name:(header.textContent || "Section").trim(), colour:colourFromClass(header, "-hdr"), included:true, links:[]};
+            current = {name:(header.textContent || "Section").trim(), colour:colourFromClass(header, "-hdr"), included:true, column:colIndex + 1, links:[]};
             sections.push(current);
             return;
           }
           if(el.matches("a.spb-btn, a.btn")){
-            if(!current){ current = {name:"Links", colour:colourFromClass(el, "-btn"), included:true, links:[]}; sections.push(current); }
+            if(!current){ current = {name:"Links", colour:colourFromClass(el, "-btn"), included:true, column:colIndex + 1, links:[]}; sections.push(current); }
             current.links.push({label:(el.textContent || "Link").trim(), url:el.getAttribute("href") || "#", colour:colourFromClass(el, "-btn") || current.colour, included:true});
           }
         });
@@ -1307,7 +1401,7 @@ function initialiseEvents(){
   document.getElementById("titleInput").addEventListener("input", e => { project.title = e.target.value; schedulePreviewRender(); });
   document.getElementById("filenameInput").addEventListener("input", e => { project.filename = e.target.value; schedulePreviewRender(); });
   document.getElementById("descriptionInput").addEventListener("input", e => { project.description = e.target.value; schedulePreviewRender(); });
-  document.getElementById("columnsInput").addEventListener("change", e => { project.columns = cleanColumnCount(e.target.value); setStatus(`Layout set to ${project.columns} columns.`); schedulePreviewRender(); });
+  document.getElementById("columnsInput").addEventListener("change", e => { setProjectColumnCount(e.target.value); setStatus(`Layout set to ${project.columns} columns. Sections outside the new range were moved into the last column.`); scheduleRender(); });
   document.getElementById("coloursInput").addEventListener("change", e => { project.colours = cleanColourStyle(e.target.value); setStatus(`Colours set to ${project.colours === "pastel" ? "Pastel" : "Primary"}.`); schedulePreviewRender(); });
   document.getElementById("showTitleInput").addEventListener("change", e => { project.showTitle = e.target.checked; setStatus(project.showTitle ? "Title will be shown beside search." : "Title hidden from search row."); schedulePreviewRender(); });
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
@@ -1319,7 +1413,9 @@ function initialiseEvents(){
   document.getElementById("sectionList").addEventListener("drop", onEditorDrop);
   document.getElementById("sectionList").addEventListener("dragend", onEditorDragEnd);
   document.getElementById("addSectionBtn").addEventListener("click", () => {
-    project.sections.push({name:"New section", colour:"blue", included:true, links:[{label:"New link", url:"https://", colour:"blue", included:true}]}); scheduleRender();
+    project.sections.push({name:"New section", colour:"blue", included:true, column:null, links:[{label:"New link", url:"https://", colour:"blue", included:true}]});
+    assignMissingSectionColumns(project);
+    scheduleRender();
   });
   document.getElementById("includeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = true); setStatus("All sections are now used."); scheduleRender(); });
   document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); setStatus("No sections are currently used. Tick Use beside sections to add them back."); scheduleRender(); });

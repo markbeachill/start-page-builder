@@ -1,11 +1,26 @@
-# Personal Start Page Creator — Stage 1.28 — editor expand/collapse controls
+# Personal Start Page Creator — Stage 1.29 — stable section column placement
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.28 — editor expand/collapse controls
+## Stage 1.29 — stable section column placement
+
+Stage 1.29 changes section placement so columns are predictable rather than repeatedly auto-balanced.
+
+- Each section now has a stored column number.
+- Templates and older files without section column numbers are auto-assigned once using the previous balancing logic.
+- After that, section placement stays stable unless the user changes it.
+- Section cards now show their column number, for example `Col 3`.
+- Added section **←** and **→** controls to move a section left or right between columns.
+- Existing section **↑** and **↓** controls now reorder sections within the current column.
+- Section drag-and-drop is kept to reordering within the same column.
+- If the column count is reduced, sections in removed columns move into the last remaining column. For example, column 5 sections move to column 4 when changing from five to four columns.
+- Menu config JSON and embedded exported-page config now include section-level `column` values.
+- Example pages and templates were regenerated with stable section column values.
+
+## Previous Stage 1.28 — editor expand/collapse controls
 
 Stage 1.28 adds simple builder-wide editor controls for working with large menus.
 

@@ -60,7 +60,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "CI/CD",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Cloud Consoles",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Containers & Kubernetes",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Monitoring & Uptime",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Logs & APM",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Security & Trust",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Infrastructure as Code",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Incidents & Status",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Docs & Team",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 5
     }
   ]
 }

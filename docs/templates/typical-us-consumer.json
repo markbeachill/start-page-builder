@@ -31,7 +31,8 @@
           "label": "Google Translate",
           "url": "https://translate.google.com/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Email, Calendar & Cloud",
@@ -61,7 +62,8 @@
           "label": "OneDrive",
           "url": "https://onedrive.live.com/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "News",
@@ -91,7 +93,8 @@
           "label": "Google News",
           "url": "https://news.google.com/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Shopping",
@@ -121,7 +124,8 @@
           "label": "Costco",
           "url": "https://www.costco.com/"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Money, Deals & Bills",
@@ -151,7 +155,8 @@
           "label": "RetailMeNot",
           "url": "https://www.retailmenot.com/"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "TV & Streaming",
@@ -181,7 +186,8 @@
           "label": "YouTube",
           "url": "https://www.youtube.com/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Travel & Local",
@@ -211,7 +217,8 @@
           "label": "TSA",
           "url": "https://www.tsa.gov/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Health & Public Services",
@@ -237,7 +244,8 @@
           "label": "Weather.gov",
           "url": "https://www.weather.gov/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Tools",
@@ -259,7 +267,8 @@
           "label": "Have I Been Pwned",
           "url": "https://haveibeenpwned.com/"
         }
-      ]
+      ],
+      "column": 4
     }
   ]
 }

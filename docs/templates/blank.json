@@ -15,7 +15,8 @@
           "label": "Example link",
           "url": "https://example.com/"
         }
-      ]
+      ],
+      "column": 1
     }
   ]
 }

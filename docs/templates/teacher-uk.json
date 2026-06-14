@@ -60,7 +60,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Planning & Lessons",
@@ -109,7 +110,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Assessment & Feedback",
@@ -158,7 +160,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Classroom Tools",
@@ -207,7 +210,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Safeguarding & SEN",
@@ -250,7 +254,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Professional Bodies",
@@ -293,7 +298,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "CPD & Learning",
@@ -336,7 +342,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Wellbeing & Admin",
@@ -379,7 +386,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     }
   ]
 }

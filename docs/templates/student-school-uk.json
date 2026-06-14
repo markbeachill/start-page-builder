@@ -60,7 +60,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "GCSE Revision",
@@ -109,7 +110,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Subjects",
@@ -152,7 +154,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Writing & Referencing",
@@ -195,7 +198,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Research",
@@ -238,7 +242,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "AI Study Help",
@@ -281,7 +286,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Careers & Choices",
@@ -324,7 +330,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Wellbeing & Life",
@@ -367,7 +374,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     }
   ]
 }

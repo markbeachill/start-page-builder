@@ -60,7 +60,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Planning & Ideas",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Video Production",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Audio & Podcasting",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Graphics & Thumbnails",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Publish & Schedule",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Analytics & SEO",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Monetisation",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Community & Live",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Rights & Safety",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

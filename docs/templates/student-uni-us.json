@@ -60,7 +60,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Documents & Notes",
@@ -115,7 +116,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Research & Library",
@@ -170,7 +172,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Writing & Citations",
@@ -219,7 +222,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Study & Planning",
@@ -268,7 +272,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "AI Research Help",
@@ -317,7 +322,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Money & Admin",
@@ -366,7 +372,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Life, Work & Travel",
@@ -415,7 +422,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     }
   ]
 }

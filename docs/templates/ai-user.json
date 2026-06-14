@@ -60,7 +60,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Writing & Editing",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Research & Papers",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Images & Design",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Coding & Prototyping",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Local & Open Models",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Prompts & Guides",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Automation & Productivity",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Safety & Checking",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Learning AI",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

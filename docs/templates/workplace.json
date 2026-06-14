@@ -72,7 +72,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Sales & CRM",
@@ -127,7 +128,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "PR & Comms",
@@ -182,7 +184,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "News & Market Awareness",
@@ -243,7 +246,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Social Media & Publishing",
@@ -310,7 +314,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Research & Search",
@@ -377,7 +382,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Travel, Maps & Expenses",
@@ -444,7 +450,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Learning",
@@ -511,7 +518,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Finance, Legal & Admin",
@@ -578,7 +586,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Tools",
@@ -645,7 +654,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 5
     }
   ]
 }

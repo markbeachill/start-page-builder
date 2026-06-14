@@ -54,7 +54,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Reading & Words",
@@ -97,7 +98,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Maths Practice",
@@ -140,7 +142,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Science & Nature",
@@ -183,7 +186,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Creative & Making",
@@ -226,7 +230,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Safe Search & Video",
@@ -269,7 +274,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Coding & Logic",
@@ -312,7 +318,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Wellbeing & Safety",
@@ -349,7 +356,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     }
   ]
 }

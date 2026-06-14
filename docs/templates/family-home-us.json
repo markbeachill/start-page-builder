@@ -18,7 +18,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "School",
@@ -31,7 +32,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Streaming",
@@ -44,7 +46,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Shopping",
@@ -57,7 +60,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Utilities",
@@ -70,7 +74,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

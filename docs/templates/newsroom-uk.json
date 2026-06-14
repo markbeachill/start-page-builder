@@ -60,7 +60,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Search & Research",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "UK Public Records",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Verification & OSINT",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Social & Monitoring",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Data & Visuals",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Press & PR Sources",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "FOI & Archives",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Law, Ethics & Safety",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Publishing & Workflow",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 5
     }
   ]
 }

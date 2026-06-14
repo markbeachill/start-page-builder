@@ -31,7 +31,8 @@
           "label": "Google Translate",
           "url": "https://translate.google.co.uk/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Email, Calendar & Cloud",
@@ -61,7 +62,8 @@
           "label": "Dropbox",
           "url": "https://www.dropbox.com/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Work",
@@ -95,7 +97,8 @@
           "label": "Indeed",
           "url": "https://www.indeed.com/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "News",
@@ -129,7 +132,8 @@
           "label": "Google News",
           "url": "https://news.google.com/"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Sport",
@@ -167,7 +171,8 @@
           "label": "Formula 1",
           "url": "https://www.formula1.com/"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Social & Messaging",
@@ -201,7 +206,8 @@
           "label": "X",
           "url": "https://x.com/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Shopping",
@@ -239,7 +245,8 @@
           "label": "Vinted",
           "url": "https://www.vinted.co.uk/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Money, Deals & Bills",
@@ -277,7 +284,8 @@
           "label": "GOV.UK",
           "url": "https://www.gov.uk/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "TV & Streaming",
@@ -315,7 +323,8 @@
           "label": "YouTube",
           "url": "https://www.youtube.com/"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Radio",
@@ -369,7 +378,8 @@
           "label": "talkSPORT Radio",
           "url": "https://talksport.com/radio/"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Music",
@@ -395,7 +405,8 @@
           "label": "SoundCloud",
           "url": "https://soundcloud.com/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Travel & Local",
@@ -433,7 +444,8 @@
           "label": "Tripadvisor",
           "url": "https://www.tripadvisor.co.uk/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Health & Public Services",
@@ -463,7 +475,8 @@
           "label": "Met Office",
           "url": "https://www.metoffice.gov.uk/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Home & Utilities",
@@ -501,7 +514,8 @@
           "label": "Evri Tracking",
           "url": "https://www.evri.com/track-a-parcel"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Tools",
@@ -531,7 +545,8 @@
           "label": "Have I Been Pwned",
           "url": "https://haveibeenpwned.com/"
         }
-      ]
+      ],
+      "column": 1
     }
   ]
 }

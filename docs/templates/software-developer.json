@@ -27,7 +27,8 @@
           "label": "Stack Overflow",
           "url": "https://stackoverflow.com/"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Code Hosting",
@@ -49,7 +50,8 @@
           "label": "Gist",
           "url": "https://gist.github.com/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Documentation",
@@ -71,7 +73,8 @@
           "label": "TypeScript Docs",
           "url": "https://www.typescriptlang.org/docs/"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Packages",
@@ -93,7 +96,8 @@
           "label": "Maven Central",
           "url": "https://central.sonatype.com/"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Cloud & Hosting",
@@ -123,7 +127,8 @@
           "label": "Netlify",
           "url": "https://app.netlify.com/"
         }
-      ]
+      ],
+      "column": 5
     },
     {
       "name": "Databases",
@@ -145,7 +150,8 @@
           "label": "SQLite Docs",
           "url": "https://www.sqlite.org/docs.html"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Design & Testing",
@@ -167,7 +173,8 @@
           "label": "Regex101",
           "url": "https://regex101.com/"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Learning & Community",
@@ -189,7 +196,8 @@
           "label": "Reddit Programming",
           "url": "https://www.reddit.com/r/programming/"
         }
-      ]
+      ],
+      "column": 3
     }
   ]
 }

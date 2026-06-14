@@ -54,7 +54,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Search & Maps",
@@ -103,7 +104,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "News & Radio",
@@ -152,7 +154,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Health & Care",
@@ -201,7 +204,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Money & Bills",
@@ -250,7 +254,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Shopping & Food",
@@ -299,7 +304,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Travel & Local",
@@ -348,7 +354,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "TV, Hobbies & Tools",
@@ -397,7 +404,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

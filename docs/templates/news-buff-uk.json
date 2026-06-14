@@ -60,7 +60,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "UK Newspapers",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Wires & Global",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Politics & Parliament",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Local & Regions",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Fact Checking",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Data & Polls",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Business & Markets",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Long Reads",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Alerts & Reading",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

@@ -60,7 +60,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Conditions & Advice",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Find Care",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Mental Wellbeing",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Fitness & Activity",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Food & Nutrition",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Sleep & Habits",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Life Stages & Support",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Medicines & Safety",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Tools & Records",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 1
     }
   ]
 }

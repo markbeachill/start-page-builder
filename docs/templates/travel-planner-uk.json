@@ -18,7 +18,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Flights",
@@ -31,7 +32,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Trains",
@@ -44,7 +46,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Hotels",
@@ -57,7 +60,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Currency",
@@ -76,7 +80,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Travel Alerts",
@@ -89,7 +94,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

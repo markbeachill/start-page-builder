@@ -54,7 +54,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "State & Local Archives",
@@ -97,7 +98,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Newspapers",
@@ -140,7 +142,8 @@
           "colour": "red",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Maps & Places",
@@ -189,7 +192,8 @@
           "colour": "orange",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Genealogy",
@@ -238,7 +242,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Images & Buildings",
@@ -281,7 +286,8 @@
           "colour": "green",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Records & Data",
@@ -324,7 +330,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Writing & Publishing",
@@ -373,7 +380,8 @@
           "colour": "purple",
           "included": true
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Quick Tools",
@@ -428,7 +436,8 @@
           "colour": "blue",
           "included": true
         }
-      ]
+      ],
+      "column": 3
     }
   ]
 }

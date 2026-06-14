@@ -60,7 +60,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Brand & Colour",
@@ -115,7 +116,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "Type & Icons",
@@ -170,7 +172,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Stock Assets",
@@ -225,7 +228,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Image Tools",
@@ -280,7 +284,8 @@
           "included": true,
           "colour": "blue"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Video & Motion",
@@ -335,7 +340,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     },
     {
       "name": "UX & Web",
@@ -390,7 +396,8 @@
           "included": true,
           "colour": "purple"
         }
-      ]
+      ],
+      "column": 3
     },
     {
       "name": "Portfolio & Delivery",
@@ -445,7 +452,8 @@
           "included": true,
           "colour": "green"
         }
-      ]
+      ],
+      "column": 4
     },
     {
       "name": "Clients & Projects",
@@ -500,7 +508,8 @@
           "included": true,
           "colour": "orange"
         }
-      ]
+      ],
+      "column": 1
     },
     {
       "name": "Learning & Community",
@@ -555,7 +564,8 @@
           "included": true,
           "colour": "red"
         }
-      ]
+      ],
+      "column": 2
     }
   ]
 }

@@ -112,6 +112,7 @@ body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#33333
       "name": "Search",
       "colour": "green",
       "included": true,
+      "column": 1,
       "links": [
         {
           "label": "Google",
@@ -122,22 +123,10 @@ body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#33333
       ]
     },
     {
-      "name": "Shopping",
-      "colour": "red",
-      "included": true,
-      "links": [
-        {
-          "label": "Tesco Grocery",
-          "url": "https://www.tesco.com/groceries/",
-          "colour": "red",
-          "included": true
-        }
-      ]
-    },
-    {
       "name": "School",
       "colour": "orange",
       "included": true,
+      "column": 2,
       "links": [
         {
           "label": "Arbor Parent",
@@ -148,9 +137,38 @@ body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#33333
       ]
     },
     {
+      "name": "Streaming",
+      "colour": "purple",
+      "included": true,
+      "column": 3,
+      "links": [
+        {
+          "label": "Netflix",
+          "url": "https://www.netflix.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ]
+    },
+    {
+      "name": "Shopping",
+      "colour": "red",
+      "included": true,
+      "column": 1,
+      "links": [
+        {
+          "label": "Tesco Grocery",
+          "url": "https://www.tesco.com/groceries/",
+          "colour": "red",
+          "included": true
+        }
+      ]
+    },
+    {
       "name": "Utilities",
       "colour": "blue",
       "included": true,
+      "column": 2,
       "links": [
         {
           "label": "British Gas",
@@ -165,25 +183,12 @@ body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#33333
           "included": true
         }
       ]
-    },
-    {
-      "name": "Streaming",
-      "colour": "purple",
-      "included": true,
-      "links": [
-        {
-          "label": "Netflix",
-          "url": "https://www.netflix.com/",
-          "colour": "purple",
-          "included": true
-        }
-      ]
     }
   ]
 }
 </script>
 <script>
-  (function attachClassicMenuBehaviour(root=document, options = {}){
+function attachClassicMenuBehaviour(root=document, options = {}){
   // Search form: submit a normal Google search, or append a Wikipedia site filter.
   const form = root.querySelector(".spb-searchbar-form, .searchbar-form");
   if(form){
@@ -236,7 +241,9 @@ body[data-spb-skin="classic"]{margin:0;padding:0;background:#ffffff;color:#33333
       header.setAttribute("aria-expanded", String(!shouldHide));
     });
   });
-})(document);
+}
+attachClassicMenuBehaviour(document);
+
 </script>
 </body>
 </html>
