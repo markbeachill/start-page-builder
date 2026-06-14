@@ -61,10 +61,10 @@
     .field input,.field textarea,.section-title input,.field select,.section-title select,.link-row input,.link-row select{border:1px solid #ccc;border-radius:4px;padding:5px 6px;font:inherit;font-size:12px;background:#fff}
     .field textarea{height:48px;min-width:320px;resize:vertical}.field input{min-width:170px}
     .subtle-help{font-size:11px;color:#666;margin:0 0 6px}.editor-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.section-list{display:flex;flex-direction:column;gap:8px}
-    .section-card{background:#fff;border-radius:4px;border:1px solid #ddd;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}.section-card.excluded{opacity:.55;background:#f6f6f6}
+    .section-card{background:#fff;border-radius:4px;border:1px solid #ddd;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}.section-card.excluded{opacity:.55;background:#f6f6f6}.section-card.section-drag-over{outline:2px dashed #2563eb;outline-offset:2px}.section-card.section-dragging{opacity:.6}
     .section-head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.toggle-line{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#555;font-weight:700;margin-right:4px}.toggle-line input{margin:0}
-    .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}
-    .links{display:flex;flex-direction:column;gap:4px}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row.drag-over{outline:2px dashed #2563eb;outline-offset:1px}.drag-handle{border:1px solid #bbb;background:#f4f4f4;border-radius:4px;padding:3px 6px;cursor:grab;font-size:12px;line-height:1}.drag-handle:active{cursor:grabbing}.link-actions{display:flex;gap:4px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
+    .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}.section-count{font-size:11px;color:#666;border:1px solid #ddd;border-radius:999px;padding:2px 7px;background:#fafafa;white-space:nowrap}
+    .links{display:flex;flex-direction:column;gap:4px}.section-list.editor-collapsed .links,.section-list.editor-collapsed .section-foot,.section-list.editor-collapsed .section-card>.empty-links{display:none}.link-row{border:1px solid #eee;border-radius:3px;padding:5px;background:#fcfcfc;display:flex;flex-wrap:wrap;gap:5px;align-items:center}.link-row.drag-over{outline:2px dashed #2563eb;outline-offset:1px}.drag-handle,.section-drag-handle{border:1px solid #bbb;background:#f4f4f4;border-radius:4px;padding:3px 6px;cursor:grab;font-size:12px;line-height:1;user-select:none}.drag-handle:active,.section-drag-handle:active{cursor:grabbing}.section-drag-handle{font-weight:700;padding:4px 7px}.link-actions{display:flex;gap:4px;align-items:center}.link-row input[type=text]{flex:1 1 150px;min-width:135px}.link-row input[type=url]{flex:2 1 260px;min-width:210px}.link-row select{width:92px}.empty-links{font-size:12px;color:#666;padding:4px 0}.section-foot{margin-top:6px;display:flex;gap:6px}
     .builder-preview-wrapper h2{margin:0 0 8px;font-size:16px;font-weight:600;border-bottom:1px solid #ddd;padding-bottom:4px;display:flex;justify-content:space-between;gap:10px}.preview-meta{font-size:12px;color:#666;font-weight:400}.preview-frame{background:#fff;min-height:calc(100vh - 120px);overflow:visible}
     .empty-preview{padding:18px;margin:10px;border:1px dashed #bbb;border-radius:6px;background:#fafafa;color:#444;font-size:14px;line-height:1.5}.privacy{font-size:11px;color:#666;margin-top:8px;line-height:1.4}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     @media(max-width:1100px){.builder-main{flex-direction:column}.builder-editor,.builder-preview-wrapper{flex:none;max-width:none;min-width:0;height:auto;min-height:50vh}.status{width:100%;margin-left:0;text-align:left}.builder-page{height:auto}.builder-toolbar{position:static}.field textarea{min-width:0}.preview-frame{min-height:500px}.section-controls{margin-left:0}}
@@ -231,6 +231,8 @@
           <button id="addSectionBtn" type="button" class="secondary">+ Add section</button>
           <button id="includeAllBtn" type="button" class="secondary">Use all</button>
           <button id="excludeAllBtn" type="button" class="secondary">Use none</button>
+          <button id="expandEditorBtn" type="button" class="secondary">Expand all</button>
+          <button id="collapseEditorBtn" type="button" class="secondary">Collapse all</button>
         </div>
 
         <div id="sectionList" class="section-list"></div>
@@ -258,6 +260,21 @@ const defaultPalette = {
   purple: "#852b99",
   red:    "#bd121d"
 };
+let editorCollapsed = false;
+function applyEditorCollapseState(){
+  const container = document.getElementById("sectionList");
+  if(!container) return;
+  container.classList.toggle("editor-collapsed", editorCollapsed);
+  const expandButton = document.getElementById("expandEditorBtn");
+  const collapseButton = document.getElementById("collapseEditorBtn");
+  if(expandButton) expandButton.disabled = !editorCollapsed;
+  if(collapseButton) collapseButton.disabled = editorCollapsed || !project.sections.length;
+}
+function setEditorCollapsed(collapsed){
+  editorCollapsed = Boolean(collapsed);
+  applyEditorCollapseState();
+  setStatus(editorCollapsed ? "Editor sections collapsed. Section controls remain visible for easier reordering." : "Editor sections expanded.");
+}
 const pastelPalette = {
   blue:   "#8bbcff",
   green:  "#8fd6a3",
@@ -655,10 +672,13 @@ function renderEditor(){
   const container = document.getElementById("sectionList");
   if(!project.sections.length){
     container.innerHTML = `<div class="section-card"><div class="links"><div class="empty-links">No sections yet. Use “Add section” to start.</div></div></div>`;
+    applyEditorCollapseState();
     return;
   }
   container.innerHTML = project.sections.map((section, si) => {
     const included = section.included !== false;
+    const linkCount = (section.links || []).length;
+    const linkLabel = linkCount === 1 ? "1 link" : `${linkCount} links`;
     const linkRows = (section.links || []).map((link, li) => `
       <div class="link-row" data-section-index="${si}" data-link-index="${li}">
         <span class="drag-handle" draggable="true" title="Drag to reorder this link" aria-label="Drag to reorder this link">↕</span>
@@ -675,11 +695,13 @@ function renderEditor(){
     return `
       <article class="section-card ${included ? "" : "excluded"}" data-section-index="${si}">
         <div class="section-head">
+          <span class="section-drag-handle" draggable="true" title="Drag to reorder this section" aria-label="Drag to reorder this section">☰</span>
           <label class="toggle-line"><input type="checkbox" data-action="toggle-section" ${included ? "checked" : ""}> Use</label>
           <div class="section-title">
             <input type="text" value="${escapeHtml(section.name || "")}" data-action="section-name" aria-label="Section name">
             <select data-action="section-colour" aria-label="Section colour">${colourOptions(cleanColour(section.colour || "blue"))}</select>
           </div>
+          <span class="section-count">${escapeHtml(linkLabel)}</span>
           <div class="section-controls">
             <button type="button" class="mini secondary" data-action="move-section-up" ${si === 0 ? "disabled" : ""}>↑</button>
             <button type="button" class="mini secondary" data-action="move-section-down" ${si === project.sections.length - 1 ? "disabled" : ""}>↓</button>
@@ -692,6 +714,7 @@ function renderEditor(){
         <div class="section-foot"><button type="button" class="mini secondary" data-action="add-link">+ Add link</button></div>
       </article>`;
   }).join("");
+  applyEditorCollapseState();
 }
 function renderPreview(){
   const state = getCurrentState();
@@ -774,16 +797,45 @@ function onSectionListClick(event){
   scheduleRender();
 }
 let draggedLink = null;
-function onLinkDragStart(event){
+let draggedSection = null;
+function onEditorDragStart(event){
+  // Sections can only be dragged by their section handle. This avoids the
+  // focus problems that happen when ordinary text fields become draggable.
+  const sectionHandle = event.target.closest(".section-drag-handle");
+  if(sectionHandle){
+    const card = sectionHandle.closest(".section-card");
+    if(!card || card.dataset.sectionIndex === undefined) return;
+    draggedSection = { sectionIndex:Number(card.dataset.sectionIndex) };
+    draggedLink = null;
+    card.classList.add("section-dragging");
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", `section:${draggedSection.sectionIndex}`);
+    return;
+  }
+
+  // Links can only be dragged by their link handle, and only within the same section.
   const handle = event.target.closest(".drag-handle");
   if(!handle) return;
   const row = handle.closest(".link-row");
   if(!row) return;
   draggedLink = { sectionIndex:Number(row.dataset.sectionIndex), linkIndex:Number(row.dataset.linkIndex) };
+  draggedSection = null;
   event.dataTransfer.effectAllowed = "move";
   event.dataTransfer.setData("text/plain", `${draggedLink.sectionIndex}:${draggedLink.linkIndex}`);
 }
-function onLinkDragOver(event){
+function onEditorDragOver(event){
+  if(draggedSection){
+    const card = event.target.closest(".section-card");
+    if(!card || card.dataset.sectionIndex === undefined) return;
+    event.preventDefault();
+    event.dataTransfer.dropEffect = "move";
+    document.querySelectorAll(".section-card.section-drag-over").forEach(el => {
+      if(el !== card) el.classList.remove("section-drag-over");
+    });
+    if(!card.classList.contains("section-dragging")) card.classList.add("section-drag-over");
+    return;
+  }
+
   if(!draggedLink) return;
   const row = event.target.closest(".link-row");
   if(!row) return;
@@ -793,11 +845,32 @@ function onLinkDragOver(event){
   event.dataTransfer.dropEffect = "move";
   row.classList.add("drag-over");
 }
-function onLinkDragLeave(event){
+function onEditorDragLeave(event){
   const row = event.target.closest(".link-row");
   if(row) row.classList.remove("drag-over");
 }
-function onLinkDrop(event){
+function onEditorDrop(event){
+  if(draggedSection){
+    const card = event.target.closest(".section-card");
+    if(!card || card.dataset.sectionIndex === undefined) return;
+    event.preventDefault();
+    const from = draggedSection.sectionIndex;
+    let to = Number(card.dataset.sectionIndex);
+    if(Number.isNaN(from) || Number.isNaN(to) || from === to) return;
+    const rect = card.getBoundingClientRect();
+    const after = event.clientY > rect.top + rect.height / 2;
+    if(after) to += 1;
+    const [section] = project.sections.splice(from, 1);
+    if(from < to) to -= 1;
+    if(to < 0) to = 0;
+    if(to > project.sections.length) to = project.sections.length;
+    project.sections.splice(to, 0, section);
+    draggedSection = null;
+    setStatus("Section moved.");
+    scheduleRender();
+    return;
+  }
+
   if(!draggedLink) return;
   const row = event.target.closest(".link-row");
   if(!row) return;
@@ -820,9 +893,11 @@ function onLinkDrop(event){
   draggedLink = null;
   scheduleRender();
 }
-function onLinkDragEnd(){
+function onEditorDragEnd(){
   document.querySelectorAll(".link-row.drag-over").forEach(el => el.classList.remove("drag-over"));
+  document.querySelectorAll(".section-card.section-drag-over,.section-card.section-dragging").forEach(el => el.classList.remove("section-drag-over","section-dragging"));
   draggedLink = null;
+  draggedSection = null;
 }
 const templateFiles = {
   "typical-uk-user":"templates/typical-uk-user.json",
@@ -1238,16 +1313,18 @@ function initialiseEvents(){
   document.getElementById("sectionList").addEventListener("input", onSectionListInput);
   document.getElementById("sectionList").addEventListener("change", onSectionListInput);
   document.getElementById("sectionList").addEventListener("click", onSectionListClick);
-  document.getElementById("sectionList").addEventListener("dragstart", onLinkDragStart);
-  document.getElementById("sectionList").addEventListener("dragover", onLinkDragOver);
-  document.getElementById("sectionList").addEventListener("dragleave", onLinkDragLeave);
-  document.getElementById("sectionList").addEventListener("drop", onLinkDrop);
-  document.getElementById("sectionList").addEventListener("dragend", onLinkDragEnd);
+  document.getElementById("sectionList").addEventListener("dragstart", onEditorDragStart);
+  document.getElementById("sectionList").addEventListener("dragover", onEditorDragOver);
+  document.getElementById("sectionList").addEventListener("dragleave", onEditorDragLeave);
+  document.getElementById("sectionList").addEventListener("drop", onEditorDrop);
+  document.getElementById("sectionList").addEventListener("dragend", onEditorDragEnd);
   document.getElementById("addSectionBtn").addEventListener("click", () => {
     project.sections.push({name:"New section", colour:"blue", included:true, links:[{label:"New link", url:"https://", colour:"blue", included:true}]}); scheduleRender();
   });
   document.getElementById("includeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = true); setStatus("All sections are now used."); scheduleRender(); });
   document.getElementById("excludeAllBtn").addEventListener("click", () => { project.sections.forEach(s => s.included = false); setStatus("No sections are currently used. Tick Use beside sections to add them back."); scheduleRender(); });
+  document.getElementById("expandEditorBtn").addEventListener("click", () => setEditorCollapsed(false));
+  document.getElementById("collapseEditorBtn").addEventListener("click", () => setEditorCollapsed(true));
   const templateFromUrl = getTemplateFromUrl();
   if(templateFiles[templateFromUrl]) document.getElementById("templateSelect").value = templateFromUrl;
   document.getElementById("templateSelect").addEventListener("change", () => setStatus("Template selected. Click Build with selected to replace the current menu."));

@@ -1,11 +1,32 @@
-# Personal Start Page Creator — Stage 1.26 — template quality batch 3
+# Personal Start Page Creator — Stage 1.28 — editor expand/collapse controls
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.26 — template quality batch 3
+## Stage 1.28 — editor expand/collapse controls
+
+Stage 1.28 adds simple builder-wide editor controls for working with large menus.
+
+- Added **Expand all** and **Collapse all** controls above the section editor.
+- **Collapse all** hides link rows and add-link controls across all sections, leaving section headers, Use checkboxes, colours, drag handles and section movement buttons visible.
+- This makes large templates easier to reorder without changing the exported start page.
+- **Expand all** restores the full link editor.
+- The collapse state is editor-only and is not saved into menu configs or exported start pages.
+
+## Previous Stage 1.27 — section reordering
+
+This stage adds section reordering to the builder editor.
+
+- Section cards now have a dedicated drag handle.
+- Sections can be dragged up or down to change their order.
+- Existing ↑ / ↓ section movement buttons remain as a reliable fallback.
+- Dragging is deliberately limited to the section handle so text fields, selects and buttons do not lose focus.
+- Link dragging within a section still works as before.
+- Reordered sections update the preview, browser draft, saved menu config and exported start page.
+
+## Previous Stage 1.26 update
 
 This stage improves another six jump-start templates with fuller, more practical menus and regenerated examples.
 
@@ -110,6 +131,7 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 - Import list from file: Markdown, CSV and plain text.
 - Paste list from AI: Markdown, CSV and plain text, with START/END marker support.
 - Export list dropdown: Markdown and plain text.
+- Section cards have ↑ / ↓ controls and a drag handle for reordering sections.
 - Link rows have ↑ / ↓ controls and can be dragged within their section to reorder links.
 - Section **Use** control remains, with sections used by default.
 - Responsive classic renderer with full-width buttons, calculated column widths and search-first behaviour.
