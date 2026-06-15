@@ -1,21 +1,63 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Travel Planners Start Page",
-  "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
+  "title": "Travel Planner Start Page",
+  "description": "A fuller UK travel-planning template for maps, flights, trains, stays, itineraries, safety, money, local transport, activities and travel tools.",
   "filename": "start-page-travel-planner-uk.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Maps",
-      "colour": "green",
+      "name": "Maps & Routes",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google Maps",
           "url": "https://maps.google.com/",
-          "colour": "green",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Apple Maps",
+          "url": "https://maps.apple.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Waze",
+          "url": "https://www.waze.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Rome2Rio",
+          "url": "https://www.rome2rio.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Citymapper",
+          "url": "https://citymapper.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "what3words",
+          "url": "https://what3words.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "AA Route",
+          "url": "https://www.theaa.com/route-planner",
+          "colour": "blue",
           "included": true
         }
       ],
@@ -27,8 +69,50 @@
       "included": true,
       "links": [
         {
+          "label": "Google Flights",
+          "url": "https://www.google.com/travel/flights",
+          "colour": "orange",
+          "included": true
+        },
+        {
           "label": "Skyscanner",
           "url": "https://www.skyscanner.net/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kayak",
+          "url": "https://www.kayak.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Expedia",
+          "url": "https://www.expedia.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FlightAware",
+          "url": "https://www.flightaware.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Flightradar24",
+          "url": "https://www.flightradar24.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Heathrow",
+          "url": "https://www.heathrow.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Gatwick",
+          "url": "https://www.gatwickairport.com/",
           "colour": "orange",
           "included": true
         }
@@ -36,47 +120,167 @@
       "column": 2
     },
     {
-      "name": "Trains",
-      "colour": "purple",
+      "name": "Trains & Coaches",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "National Rail",
           "url": "https://www.nationalrail.co.uk/",
-          "colour": "purple",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "TfL",
+          "url": "https://tfl.gov.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Traveline",
+          "url": "https://www.traveline.info/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Eurostar",
+          "url": "https://www.eurostar.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "National Express",
+          "url": "https://www.nationalexpress.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Megabus",
+          "url": "https://uk.megabus.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ScotRail",
+          "url": "https://www.scotrail.co.uk/",
+          "colour": "green",
           "included": true
         }
       ],
       "column": 3
     },
     {
-      "name": "Hotels",
-      "colour": "red",
+      "name": "Hotels & Stays",
+      "colour": "purple",
       "included": true,
       "links": [
         {
           "label": "Booking.com",
           "url": "https://www.booking.com/",
-          "colour": "red",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Airbnb",
+          "url": "https://www.airbnb.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hotels.com",
+          "url": "https://uk.hotels.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hostelworld",
+          "url": "https://www.hostelworld.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Premier Inn",
+          "url": "https://www.premierinn.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Travelodge",
+          "url": "https://www.travelodge.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
+          "colour": "purple",
           "included": true
         }
       ],
       "column": 4
     },
     {
-      "name": "Currency",
+      "name": "Plans & Itinerary",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "XE Currency",
-          "url": "https://www.xe.com/",
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
           "colour": "blue",
           "included": true
         },
         {
-          "label": "Revolut",
-          "url": "https://www.revolut.com/",
+          "label": "TripIt",
+          "url": "https://www.tripit.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wanderlog",
+          "url": "https://wanderlog.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PackPoint",
+          "url": "https://www.packpnt.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Weather",
+          "url": "https://www.metoffice.gov.uk/",
           "colour": "blue",
           "included": true
         }
@@ -84,14 +288,280 @@
       "column": 1
     },
     {
-      "name": "Travel Alerts",
-      "colour": "green",
+      "name": "Safety & Documents",
+      "colour": "red",
       "included": true,
       "links": [
         {
           "label": "FCDO Advice",
           "url": "https://www.gov.uk/foreign-travel-advice",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "UK Passport",
+          "url": "https://www.gov.uk/browse/abroad/passports",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "GHIC",
+          "url": "https://www.nhs.uk/using-the-nhs/healthcare-abroad/apply-for-a-free-uk-global-health-insurance-card-ghic/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "TravelHealthPro",
+          "url": "https://travelhealthpro.org.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "UK Customs",
+          "url": "https://www.gov.uk/bringing-goods-into-uk-personal-use",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Lost Passport",
+          "url": "https://www.gov.uk/emergency-travel-document",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Travel Aware",
+          "url": "https://travelaware.campaign.gov.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Met Office Warnings",
+          "url": "https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Money & Mobile",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Wise",
+          "url": "https://wise.com/gb/currency-converter/",
           "colour": "green",
+          "included": true
+        },
+        {
+          "label": "XE",
+          "url": "https://www.xe.com/currencyconverter/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Revolut",
+          "url": "https://www.revolut.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Monzo",
+          "url": "https://monzo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mastercard ATM",
+          "url": "https://www.mastercard.us/en-us/personal/get-support/find-nearest-atm.html",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Visa ATM",
+          "url": "https://www.visa.com/atmlocator/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "O2 Roaming",
+          "url": "https://www.o2.co.uk/international",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "EE Roaming",
+          "url": "https://ee.co.uk/help/mobile/roaming",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Local Transport",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/gb/en/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Bolt",
+          "url": "https://bolt.eu/en-gb/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Lime",
+          "url": "https://www.li.me/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Enterprise",
+          "url": "https://www.enterprise.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Turo",
+          "url": "https://turo.com/gb/en",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Parkopedia",
+          "url": "https://www.parkopedia.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "JustPark",
+          "url": "https://www.justpark.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Zapmap",
+          "url": "https://www.zap-map.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Food & Things",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "GetYourGuide",
+          "url": "https://www.getyourguide.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Viator",
+          "url": "https://www.viator.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "AllTrails",
+          "url": "https://www.alltrails.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "HappyCow",
+          "url": "https://www.happycow.net/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TheFork",
+          "url": "https://www.thefork.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "OpenTable",
+          "url": "https://www.opentable.co.uk/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Travel Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Translate",
+          "url": "https://translate.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DeepL",
+          "url": "https://www.deepl.com/translator",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Photos",
+          "url": "https://photos.google.com/",
+          "colour": "blue",
           "included": true
         }
       ],

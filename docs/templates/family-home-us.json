@@ -1,34 +1,454 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Family & Home Start Page",
-  "description": "Shared logistics, grocery delivery, and public utility billing.",
+  "description": "A fuller US family and home template for shared calendars, school, shopping, money, health, utilities, travel, entertainment and online safety.",
   "filename": "start-page-family-home-us.html",
   "columns": 3,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Search",
-      "colour": "green",
+      "name": "Search & AI",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google",
           "url": "https://www.google.com/",
-          "colour": "green",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DuckDuckGo",
+          "url": "https://duckduckgo.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Translate",
+          "url": "https://translate.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bing",
+          "url": "https://www.bing.com/",
+          "colour": "blue",
           "included": true
         }
       ],
       "column": 1
     },
     {
-      "name": "School",
+      "name": "Calendar & Lists",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook Calendar",
+          "url": "https://outlook.live.com/calendar/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MS To Do",
+          "url": "https://to-do.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Keep",
+          "url": "https://keep.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Todoist",
+          "url": "https://todoist.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Any.do",
+          "url": "https://www.any.do/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Cozi",
+          "url": "https://www.cozi.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "School & Learning",
       "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "PowerSchool Par",
-          "url": "https://www.powerschool.com/parents/",
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PBS Learning",
+          "url": "https://www.pbslearningmedia.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NASA Kids",
+          "url": "https://www.nasa.gov/learning-resources/nasa-kids-club/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Duolingo",
+          "url": "https://www.duolingo.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Common Sense",
+          "url": "https://www.commonsensemedia.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "College Board",
+          "url": "https://www.collegeboard.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Child Mind",
+          "url": "https://childmind.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Shopping & Groceries",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Amazon",
+          "url": "https://www.amazon.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Walmart",
+          "url": "https://www.walmart.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Target",
+          "url": "https://www.target.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Costco",
+          "url": "https://www.costco.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Instacart",
+          "url": "https://www.instacart.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kroger",
+          "url": "https://www.kroger.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "eBay",
+          "url": "https://www.ebay.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Etsy",
+          "url": "https://www.etsy.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Money & Bills",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "USA.gov Money",
+          "url": "https://www.usa.gov/money",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "IRS",
+          "url": "https://www.irs.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Benefits.gov",
+          "url": "https://www.benefits.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PayPal",
+          "url": "https://www.paypal.com/us/home",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NerdWallet",
+          "url": "https://www.nerdwallet.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Consumer Reports",
+          "url": "https://www.consumerreports.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CFPB",
+          "url": "https://www.consumerfinance.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AnnualCreditReport",
+          "url": "https://www.annualcreditreport.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Health & Care",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "MedlinePlus",
+          "url": "https://medlineplus.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CDC",
+          "url": "https://www.cdc.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HealthCare.gov",
+          "url": "https://www.healthcare.gov/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Poison Control",
+          "url": "https://www.poison.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "988 Lifeline",
+          "url": "https://988lifeline.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NAMI",
+          "url": "https://www.nami.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mayo Clinic",
+          "url": "https://www.mayoclinic.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WebMD",
+          "url": "https://www.webmd.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Home & Utilities",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "USPS Tracking",
+          "url": "https://tools.usps.com/go/TrackConfirmAction_input",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "UPS Tracking",
+          "url": "https://www.ups.com/track",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "FedEx Tracking",
+          "url": "https://www.fedex.com/en-us/tracking.html",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Weather.gov",
+          "url": "https://www.weather.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Ready.gov",
+          "url": "https://www.ready.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Energy Saver",
+          "url": "https://www.energy.gov/energysaver/energy-saver",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "FCC Broadband",
+          "url": "https://broadbandmap.fcc.gov/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Travel & Local",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Waze",
+          "url": "https://www.waze.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Amtrak",
+          "url": "https://www.amtrak.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/us/en/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Lyft",
+          "url": "https://www.lyft.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Google Flights",
+          "url": "https://www.google.com/travel/flights",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.com/",
           "colour": "orange",
           "included": true
         }
@@ -36,7 +456,7 @@
       "column": 2
     },
     {
-      "name": "Streaming",
+      "name": "TV, Radio & Fun",
       "colour": "purple",
       "included": true,
       "links": [
@@ -45,37 +465,107 @@
           "url": "https://www.netflix.com/",
           "colour": "purple",
           "included": true
+        },
+        {
+          "label": "Hulu",
+          "url": "https://www.hulu.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Prime Video",
+          "url": "https://www.primevideo.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Disney+",
+          "url": "https://www.disneyplus.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "NPR",
+          "url": "https://www.npr.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "PBS",
+          "url": "https://www.pbs.org/",
+          "colour": "purple",
+          "included": true
         }
       ],
       "column": 3
     },
     {
-      "name": "Shopping",
+      "name": "Safety & Passwords",
       "colour": "red",
       "included": true,
       "links": [
         {
-          "label": "Instacart",
-          "url": "https://www.instacart.com/",
+          "label": "Bitwarden",
+          "url": "https://bitwarden.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Pwned?",
+          "url": "https://haveibeenpwned.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "FTC Scams",
+          "url": "https://consumer.ftc.gov/scams",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CISA Secure",
+          "url": "https://www.cisa.gov/secure-our-world",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NetSmartz",
+          "url": "https://www.missingkids.org/netsmartz",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Common Sense",
+          "url": "https://www.commonsensemedia.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "IdentityTheft.gov",
+          "url": "https://www.identitytheft.gov/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
           "colour": "red",
           "included": true
         }
       ],
       "column": 1
-    },
-    {
-      "name": "Utilities",
-      "colour": "blue",
-      "included": true,
-      "links": [
-        {
-          "label": "Zillow",
-          "url": "https://www.zillow.com/",
-          "colour": "blue",
-          "included": true
-        }
-      ],
-      "column": 2
     }
   ]
 }

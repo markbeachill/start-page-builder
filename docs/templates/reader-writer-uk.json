@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Readers & Writers Start Page",
-  "description": "Literary tracking, publishing pipelines, and lexicography tools.",
+  "description": "A fuller UK readers-and-writers template for libraries, books, drafting, research, publishing, magazines, notes, references, audio and writing communities.",
   "filename": "start-page-reader-writer-uk.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Books & Libraries",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "British Library",
+          "url": "https://www.bl.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Library Hub",
+          "url": "https://discover.libraryhub.jisc.ac.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WorldCat",
+          "url": "https://www.worldcat.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Books",
+          "url": "https://books.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Open Library",
+          "url": "https://openlibrary.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Project Gutenberg",
+          "url": "https://www.gutenberg.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive",
+          "url": "https://archive.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Goodreads",
+          "url": "https://www.goodreads.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Writing & Drafting",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Docs",
+          "url": "https://docs.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Word Online",
+          "url": "https://www.office.com/launch/word",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Scrivener",
+          "url": "https://www.literatureandlatte.com/scrivener/overview",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ulysses",
+          "url": "https://ulysses.app/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Draft",
+          "url": "https://draftin.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hemingway",
+          "url": "https://hemingwayapp.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Grammarly",
+          "url": "https://www.grammarly.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Research",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Scholar",
+          "url": "https://scholar.google.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "JSTOR Daily",
+          "url": "https://daily.jstor.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Britannica",
+          "url": "https://www.britannica.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Oxford Learner's",
+          "url": "https://www.oxfordlearnersdictionaries.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "OneLook",
+          "url": "https://www.onelook.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Etymonline",
+          "url": "https://www.etymonline.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Publishing",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Submittable",
+          "url": "https://www.submittable.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Duotrope",
+          "url": "https://duotrope.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Writers & Artists",
+          "url": "https://www.writersandartists.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reedsy",
+          "url": "https://reedsy.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "KDP",
+          "url": "https://kdp.amazon.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "IngramSpark",
+          "url": "https://www.ingramspark.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Smashwords",
+          "url": "https://www.smashwords.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Poetry Society",
+          "url": "https://poetrysociety.org.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Reading & Reviews",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Goodreads",
+          "url": "https://www.goodreads.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "The StoryGraph",
+          "url": "https://www.thestorygraph.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BookBrowse",
+          "url": "https://www.bookbrowse.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Literary Hub",
+          "url": "https://lithub.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Guardian Books",
+          "url": "https://www.theguardian.com/books",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC Culture",
+          "url": "https://www.bbc.com/culture",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Waterstones",
+          "url": "https://www.waterstones.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bookshop.org",
+          "url": "https://uk.bookshop.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Magazines & Journals",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "LRB",
+          "url": "https://www.lrb.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Granta",
+          "url": "https://granta.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "New Yorker",
+          "url": "https://www.newyorker.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Paris Review",
+          "url": "https://www.theparisreview.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Aeon",
+          "url": "https://aeon.co/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Longreads",
+          "url": "https://longreads.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Electric Lit",
+          "url": "https://electricliterature.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Poetry Foundation",
+          "url": "https://www.poetryfoundation.org/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Notes & Research",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Obsidian",
+          "url": "https://obsidian.md/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Evernote",
+          "url": "https://evernote.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Zotero",
+          "url": "https://www.zotero.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Raindrop",
+          "url": "https://raindrop.io/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Pocket",
+          "url": "https://getpocket.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Keep",
+          "url": "https://keep.google.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Reference & Style",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Cambridge Dict",
+          "url": "https://dictionary.cambridge.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Merriam-Webster",
+          "url": "https://www.merriam-webster.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Thesaurus",
+          "url": "https://www.thesaurus.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Chicago Manual",
+          "url": "https://www.chicagomanualofstyle.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "APA Style",
+          "url": "https://apastyle.apa.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "GOV.UK Style",
+          "url": "https://www.gov.uk/guidance/style-guide",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Plain English",
+          "url": "https://www.plainenglish.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Purdue OWL",
+          "url": "https://owl.purdue.edu/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Audio & Ebooks",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Audible UK",
+          "url": "https://www.audible.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Libby",
+          "url": "https://www.overdrive.com/apps/libby",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BorrowBox",
+          "url": "https://www.borrowbox.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kobo",
+          "url": "https://www.kobo.com/gb/en",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kindle Cloud",
+          "url": "https://read.amazon.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BBC Sounds",
+          "url": "https://www.bbc.co.uk/sounds",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "LibriVox",
+          "url": "https://librivox.org/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Community & Learning",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "NaNoWriMo",
+          "url": "https://nanowrimo.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NCW",
+          "url": "https://nationalcentreforwriting.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Arvon",
+          "url": "https://www.arvon.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FutureLearn",
+          "url": "https://www.futurelearn.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Coursera Writing",
+          "url": "https://www.coursera.org/browse/arts-and-humanities/writing",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Writing Magazine",
+          "url": "https://www.writers-online.co.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Society Authors",
+          "url": "https://societyofauthors.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Writers' HQ",
+          "url": "https://writershq.co.uk/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    }
+  ]
 }

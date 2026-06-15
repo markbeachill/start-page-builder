@@ -1,73 +1,371 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "Family & Home Start Page",
-  "description": "Shared logistics, grocery delivery, and public utility billing.",
+  "description": "A fuller UK family and home template for shared calendars, school, shopping, money, health, utilities, travel, entertainment and online safety.",
   "filename": "start-page-family-home-uk.html",
   "columns": 3,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Search",
-      "colour": "green",
+      "name": "Search & AI",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google",
-          "url": "https://www.google.com/",
-          "colour": "green",
+          "url": "https://www.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wikipedia",
+          "url": "https://www.wikipedia.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DuckDuckGo",
+          "url": "https://duckduckgo.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Translate",
+          "url": "https://translate.google.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC Search",
+          "url": "https://www.bbc.co.uk/search",
+          "colour": "blue",
           "included": true
         }
       ],
       "column": 1
     },
     {
-      "name": "School",
-      "colour": "orange",
+      "name": "Calendar & Lists",
+      "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "Arbor Parent",
-          "url": "https://arbor-education.com/",
-          "colour": "orange",
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Outlook Calendar",
+          "url": "https://outlook.live.com/calendar/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MS To Do",
+          "url": "https://to-do.live.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Keep",
+          "url": "https://keep.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Todoist",
+          "url": "https://todoist.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Any.do",
+          "url": "https://www.any.do/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Cozi",
+          "url": "https://www.cozi.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Trello",
+          "url": "https://trello.com/",
+          "colour": "green",
           "included": true
         }
       ],
       "column": 2
     },
     {
-      "name": "Streaming",
-      "colour": "purple",
+      "name": "School & Learning",
+      "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Netflix",
-          "url": "https://www.netflix.com/",
-          "colour": "purple",
+          "label": "BBC Bitesize",
+          "url": "https://www.bbc.co.uk/bitesize",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Oak Academy",
+          "url": "https://www.thenational.academy/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Seneca",
+          "url": "https://senecalearning.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Khan Academy",
+          "url": "https://www.khanacademy.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Duolingo",
+          "url": "https://www.duolingo.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Scratch",
+          "url": "https://scratch.mit.edu/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Childline",
+          "url": "https://www.childline.org.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Parentkind",
+          "url": "https://www.parentkind.org.uk/",
+          "colour": "orange",
           "included": true
         }
       ],
       "column": 3
     },
     {
-      "name": "Shopping",
-      "colour": "red",
+      "name": "Shopping & Groceries",
+      "colour": "orange",
       "included": true,
       "links": [
         {
-          "label": "Tesco Grocery",
-          "url": "https://www.tesco.com/groceries/",
-          "colour": "red",
+          "label": "Amazon UK",
+          "url": "https://www.amazon.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Tesco",
+          "url": "https://www.tesco.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sainsbury's",
+          "url": "https://www.sainsburys.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ASDA",
+          "url": "https://www.asda.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Ocado",
+          "url": "https://www.ocado.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Argos",
+          "url": "https://www.argos.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "John Lewis",
+          "url": "https://www.johnlewis.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Vinted",
+          "url": "https://www.vinted.co.uk/",
+          "colour": "orange",
           "included": true
         }
       ],
       "column": 1
     },
     {
-      "name": "Utilities",
+      "name": "Money & Bills",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "MoneySavingExpert",
+          "url": "https://www.moneysavingexpert.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "HMRC",
+          "url": "https://www.gov.uk/government/organisations/hm-revenue-customs",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "GOV.UK Benefits",
+          "url": "https://www.gov.uk/browse/benefits",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PayPal",
+          "url": "https://www.paypal.com/uk/home",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Compare Market",
+          "url": "https://www.comparethemarket.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Uswitch",
+          "url": "https://www.uswitch.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Citizens Advice",
+          "url": "https://www.citizensadvice.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ofgem",
+          "url": "https://www.ofgem.gov.uk/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Health & Care",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "NHS",
+          "url": "https://www.nhs.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NHS App",
+          "url": "https://www.nhs.uk/nhs-app/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NHS 111",
+          "url": "https://111.nhs.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Patient.info",
+          "url": "https://patient.info/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mind",
+          "url": "https://www.mind.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Samaritans",
+          "url": "https://www.samaritans.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Find Dentist",
+          "url": "https://www.nhs.uk/service-search/find-a-dentist",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Find Pharmacy",
+          "url": "https://www.nhs.uk/service-search/pharmacy/find-a-pharmacy",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Home & Utilities",
       "colour": "blue",
       "included": true,
       "links": [
+        {
+          "label": "Royal Mail",
+          "url": "https://www.royalmail.com/track-your-item",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Evri Tracking",
+          "url": "https://www.evri.com/track-a-parcel",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Octopus Energy",
+          "url": "https://octopus.energy/",
+          "colour": "blue",
+          "included": true
+        },
         {
           "label": "British Gas",
           "url": "https://www.britishgas.co.uk/",
@@ -75,13 +373,199 @@
           "included": true
         },
         {
-          "label": "Bin Collection",
-          "url": "https://www.gov.uk/rubbish-collection-day",
+          "label": "BT",
+          "url": "https://www.bt.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Virgin Media",
+          "url": "https://www.virginmedia.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Flood Risk",
+          "url": "https://www.gov.uk/check-long-term-flood-risk",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Met Office",
+          "url": "https://www.metoffice.gov.uk/",
           "colour": "blue",
           "included": true
         }
       ],
+      "column": 1
+    },
+    {
+      "name": "Travel & Local",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Maps",
+          "url": "https://maps.google.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "TfL",
+          "url": "https://tfl.gov.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Traveline",
+          "url": "https://www.traveline.info/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/gb/en/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Booking.com",
+          "url": "https://www.booking.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Skyscanner",
+          "url": "https://www.skyscanner.net/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
       "column": 2
+    },
+    {
+      "name": "TV, Radio & Fun",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC iPlayer",
+          "url": "https://www.bbc.co.uk/iplayer",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ITVX",
+          "url": "https://www.itv.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Channel 4",
+          "url": "https://www.channel4.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Netflix",
+          "url": "https://www.netflix.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Prime Video",
+          "url": "https://www.primevideo.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Disney+",
+          "url": "https://www.disneyplus.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "BBC Sounds",
+          "url": "https://www.bbc.co.uk/sounds",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Safety & Passwords",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Bitwarden",
+          "url": "https://bitwarden.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Pwned?",
+          "url": "https://haveibeenpwned.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Get Safe Online",
+          "url": "https://www.getsafeonline.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Cyber Aware",
+          "url": "https://www.ncsc.gov.uk/cyberaware/home",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NSPCC",
+          "url": "https://www.nspcc.org.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Internet Matters",
+          "url": "https://www.internetmatters.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Action Fraud",
+          "url": "https://www.actionfraud.police.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 1
     }
   ]
 }

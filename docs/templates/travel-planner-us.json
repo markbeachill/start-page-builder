@@ -1,21 +1,63 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Travel Planners Start Page",
-  "description": "Live transit tracking, foreign office alerts, and itinerary hubs.",
+  "title": "Travel Planner Start Page",
+  "description": "A fuller US travel-planning template for maps, flights, road trips, rail, stays, itineraries, safety, money, activities and travel tools.",
   "filename": "start-page-travel-planner-us.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
   "sections": [
     {
-      "name": "Maps",
-      "colour": "green",
+      "name": "Maps & Routes",
+      "colour": "blue",
       "included": true,
       "links": [
         {
           "label": "Google Maps",
           "url": "https://maps.google.com/",
-          "colour": "green",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Apple Maps",
+          "url": "https://maps.apple.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Waze",
+          "url": "https://www.waze.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Rome2Rio",
+          "url": "https://www.rome2rio.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "OpenStreetMap",
+          "url": "https://www.openstreetmap.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "what3words",
+          "url": "https://what3words.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "AAA TripTik",
+          "url": "https://triptik.aaa.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "GasBuddy",
+          "url": "https://www.gasbuddy.com/",
+          "colour": "blue",
           "included": true
         }
       ],
@@ -27,8 +69,50 @@
       "included": true,
       "links": [
         {
+          "label": "Google Flights",
+          "url": "https://www.google.com/travel/flights",
+          "colour": "orange",
+          "included": true
+        },
+        {
           "label": "Skyscanner",
-          "url": "https://www.skyscanner.net/",
+          "url": "https://www.skyscanner.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Kayak",
+          "url": "https://www.kayak.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Expedia",
+          "url": "https://www.expedia.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FlightAware",
+          "url": "https://www.flightaware.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Flightradar24",
+          "url": "https://www.flightradar24.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "TSA",
+          "url": "https://www.tsa.gov/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FAA Delays",
+          "url": "https://www.fly.faa.gov/flyfaa/usmap.jsp",
           "colour": "orange",
           "included": true
         }
@@ -36,47 +120,167 @@
       "column": 2
     },
     {
-      "name": "Trains",
-      "colour": "purple",
+      "name": "Road, Rail & Bus",
+      "colour": "green",
       "included": true,
       "links": [
         {
           "label": "Amtrak",
           "url": "https://www.amtrak.com/",
-          "colour": "purple",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Greyhound",
+          "url": "https://www.greyhound.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FlixBus",
+          "url": "https://www.flixbus.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Megabus",
+          "url": "https://us.megabus.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Rome2Rio",
+          "url": "https://www.rome2rio.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Enterprise",
+          "url": "https://www.enterprise.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hertz",
+          "url": "https://www.hertz.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Turo",
+          "url": "https://turo.com/us/en",
+          "colour": "green",
           "included": true
         }
       ],
       "column": 3
     },
     {
-      "name": "Hotels",
-      "colour": "red",
+      "name": "Hotels & Stays",
+      "colour": "purple",
       "included": true,
       "links": [
         {
           "label": "Booking.com",
           "url": "https://www.booking.com/",
-          "colour": "red",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Airbnb",
+          "url": "https://www.airbnb.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hotels.com",
+          "url": "https://www.hotels.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hostelworld",
+          "url": "https://www.hostelworld.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Marriott",
+          "url": "https://www.marriott.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hilton",
+          "url": "https://www.hilton.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
+          "colour": "purple",
           "included": true
         }
       ],
       "column": 4
     },
     {
-      "name": "Currency",
+      "name": "Plans & Itinerary",
       "colour": "blue",
       "included": true,
       "links": [
         {
-          "label": "XE Currency",
-          "url": "https://www.xe.com/",
+          "label": "Google Travel",
+          "url": "https://www.google.com/travel/",
           "colour": "blue",
           "included": true
         },
         {
-          "label": "Revolut",
-          "url": "https://www.revolut.com/",
+          "label": "TripIt",
+          "url": "https://www.tripit.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Wanderlog",
+          "url": "https://wanderlog.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Calendar",
+          "url": "https://calendar.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Drive",
+          "url": "https://drive.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Notion",
+          "url": "https://www.notion.so/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "PackPoint",
+          "url": "https://www.packpnt.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Weather.gov",
+          "url": "https://www.weather.gov/",
           "colour": "blue",
           "included": true
         }
@@ -84,14 +288,280 @@
       "column": 1
     },
     {
-      "name": "Travel Alerts",
+      "name": "Safety & Documents",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Travel Advisories",
+          "url": "https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories.html/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "US Passports",
+          "url": "https://travel.state.gov/content/travel/en/passports.html",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Smart Traveler",
+          "url": "https://step.state.gov/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CDC Travel",
+          "url": "https://wwwnc.cdc.gov/travel",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CBP Travel",
+          "url": "https://www.cbp.gov/travel",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "TSA What Can I",
+          "url": "https://www.tsa.gov/travel/security-screening/whatcanibring/all",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Ready.gov",
+          "url": "https://www.ready.gov/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NWS Alerts",
+          "url": "https://www.weather.gov/alerts",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Money & Mobile",
       "colour": "green",
       "included": true,
       "links": [
         {
-          "label": "State Dept Adv.",
-          "url": "https://travel.state.gov/",
+          "label": "Wise",
+          "url": "https://wise.com/us/currency-converter/",
           "colour": "green",
+          "included": true
+        },
+        {
+          "label": "XE",
+          "url": "https://www.xe.com/currencyconverter/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Revolut",
+          "url": "https://www.revolut.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Venmo",
+          "url": "https://venmo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mastercard ATM",
+          "url": "https://www.mastercard.us/en-us/personal/get-support/find-nearest-atm.html",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Visa ATM",
+          "url": "https://www.visa.com/atmlocator/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Google Fi",
+          "url": "https://fi.google.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "T-Mobile Travel",
+          "url": "https://www.t-mobile.com/cell-phone-plans/international-roaming-plans",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Local Transport",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Uber",
+          "url": "https://www.uber.com/us/en/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Lyft",
+          "url": "https://www.lyft.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Lime",
+          "url": "https://www.li.me/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Bird",
+          "url": "https://www.bird.co/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Zipcar",
+          "url": "https://www.zipcar.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Parkopedia",
+          "url": "https://www.parkopedia.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "SpotHero",
+          "url": "https://spothero.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PlugShare",
+          "url": "https://www.plugshare.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Food & Things",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Tripadvisor",
+          "url": "https://www.tripadvisor.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Time Out",
+          "url": "https://www.timeout.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "GetYourGuide",
+          "url": "https://www.getyourguide.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Viator",
+          "url": "https://www.viator.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "AllTrails",
+          "url": "https://www.alltrails.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "HappyCow",
+          "url": "https://www.happycow.net/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "OpenTable",
+          "url": "https://www.opentable.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Yelp",
+          "url": "https://www.yelp.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Travel Tools",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Google Translate",
+          "url": "https://translate.google.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "DeepL",
+          "url": "https://www.deepl.com/translator",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Time.is",
+          "url": "https://time.is/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "World Time",
+          "url": "https://www.worldtimebuddy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Speedtest",
+          "url": "https://www.speedtest.net/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Smallpdf",
+          "url": "https://smallpdf.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Dropbox",
+          "url": "https://www.dropbox.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Google Photos",
+          "url": "https://photos.google.com/",
+          "colour": "blue",
           "included": true
         }
       ],

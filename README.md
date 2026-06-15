@@ -1,11 +1,30 @@
-# Personal Start Page Creator — Stage 1.31 — link drag between sections
+# Personal Start Page Creator — Stage 1.32 — template quality batch 4
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.31 — link drag between sections
+## Stage 1.32 — template quality batch 4
+
+Stage 1.32 improves another six jump-start templates with fuller, more practical menus and regenerates their matching **Try it** example pages.
+
+Enhanced templates:
+
+- Family & Home — UK
+- Family & Home — US
+- Travel Planners — UK
+- Travel Planners — US
+- Readers & Writers — UK
+- Readers & Writers — US
+
+Template notes:
+
+- Family & Home now covers search, shared calendars, school, groceries, money, health, utilities, travel, entertainment and online safety.
+- Travel Planners now covers maps, flights, trains/road travel, stays, itineraries, travel safety, money, local transport, activities and travel tools.
+- Readers & Writers is now a ready-to-use Hobbies template covering libraries, writing tools, research, publishing, reviews, journals, notes, references, audio and writing communities.
+
+## Previous Stage 1.31 — link drag between sections
 
 Stage 1.31 lets links be moved between sections using the existing link drag handles.
 
@@ -173,7 +192,7 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 - Paste list from AI: Markdown, CSV and plain text, with START/END marker support.
 - Export list dropdown: Markdown and plain text.
 - Section cards are grouped by column in the editor, with ↑ / ↓ controls, ← / → column movement, and a drag handle for reordering within a column.
-- Link rows have ↑ / ↓ controls and can be dragged within their section to reorder links.
+- Link rows have ↑ / ↓ controls and can be dragged within or between expanded sections.
 - Section **Use** control remains, with sections used by default.
 - Responsive classic renderer with full-width buttons, calculated column widths and search-first behaviour.
 - Namespaced exported menu classes and attributes reduce clashes when adapting the menu for other sites.
