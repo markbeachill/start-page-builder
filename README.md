@@ -1,11 +1,24 @@
-# Personal Start Page Creator — Stage 1.29 — stable section column placement
+# Personal Start Page Creator — Stage 1.30 — editor ordering by column
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.29 — stable section column placement
+## Stage 1.30 — editor ordering by column
+
+Stage 1.30 makes the builder editor match the new stable column model from Stage 1.29.
+
+- Section cards are now grouped by column in the editor: Column 1 first, then Column 2, and so on.
+- Added visible column dividers such as `Column 1 · 3 sections`.
+- Empty columns are shown with a small placeholder message so users can see where sections can be moved.
+- Ordering within each column is preserved.
+- Section **←** and **→** movement now places the moved section at the bottom of the destination column.
+- Section **↑** and **↓** continue to reorder within the current column.
+- Section drag-and-drop still works within the current column only.
+- The exported start page output is unchanged; this is an editor usability improvement.
+
+## Previous Stage 1.29 — stable section column placement
 
 Stage 1.29 changes section placement so columns are predictable rather than repeatedly auto-balanced.
 
@@ -146,7 +159,7 @@ The classic menu structure is still protected: sections, headers, buttons, searc
 - Import list from file: Markdown, CSV and plain text.
 - Paste list from AI: Markdown, CSV and plain text, with START/END marker support.
 - Export list dropdown: Markdown and plain text.
-- Section cards have ↑ / ↓ controls and a drag handle for reordering sections.
+- Section cards are grouped by column in the editor, with ↑ / ↓ controls, ← / → column movement, and a drag handle for reordering within a column.
 - Link rows have ↑ / ↓ controls and can be dragged within their section to reorder links.
 - Section **Use** control remains, with sections used by default.
 - Responsive classic renderer with full-width buttons, calculated column widths and search-first behaviour.

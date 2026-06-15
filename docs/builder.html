@@ -60,7 +60,7 @@
     .field{display:flex;flex-direction:column;gap:3px}.field.full{flex:1 1 320px}label{font-size:11px;font-weight:700;color:#4b5563}
     .field input,.field textarea,.section-title input,.field select,.section-title select,.link-row input,.link-row select{border:1px solid #ccc;border-radius:4px;padding:5px 6px;font:inherit;font-size:12px;background:#fff}
     .field textarea{height:48px;min-width:320px;resize:vertical}.field input{min-width:170px}
-    .subtle-help{font-size:11px;color:#666;margin:0 0 6px}.editor-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.section-list{display:flex;flex-direction:column;gap:8px}
+    .subtle-help{font-size:11px;color:#666;margin:0 0 6px}.editor-actions{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}.section-list{display:flex;flex-direction:column;gap:8px}.editor-column-heading{background:#eef2ff;border:1px solid #c7d2fe;border-radius:6px;padding:7px 9px;font-size:12px;font-weight:800;color:#3730a3;letter-spacing:.02em}.editor-column-empty{border:1px dashed #d1d5db;border-radius:6px;padding:8px 10px;color:#6b7280;background:#fafafa;font-size:12px}
     .section-card{background:#fff;border-radius:4px;border:1px solid #ddd;padding:8px;box-shadow:0 1px 2px rgba(0,0,0,.04)}.section-card.excluded{opacity:.55;background:#f6f6f6}.section-card.section-drag-over{outline:2px dashed #2563eb;outline-offset:2px}.section-card.section-dragging{opacity:.6}
     .section-head{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:6px}.toggle-line{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:#555;font-weight:700;margin-right:4px}.toggle-line input{margin:0}
     .section-title{display:flex;flex:1 1 330px;gap:6px;align-items:center}.section-title input{flex:1 1 220px;min-width:180px}.section-title select{width:96px}.section-controls{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}.section-count{font-size:11px;color:#666;border:1px solid #ddd;border-radius:999px;padding:2px 7px;background:#fafafa;white-space:nowrap}
@@ -342,6 +342,21 @@ function assignMissingSectionColumns(p){
   });
   return p;
 }
+function normaliseSectionOrder(p){
+  // The editor should read like the finished menu: Column 1 sections first,
+  // then Column 2, and so on. Existing order within each column is preserved.
+  assignMissingSectionColumns(p);
+  const columnCount = cleanColumnCount(p.columns);
+  p.sections = (p.sections || [])
+    .map((section, originalIndex) => ({section, originalIndex}))
+    .sort((a, b) => {
+      const aColumn = cleanSectionColumn(a.section.column, columnCount) || columnCount;
+      const bColumn = cleanSectionColumn(b.section.column, columnCount) || columnCount;
+      return aColumn - bColumn || a.originalIndex - b.originalIndex;
+    })
+    .map(entry => entry.section);
+  return p;
+}
 function setProjectColumnCount(value){
   const next = cleanColumnCount(value);
   project.columns = next;
@@ -349,7 +364,7 @@ function setProjectColumnCount(value){
     const current = Number.parseInt(section.column, 10);
     section.column = current >= 1 ? Math.min(current, next) : null;
   });
-  assignMissingSectionColumns(project);
+  normaliseSectionOrder(project);
 }
 function findSectionIndexInColumn(sectionIndex, direction){
   const section = project.sections[sectionIndex];
@@ -380,7 +395,20 @@ function moveSectionSideways(sectionIndex, direction){
   const current = cleanSectionColumn(section.column, columnCount) || 1;
   const next = current + direction;
   if(next < 1 || next > columnCount) return false;
-  section.column = next;
+
+  // Move left/right changes the column and places the section at the bottom
+  // of the destination column. The user can then use ↑/↓ for fine ordering.
+  const [moved] = project.sections.splice(sectionIndex, 1);
+  moved.column = next;
+  let insertIndex = -1;
+  project.sections.forEach((candidate, i) => {
+    if(cleanSectionColumn(candidate.column, columnCount) === next) insertIndex = i + 1;
+  });
+  if(insertIndex === -1){
+    insertIndex = project.sections.findIndex(candidate => (cleanSectionColumn(candidate.column, columnCount) || columnCount) > next);
+    if(insertIndex === -1) insertIndex = project.sections.length;
+  }
+  project.sections.splice(insertIndex, 0, moved);
   return true;
 }
 function makeColumns(count){
@@ -632,7 +660,7 @@ function normaliseFriendlyProject(input){
       included: link.included !== false
     }))
   }));
-  return assignMissingSectionColumns(p);
+  return normaliseSectionOrder(p);
 }
 function internalStateToProject(input){
   const p = defaultProject();
@@ -656,7 +684,7 @@ function internalStateToProject(input){
     });
   });
   p.sections = sections;
-  return assignMissingSectionColumns(p);
+  return normaliseSectionOrder(p);
 }
 function projectToInternalState(p){
   const state = defaultState();
@@ -668,7 +696,7 @@ function projectToInternalState(p){
   state.settings.palette = state.settings.colours === "pastel" ? {...pastelPalette} : {...defaultPalette};
   state.settings.showTitle = cleanShowTitle(p.showTitle);
   state.menu.columns = makeColumns(state.settings.columns);
-  assignMissingSectionColumns(p);
+  normaliseSectionOrder(p);
   (p.sections || []).filter(s => s.included !== false).forEach(section => {
     const colour = cleanColour(section.colour || "blue");
     const block = [{type:"header", text:section.name || "Section", color:colour}];
@@ -713,6 +741,7 @@ function colourOptions(selected){
   return allowedColours.map(c => `<option value="${c}" ${c === selected ? "selected" : ""}>${c}</option>`).join("");
 }
 function scheduleRender(save=true, mode="all"){
+  normaliseSectionOrder(project);
   if(save) saveToBrowser();
   // If any queued update needs a full editor rebuild, keep the queued mode as "all".
   // Otherwise preview-only updates must not rebuild the editor, because that destroys
@@ -742,7 +771,7 @@ function renderSettings(){
   document.getElementById("columnsInput").value = String(cleanColumnCount(project.columns));
   document.getElementById("coloursInput").value = cleanColourStyle(project.colours || "primary");
   document.getElementById("showTitleInput").checked = cleanShowTitle(project.showTitle);
-  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Choose 2–5 columns for wider screens; phones still stack into one column. Use <strong>←</strong>/<strong>→</strong> to move sections between columns and <strong>↑</strong>/<strong>↓</strong> to reorder within a column.";
+  document.getElementById("templateDescription").innerHTML = "Tick <strong>Use</strong> to include a section in your preview and exported start page. Sections are grouped by column in the editor. Use <strong>←</strong>/<strong>→</strong> to move sections between columns and <strong>↑</strong>/<strong>↓</strong> to reorder within the current column.";
 }
 function renderEditor(){
   const container = document.getElementById("sectionList");
@@ -751,7 +780,9 @@ function renderEditor(){
     applyEditorCollapseState();
     return;
   }
-  container.innerHTML = project.sections.map((section, si) => {
+  normaliseSectionOrder(project);
+  const columnCount = cleanColumnCount(project.columns);
+  const sectionCardHtml = (section, si) => {
     const included = section.included !== false;
     const linkCount = (section.links || []).length;
     const linkLabel = linkCount === 1 ? "1 link" : `${linkCount} links`;
@@ -759,7 +790,7 @@ function renderEditor(){
     const canMoveUp = findSectionIndexInColumn(si, -1) !== -1;
     const canMoveDown = findSectionIndexInColumn(si, 1) !== -1;
     const canMoveLeft = sectionColumn > 1;
-    const canMoveRight = sectionColumn < cleanColumnCount(project.columns);
+    const canMoveRight = sectionColumn < columnCount;
     const linkRows = (section.links || []).map((link, li) => `
       <div class="link-row" data-section-index="${si}" data-link-index="${li}">
         <span class="drag-handle" draggable="true" title="Drag to reorder this link" aria-label="Drag to reorder this link">↕</span>
@@ -776,7 +807,7 @@ function renderEditor(){
     return `
       <article class="section-card ${included ? "" : "excluded"}" data-section-index="${si}">
         <div class="section-head">
-          <span class="section-drag-handle" draggable="true" title="Drag to reorder this section" aria-label="Drag to reorder this section">☰</span>
+          <span class="section-drag-handle" draggable="true" title="Drag to reorder this section within column ${sectionColumn}" aria-label="Drag to reorder this section within column ${sectionColumn}">☰</span>
           <label class="toggle-line"><input type="checkbox" data-action="toggle-section" ${included ? "checked" : ""}> Use</label>
           <div class="section-title">
             <input type="text" value="${escapeHtml(section.name || "")}" data-action="section-name" aria-label="Section name">
@@ -796,7 +827,22 @@ function renderEditor(){
         <div class="links">${linkRows}</div>
         <div class="section-foot"><button type="button" class="mini secondary" data-action="add-link">+ Add link</button></div>
       </article>`;
-  }).join("");
+  };
+
+  const parts = [];
+  for(let column = 1; column <= columnCount; column++){
+    const sectionsInColumn = project.sections
+      .map((section, si) => ({section, si}))
+      .filter(entry => (cleanSectionColumn(entry.section.column, project.columns) || 1) === column);
+    const label = sectionsInColumn.length === 1 ? "1 section" : `${sectionsInColumn.length} sections`;
+    parts.push(`<div class="editor-column-heading">Column ${column} · ${label}</div>`);
+    if(sectionsInColumn.length){
+      sectionsInColumn.forEach(entry => parts.push(sectionCardHtml(entry.section, entry.si)));
+    }else{
+      parts.push(`<div class="editor-column-empty">No sections in column ${column}. Use ←/→ on a section to move it here.</div>`);
+    }
+  }
+  container.innerHTML = parts.join("");
   applyEditorCollapseState();
 }
 function renderPreview(){
