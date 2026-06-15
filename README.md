@@ -1,11 +1,24 @@
-# Personal Start Page Creator — Stage 1.30 — editor ordering by column
+# Personal Start Page Creator — Stage 1.31 — link drag between sections
 
 **Live website:** https://markbeachill.github.io/start-page-builder  
 **GitHub repository:** https://github.com/markbeachill/start-page-builder
 
 A static GitHub Pages website for creating standalone personal browser start pages.
 
-## Stage 1.30 — editor ordering by column
+## Stage 1.31 — link drag between sections
+
+Stage 1.31 lets links be moved between sections using the existing link drag handles.
+
+- Link drag-and-drop now works across expanded sections, not only within the same section.
+- Dropping a link onto another link row inserts it at that position.
+- Dropping a link into the empty link area of a section appends it to that section.
+- Empty sections can receive dragged links.
+- Dragging still starts only from the link handle, so text fields, URL fields, selects and buttons remain safe to click and edit.
+- Existing link ↑ / ↓ buttons still reorder within the current section.
+- Section drag-and-drop remains limited to reordering sections within the same column.
+- The preview, browser draft, saved menu config and exported start page all reflect the new link location.
+
+## Previous Stage 1.30 — editor ordering by column
 
 Stage 1.30 makes the builder editor match the new stable column model from Stage 1.29.
 
