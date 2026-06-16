@@ -1,0 +1,33 @@
+name: Validate site
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate templates and generated examples
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check docs/assets/start-page-renderer.js
+          node --check tools/generate-examples.js
+          node --check tools/validate-templates.js
+
+      - name: Check generated examples are up to date
+        run: node tools/generate-examples.js --check
+
+      - name: Validate templates and site links
+        run: node tools/validate-templates.js

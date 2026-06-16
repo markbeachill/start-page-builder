@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "UK Football Start Page",
-  "description": "Intense focus on the British football pyramid, media, and FPL.",
+  "description": "A fuller UK football template for matchday scores, Premier League, EFL, cups, transfers, stats, women’s football, tickets, travel and supporter resources.",
   "filename": "start-page-football-uk-uk.html",
   "columns": 5,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Live Matchday",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Football",
+          "url": "https://www.bbc.co.uk/sport/football",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Sky Football",
+          "url": "https://www.skysports.com/football",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Flashscore Football",
+          "url": "https://www.flashscore.co.uk/football/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "LiveScore Football",
+          "url": "https://www.livescore.com/en/football/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "FotMob",
+          "url": "https://www.fotmob.com/en-GB",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Sofascore Football",
+          "url": "https://www.sofascore.com/football",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WhoScored",
+          "url": "https://www.whoscored.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "11v11",
+          "url": "https://www.11v11.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Premier League",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Premier League",
+          "url": "https://www.premierleague.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Fixtures",
+          "url": "https://www.premierleague.com/fixtures",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Tables",
+          "url": "https://www.premierleague.com/tables",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Fantasy PL",
+          "url": "https://fantasy.premierleague.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Premier League News",
+          "url": "https://www.premierleague.com/news",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PL2",
+          "url": "https://www.premierleague.com/premier-league-2",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Football Web Pages",
+          "url": "https://www.footballwebpages.co.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Fantasy Scout",
+          "url": "https://www.fantasyfootballscout.co.uk/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "EFL & Non-League",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "English Football League",
+          "url": "https://www.efl.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Championship",
+          "url": "https://www.efl.com/competitions/sky-bet-championship/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "League One",
+          "url": "https://www.efl.com/competitions/sky-bet-league-one/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "League Two",
+          "url": "https://www.efl.com/competitions/sky-bet-league-two/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "National League",
+          "url": "https://www.thenationalleague.org.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Non-League Paper",
+          "url": "https://www.thenonleaguefootballpaper.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FA Full-Time",
+          "url": "https://fulltime.thefa.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Football Ground Map",
+          "url": "https://www.footballgroundmap.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Cups & Europe",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "FA Cup",
+          "url": "https://www.thefa.com/competitions/thefacup",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Carabao Cup",
+          "url": "https://www.efl.com/competitions/carabao-cup/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Champions League",
+          "url": "https://www.uefa.com/uefachampionsleague/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Europa League",
+          "url": "https://www.uefa.com/uefaeuropaleague/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Conference League",
+          "url": "https://www.uefa.com/uefaconferenceleague/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FIFA World Cup",
+          "url": "https://www.fifa.com/en/tournaments/mens/worldcup",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "England Football",
+          "url": "https://www.englandfootball.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Scottish FA",
+          "url": "https://www.scottishfa.co.uk/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Transfers & Squads",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Transfermarkt",
+          "url": "https://www.transfermarkt.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC Transfers",
+          "url": "https://www.bbc.co.uk/sport/football/transfers",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Sky Transfers",
+          "url": "https://www.skysports.com/transfer-centre",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Athletic Football",
+          "url": "https://www.nytimes.com/athletic/football/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Guardian Football",
+          "url": "https://www.theguardian.com/football",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CIES Observatory",
+          "url": "https://football-observatory.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Capology",
+          "url": "https://www.capology.com/uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "FBref Squads",
+          "url": "https://fbref.com/en/squads/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 5
+    },
+    {
+      "name": "Stats & Analysis",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "FBref",
+          "url": "https://fbref.com/en/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Understat",
+          "url": "https://understat.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Statbunker",
+          "url": "https://www.statbunker.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "WhoScored",
+          "url": "https://www.whoscored.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Analyst",
+          "url": "https://theanalyst.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Smarterscout",
+          "url": "https://smarterscout.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Opta Analyst",
+          "url": "https://theanalyst.com/eu/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Clubs & Fan Media",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC My Club",
+          "url": "https://www.bbc.co.uk/sport/football/teams",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Football365",
+          "url": "https://www.football365.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "FourFourTwo",
+          "url": "https://www.fourfourtwo.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "90min",
+          "url": "https://www.90min.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Tifo Football",
+          "url": "https://www.youtube.com/@Tifo",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "When Saturday Comes",
+          "url": "https://www.wsc.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Football Supporters",
+          "url": "https://thefsa.org.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Reddit Soccer",
+          "url": "https://www.reddit.com/r/soccer/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Women's Football",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Women's Super League",
+          "url": "https://womensleagues.thefa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Women's Championship",
+          "url": "https://womensleagues.thefa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Lionesses",
+          "url": "https://www.englandfootball.com/england/womens-senior-team",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "UEFA Women's CL",
+          "url": "https://www.uefa.com/womenschampionsleague/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FIFA Women's World Cup",
+          "url": "https://www.fifa.com/en/tournaments/womens/womensworldcup",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BBC Women's Football",
+          "url": "https://www.bbc.co.uk/sport/football/womens",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Sky WSL",
+          "url": "https://www.skysports.com/womens-super-league",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Guardian Women's Football",
+          "url": "https://www.theguardian.com/football/womens-football",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Tickets & Travel",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Ticketmaster Sport",
+          "url": "https://www.ticketmaster.co.uk/sports",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Wembley Stadium",
+          "url": "https://www.wembleystadium.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Trainline",
+          "url": "https://www.thetrainline.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "National Rail",
+          "url": "https://www.nationalrail.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Transport for London",
+          "url": "https://tfl.gov.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Traveline",
+          "url": "https://www.traveline.info/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Football Ground Guide",
+          "url": "https://footballgroundguide.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FanHub",
+          "url": "https://fan-hub.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Rules & Supporters",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "The FA",
+          "url": "https://www.thefa.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "IFAB Laws",
+          "url": "https://www.theifab.com/laws/latest/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "PGMOL",
+          "url": "https://www.pgmol.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Kick It Out",
+          "url": "https://www.kickitout.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Football Supporters",
+          "url": "https://thefsa.org.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "FA Discipline",
+          "url": "https://www.thefa.com/football-rules-governance/discipline",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Premier League Handbook",
+          "url": "https://www.premierleague.com/publications",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Supporters Direct",
+          "url": "https://thefsa.org.uk/supporters-direct/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 5
+    }
+  ]
 }

@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Sports Start Page",
-  "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+  "title": "Sports Start Page UK",
+  "description": "A fuller UK sports template for live scores, sports news, football, cricket, rugby, tennis, golf, motorsport, fantasy games, tickets and analysis.",
   "filename": "start-page-sport-general-uk.html",
   "columns": 5,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Live Scores & Fixtures",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Sky Sports Scores",
+          "url": "https://www.skysports.com/live-scores",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Flashscore UK",
+          "url": "https://www.flashscore.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "LiveScore",
+          "url": "https://www.livescore.com/en/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Sofascore",
+          "url": "https://www.sofascore.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "ESPN UK",
+          "url": "https://www.espn.co.uk/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Sporting Life",
+          "url": "https://www.sportinglife.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Olympics",
+          "url": "https://www.olympics.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "UK Sports News",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Sport",
+          "url": "https://www.bbc.co.uk/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Sky Sports",
+          "url": "https://www.skysports.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "TNT Sports",
+          "url": "https://www.bt.com/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Guardian Sport",
+          "url": "https://www.theguardian.com/uk/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Independent Sport",
+          "url": "https://www.independent.co.uk/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Telegraph Sport",
+          "url": "https://www.telegraph.co.uk/sport/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Athletic UK",
+          "url": "https://www.nytimes.com/athletic/uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "ITV Sport",
+          "url": "https://www.itv.com/sport",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Football",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Premier League",
+          "url": "https://www.premierleague.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "English Football League",
+          "url": "https://www.efl.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "The FA",
+          "url": "https://www.thefa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "UEFA",
+          "url": "https://www.uefa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FIFA",
+          "url": "https://www.fifa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FotMob",
+          "url": "https://www.fotmob.com/en-GB",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Transfermarkt",
+          "url": "https://www.transfermarkt.co.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FBref",
+          "url": "https://fbref.com/en/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Cricket",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "ESPNcricinfo",
+          "url": "https://www.espncricinfo.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BBC Cricket",
+          "url": "https://www.bbc.co.uk/sport/cricket",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "England Cricket",
+          "url": "https://www.ecb.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "County Championship",
+          "url": "https://www.ecb.co.uk/county-championship",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "The Hundred",
+          "url": "https://www.thehundred.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ICC",
+          "url": "https://www.icc-cricket.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Cricbuzz",
+          "url": "https://www.cricbuzz.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Wisden",
+          "url": "https://www.wisden.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Rugby",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "England Rugby",
+          "url": "https://www.englandrugby.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Premiership Rugby",
+          "url": "https://www.premiershiprugby.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "United Rugby",
+          "url": "https://www.unitedrugby.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Six Nations",
+          "url": "https://www.sixnationsrugby.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "World Rugby",
+          "url": "https://www.world.rugby/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "BBC Rugby Union",
+          "url": "https://www.bbc.co.uk/sport/rugby-union",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "BBC Rugby League",
+          "url": "https://www.bbc.co.uk/sport/rugby-league",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "RugbyPass",
+          "url": "https://www.rugbypass.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 5
+    },
+    {
+      "name": "Tennis & Golf",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ATP Tour",
+          "url": "https://www.atptour.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WTA Tennis",
+          "url": "https://www.wtatennis.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Wimbledon",
+          "url": "https://www.wimbledon.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "LTA",
+          "url": "https://www.lta.org.uk/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "DP World Tour",
+          "url": "https://www.europeantour.com/dpworld-tour/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "PGA TOUR",
+          "url": "https://www.pgatour.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "LPGA",
+          "url": "https://www.lpga.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Golf Channel",
+          "url": "https://www.golfchannel.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Motorsport & Cycling",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Formula 1",
+          "url": "https://www.formula1.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "MotoGP",
+          "url": "https://www.motogp.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Formula E",
+          "url": "https://www.fiaformulae.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Autosport",
+          "url": "https://www.autosport.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Cyclingnews",
+          "url": "https://www.cyclingnews.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "UCI",
+          "url": "https://www.uci.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "British Cycling",
+          "url": "https://www.britishcycling.org.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BBC Formula 1",
+          "url": "https://www.bbc.co.uk/sport/formula1",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Global Leagues",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "NBA",
+          "url": "https://www.nba.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NFL",
+          "url": "https://www.nfl.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "MLB",
+          "url": "https://www.mlb.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NHL",
+          "url": "https://www.nhl.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "MLS",
+          "url": "https://www.mlssoccer.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WNBA",
+          "url": "https://www.wnba.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NCAA",
+          "url": "https://www.ncaa.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Paralympics",
+          "url": "https://www.paralympic.org/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Fantasy & Analysis",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Fantasy Premier League",
+          "url": "https://fantasy.premierleague.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Fantasy Football Scout",
+          "url": "https://www.fantasyfootballscout.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Superbru",
+          "url": "https://www.superbru.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "ESPN Fantasy",
+          "url": "https://fantasy.espn.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "WhoScored",
+          "url": "https://www.whoscored.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Squawka",
+          "url": "https://www.squawka.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Analyst",
+          "url": "https://theanalyst.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Sports Reference",
+          "url": "https://www.sports-reference.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Tickets & Watching",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Ticketmaster UK",
+          "url": "https://www.ticketmaster.co.uk/sports",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "See Tickets",
+          "url": "https://www.seetickets.com/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "AXS UK",
+          "url": "https://www.axs.com/uk",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC iPlayer Sport",
+          "url": "https://www.bbc.co.uk/iplayer/categories/sport/featured",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "ITVX Sport",
+          "url": "https://www.itv.com/watch/categories/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Sky Sports TV Guide",
+          "url": "https://www.skysports.com/watch/tv-guide",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "TNT Sports",
+          "url": "https://www.bt.com/sport",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "DAZN",
+          "url": "https://www.dazn.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 5
+    }
+  ]
 }

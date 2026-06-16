@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Sports Start Page",
-  "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+  "title": "Sports Start Page US",
+  "description": "A fuller US sports template for scores, pro leagues, college sports, fantasy games, stats, streaming, tickets and sports communities.",
   "filename": "start-page-sport-general-us.html",
   "columns": 5,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Scores & News",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "ESPN",
+          "url": "https://www.espn.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "CBS Sports",
+          "url": "https://www.cbssports.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Yahoo Sports",
+          "url": "https://sports.yahoo.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "FOX Sports",
+          "url": "https://www.foxsports.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "theScore",
+          "url": "https://www.thescore.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bleacher Report",
+          "url": "https://bleacherreport.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "AP Sports",
+          "url": "https://apnews.com/sports",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "USA TODAY Sports",
+          "url": "https://www.usatoday.com/sports/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Pro Leagues",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "NFL",
+          "url": "https://www.nfl.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NBA",
+          "url": "https://www.nba.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "MLB",
+          "url": "https://www.mlb.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NHL",
+          "url": "https://www.nhl.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "MLS",
+          "url": "https://www.mlssoccer.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "WNBA",
+          "url": "https://www.wnba.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NWSL",
+          "url": "https://www.nwslsoccer.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "UFC",
+          "url": "https://www.ufc.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "College Sports",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "NCAA",
+          "url": "https://www.ncaa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ESPN College Football",
+          "url": "https://www.espn.com/college-football/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "ESPN College Basketball",
+          "url": "https://www.espn.com/mens-college-basketball/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NCAA Women",
+          "url": "https://www.ncaa.com/sports/basketball-women/d1",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "CBS College Sports",
+          "url": "https://www.cbssports.com/college-football/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "NCAA March Madness",
+          "url": "https://www.ncaa.com/march-madness-live",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "On3",
+          "url": "https://www.on3.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "D1Baseball",
+          "url": "https://d1baseball.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Fantasy Games",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "ESPN Fantasy",
+          "url": "https://fantasy.espn.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Yahoo Fantasy",
+          "url": "https://sports.yahoo.com/fantasy/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sleeper",
+          "url": "https://sleeper.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "CBS Fantasy",
+          "url": "https://www.cbssports.com/fantasy/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NFL Fantasy",
+          "url": "https://fantasy.nfl.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "NBA Fantasy",
+          "url": "https://www.nba.com/fantasy",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "MLB Fantasy",
+          "url": "https://www.mlb.com/fantasy",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "FantasyPros",
+          "url": "https://www.fantasypros.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Stats & Reference",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "StatMuse",
+          "url": "https://www.statmuse.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Sports Reference",
+          "url": "https://www.sports-reference.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Pro Football Reference",
+          "url": "https://www.pro-football-reference.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Basketball Reference",
+          "url": "https://www.basketball-reference.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Baseball Reference",
+          "url": "https://www.baseball-reference.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hockey Reference",
+          "url": "https://www.hockey-reference.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "FBref",
+          "url": "https://fbref.com/en/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TeamRankings",
+          "url": "https://www.teamrankings.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 5
+    },
+    {
+      "name": "Streaming & TV",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Watch ESPN",
+          "url": "https://www.espn.com/watch/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "FOX Sports",
+          "url": "https://www.foxsports.com/live",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "CBS Sports HQ",
+          "url": "https://www.cbssports.com/live/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NBC Sports",
+          "url": "https://www.nbcsports.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Peacock Sports",
+          "url": "https://www.peacocktv.com/sports",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Paramount+ Sports",
+          "url": "https://www.paramountplus.com/sports/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Prime Video Sports",
+          "url": "https://www.amazon.com/sports",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "YouTube TV Sports",
+          "url": "https://tv.youtube.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Soccer & Global",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "ESPN Soccer",
+          "url": "https://www.espn.com/soccer/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MLS",
+          "url": "https://www.mlssoccer.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "U.S. Soccer",
+          "url": "https://www.ussoccer.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FIFA",
+          "url": "https://www.fifa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "UEFA",
+          "url": "https://www.uefa.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FotMob",
+          "url": "https://www.fotmob.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Transfermarkt",
+          "url": "https://www.transfermarkt.us/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "FBref",
+          "url": "https://fbref.com/en/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Racing & Golf",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "NASCAR",
+          "url": "https://www.nascar.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "IndyCar",
+          "url": "https://www.indycar.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Formula 1",
+          "url": "https://www.formula1.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "MotoGP",
+          "url": "https://www.motogp.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "PGA TOUR",
+          "url": "https://www.pgatour.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "LPGA",
+          "url": "https://www.lpga.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Golf Channel",
+          "url": "https://www.golfchannel.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "ESPN Golf",
+          "url": "https://www.espn.com/golf/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Tickets & Venues",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Ticketmaster",
+          "url": "https://www.ticketmaster.com/sports",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SeatGeek",
+          "url": "https://seatgeek.com/sports-tickets",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "StubHub",
+          "url": "https://www.stubhub.com/sports-tickets/category/28/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "AXS",
+          "url": "https://www.axs.com/sports",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "MLB Tickets",
+          "url": "https://www.mlb.com/tickets",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NBA Tickets",
+          "url": "https://www.nba.com/tickets",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NFL Tickets",
+          "url": "https://www.nfl.com/tickets/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NHL Tickets",
+          "url": "https://www.nhl.com/tickets",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Communities",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Reddit Sports",
+          "url": "https://www.reddit.com/r/sports/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "SB Nation",
+          "url": "https://www.sbnation.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Ringer",
+          "url": "https://www.theringer.com/sports",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Athletic",
+          "url": "https://www.nytimes.com/athletic/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Players' Tribune",
+          "url": "https://www.theplayerstribune.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Sports Illustrated",
+          "url": "https://www.si.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Boardroom",
+          "url": "https://boardroom.tv/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Front Office Sports",
+          "url": "https://frontofficesports.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 5
+    }
+  ]
 }

@@ -368,33 +368,39 @@
     "code": "sport-general-uk",
     "title": "Sports",
     "country": "UK",
-    "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+    "description": "A fuller UK sports template for live scores, sports news, football, cricket, rugby, tennis, golf, motorsport, fantasy games, tickets and analysis.",
     "template": "templates/sport-general-uk.json",
     "example": "examples/start-page-sport-general-uk.html",
-    "available": false,
-    "columns": 5
+    "available": true,
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "F: Sport & Fandoms",
     "code": "sport-general-us",
     "title": "Sports",
     "country": "US",
-    "description": "Multidisciplinary live tracking, fantasy sports, and analysis.",
+    "description": "A fuller US sports template for scores, pro leagues, college sports, fantasy games, stats, streaming, tickets and sports communities.",
     "template": "templates/sport-general-us.json",
     "example": "examples/start-page-sport-general-us.html",
-    "available": false,
-    "columns": 5
+    "available": true,
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "F: Sport & Fandoms",
     "code": "football-uk-uk",
     "title": "UK Football",
     "country": "UK",
-    "description": "Intense focus on the British football pyramid, media, and FPL.",
+    "description": "A fuller UK football template for matchday scores, Premier League, EFL, cups, transfers, stats, women’s football, tickets, travel and supporter resources.",
     "template": "templates/football-uk-uk.json",
     "example": "examples/start-page-football-uk-uk.html",
-    "available": false,
-    "columns": 5
+    "available": true,
+    "columns": 5,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
@@ -453,54 +459,64 @@
     "code": "movie-buff-uk",
     "title": "Movie Buffs",
     "country": "UK",
-    "description": "Cinephile logging, industry tracking, and streaming finders.",
+    "description": "A fuller UK movie-buff template for film tracking, streaming finders, cinemas, reviews, industry news, archives, awards, filmmaking and film communities.",
     "template": "templates/movie-buff-uk.json",
     "example": "examples/start-page-movie-buff-uk.html",
-    "available": false,
-    "columns": 4
+    "available": true,
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
     "code": "movie-buff-us",
     "title": "Movie Buffs",
     "country": "US",
-    "description": "Cinephile logging, industry tracking, and streaming finders.",
+    "description": "A fuller US movie-buff template for film tracking, streaming finders, theaters, reviews, industry news, archives, awards, filmmaking and film communities.",
     "template": "templates/movie-buff-us.json",
     "example": "examples/start-page-movie-buff-us.html",
-    "available": false,
-    "columns": 4
+    "available": true,
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
     "code": "kpop-fan",
     "title": "K-Pop Fans",
     "country": "",
-    "description": "Fast-paced tracking of music show voting, streams, and hubs.",
+    "description": "A fuller K-pop fan template for official platforms, music shows, voting apps, charts, streaming, albums, concerts, language tools and fan communities.",
     "template": "templates/kpop-fan.json",
     "example": "examples/start-page-kpop-fan.html",
-    "available": false,
-    "columns": 4
+    "available": true,
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
     "code": "music-fan-uk",
     "title": "Music Fans",
     "country": "UK",
-    "description": "Physical media indices, discovery platforms, and live gig finders.",
+    "description": "A fuller UK music-fan template for listening, charts, gigs, festivals, record shops, reviews, radio sessions, music data, making music and communities.",
     "template": "templates/music-fan-uk.json",
     "example": "examples/start-page-music-fan-uk.html",
-    "available": false,
-    "columns": 4
+    "available": true,
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   },
   {
     "section": "E: Hobbies",
     "code": "music-fan-us",
     "title": "Music Fans",
     "country": "US",
-    "description": "Physical media indices, discovery platforms, and live gig finders.",
+    "description": "A fuller US music-fan template for listening, charts, concerts, festivals, record shops, reviews, radio sessions, music data, making music and communities.",
     "template": "templates/music-fan-us.json",
     "example": "examples/start-page-music-fan-us.html",
-    "available": false,
-    "columns": 4
+    "available": true,
+    "columns": 4,
+    "colours": "primary",
+    "showTitle": true
   }
 ]

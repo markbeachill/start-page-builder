@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Music Fans Start Page",
-  "description": "Physical media indices, discovery platforms, and live gig finders.",
+  "title": "Music Fans Start Page US",
+  "description": "A fuller US music-fan template for listening, charts, concerts, festivals, record shops, reviews, radio sessions, music data, making music and communities.",
   "filename": "start-page-music-fan-us.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Listening & Discovery",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube Music",
+          "url": "https://music.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://bandcamp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Deezer",
+          "url": "https://www.deezer.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Last.fm",
+          "url": "https://www.last.fm/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Mixcloud",
+          "url": "https://www.mixcloud.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "US Charts & Releases",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Billboard Charts",
+          "url": "https://www.billboard.com/charts/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Spotify Charts US",
+          "url": "https://charts.spotify.com/charts/view/regional-us-daily/latest",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Apple Music Charts",
+          "url": "https://music.apple.com/us/browse/top-charts",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NPR Music",
+          "url": "https://www.npr.org/music/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Rolling Stone Music",
+          "url": "https://www.rollingstone.com/music/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Pitchfork",
+          "url": "https://pitchfork.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Consequence",
+          "url": "https://consequence.net/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Stereogum",
+          "url": "https://www.stereogum.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Concerts US",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Songkick",
+          "url": "https://www.songkick.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Bandsintown",
+          "url": "https://www.bandsintown.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ticketmaster",
+          "url": "https://www.ticketmaster.com/music",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Live Nation",
+          "url": "https://www.livenation.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AXS",
+          "url": "https://www.axs.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "SeatGeek",
+          "url": "https://seatgeek.com/concert-tickets",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "StubHub Concerts",
+          "url": "https://www.stubhub.com/concert-tickets/category/1/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Eventbrite Music",
+          "url": "https://www.eventbrite.com/d/online/music--events/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Festivals",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Coachella",
+          "url": "https://www.coachella.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Lollapalooza",
+          "url": "https://www.lollapalooza.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Bonnaroo",
+          "url": "https://www.bonnaroo.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Austin City Limits",
+          "url": "https://www.aclfestival.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Newport Folk",
+          "url": "https://newportfolk.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Stagecoach",
+          "url": "https://www.stagecoachfestival.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Pitchfork Festival",
+          "url": "https://pitchforkmusicfestival.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "SXSW Music",
+          "url": "https://www.sxsw.com/festivals/music/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Record Shops & Vinyl",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Discogs",
+          "url": "https://www.discogs.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Amoeba Music",
+          "url": "https://www.amoeba.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Rough Trade NYC",
+          "url": "https://www.roughtrade.com/us",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Turntable Lab",
+          "url": "https://www.turntablelab.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Vinyl Me, Please",
+          "url": "https://www.vinylmeplease.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Newbury Comics",
+          "url": "https://www.newburycomics.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Grimey's",
+          "url": "https://www.grimeys.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "eBay Vinyl",
+          "url": "https://www.ebay.com/b/Vinyl-Records/176985/bn_1860304",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Reviews & Magazines",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Pitchfork",
+          "url": "https://pitchfork.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Rolling Stone",
+          "url": "https://www.rollingstone.com/music/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NPR Music",
+          "url": "https://www.npr.org/music/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Stereogum",
+          "url": "https://www.stereogum.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Consequence",
+          "url": "https://consequence.net/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Paste Music",
+          "url": "https://www.pastemagazine.com/music",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BrooklynVegan",
+          "url": "https://www.brooklynvegan.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Spin",
+          "url": "https://www.spin.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Radio & Sessions",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "NPR Tiny Desk",
+          "url": "https://www.npr.org/series/tiny-desk-concerts/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "KEXP",
+          "url": "https://www.kexp.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "KCRW",
+          "url": "https://www.kcrw.com/music",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "WXPN",
+          "url": "https://xpn.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SiriusXM",
+          "url": "https://www.siriusxm.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "COLORS",
+          "url": "https://colorsxstudios.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Boiler Room",
+          "url": "https://boilerroom.tv/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NTS Radio",
+          "url": "https://www.nts.live/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Data & Setlists",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Setlist.fm",
+          "url": "https://www.setlist.fm/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MusicBrainz",
+          "url": "https://musicbrainz.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AllMusic",
+          "url": "https://www.allmusic.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Rate Your Music",
+          "url": "https://rateyourmusic.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Genius",
+          "url": "https://genius.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WhoSampled",
+          "url": "https://www.whosampled.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Songfacts",
+          "url": "https://www.songfacts.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "SecondHandSongs",
+          "url": "https://secondhandsongs.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Making & Gear",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Ableton",
+          "url": "https://www.ableton.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BandLab",
+          "url": "https://www.bandlab.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Soundtrap",
+          "url": "https://www.soundtrap.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Splice",
+          "url": "https://splice.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reverb",
+          "url": "https://reverb.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Equipboard",
+          "url": "https://equipboard.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "LANDR",
+          "url": "https://www.landr.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sound On Sound",
+          "url": "https://www.soundonsound.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Communities",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Reddit Music",
+          "url": "https://www.reddit.com/r/Music/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Reddit Vinyl",
+          "url": "https://www.reddit.com/r/vinyl/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Steve Hoffman Forums",
+          "url": "https://forums.stevehoffman.tv/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Rate Your Music",
+          "url": "https://rateyourmusic.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Bandcamp Daily",
+          "url": "https://daily.bandcamp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Aquarium Drunkard",
+          "url": "https://aquariumdrunkard.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Okayplayer",
+          "url": "https://www.okayplayer.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hype Machine",
+          "url": "https://hypem.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 2
+    }
+  ]
 }

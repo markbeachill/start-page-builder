@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Music Fans Start Page",
-  "description": "Physical media indices, discovery platforms, and live gig finders.",
+  "title": "Music Fans Start Page UK",
+  "description": "A fuller UK music-fan template for listening, charts, gigs, festivals, record shops, reviews, radio sessions, music data, making music and communities.",
   "filename": "start-page-music-fan-uk.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Listening & Discovery",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Sounds",
+          "url": "https://www.bbc.co.uk/sounds",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube Music",
+          "url": "https://music.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bandcamp",
+          "url": "https://bandcamp.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SoundCloud",
+          "url": "https://soundcloud.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Deezer",
+          "url": "https://www.deezer.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Last.fm",
+          "url": "https://www.last.fm/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "UK Charts & Releases",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Official Charts",
+          "url": "https://www.officialcharts.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BBC Radio 1 Chart",
+          "url": "https://www.bbc.co.uk/programmes/b006wkgn",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Spotify Charts UK",
+          "url": "https://charts.spotify.com/charts/view/regional-gb-daily/latest",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Apple Music Charts",
+          "url": "https://music.apple.com/gb/browse/top-charts",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Music Week",
+          "url": "https://www.musicweek.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NME",
+          "url": "https://www.nme.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Pitchfork",
+          "url": "https://pitchfork.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Line of Best Fit",
+          "url": "https://www.thelineofbestfit.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Live Gigs UK",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Songkick",
+          "url": "https://www.songkick.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Bandsintown",
+          "url": "https://www.bandsintown.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "DICE",
+          "url": "https://dice.fm/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Ticketmaster UK",
+          "url": "https://www.ticketmaster.co.uk/music",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "See Tickets",
+          "url": "https://www.seetickets.com/music",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AXS UK",
+          "url": "https://www.axs.com/uk",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Resident Advisor",
+          "url": "https://ra.co/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Skiddle",
+          "url": "https://www.skiddle.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Venues & Festivals",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Glastonbury",
+          "url": "https://www.glastonburyfestivals.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reading & Leeds",
+          "url": "https://www.readingandleedsfestival.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Download Festival",
+          "url": "https://downloadfestival.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Wireless",
+          "url": "https://wirelessfestival.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Royal Albert Hall",
+          "url": "https://www.royalalberthall.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "The O2",
+          "url": "https://www.theo2.co.uk/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Academy Music Group",
+          "url": "https://www.academymusicgroup.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "UK Music Festivals",
+          "url": "https://www.efestivals.co.uk/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Record Shops & Vinyl",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Discogs",
+          "url": "https://www.discogs.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Rough Trade",
+          "url": "https://www.roughtrade.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "HMV",
+          "url": "https://hmv.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Banquet Records",
+          "url": "https://www.banquetrecords.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Juno Records",
+          "url": "https://www.juno.co.uk/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Norman Records",
+          "url": "https://www.normanrecords.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Phonica",
+          "url": "https://www.phonicarecords.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Vinyl Factory",
+          "url": "https://thevinylfactory.com/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Reviews & Magazines",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Guardian Music",
+          "url": "https://www.theguardian.com/music",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "NME",
+          "url": "https://www.nme.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Pitchfork",
+          "url": "https://pitchfork.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "MOJO",
+          "url": "https://www.mojo4music.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Uncut",
+          "url": "https://www.uncut.co.uk/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Quietus",
+          "url": "https://thequietus.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Stereogum",
+          "url": "https://www.stereogum.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Clash",
+          "url": "https://www.clashmusic.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Radio & Sessions",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "BBC Radio 6 Music",
+          "url": "https://www.bbc.co.uk/sounds/play/live:bbc_6music",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "BBC Radio 1",
+          "url": "https://www.bbc.co.uk/sounds/play/live:bbc_radio_one",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "KEXP",
+          "url": "https://www.kexp.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NPR Tiny Desk",
+          "url": "https://www.npr.org/series/tiny-desk-concerts/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "COLORS",
+          "url": "https://colorsxstudios.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Boiler Room",
+          "url": "https://boilerroom.tv/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Later...",
+          "url": "https://www.bbc.co.uk/programmes/b006ml0l",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "NTS Radio",
+          "url": "https://www.nts.live/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Data & Setlists",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Setlist.fm",
+          "url": "https://www.setlist.fm/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "MusicBrainz",
+          "url": "https://musicbrainz.org/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "AllMusic",
+          "url": "https://www.allmusic.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Rate Your Music",
+          "url": "https://rateyourmusic.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Genius",
+          "url": "https://genius.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WhoSampled",
+          "url": "https://www.whosampled.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Songfacts",
+          "url": "https://www.songfacts.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "SecondHandSongs",
+          "url": "https://secondhandsongs.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Making & Gear",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Ableton",
+          "url": "https://www.ableton.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "BandLab",
+          "url": "https://www.bandlab.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Soundtrap",
+          "url": "https://www.soundtrap.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Splice",
+          "url": "https://splice.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Reverb",
+          "url": "https://reverb.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Equipboard",
+          "url": "https://equipboard.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "LANDR",
+          "url": "https://www.landr.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sound On Sound",
+          "url": "https://www.soundonsound.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Communities",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Reddit Music",
+          "url": "https://www.reddit.com/r/Music/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Reddit Vinyl",
+          "url": "https://www.reddit.com/r/vinyl/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Steve Hoffman Forums",
+          "url": "https://forums.stevehoffman.tv/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Drowned in Sound",
+          "url": "https://drownedinsound.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Bandcamp Daily",
+          "url": "https://daily.bandcamp.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Mixcloud",
+          "url": "https://www.mixcloud.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "NTS Radio",
+          "url": "https://www.nts.live/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Resident Advisor",
+          "url": "https://ra.co/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 2
+    }
+  ]
 }

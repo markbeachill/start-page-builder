@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
-  "title": "Movie Buffs Start Page",
-  "description": "Cinephile logging, industry tracking, and streaming finders.",
+  "title": "Movie Buffs Start Page US",
+  "description": "A fuller US movie-buff template for film tracking, streaming finders, theaters, reviews, industry news, archives, awards, filmmaking and film communities.",
   "filename": "start-page-movie-buff-us.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Track & Discover",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Letterboxd",
+          "url": "https://letterboxd.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "IMDb",
+          "url": "https://www.imdb.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "The Movie Database",
+          "url": "https://www.themoviedb.org/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Trakt",
+          "url": "https://trakt.tv/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Rotten Tomatoes",
+          "url": "https://www.rottentomatoes.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Metacritic",
+          "url": "https://www.metacritic.com/movie/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "MUBI",
+          "url": "https://mubi.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Criticker",
+          "url": "https://www.criticker.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Streaming US",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "JustWatch US",
+          "url": "https://www.justwatch.com/us",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Reelgood",
+          "url": "https://reelgood.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Netflix",
+          "url": "https://www.netflix.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Prime Video",
+          "url": "https://www.primevideo.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Disney+",
+          "url": "https://www.disneyplus.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Hulu",
+          "url": "https://www.hulu.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Max",
+          "url": "https://www.max.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Criterion Channel",
+          "url": "https://www.criterionchannel.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Theaters US",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Fandango",
+          "url": "https://www.fandango.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "AMC Theatres",
+          "url": "https://www.amctheatres.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Regal",
+          "url": "https://www.regmovies.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Cinemark",
+          "url": "https://www.cinemark.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Alamo Drafthouse",
+          "url": "https://drafthouse.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Landmark Theatres",
+          "url": "https://www.landmarktheatres.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Angelika",
+          "url": "https://www.angelikafilmcenter.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "IMAX",
+          "url": "https://www.imax.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Reviews & Criticism",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "Sight and Sound",
+          "url": "https://www.bfi.org.uk/sight-and-sound",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Little White Lies",
+          "url": "https://lwlies.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Guardian Film",
+          "url": "https://www.theguardian.com/film",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Empire",
+          "url": "https://www.empireonline.com/movies/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "RogerEbert.com",
+          "url": "https://www.rogerebert.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Film Stage",
+          "url": "https://thefilmstage.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Variety Film",
+          "url": "https://variety.com/v/film/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Hollywood Reporter",
+          "url": "https://www.hollywoodreporter.com/movies/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Industry & Box Office",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Deadline",
+          "url": "https://deadline.com/v/film/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Variety",
+          "url": "https://variety.com/v/film/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "IndieWire",
+          "url": "https://www.indiewire.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Screen Daily",
+          "url": "https://www.screendaily.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Box Office Mojo",
+          "url": "https://www.boxofficemojo.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Numbers",
+          "url": "https://www.the-numbers.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Movie Insider",
+          "url": "https://www.movieinsider.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Film Distributors' Assoc.",
+          "url": "https://filmdistributorsassociation.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Classics & Archives",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "AFI",
+          "url": "https://www.afi.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "TCM",
+          "url": "https://www.tcm.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Criterion",
+          "url": "https://www.criterion.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Internet Archive Movies",
+          "url": "https://archive.org/details/movies",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Library of Congress Film",
+          "url": "https://www.loc.gov/film-and-videos/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "UCLA Film Archive",
+          "url": "https://www.cinema.ucla.edu/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Kanopy",
+          "url": "https://www.kanopy.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "MUBI",
+          "url": "https://mubi.com/en/us",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Awards & Festivals",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "BAFTA",
+          "url": "https://www.bafta.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Oscars",
+          "url": "https://www.oscars.org/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Cannes",
+          "url": "https://www.festival-cannes.com/en/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Venice Film Festival",
+          "url": "https://www.labiennale.org/en/cinema",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Sundance",
+          "url": "https://www.sundance.org/festivals/sundance-film-festival/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "TIFF",
+          "url": "https://www.tiff.net/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "London Film Festival",
+          "url": "https://www.bfi.org.uk/london-film-festival",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Golden Globes",
+          "url": "https://goldenglobes.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Making & Screenwriting",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "No Film School",
+          "url": "https://nofilmschool.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "StudioBinder",
+          "url": "https://www.studiobinder.com/blog/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "BFI Film Academy",
+          "url": "https://www.bfi.org.uk/bfi-film-academy-opportunities-young-creatives",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Scriptnotes",
+          "url": "https://johnaugust.com/scriptnotes",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Film Riot",
+          "url": "https://www.youtube.com/user/filmriot",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Celtx",
+          "url": "https://www.celtx.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "WriterDuet",
+          "url": "https://www.writerduet.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Final Draft",
+          "url": "https://www.finaldraft.com/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Posters & Data",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "IMP Awards",
+          "url": "https://www.impawards.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Art of the Title",
+          "url": "https://www.artofthetitle.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "IMDb Charts",
+          "url": "https://www.imdb.com/chart/top/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Letterboxd Lists",
+          "url": "https://letterboxd.com/lists/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TMDb API",
+          "url": "https://developer.themoviedb.org/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Box Office Mojo",
+          "url": "https://www.boxofficemojo.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "The Numbers",
+          "url": "https://www.the-numbers.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "MovieLens",
+          "url": "https://movielens.org/",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Communities & Podcasts",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Reddit Movies",
+          "url": "https://www.reddit.com/r/movies/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Criterion Forum",
+          "url": "https://criterionforum.org/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "MUBI Notebook",
+          "url": "https://mubi.com/en/notebook",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Ringer Movies",
+          "url": "https://www.theringer.com/movies",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Filmspotting",
+          "url": "https://www.filmspotting.net/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Script Apart",
+          "url": "https://www.scriptapart.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Kermode & Mayo",
+          "url": "https://www.kermodeandmayo.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "BFI Podcasts",
+          "url": "https://www.bfi.org.uk/sight-and-sound/podcasts",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    }
+  ]
 }

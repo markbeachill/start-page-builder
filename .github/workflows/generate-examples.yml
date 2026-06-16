@@ -1,0 +1,39 @@
+name: Generate examples
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    name: Generate template examples
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate examples from template JSON
+        run: node tools/generate-examples.js
+
+      - name: Validate generated output
+        run: node tools/validate-templates.js
+
+      - name: Commit generated example changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/examples/*.html docs/examples/README.md
+          if git diff --cached --quiet; then
+            echo "No generated example changes to commit."
+          else
+            git commit -m "Regenerate template examples"
+            git push
+          fi

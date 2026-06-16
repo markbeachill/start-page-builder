@@ -1,10 +1,571 @@
 {
   "format": "personal-start-page-creator-v1",
   "title": "K-Pop Fans Start Page",
-  "description": "Fast-paced tracking of music show voting, streams, and hubs.",
+  "description": "A fuller K-pop fan template for official platforms, music shows, voting apps, charts, streaming, albums, concerts, language tools and fan communities.",
   "filename": "start-page-kpop-fan.html",
   "columns": 4,
   "colours": "primary",
   "showTitle": true,
-  "sections": []
+  "sections": [
+    {
+      "name": "Official Platforms",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Weverse",
+          "url": "https://weverse.io/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Mnet Plus",
+          "url": "https://www.mnetplus.world/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "YouTube Music",
+          "url": "https://music.youtube.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Spotify K-Pop",
+          "url": "https://open.spotify.com/genre/k-pop-page",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Apple Music K-Pop",
+          "url": "https://music.apple.com/us/curator/k-pop/976439551",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Melon",
+          "url": "https://www.melon.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Bugs",
+          "url": "https://music.bugs.co.kr/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Genie",
+          "url": "https://www.genie.co.kr/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "News & Schedules",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Soompi",
+          "url": "https://www.soompi.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Naver Entertainment",
+          "url": "https://entertain.naver.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Billboard K-Pop",
+          "url": "https://www.billboard.com/c/k-pop/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "The Korea Herald",
+          "url": "https://www.koreaherald.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Rolling Stone K-Pop",
+          "url": "https://www.rollingstone.com/t/k-pop/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Kpopmap",
+          "url": "https://www.kpopmap.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "r/kpop",
+          "url": "https://www.reddit.com/r/kpop/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "KBS World",
+          "url": "https://kbsworld.kbs.co.kr/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Music Shows & Voting",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "M COUNTDOWN",
+          "url": "https://www.mnetplus.world/community/main?communityId=PzfktaFfF9GXMF1CBSnUO",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Music Bank",
+          "url": "https://kbsworld.kbs.co.kr/program/view.php?pg_seq=12",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Show Champion",
+          "url": "https://www.mbcplus.com/web/program/contentList.do?programInfoSeq=67",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Inkigayo",
+          "url": "https://programs.sbs.co.kr/enter/gayo/main",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "The Show",
+          "url": "https://programs.sbs.co.kr/mtv/theshow/main",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "IdolChamp",
+          "url": "https://idolchamp.co.kr/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Mubeat",
+          "url": "https://mubeat.tv/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Fancast",
+          "url": "https://fancast.io/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Charts & Tracking",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Circle Chart",
+          "url": "https://circlechart.kr/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Hanteo Chart",
+          "url": "https://www.hanteochart.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Melon Chart",
+          "url": "https://www.melon.com/chart/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Bugs Chart",
+          "url": "https://music.bugs.co.kr/chart",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Genie Chart",
+          "url": "https://www.genie.co.kr/chart/top200",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Billboard Charts",
+          "url": "https://www.billboard.com/charts/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Spotify Charts",
+          "url": "https://charts.spotify.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "YouTube Charts",
+          "url": "https://charts.youtube.com/",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Streaming & Video",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "YouTube",
+          "url": "https://www.youtube.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "YouTube Music",
+          "url": "https://music.youtube.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Spotify",
+          "url": "https://open.spotify.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Apple Music",
+          "url": "https://music.apple.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Melon",
+          "url": "https://www.melon.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "1theK",
+          "url": "https://www.youtube.com/user/LOENENT",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "M2",
+          "url": "https://www.youtube.com/@MnetM2",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "KBS Kpop",
+          "url": "https://www.youtube.com/@KBSKpop",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Albums & Merch",
+      "colour": "blue",
+      "included": true,
+      "links": [
+        {
+          "label": "Weverse Shop",
+          "url": "https://shop.weverse.io/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Ktown4u",
+          "url": "https://www.ktown4u.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Yes24 Global",
+          "url": "https://global.yes24.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Aladin",
+          "url": "https://www.aladin.co.kr/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Music Korea",
+          "url": "https://www.musickorea.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "SubK Shop",
+          "url": "https://www.subkshop.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Choice Music LA",
+          "url": "https://choicemusicla.com/",
+          "colour": "blue",
+          "included": true
+        },
+        {
+          "label": "Cokodive",
+          "url": "https://cokodive.com/",
+          "colour": "blue",
+          "included": true
+        }
+      ],
+      "column": 2
+    },
+    {
+      "name": "Concerts & Tickets",
+      "colour": "red",
+      "included": true,
+      "links": [
+        {
+          "label": "Ticketmaster",
+          "url": "https://www.ticketmaster.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Live Nation",
+          "url": "https://www.livenation.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "AXS",
+          "url": "https://www.axs.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Interpark Global",
+          "url": "https://www.globalinterpark.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Yes24 Ticket",
+          "url": "http://ticket.yes24.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Melon Ticket",
+          "url": "https://ticket.melon.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Songkick",
+          "url": "https://www.songkick.com/",
+          "colour": "red",
+          "included": true
+        },
+        {
+          "label": "Bandsintown",
+          "url": "https://www.bandsintown.com/",
+          "colour": "red",
+          "included": true
+        }
+      ],
+      "column": 3
+    },
+    {
+      "name": "Lyrics & Language",
+      "colour": "green",
+      "included": true,
+      "links": [
+        {
+          "label": "Genius K-Pop",
+          "url": "https://genius.com/tags/k-pop",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Musixmatch",
+          "url": "https://www.musixmatch.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Naver Dictionary",
+          "url": "https://dict.naver.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Papago",
+          "url": "https://papago.naver.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Talk To Me In Korean",
+          "url": "https://talktomeinkorean.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "How To Study Korean",
+          "url": "https://www.howtostudykorean.com/",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Duolingo Korean",
+          "url": "https://www.duolingo.com/course/ko/en/Learn-Korean",
+          "colour": "green",
+          "included": true
+        },
+        {
+          "label": "Forvo Korean",
+          "url": "https://forvo.com/languages/ko/",
+          "colour": "green",
+          "included": true
+        }
+      ],
+      "column": 4
+    },
+    {
+      "name": "Fan Communities",
+      "colour": "purple",
+      "included": true,
+      "links": [
+        {
+          "label": "X",
+          "url": "https://x.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Instagram",
+          "url": "https://www.instagram.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "TikTok",
+          "url": "https://www.tiktok.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "r/kpop",
+          "url": "https://www.reddit.com/r/kpop/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Discord",
+          "url": "https://discord.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Weverse Communities",
+          "url": "https://weverse.io/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Pinterest",
+          "url": "https://www.pinterest.com/",
+          "colour": "purple",
+          "included": true
+        },
+        {
+          "label": "Tumblr K-Pop",
+          "url": "https://www.tumblr.com/tagged/kpop",
+          "colour": "purple",
+          "included": true
+        }
+      ],
+      "column": 1
+    },
+    {
+      "name": "Archives & Databases",
+      "colour": "orange",
+      "included": true,
+      "links": [
+        {
+          "label": "Korean Music Awards",
+          "url": "https://koreanmusicawards.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Circle Chart",
+          "url": "https://circlechart.kr/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "KProfiles",
+          "url": "https://kprofiles.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "K-Pop Database",
+          "url": "https://dbkpop.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "The Bias List",
+          "url": "https://thebiaslist.com/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Album of the Year",
+          "url": "https://www.albumoftheyear.org/genre/18-k-pop/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Rate Your Music",
+          "url": "https://rateyourmusic.com/genre/k-pop/",
+          "colour": "orange",
+          "included": true
+        },
+        {
+          "label": "Last.fm K-Pop",
+          "url": "https://www.last.fm/tag/k-pop",
+          "colour": "orange",
+          "included": true
+        }
+      ],
+      "column": 2
+    }
+  ]
 }
